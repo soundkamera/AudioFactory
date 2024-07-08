@@ -1,0 +1,18 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3847527849	Play_Gameplay_Music_Switch			\Default Work Unit\Play_Gameplay_Music_Switch	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	4167483016	MUS_State_Group			\Default Work Unit\MUS_State_Group	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MUS_State_Group			
+	3794091075	state_04	MUS_State_Group			
+	3794091076	state_03	MUS_State_Group			
+	3794091077	state_02	MUS_State_Group			
+	3794091078	state_01	MUS_State_Group			
+
+Trigger	ID	Name			Wwise Object Path	Notes
+	351475377	stinger_01			\Default Work Unit\Music\stinger_01	
+	351475378	stinger_02			\Default Work Unit\Music\stinger_02	
+	351475379	stinger_03			\Default Work Unit\Music\stinger_03	
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{92AD68E0-0871-5B84-7B6B-3B3C8234740E}">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Audio Devices\Default Work Unit\No_Output" GUID="{D3738AE9-E040-4E3A-9CAF-27460AF9A685}" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" ObjectPath="\Audio Devices\Default Work Unit\System" GUID="{DC571BAD-A8A4-453C-8669-4C569604A616}" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="1636224025" Name="Shot_Distance" ObjectPath="\Game Parameters\Default Work Unit\Shot_Distance" GUID="{48160BC4-20A9-4C86-B2D5-02A3F723FC54}"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="4167483016" Name="MUS_State_Group" ObjectPath="\States\Default Work Unit\MUS_State_Group" GUID="{4EBBCF84-E163-41A0-A663-F0BC2A860410}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MUS_State_Group\None" GUID="{C41FB390-63C4-4CB1-AFB1-24503BFACF70}"/>
+						<State Id="3794091075" Name="state_04" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_04" GUID="{040860ED-C33B-4E10-A365-5819C4C844A4}"/>
+						<State Id="3794091076" Name="state_03" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_03" GUID="{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"/>
+						<State Id="3794091077" Name="state_02" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_02" GUID="{A62A0D80-F71D-40AF-A4A5-49905590B651}"/>
+						<State Id="3794091078" Name="state_01" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_01" GUID="{0DBAFC0E-E0DC-447B-A08D-06FB3CF21BCD}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="2441865070" Name="MUSStateSwitchGroup" ObjectPath="\Switches\Default Work Unit\MUSStateSwitchGroup" GUID="{BEEAE54E-0A23-47A3-A28C-74BE1DA64476}">
+					<Switches>
+						<Switch Id="1888097757" Name="MUSstate_01" ObjectPath="\Switches\Default Work Unit\MUSStateSwitchGroup\MUSstate_01" GUID="{658F886C-7AF4-4BCC-ABAD-07F0FC1FD96D}"/>
+						<Switch Id="1888097758" Name="MUSState_02" ObjectPath="\Switches\Default Work Unit\MUSStateSwitchGroup\MUSState_02" GUID="{19B39C09-B84E-4B34-A3EA-C219E075734C}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{CE4A7BD1-ADC2-D875-A534-D71D5D9EA814}</FileHash>
+</SoundBanksInfo>

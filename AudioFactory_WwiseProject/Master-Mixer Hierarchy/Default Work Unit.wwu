@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{04F5BB1B-537A-40FB-8600-F2DB9EA88CFB}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{421B458C-7418-4875-8634-D686EB882A68}" SchemaVersion="119">
 	<Busses>
-		<WorkUnit Name="Default Work Unit" ID="{04F5BB1B-537A-40FB-8600-F2DB9EA88CFB}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{421B458C-7418-4875-8634-D686EB882A68}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<ReferenceList>
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
-							<ObjectRef Name="System" ID="{82193C90-93EA-4EBE-8CB6-90D6B7924A3D}" WorkUnitID="{A76A91AC-67DE-4259-8161-6F1941E1A55A}"/>
+							<ObjectRef Name="System" ID="{DC571BAD-A8A4-453C-8669-4C569604A616}" WorkUnitID="{F8B0B33B-14F4-43C0-8E71-644E26EEDD15}"/>
 						</Reference>
 					</ReferenceList>
 				</Bus>

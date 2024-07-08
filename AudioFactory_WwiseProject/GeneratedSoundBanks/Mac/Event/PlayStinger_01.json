@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3908403279",
+    "Type": "Event",
+    "GUID": "{860D8A76-E397-4E8C-9A85-F22A04A9DC2F}",
+    "Language": "SFX",
+    "Hash": "{A7A6C1D0-ADEF-DC59-A829-E6F144DE0006}",
+    "ObjectPath": "PlayStinger_01",
+    "ShortName": "PlayStinger_01",
+    "Path": "Event/PlayStinger_01.bnk",
+    "Events": [
+     {
+      "Id": "3908403279",
+      "Name": "PlayStinger_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\PlayStinger_01",
+      "GUID": "{860D8A76-E397-4E8C-9A85-F22A04A9DC2F}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "351475377",
+        "Name": "stinger_01",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\Music\\stinger_01",
+        "GUID": "{BD9C69F6-2E41-44A5-9E36-8FB2C10949AB}"
+       }
+      ]
+     }
+    ],
+    "Triggers": [
+     {
+      "Id": "351475377",
+      "Name": "stinger_01",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\Music\\stinger_01",
+      "GUID": "{BD9C69F6-2E41-44A5-9E36-8FB2C10949AB}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2804A177-A095-874D-F61F-FA116384C513}"
+ }
+}

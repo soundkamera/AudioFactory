@@ -1,6 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{1C74891C-7545-4F10-9BF5-340A0FE19E90}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{41438E12-06F6-4831-816D-4BD85E54F0FD}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{1C74891C-7545-4F10-9BF5-340A0FE19E90}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{41438E12-06F6-4831-816D-4BD85E54F0FD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="ROOM TONE" ID="{A290ECA9-7D7C-4A0F-8D55-04F05847D336}" ShortID="513894078">
+					<ChildrenList>
+						<Sound Name="Ambience Factory Hi Lo Interior 01" ID="{CF717E50-0FAA-4AA9-B3E1-EE2A9F0DF93D}" ShortID="259202150">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambience Factory Hi Lo Interior 01" ID="{0384F6FE-6A80-40F8-8892-25978BF62485}">
+									<Language>SFX</Language>
+									<AudioFile>ROOM TONE\Ambience Factory Hi Lo Interior 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="689954285"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambience Factory Hi Lo Interior 01" ID="{0384F6FE-6A80-40F8-8892-25978BF62485}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SI-WORKS10_12_1" ID="{146BB26F-A9A8-4BF8-A460-45B0A2A7BC4E}" ShortID="702238820">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SI-WORKS10_12_1" ID="{1F163434-913C-473B-BB48-D669D679C392}">
+									<Language>SFX</Language>
+									<AudioFile>ROOM TONE\SI-WORKS10_12_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="851180688"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SI-WORKS10_12_1" ID="{1F163434-913C-473B-BB48-D669D679C392}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SI-WORKS10_13_1-1" ID="{C616E8E4-E866-4FC1-B3A0-802C47BDF9D7}" ShortID="407439678">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-19</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SI-WORKS10_13_1-1" ID="{30A4443C-A4D3-4311-8401-5383E17B774A}">
+									<Language>SFX</Language>
+									<AudioFile>ROOM TONE\SI-WORKS10_13_1-1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="176510289"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SI-WORKS10_13_1-1" ID="{30A4443C-A4D3-4311-8401-5383E17B774A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SI-WORKS10_13_1" ID="{F90BA47A-0B7B-4229-A6E0-9BF15C3746E6}" ShortID="731831064">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SI-WORKS10_13_1" ID="{9EC0EFCE-BF54-4B69-B3F0-D25EB9DE84A7}">
+									<Language>SFX</Language>
+									<AudioFile>ROOM TONE\SI-WORKS10_13_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="250250363"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SI-WORKS10_13_1" ID="{9EC0EFCE-BF54-4B69-B3F0-D25EB9DE84A7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Spaceship ambience while cruising with a rumble and subtle drone" ID="{8E6B1D41-4EF1-4065-B759-2448D97FE985}" ShortID="679609892">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Spaceship ambience while cruising with a rumble and subtle drone" ID="{4A735401-4DE4-430D-B7D2-FA24731D8F07}">
+									<Language>SFX</Language>
+									<AudioFile>ROOM TONE\Spaceship ambience while cruising with a rumble and subtle drone.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="338632377"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Spaceship ambience while cruising with a rumble and subtle drone" ID="{4A735401-4DE4-430D-B7D2-FA24731D8F07}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
