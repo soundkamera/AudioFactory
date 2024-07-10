@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{827C080C-5A53-4AA6-A908-9C0FE870638F}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{093ADEA3-E96F-43B2-A9DB-0EC1003CA2BD}" SchemaVersion="119">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{827C080C-5A53-4AA6-A908-9C0FE870638F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{093ADEA3-E96F-43B2-A9DB-0EC1003CA2BD}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Shot_Distance" ID="{48160BC4-20A9-4C86-B2D5-02A3F723FC54}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

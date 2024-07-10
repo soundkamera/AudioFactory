@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="AudioFactory_WwiseProject" GUID="{D2F69005-B6DA-4115-BC51-BF1EB4E9BE64}" Generator="2023.1.5.8522"/>
+	<CacheRoot>../.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Mac" GUID="{7F6DE81C-B047-45DE-A069-404C5470CEC8}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="Mac"/>
+		<Platform Name="Windows" GUID="{D15DBC1A-6A93-4A2A-98EC-BA1AB51E51C8}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{BFEA3662-481E-454A-A2F9-FEC19905600C}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{0CF67CC8-FCF3-DE56-EB3D-9B34972D1633}</FileHash>
+</ProjectInfo>

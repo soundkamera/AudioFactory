@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="119">
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\States\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Queries\Factory Queries.wwu" DateLow="1716414210" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1716414210" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Metadata\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Events\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Effects\Factory Effects.wwu" DateLow="1716414210" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1716414210" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\AudioFactory_WwiseProject.wproj" DateLow="1719934042" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\AudioFactory_WwiseProject.raygould.wsettings" DateLow="1719934062" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1719933664" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Triggers\Music.wwu" DateLow="1719334950" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1719334950" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1719412881" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\States\Default Work Unit.wwu" DateLow="1719412881" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1720205457" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1718291105" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Queries\Factory Queries.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Metadata\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Interactive Music Hierarchy\GameplayMusic.wwu" DateLow="1720205457" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1720205457" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1719421989" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Events\Default Work Unit.wwu" DateLow="1720205457" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Effects\Factory Effects.wwu" DateLow="1719692135" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\AudioFactory_WwiseProject.wproj" DateLow="1717704625" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\AudioFactory_WwiseProject.raygould.wsettings" DateLow="1720474893" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1717692377" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Actor-Mixer Hierarchy\Impacts.wwu" DateLow="1720205508" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Actor-Mixer Hierarchy\GUNS.wwu" DateLow="1720205437" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Actor-Mixer Hierarchy\Foley.wwu" DateLow="1720205487" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1718218409" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\raygould\Documents\UnrealProjects\AudioFactory\AudioFactory\AudioFactory_WwiseProject\Actor-Mixer Hierarchy\Ambience.wwu" DateLow="1720205434" DateHigh="0"/>
 </ValidationCache>

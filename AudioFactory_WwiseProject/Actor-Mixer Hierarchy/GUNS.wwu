@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4563B9EC-BC67-4C29-960B-4D642EDC73C7}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="GUNS" ID="{4563B9EC-BC67-4C29-960B-4D642EDC73C7}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="GUNAuto" ID="{5BB4BF3B-9F08-4B98-9939-54AEA74330B5}" ShortID="141389387">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="AK104_singleshot_01" ID="{C89559FF-7F48-4B2F-99AE-0882AA71A575}" ShortID="224589417">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="AK104_Onset" ID="{2B2833DC-D8D4-46BE-88AB-29A3FA3EC1FF}" ShortID="619815208">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Onset_A_AK47_SINGLESHOT_ON_GUN_A_01" ID="{F566EE9C-5B1D-4C75-A865-AF6CBEAE7513}" ShortID="79350964">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Onset_A_AK47_SINGLESHOT_ON_GUN_A_01" ID="{6337DCE0-138B-4E84-B6DA-17C69936D488}">
+													<Language>SFX</Language>
+													<AudioFile>Onset_A_AK47_SINGLESHOT_ON_GUN_A_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="646400363"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Onset_A_AK47_SINGLESHOT_ON_GUN_A_01" ID="{6337DCE0-138B-4E84-B6DA-17C69936D488}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Onset_B_AK47_SINGLESHOT_ON_GUN_B_01" ID="{51A00352-B13B-4E6D-A371-D63A937FDA21}" ShortID="315968587">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Onset_B_AK47_SINGLESHOT_ON_GUN_B_01" ID="{2BD0D605-FF15-40B0-A208-D7E22D38608D}">
+													<Language>SFX</Language>
+													<AudioFile>Onset_B_AK47_SINGLESHOT_ON_GUN_B_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="918250770"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Onset_B_AK47_SINGLESHOT_ON_GUN_B_01" ID="{2BD0D605-FF15-40B0-A208-D7E22D38608D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+								<BlendContainer Name="AK104_Body" ID="{053ED105-BA7D-4F0A-8166-9A6D54F07ACF}" ShortID="344007000">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Body_A_AK47_SINGLESHOT_2M_STE_01" ID="{9EC8B8A1-9374-433B-B24D-960B9642F1B1}" ShortID="1001799837">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{2E1FA1E2-81C3-4CF7-BBE6-0E9422B34815}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Body_A_AK47_SINGLESHOT_2M_STE_01" ID="{226D0723-200E-4D77-9324-715CFB8EA5C0}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Body_A_AK47_SINGLESHOT_2M_STE_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="901348505"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Body_A_AK47_SINGLESHOT_2M_STE_01" ID="{226D0723-200E-4D77-9324-715CFB8EA5C0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Body_B_AK47_SINGLESHOT_2M_STE_01" ID="{18009749-BEB4-4F21-9081-E33AAE681488}" ShortID="112700919">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Body_B_AK47_SINGLESHOT_2M_STE_01" ID="{92916620-DAC8-4E50-B793-F2210426F130}">
+													<Language>SFX</Language>
+													<AudioFile>Body_B_AK47_SINGLESHOT_2M_STE_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="308727436"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Body_B_AK47_SINGLESHOT_2M_STE_01" ID="{92916620-DAC8-4E50-B793-F2210426F130}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+								<BlendContainer Name="AK104_Thump" ID="{9311B2F5-8EDB-4AC2-9B59-3F0A6CC27155}" ShortID="937537457">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>80</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Thump_AK47_SINGLESHOT_2M_01" ID="{DAD34934-5082-499B-961E-071D60D0333C}" ShortID="646874861">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Thump_AK47_SINGLESHOT_2M_01" ID="{54399C16-4127-4922-B5DC-8EC781DCF61A}">
+													<Language>SFX</Language>
+													<AudioFile>Thump_AK47_SINGLESHOT_2M_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="617330069"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Thump_AK47_SINGLESHOT_2M_01" ID="{54399C16-4127-4922-B5DC-8EC781DCF61A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{2D0F7F2D-E48B-4B96-A49B-1AAF0D1CDA99}" ShortID="1055895887">
+														<PropertyList>
+															<Property Name="Render" Type="bool" Value="True"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																<ObjectRef Name="High_Impact" ID="{2AFD6FB0-C906-4683-A377-FEEEF72967B0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</BlendContainer>
+								<BlendContainer Name="AK104_Tail" ID="{5C328398-652E-4580-8956-8795E806AE7B}" ShortID="770467771">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Tail_A_AK47_2M_STE_01" ID="{AAC17E30-065A-4AA3-BAA5-DF0F5C829FFD}" ShortID="827625868">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tail_A_AK47_2M_STE_01" ID="{CFF36B54-1957-4454-B150-D89AF0123392}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="3.47359307359307"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Tail_A_AK47_2M_STE_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="291244584"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tail_A_AK47_2M_STE_01" ID="{CFF36B54-1957-4454-B150-D89AF0123392}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tail_B_AK47_5M_STE_01" ID="{5BD4EC30-AC53-4998-86FA-FC85AA2B40D5}" ShortID="815799888">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tail_B_AK47_5M_STE_01" ID="{48F24DCF-296E-430D-AFD2-E7E7396CFC50}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="2.84675324675324"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Tail_B_AK47_5M_STE_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="70118043"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tail_B_AK47_5M_STE_01" ID="{48F24DCF-296E-430D-AFD2-E7E7396CFC50}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tail_C_AK47_20M_STE_01" ID="{234EFC35-3CF9-4786-A7A7-4235543D02F0}" ShortID="790380661">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tail_C_AK47_20M_STE_01" ID="{FE97C294-82D1-4429-8BC6-E7E3C13A4E32}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="3.23463203463203"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Tail_C_AK47_20M_STE_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="353342779"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tail_C_AK47_20M_STE_01" ID="{FE97C294-82D1-4429-8BC6-E7E3C13A4E32}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<BlendTrackList>
+										<BlendTrack Name="Shot_Distance_Fader" ID="{5ACA1317-52C7-4412-AD87-C15F4FB0C40F}" ShortID="400054396">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="Shot_Distance" ID="{48160BC4-20A9-4C86-B2D5-02A3F723FC54}" WorkUnitID="{093ADEA3-E96F-43B2-A9DB-0EC1003CA2BD}"/>
+												</Reference>
+											</ReferenceList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{DA15B1B6-78B0-46F2-A11B-BBD81A639147}" ShortID="880036674">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																</PropertyList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="Tail_A_AK47_2M_STE_01" ID="{AAC17E30-065A-4AA3-BAA5-DF0F5C829FFD}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>11.1602209944751</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>44.4935543278085</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="Tail_B_AK47_5M_STE_01" ID="{5BD4EC30-AC53-4998-86FA-FC85AA2B40D5}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>38.0847145488029</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>71.4180478821362</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="Tail_C_AK47_20M_STE_01" ID="{234EFC35-3CF9-4786-A7A7-4235543D02F0}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>63.9042357274401</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>97.2375690607735</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+										<BlendTrack Name="New Blend Track" ID="{5799A8FA-23DA-4915-BBD9-A08382F24E64}" ShortID="817898131"/>
+										<BlendTrack Name="New Blend Track_01" ID="{7F4187BB-674A-48C0-A410-B48ABB7C62B4}" ShortID="492247049"/>
+									</BlendTrackList>
+								</BlendContainer>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="GUNSPis" ID="{8971DAB7-CF59-4606-BA9F-046F1E644359}" ShortID="529851947">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="GUNPis_Onset" ID="{93B06E57-A237-411A-BFE5-E71FBEE9FA6C}" ShortID="999304467">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="GUNPis_Onset A_01" ID="{7FE1CB18-5902-48A3-8BB9-3307DA1C015A}" ShortID="730293703">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GUNPis_Onset A_01" ID="{CBCC6CE7-F9DE-462C-AC06-AE7DD76F1532}">
+											<Language>SFX</Language>
+											<AudioFile>GUNPis_Onset A_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="191478550"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GUNPis_Onset A_01" ID="{CBCC6CE7-F9DE-462C-AC06-AE7DD76F1532}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="GUNPis_Onset B_01" ID="{74A6F587-86D2-43B0-B385-F853411B6ADD}" ShortID="401357194">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GUNPis_Onset B_01" ID="{049768B5-593C-404E-863A-D990940F2D6A}">
+											<Language>SFX</Language>
+											<AudioFile>GUNPis_Onset B_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="914388226"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GUNPis_Onset B_01" ID="{049768B5-593C-404E-863A-D990940F2D6A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="GUNRif" ID="{55735E1D-9EF6-4F81-B41C-DBC28EA72E1A}" ShortID="57805669">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="GUNShotg" ID="{EEC36960-7A61-4E97-90C2-A565E6423494}" ShortID="606045130">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

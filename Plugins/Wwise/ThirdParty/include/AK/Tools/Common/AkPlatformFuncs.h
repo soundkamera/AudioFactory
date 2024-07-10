@@ -113,6 +113,13 @@ struct AkThreadProperties {};
 #define AK_THREAD_INIT_CODE(_threadProperties)
 #endif
 
+// to be used to unequivocally cause a crash for scenarios that are critical failures that we cannot hope to recover from
+#ifndef AK_FORCE_CRASH
+#define AK_FORCE_CRASH \
+	((void(*)())0)(); \
+	*((char*)-1) = 'x';
+#endif
+
 #ifndef AK_PLATFORM_MEMCPY
 namespace AKPLATFORM
 {

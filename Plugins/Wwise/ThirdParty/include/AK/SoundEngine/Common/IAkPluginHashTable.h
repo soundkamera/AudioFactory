@@ -180,25 +180,23 @@ public:
 	template<typename KeyType, typename FuncType>
 	AkForceInline void RemoveIf(AkHashTableBase<KeyType>* in_pHashTable, FuncType in_func)
 	{
-		AkUInt32 uNumReservedEntries = in_pHashTable->uNumReservedEntries;
+		AkUInt32 uSlotsToEvaluate = in_pHashTable->uNumUsedEntries;
 		bool* pbSlotOccupied = in_pHashTable->pbSlotOccupied;
 		AkUInt32 uSlot = 0;
-		while (uSlot < uNumReservedEntries)
+		while (uSlotsToEvaluate > 0)
 		{
-			if (pbSlotOccupied[uSlot] && in_func(uSlot))
+			AKASSERT(uSlot < in_pHashTable->uNumReservedEntries);
+			if (pbSlotOccupied[uSlot])
 			{
-				// if slot is occupied, and the function confirmed removal, remove this slot, but don't advance uSlot
-				bool removeWrappedData = RemoveSlot(in_pHashTable, (AkInt32)uSlot);
-				// if the removeSlot process moved data around the end of the table, then we need to lower numReservedEntries to compensate
-				if (removeWrappedData)
+				// run the provided func to determine if this slot should be removed
+				uSlotsToEvaluate--;
+				if (in_func(uSlot))
 				{
-					uNumReservedEntries--;
+					RemoveSlot(in_pHashTable, (AkInt32)uSlot);
+					continue; // don't advance uSlot; RemoveSlot moves data down
 				}
 			}
-			else
-			{
-				uSlot++;
-			}
+			uSlot++;
 		}
 	}
 
@@ -210,25 +208,23 @@ public:
 	template<typename KeyType, typename ValueType, typename FuncType>
 	AkForceInline void RemoveIfValue(AkHashTable<KeyType, ValueType>* in_pHashTable, FuncType in_func)
 	{
-		AkUInt32 uNumReservedEntries = in_pHashTable->uNumReservedEntries;
+		AkUInt32 uSlotsToEvaluate = in_pHashTable->uNumUsedEntries;
 		bool* pbSlotOccupied = in_pHashTable->pbSlotOccupied;
 		AkUInt32 uSlot = 0;
-		while (uSlot < uNumReservedEntries)
+		while (uSlotsToEvaluate > 0)
 		{
-			if (pbSlotOccupied[uSlot] && in_func(uSlot))
+			AKASSERT(uSlot < in_pHashTable->uNumReservedEntries);
+			if (pbSlotOccupied[uSlot])
 			{
-				// if slot is occupied, and the function confirmed removal, remove this slot, but don't advance uSlot
-				bool removeWrappedData = RemoveSlotValue(in_pHashTable, (AkInt32)uSlot);
-				// if the removeSlot process moved data around the end of the table, then we need to lower numReservedEntries to compensate
-				if (removeWrappedData)
+				// run the provided func to determine if this slot should be removed
+				uSlotsToEvaluate--;
+				if (in_func(uSlot))
 				{
-					uNumReservedEntries--;
+					RemoveSlotValue(in_pHashTable, (AkInt32)uSlot);
+					continue; // don't advance uSlot; RemoveSlot moves data down
 				}
 			}
-			else
-			{
-				uSlot++;
-			}
+			uSlot++;
 		}
 	}
 };

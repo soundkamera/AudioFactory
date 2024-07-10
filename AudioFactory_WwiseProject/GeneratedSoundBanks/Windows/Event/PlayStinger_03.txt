@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3908403277	PlayStinger_03			\Default Work Unit\PlayStinger_03	
+

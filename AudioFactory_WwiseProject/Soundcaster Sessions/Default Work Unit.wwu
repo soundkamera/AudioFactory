@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{E23C8CF1-2B54-41D2-873D-972548C67EF2}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{436E8A9D-BA7F-4D63-9C83-8FDF63B49096}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{E23C8CF1-2B54-41D2-873D-972548C67EF2}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{436E8A9D-BA7F-4D63-9C83-8FDF63B49096}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="MusicTest" ID="{327967B8-56FF-4595-847A-1069CF560712}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="PlayStinger_01" ID="{860D8A76-E397-4E8C-9A85-F22A04A9DC2F}" WorkUnitID="{DF481478-48A8-4A03-859E-297F590A4845}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PlayStinger_02" ID="{CFCCCBBD-8D5C-45D2-9DF6-DA30EFD5ACB2}" WorkUnitID="{DF481478-48A8-4A03-859E-297F590A4845}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PlayStinger_03" ID="{6A521B7D-233A-4145-947F-9DDEC2A25998}" WorkUnitID="{DF481478-48A8-4A03-859E-297F590A4845}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="state_02" ID="{0B605D8B-1E80-4D33-9DE3-4996BC6A1249}" WorkUnitID="{8AB7D293-EFE0-4D68-8EE6-739E9A2896E0}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Shot_Distance" ID="{48160BC4-20A9-4C86-B2D5-02A3F723FC54}"/>
+							<Value>30.440414507772</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="MUSstate_01" ID="{658F886C-7AF4-4BCC-ABAD-07F0FC1FD96D}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

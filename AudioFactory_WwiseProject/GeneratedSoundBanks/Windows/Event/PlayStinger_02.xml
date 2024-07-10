@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="3908403276" Type="Event" GUID="{CFCCCBBD-8D5C-45D2-9DF6-DA30EFD5ACB2}" Language="SFX" Hash="{4B803BA0-857D-1DA7-D70C-1C4D6EAB231A}">
+			<ObjectPath>PlayStinger_02</ObjectPath>
+			<ShortName>PlayStinger_02</ShortName>
+			<Path>Event/PlayStinger_02.bnk</Path>
+			<Events>
+				<Event Id="3908403276" Name="PlayStinger_02" ObjectPath="\Events\Default Work Unit\PlayStinger_02" GUID="{CFCCCBBD-8D5C-45D2-9DF6-DA30EFD5ACB2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="351475378" Name="stinger_02" ObjectPath="\Triggers\Default Work Unit\Music\stinger_02" GUID="{074F1A17-082F-45D8-B7D8-EC5D62078257}"/>
+					</ActionTrigger>
+				</Event>
+			</Events>
+			<Triggers>
+				<Trigger Id="351475378" Name="stinger_02" ObjectPath="\Triggers\Default Work Unit\Music\stinger_02" GUID="{074F1A17-082F-45D8-B7D8-EC5D62078257}"/>
+			</Triggers>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{51C7A87A-4F3A-C0AC-B899-659DD888F36D}</FileHash>
+</SoundBanksInfo>
