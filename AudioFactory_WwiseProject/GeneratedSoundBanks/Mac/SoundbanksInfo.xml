@@ -50,7 +50,7 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{D76920CB-91A4-11F9-FC50-2469841445E3}">
+		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{A4B0D43F-D71F-44F9-9250-D9712B6D1812}">
 			<ObjectPath>Play_Gameplay_Music_Switch</ObjectPath>
 			<ShortName>Play_Gameplay_Music_Switch</ShortName>
 			<Path>Event/Play_Gameplay_Music_Switch.bnk</Path>
@@ -74,6 +74,11 @@
 					<ShortName>state_03\state_03_cineperc1_90BPM_4-4_P2M.wav</ShortName>
 					<Path>Media/82277003.wem</Path>
 					<CachePath>SFX/state_03/state_03_cineperc1_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="83335911" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>output loops_02.wav</ShortName>
+					<Path>Media/83335911.wem</Path>
+					<CachePath>SFX/output loops_02_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="217652010" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>state_03\state_03_synth high_90BPM_4-4_P2M.wav</ShortName>
@@ -120,6 +125,11 @@
 					<Path>Media/549508724.wem</Path>
 					<CachePath>SFX/state_03/state_03_synth low_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="552141323" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>output one shot_01.wav</ShortName>
+					<Path>Media/552141323.wem</Path>
+					<CachePath>SFX/output one shot_01_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="653379172" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>state_04\state_04_cineperc2_90BPM_4-4_P0M.wav</ShortName>
 					<Path>Media/653379172.wem</Path>
@@ -155,6 +165,11 @@
 					<Path>Media/992966600.wem</Path>
 					<CachePath>SFX/state_02/state_02_stringsmid_90BPM_4-4_P1M_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="1037934717" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>output loops_01.wav</ShortName>
+					<Path>Media/1037934717.wem</Path>
+					<CachePath>SFX/output loops_01_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="1063273330" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Boom.wav</ShortName>
 					<Path>Media/1063273330.wem</Path>
@@ -167,8 +182,11 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091078" GUID="{0DBAFC0E-E0DC-447B-A08D-06FB3CF21BCD}"/>
 							<MediaRefs>
+								<MediaRef Id="83335911"/>
 								<MediaRef Id="435511949"/>
+								<MediaRef Id="552141323"/>
 								<MediaRef Id="781923683"/>
+								<MediaRef Id="1037934717"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -271,5 +289,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{14FB3AAD-A560-DFF7-1950-24E80CA5EA9D}</FileHash>
+	<FileHash>{DD60551F-10EB-B210-6AAD-477CA7785EC2}</FileHash>
 </SoundBanksInfo>
