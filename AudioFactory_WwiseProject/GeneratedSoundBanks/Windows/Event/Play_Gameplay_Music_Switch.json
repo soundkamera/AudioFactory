@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A314E895-1A61-420E-8376-B4C295EACB0E}",
     "Language": "SFX",
-    "Hash": "{D76920CB-91A4-11F9-FC50-2469841445E3}",
+    "Hash": "{A4B0D43F-D71F-44F9-9250-D9712B6D1812}",
     "ObjectPath": "Play_Gameplay_Music_Switch",
     "ShortName": "Play_Gameplay_Music_Switch",
     "Path": "Event/Play_Gameplay_Music_Switch.bnk",
@@ -50,6 +50,15 @@
       "ShortName": "state_03\\state_03_cineperc1_90BPM_4-4_P2M.wav",
       "Path": "Media/82277003.wem",
       "CachePath": "SFX/state_03/state_03_cineperc1_90BPM_4-4_P2M_FBC78EF0.wem"
+     },
+     {
+      "Id": "83335911",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "output loops_02.wav",
+      "Path": "Media/83335911.wem",
+      "CachePath": "SFX/output loops_02_FBC78EF0.wem"
      },
      {
       "Id": "217652010",
@@ -133,6 +142,15 @@
       "CachePath": "SFX/state_03/state_03_synth low_90BPM_4-4_P2M_FBC78EF0.wem"
      },
      {
+      "Id": "552141323",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "output one shot_01.wav",
+      "Path": "Media/552141323.wem",
+      "CachePath": "SFX/output one shot_01_FBC78EF0.wem"
+     },
+     {
       "Id": "653379172",
       "Language": "SFX",
       "Streaming": "false",
@@ -196,6 +214,15 @@
       "CachePath": "SFX/state_02/state_02_stringsmid_90BPM_4-4_P1M_FBC78EF0.wem"
      },
      {
+      "Id": "1037934717",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "output loops_01.wav",
+      "Path": "Media/1037934717.wem",
+      "CachePath": "SFX/output loops_01_FBC78EF0.wem"
+     },
+     {
       "Id": "1063273330",
       "Language": "SFX",
       "Streaming": "false",
@@ -222,10 +249,19 @@
         },
         "MediaRefs": [
          {
+          "Id": "83335911"
+         },
+         {
           "Id": "435511949"
          },
          {
+          "Id": "552141323"
+         },
+         {
           "Id": "781923683"
+         },
+         {
+          "Id": "1037934717"
          }
         ]
        },
@@ -381,6 +417,6 @@
     ]
    }
   ],
-  "FileHash": "{328743C6-910A-B5BF-2561-A83D44C9DDD1}"
+  "FileHash": "{BF6158BC-339A-69DF-2DC3-46F3D2E35BAD}"
  }
 }

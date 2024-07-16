@@ -152,6 +152,11 @@
 								<MusicSegment Name="state_01" ID="{2D288712-27F1-4DC9-A41D-ACB6827E8A8D}" ShortID="492463326">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="184000"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -386,6 +391,147 @@
 												</ObjectList>
 											</ObjectLists>
 										</MusicTrack>
+										<MusicTrack Name="output loops_01" ID="{DBA31CF1-2598-45D0-A888-8BC07075A196}" ShortID="39019472">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{E86F1817-EC70-44BE-8528-0025A6056E27}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="output loops_01" ID="{12ABED72-3453-4779-AB04-861707A35B8E}">
+													<Language>SFX</Language>
+													<AudioFile>output loops_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1037934717"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="output loops_02" ID="{9BA5DCE2-F9CE-4C35-8931-96C4A5B23A4C}">
+													<Language>SFX</Language>
+													<AudioFile>output loops_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="83335911"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{45E0B12C-E769-4B5A-A5F7-8E3879D51CD9}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="output loops_01" ID="{07F3C810-53D9-4AEE-9B2B-DBBF98043625}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="45714.2916666667"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="output loops_01" ID="{12ABED72-3453-4779-AB04-861707A35B8E}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{3DFC3F61-AB11-4CE1-9290-2E1A479D7682}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="output loops_02" ID="{F0603AC8-5EC2-4452-9D5D-FDA12A5E955C}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="45714.2708333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="output loops_02" ID="{9BA5DCE2-F9CE-4C35-8931-96C4A5B23A4C}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="output one shot_01" ID="{31AC7C99-7ABD-4A07-837B-1C7B095A0FFA}" ShortID="833747605">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{F689EE93-5462-4017-80E0-FB9EF49AC15A}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="output one shot_01" ID="{F990EC17-42A6-49C0-A6A4-A9A5B1B258DE}">
+													<Language>SFX</Language>
+													<AudioFile>output one shot_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="552141323"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{14B76308-50B1-45C3-B182-9DC85139EF03}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="output one shot_01" ID="{D905CDFA-A73E-43E9-BB30-16532C3869E2}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="45714.2916666667"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="output one shot_01" ID="{F990EC17-42A6-49C0-A6A4-A9A5B1B258DE}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Cues">
@@ -417,7 +563,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>2</Value>
+										<Value>12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -926,7 +1072,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -980,7 +1126,7 @@
 										<Property Name="EndPosition" Type="Real64" Value="68666.6666666667"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-14</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -997,7 +1143,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-4</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1235,7 +1381,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-2</Value>
+														<Value>-4</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1355,7 +1501,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>3</Value>
+														<Value>1</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1475,7 +1621,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>12</Value>
+														<Value>10</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
