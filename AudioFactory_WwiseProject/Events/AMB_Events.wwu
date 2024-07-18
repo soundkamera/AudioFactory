@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3B204D5C-EAB8-47A2-9E41-FEBA0945BC5F}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="AMB_Events" ID="{3B204D5C-EAB8-47A2-9E41-FEBA0945BC5F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_AMBInd" ID="{A6035210-A3D2-4F78-BD66-6004D4DBCE2A}">
+					<ChildrenList>
+						<Action Name="" ID="{1FAF5C2A-9E42-461D-A0B5-970E5DCDDB9D}" ShortID="408965482">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMBInd" ID="{D9751613-AE03-44A8-B998-BCBB3A87636D}" WorkUnitID="{EAAC26E8-559A-4A0D-B30B-18BFEC4F4845}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AMBRoom" ID="{B10D85C3-2C52-43A3-878C-9CB610508D0A}">
+					<ChildrenList>
+						<Action Name="" ID="{CEBB73C1-9066-4D14-A944-21730030E671}" ShortID="743049288">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMBRoom" ID="{440CD6F0-1ACC-42F5-8183-20F5CC36E4C8}" WorkUnitID="{EAAC26E8-559A-4A0D-B30B-18BFEC4F4845}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

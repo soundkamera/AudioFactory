@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{A4B0D43F-D71F-44F9-9250-D9712B6D1812}">
+		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{6C767F11-3736-8DF5-BC01-C5BFE1F05F45}">
 			<ObjectPath>Play_Gameplay_Music_Switch</ObjectPath>
 			<ShortName>Play_Gameplay_Music_Switch</ShortName>
 			<Path>Event/Play_Gameplay_Music_Switch.bnk</Path>
@@ -21,20 +21,15 @@
 					<Path>Media/46960146.wem</Path>
 					<CachePath>SFX/state_04/state_04_cineperc1_90BPM_4-4_P1M_FBC78EF0.wem</CachePath>
 				</File>
-				<File Id="82277003" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>state_03\state_03_cineperc1_90BPM_4-4_P2M.wav</ShortName>
-					<Path>Media/82277003.wem</Path>
-					<CachePath>SFX/state_03/state_03_cineperc1_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
+				<File Id="67317244" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Riser.wav</ShortName>
+					<Path>Media/67317244.wem</Path>
+					<CachePath>SFX/Riser_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="83335911" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>output loops_02.wav</ShortName>
 					<Path>Media/83335911.wem</Path>
 					<CachePath>SFX/output loops_02_FBC78EF0.wem</CachePath>
-				</File>
-				<File Id="217652010" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>state_03\state_03_synth high_90BPM_4-4_P2M.wav</ShortName>
-					<Path>Media/217652010.wem</Path>
-					<CachePath>SFX/state_03/state_03_synth high_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="261637511" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>WaterphoneRH_08.wav</ShortName>
@@ -71,11 +66,6 @@
 					<Path>Media/539139091.wem</Path>
 					<CachePath>SFX/state_04/state_04_synthlow_90BPM_4-4_P1M_FBC78EF0.wem</CachePath>
 				</File>
-				<File Id="549508724" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>state_03\state_03_synth low_90BPM_4-4_P2M.wav</ShortName>
-					<Path>Media/549508724.wem</Path>
-					<CachePath>SFX/state_03/state_03_synth low_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
-				</File>
 				<File Id="552141323" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>output one shot_01.wav</ShortName>
 					<Path>Media/552141323.wem</Path>
@@ -91,20 +81,10 @@
 					<Path>Media/666834122.wem</Path>
 					<CachePath>SFX/state_04/state_04_brassmid_90BPM_4-4_P1M_FBC78EF0.wem</CachePath>
 				</File>
-				<File Id="718743451" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>state_03\state_03_brassmid_90BPM_4-4_P2M.wav</ShortName>
-					<Path>Media/718743451.wem</Path>
-					<CachePath>SFX/state_03/state_03_brassmid_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
-				</File>
 				<File Id="781923683" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>state_01\state_01_synthhmidhigh_90BPM_4-4_P2M.wav</ShortName>
 					<Path>Media/781923683.wem</Path>
 					<CachePath>SFX/state_01/state_01_synthhmidhigh_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
-				</File>
-				<File Id="829996447" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>state_03\state_03_stringsmid_90BPM_4-4_P2M.wav</ShortName>
-					<Path>Media/829996447.wem</Path>
-					<CachePath>SFX/state_03/state_03_stringsmid_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="882418969" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>state_04\state_04_cineperc3_90BPM_4-4_P0M.wav</ShortName>
@@ -128,7 +108,12 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3847527849" Name="Play_Gameplay_Music_Switch" ObjectPath="\Events\Default Work Unit\Play_Gameplay_Music_Switch" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" DurationType="Infinite">
+				<Event Id="3847527849" Name="Play_Gameplay_Music_Switch" ObjectPath="\Events\MUS_Events\Play_Gameplay_Music_Switch" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="67317244"/>
+						<MediaRef Id="261637511"/>
+						<MediaRef Id="1063273330"/>
+					</MediaRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091078" GUID="{0DBAFC0E-E0DC-447B-A08D-06FB3CF21BCD}"/>
@@ -153,16 +138,6 @@
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091076" GUID="{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"/>
-							<MediaRefs>
-								<MediaRef Id="82277003"/>
-								<MediaRef Id="217652010"/>
-								<MediaRef Id="549508724"/>
-								<MediaRef Id="718743451"/>
-								<MediaRef Id="829996447"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091075" GUID="{040860ED-C33B-4E10-A365-5819C4C844A4}"/>
 							<MediaRefs>
 								<MediaRef Id="27279813"/>
 								<MediaRef Id="46960146"/>
@@ -195,5 +170,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{142F8379-79E4-EF0F-4550-0C1A8B583234}</FileHash>
+	<FileHash>{94B512E2-05D2-9B97-068B-5E2B56EF04B0}</FileHash>
 </SoundBanksInfo>

@@ -122,6 +122,76 @@
     ]
    },
    {
+    "Id": "2450565445",
+    "Type": "Event",
+    "GUID": "{A6035210-A3D2-4F78-BD66-6004D4DBCE2A}",
+    "Language": "SFX",
+    "Hash": "{A6AF64A0-C777-D1FA-1066-23411D0EAD38}",
+    "ObjectPath": "Play_AMBInd",
+    "ShortName": "Play_AMBInd",
+    "Path": "Event/Play_AMBInd.bnk",
+    "Media": [
+     {
+      "Id": "501126589",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ambience _factory_INT_loop_01.wav",
+      "Path": "Media/501126589.wem",
+      "CachePath": "SFX/Ambience _factory_INT_loop_01_FBC78EF0.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2450565445",
+      "Name": "Play_AMBInd",
+      "ObjectPath": "\\Events\\AMB_Events\\Play_AMBInd",
+      "GUID": "{A6035210-A3D2-4F78-BD66-6004D4DBCE2A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "501126589"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "2937460503",
+    "Type": "Event",
+    "GUID": "{B10D85C3-2C52-43A3-878C-9CB610508D0A}",
+    "Language": "SFX",
+    "Hash": "{C328417C-E8FF-5C73-08D9-9A43DC65C325}",
+    "ObjectPath": "Play_AMBRoom",
+    "ShortName": "Play_AMBRoom",
+    "Path": "Event/Play_AMBRoom.bnk",
+    "Media": [
+     {
+      "Id": "888978017",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ambience_room_tone_large_room_loop_.wav",
+      "Path": "Media/888978017.wem",
+      "CachePath": "SFX/Ambience_room_tone_large_room_loop__FBC78EF0.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2937460503",
+      "Name": "Play_AMBRoom",
+      "ObjectPath": "\\Events\\AMB_Events\\Play_AMBRoom",
+      "GUID": "{B10D85C3-2C52-43A3-878C-9CB610508D0A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "888978017"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "3161908922",
     "Type": "User",
     "GUID": "{CD5F07E0-1889-4E74-A575-602DBECFE0AA}",
@@ -136,7 +206,7 @@
     "Type": "Event",
     "GUID": "{A314E895-1A61-420E-8376-B4C295EACB0E}",
     "Language": "SFX",
-    "Hash": "{A4B0D43F-D71F-44F9-9250-D9712B6D1812}",
+    "Hash": "{6C767F11-3736-8DF5-BC01-C5BFE1F05F45}",
     "ObjectPath": "Play_Gameplay_Music_Switch",
     "ShortName": "Play_Gameplay_Music_Switch",
     "Path": "Event/Play_Gameplay_Music_Switch.bnk",
@@ -169,13 +239,13 @@
       "CachePath": "SFX/state_04/state_04_cineperc1_90BPM_4-4_P1M_FBC78EF0.wem"
      },
      {
-      "Id": "82277003",
+      "Id": "67317244",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "state_03\\state_03_cineperc1_90BPM_4-4_P2M.wav",
-      "Path": "Media/82277003.wem",
-      "CachePath": "SFX/state_03/state_03_cineperc1_90BPM_4-4_P2M_FBC78EF0.wem"
+      "ShortName": "Riser.wav",
+      "Path": "Media/67317244.wem",
+      "CachePath": "SFX/Riser_FBC78EF0.wem"
      },
      {
       "Id": "83335911",
@@ -185,15 +255,6 @@
       "ShortName": "output loops_02.wav",
       "Path": "Media/83335911.wem",
       "CachePath": "SFX/output loops_02_FBC78EF0.wem"
-     },
-     {
-      "Id": "217652010",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_03\\state_03_synth high_90BPM_4-4_P2M.wav",
-      "Path": "Media/217652010.wem",
-      "CachePath": "SFX/state_03/state_03_synth high_90BPM_4-4_P2M_FBC78EF0.wem"
      },
      {
       "Id": "261637511",
@@ -259,15 +320,6 @@
       "CachePath": "SFX/state_04/state_04_synthlow_90BPM_4-4_P1M_FBC78EF0.wem"
      },
      {
-      "Id": "549508724",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_03\\state_03_synth low_90BPM_4-4_P2M.wav",
-      "Path": "Media/549508724.wem",
-      "CachePath": "SFX/state_03/state_03_synth low_90BPM_4-4_P2M_FBC78EF0.wem"
-     },
-     {
       "Id": "552141323",
       "Language": "SFX",
       "Streaming": "false",
@@ -295,15 +347,6 @@
       "CachePath": "SFX/state_04/state_04_brassmid_90BPM_4-4_P1M_FBC78EF0.wem"
      },
      {
-      "Id": "718743451",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_03\\state_03_brassmid_90BPM_4-4_P2M.wav",
-      "Path": "Media/718743451.wem",
-      "CachePath": "SFX/state_03/state_03_brassmid_90BPM_4-4_P2M_FBC78EF0.wem"
-     },
-     {
       "Id": "781923683",
       "Language": "SFX",
       "Streaming": "false",
@@ -311,15 +354,6 @@
       "ShortName": "state_01\\state_01_synthhmidhigh_90BPM_4-4_P2M.wav",
       "Path": "Media/781923683.wem",
       "CachePath": "SFX/state_01/state_01_synthhmidhigh_90BPM_4-4_P2M_FBC78EF0.wem"
-     },
-     {
-      "Id": "829996447",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_03\\state_03_stringsmid_90BPM_4-4_P2M.wav",
-      "Path": "Media/829996447.wem",
-      "CachePath": "SFX/state_03/state_03_stringsmid_90BPM_4-4_P2M_FBC78EF0.wem"
      },
      {
       "Id": "882418969",
@@ -362,9 +396,20 @@
      {
       "Id": "3847527849",
       "Name": "Play_Gameplay_Music_Switch",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Gameplay_Music_Switch",
+      "ObjectPath": "\\Events\\MUS_Events\\Play_Gameplay_Music_Switch",
       "GUID": "{A314E895-1A61-420E-8376-B4C295EACB0E}",
       "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "67317244"
+       },
+       {
+        "Id": "261637511"
+       },
+       {
+        "Id": "1063273330"
+       }
+      ],
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -425,31 +470,6 @@
          "GroupId": "4167483016",
          "Id": "3794091076",
          "GUID": "{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "82277003"
-         },
-         {
-          "Id": "217652010"
-         },
-         {
-          "Id": "549508724"
-         },
-         {
-          "Id": "718743451"
-         },
-         {
-          "Id": "829996447"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "4167483016",
-         "Id": "3794091075",
-         "GUID": "{040860ED-C33B-4E10-A365-5819C4C844A4}"
         },
         "MediaRefs": [
          {
@@ -555,7 +575,7 @@
      {
       "Id": "3908403276",
       "Name": "PlayStinger_02",
-      "ObjectPath": "\\Events\\Default Work Unit\\PlayStinger_02",
+      "ObjectPath": "\\Events\\MUS_Events\\PlayStinger_02",
       "GUID": "{CFCCCBBD-8D5C-45D2-9DF6-DA30EFD5ACB2}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
@@ -593,7 +613,7 @@
      {
       "Id": "3908403277",
       "Name": "PlayStinger_03",
-      "ObjectPath": "\\Events\\Default Work Unit\\PlayStinger_03",
+      "ObjectPath": "\\Events\\MUS_Events\\PlayStinger_03",
       "GUID": "{6A521B7D-233A-4145-947F-9DDEC2A25998}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
@@ -631,7 +651,7 @@
      {
       "Id": "3908403279",
       "Name": "PlayStinger_01",
-      "ObjectPath": "\\Events\\Default Work Unit\\PlayStinger_01",
+      "ObjectPath": "\\Events\\MUS_Events\\PlayStinger_01",
       "GUID": "{860D8A76-E397-4E8C-9A85-F22A04A9DC2F}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
@@ -657,6 +677,6 @@
     ]
    }
   ],
-  "FileHash": "{6D5FF55D-69F9-1DA7-10CD-0902FA427D6B}"
+  "FileHash": "{93D62308-FDC8-3B22-56EA-F30A24058E83}"
  }
 }
