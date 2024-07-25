@@ -1,6 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{41438E12-06F6-4831-816D-4BD85E54F0FD}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{41438E12-06F6-4831-816D-4BD85E54F0FD}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{41438E12-06F6-4831-816D-4BD85E54F0FD}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="EXPLOSIONS" ID="{428D3E7D-752B-46B2-A230-0A13027760D7}" PersistMode="Reference"/>
+				<Folder Name="Crash Brick" ID="{34F52A39-B006-4B2A-A72F-172387204E0A}" ShortID="287288966">
+					<ChildrenList>
+						<Sound Name="Crash Brick Building 01" ID="{13DB0E39-9563-48CF-B41B-E6B0C2821522}" ShortID="754496646">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Crash Brick Building 01" ID="{F40F54CE-098B-4104-A9F9-F569AFD2CDC4}">
+									<Language>SFX</Language>
+									<AudioFile>Crash Brick\Crash Brick Building 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="83642625"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Crash Brick Building 01" ID="{F40F54CE-098B-4104-A9F9-F569AFD2CDC4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Crash Brick On Pavement 01" ID="{6380ED9E-5342-4C4A-A21E-56225206726A}" ShortID="807661674">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Crash Brick On Pavement 01" ID="{DE27771B-A4A9-4576-BF7C-FE23DCB9DEA5}">
+									<Language>SFX</Language>
+									<AudioFile>Crash Brick\Crash Brick On Pavement 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="689900754"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Crash Brick On Pavement 01" ID="{DE27771B-A4A9-4576-BF7C-FE23DCB9DEA5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Crash Brick Tumble Down 01" ID="{DFC267FC-1C24-43E3-AF37-5AE13A2EF3B5}" ShortID="1018929981">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Crash Brick Tumble Down 01" ID="{C39A6AF6-2044-4CD1-9814-9A6F32214D6D}">
+									<Language>SFX</Language>
+									<AudioFile>Crash Brick\Crash Brick Tumble Down 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="787991992"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Crash Brick Tumble Down 01" ID="{C39A6AF6-2044-4CD1-9814-9A6F32214D6D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Impact Brick Falling Down 01" ID="{2B7FD0F9-5839-41D4-B15D-DC2ECC1BB0DF}" ShortID="10661453">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Impact Brick Falling Down 01" ID="{797E5D2D-11FA-41FE-828A-607F0EC04997}">
+									<Language>SFX</Language>
+									<AudioFile>Crash Brick\Impact Brick Falling Down 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="419637616"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Impact Brick Falling Down 01" ID="{797E5D2D-11FA-41FE-828A-607F0EC04997}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Impact Brick Falling Down Long 01" ID="{8C18DB9E-42DA-4874-8DFE-03E86F24C31C}" ShortID="803188393">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Impact Brick Falling Down Long 01" ID="{353640FC-E553-420F-9B3E-6455F3C9B8B5}">
+									<Language>SFX</Language>
+									<AudioFile>Crash Brick\Impact Brick Falling Down Long 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="106112174"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Impact Brick Falling Down Long 01" ID="{353640FC-E553-420F-9B3E-6455F3C9B8B5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{92AD68E0-0871-5B84-7B6B-3B3C8234740E}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{0E23954A-F11D-E96A-15FD-BC6E99CDB194}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -24,6 +24,7 @@
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="1636224025" Name="Shot_Distance" ObjectPath="\Game Parameters\Default Work Unit\Shot_Distance" GUID="{48160BC4-20A9-4C86-B2D5-02A3F723FC54}"/>
+				<GameParameter Id="1951144523" Name="Collision_Velocity" ObjectPath="\Game Parameters\Default Work Unit\Collision_Velocity" GUID="{ECF948CA-46F0-4083-BD8F-B441FFCDF166}"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="4167483016" Name="MUS_State_Group" ObjectPath="\States\Default Work Unit\MUS_State_Group" GUID="{4EBBCF84-E163-41A0-A663-F0BC2A860410}">
@@ -63,6 +64,28 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+		</SoundBank>
+		<SoundBank Id="2764105556" Type="Event" GUID="{B6B5AABC-C803-4E1E-A350-FFB447C3413C}" Language="SFX" Hash="{55FA138F-D717-B65B-F65C-C80EBD2978D1}">
+			<ObjectPath>Play_Impact</ObjectPath>
+			<ShortName>Play_Impact</ShortName>
+			<Path>Event/Play_Impact.bnk</Path>
+			<Media>
+				<File Id="719100591" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Crash Brick\Crash Brick Building 01.wav</ShortName>
+					<Path>Media/719100591.wem</Path>
+					<CachePath>SFX/Crash Brick/Crash Brick Building 01_707552D8.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2764105556" Name="Play_Impact" ObjectPath="\Events\SFX_Events\Play_Impact" GUID="{B6B5AABC-C803-4E1E-A350-FFB447C3413C}" DurationType="OneShot" DurationMin="0.40763098" DurationMax="0.40763098">
+					<MediaRefs>
+						<MediaRef Id="719100591"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="1951144523" Name="Collision_Velocity" ObjectPath="\Game Parameters\Default Work Unit\Collision_Velocity" GUID="{ECF948CA-46F0-4083-BD8F-B441FFCDF166}"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="2937460503" Type="Event" GUID="{B10D85C3-2C52-43A3-878C-9CB610508D0A}" Language="SFX" Hash="{C328417C-E8FF-5C73-08D9-9A43DC65C325}">
 			<ObjectPath>Play_AMBRoom</ObjectPath>
@@ -302,5 +325,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{64A5A00C-2440-AB70-F24F-0CA9AAEBF152}</FileHash>
+	<FileHash>{C72F7854-887B-469F-C359-E983A31C650E}</FileHash>
 </SoundBanksInfo>

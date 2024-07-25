@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B4A90745-95F2-47C5-A212-4F6A260D8029}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="FOLEY_01" ID="{B4A90745-95F2-47C5-A212-4F6A260D8029}" PersistMode="Standalone"/>
+		<WorkUnit Name="FOLEY_01" ID="{B4A90745-95F2-47C5-A212-4F6A260D8029}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="OBJECTS" ID="{DFDFD3F5-0F98-49D4-A88E-09AED226B6BE}" PersistMode="Reference"/>
+				<WorkUnit Name="FOOTSTEPS" ID="{4BCF24F2-DE00-4E9D-850E-56F88B915A9E}" PersistMode="Reference"/>
+				<WorkUnit Name="MOVEMENT" ID="{DE74E53D-DD0B-4466-8F7B-A0807E1E00E9}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

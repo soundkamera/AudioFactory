@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}" SchemaVersion="119" RootDocumentID="{4563B9EC-BC67-4C29-960B-4D642EDC73C7}" ParentDocumentID="{4563B9EC-BC67-4C29-960B-4D642EDC73C7}">
 	<AudioObjects>
-		<WorkUnit Name="BULLETS" ID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}" PersistMode="Standalone"/>
+		<WorkUnit Name="BULLETS" ID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}" OwnerID="{4563B9EC-BC67-4C29-960B-4D642EDC73C7}" PersistMode="Nested">
+			<ChildrenList>
+				<WorkUnit Name="BLLBy" ID="{883D5EE9-D4C7-491D-A4F2-B1A1CB08FD0F}" PersistMode="Reference"/>
+				<WorkUnit Name="BLLImpt" ID="{9690288C-B9E7-4561-BBEA-50BA655AE713}" PersistMode="Reference"/>
+				<WorkUnit Name="BLLRico" ID="{5A5ED019-E2CD-49AE-9D04-A202888A589C}" PersistMode="Reference"/>
+				<WorkUnit Name="BLLShel" ID="{F3B993C2-1D34-4245-ABA6-C8033A38C149}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

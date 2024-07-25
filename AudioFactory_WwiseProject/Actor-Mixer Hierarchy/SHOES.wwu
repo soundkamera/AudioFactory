@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B6E4E5E2-CC6F-4D7C-8F96-49336C901ABB}" SchemaVersion="119" RootDocumentID="{B4A90745-95F2-47C5-A212-4F6A260D8029}" ParentDocumentID="{4BCF24F2-DE00-4E9D-850E-56F88B915A9E}">
+	<AudioObjects>
+		<WorkUnit Name="SHOES" ID="{B6E4E5E2-CC6F-4D7C-8F96-49336C901ABB}" OwnerID="{4BCF24F2-DE00-4E9D-850E-56F88B915A9E}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="CONCRETE" ID="{163F1E23-E571-42ED-9C86-8E24E7A42627}" ShortID="1043698338">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="METAL" ID="{F782B3ED-DDB4-4510-9862-56CA85FBCD28}" ShortID="393546973">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

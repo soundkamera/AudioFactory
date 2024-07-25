@@ -1,0 +1,56 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "2764105556",
+    "Type": "Event",
+    "GUID": "{B6B5AABC-C803-4E1E-A350-FFB447C3413C}",
+    "Language": "SFX",
+    "Hash": "{55FA138F-D717-B65B-F65C-C80EBD2978D1}",
+    "ObjectPath": "Play_Impact",
+    "ShortName": "Play_Impact",
+    "Path": "Event/Play_Impact.bnk",
+    "Media": [
+     {
+      "Id": "719100591",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Crash Brick\\Crash Brick Building 01.wav",
+      "Path": "Media/719100591.wem",
+      "CachePath": "SFX/Crash Brick/Crash Brick Building 01_707552D8.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2764105556",
+      "Name": "Play_Impact",
+      "ObjectPath": "\\Events\\SFX_Events\\Play_Impact",
+      "GUID": "{B6B5AABC-C803-4E1E-A350-FFB447C3413C}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.40763098",
+      "DurationMax": "0.40763098",
+      "MediaRefs": [
+       {
+        "Id": "719100591"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1951144523",
+      "Name": "Collision_Velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Collision_Velocity",
+      "GUID": "{ECF948CA-46F0-4083-BD8F-B441FFCDF166}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C8E26DDC-0977-9E5F-2E4E-8D1A6CC76DB4}"
+ }
+}

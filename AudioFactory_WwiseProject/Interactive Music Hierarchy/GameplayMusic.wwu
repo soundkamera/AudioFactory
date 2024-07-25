@@ -160,7 +160,7 @@
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Segment">
-															<ObjectRef Name="state_01" ID="{2D288712-27F1-4DC9-A41D-ACB6827E8A8D}" WorkUnitID="{8AB7D293-EFE0-4D68-8EE6-739E9A2896E0}"/>
+															<ObjectRef Name="explore" ID="{2D288712-27F1-4DC9-A41D-ACB6827E8A8D}" WorkUnitID="{8AB7D293-EFE0-4D68-8EE6-739E9A2896E0}"/>
 														</Reference>
 													</ReferenceList>
 												</MusicPlaylistItem>
@@ -188,7 +188,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicSegment Name="state_01" ID="{2D288712-27F1-4DC9-A41D-ACB6827E8A8D}" ShortID="492463326">
+								<MusicSegment Name="explore" ID="{2D288712-27F1-4DC9-A41D-ACB6827E8A8D}" ShortID="492463326">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="184000"/>
 										<Property Name="Volume" Type="Real64">
@@ -806,7 +806,7 @@
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Segment">
-															<ObjectRef Name="state_02" ID="{7420B505-5C14-46FC-8294-51F730B314F7}" WorkUnitID="{8AB7D293-EFE0-4D68-8EE6-739E9A2896E0}"/>
+															<ObjectRef Name="stealth" ID="{7420B505-5C14-46FC-8294-51F730B314F7}" WorkUnitID="{8AB7D293-EFE0-4D68-8EE6-739E9A2896E0}"/>
 														</Reference>
 													</ReferenceList>
 												</MusicPlaylistItem>
@@ -834,7 +834,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicSegment Name="state_02" ID="{7420B505-5C14-46FC-8294-51F730B314F7}" ShortID="751823406">
+								<MusicSegment Name="stealth" ID="{7420B505-5C14-46FC-8294-51F730B314F7}" ShortID="751823406">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="208000"/>
 										<Property Name="Tempo" Type="Real64" Value="90"/>
@@ -1310,7 +1310,7 @@
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Segment">
-															<ObjectRef Name="state_03" ID="{8DD20C62-2B1F-4C71-A214-89D19C79F687}" WorkUnitID="{8AB7D293-EFE0-4D68-8EE6-739E9A2896E0}"/>
+															<ObjectRef Name="engage" ID="{8DD20C62-2B1F-4C71-A214-89D19C79F687}" WorkUnitID="{8AB7D293-EFE0-4D68-8EE6-739E9A2896E0}"/>
 														</Reference>
 													</ReferenceList>
 												</MusicPlaylistItem>
@@ -1335,7 +1335,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicSegment Name="state_03" ID="{8DD20C62-2B1F-4C71-A214-89D19C79F687}" ShortID="825131615">
+								<MusicSegment Name="engage" ID="{8DD20C62-2B1F-4C71-A214-89D19C79F687}" ShortID="825131615">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="68666.6666666667"/>
 										<Property Name="Volume" Type="Real64">
@@ -2359,7 +2359,7 @@
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Segment">
-															<ObjectRef Name="state_04" ID="{3913A8E3-1F81-4DDB-827F-28D9D5909297}" WorkUnitID="{8AB7D293-EFE0-4D68-8EE6-739E9A2896E0}"/>
+															<ObjectRef Name="lose" ID="{3913A8E3-1F81-4DDB-827F-28D9D5909297}" WorkUnitID="{8AB7D293-EFE0-4D68-8EE6-739E9A2896E0}"/>
 														</Reference>
 													</ReferenceList>
 												</MusicPlaylistItem>
@@ -2384,7 +2384,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicSegment Name="state_04" ID="{3913A8E3-1F81-4DDB-827F-28D9D5909297}" ShortID="360882284">
+								<MusicSegment Name="lose" ID="{3913A8E3-1F81-4DDB-827F-28D9D5909297}" ShortID="360882284">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="74666.6666666667"/>
 										<Property Name="Volume" Type="Real64">
@@ -2418,6 +2418,67 @@
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
 															<Property Name="TimeMs" Type="Real64" Value="45333.3333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="state_05" ID="{B2415C63-96DB-4934-8053-93FDE2CF0394}" ShortID="905016434">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{E8B98B50-C52A-435D-89E7-A20388E8475B}" ShortID="493312337"/>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{638E7AB0-B14F-4BFD-A70B-1E846A4B086B}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{DB96A632-924E-4A87-AB39-F1C2CE6BAAB9}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="win" ID="{2B95BD41-DDBC-4A29-BD3A-F305A4980BF4}" ShortID="842229396">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{B947521F-B0BE-4C47-BB64-202467BEA9AC}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{C0E9D0A5-2029-4F07-8FF2-64658008F50C}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="1000"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>
