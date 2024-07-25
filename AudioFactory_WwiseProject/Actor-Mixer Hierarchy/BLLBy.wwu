@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{883D5EE9-D4C7-491D-A4F2-B1A1CB08FD0F}" SchemaVersion="119" RootDocumentID="{4563B9EC-BC67-4C29-960B-4D642EDC73C7}" ParentDocumentID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}">
+	<AudioObjects>
+		<WorkUnit Name="BLLBy" ID="{883D5EE9-D4C7-491D-A4F2-B1A1CB08FD0F}" OwnerID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}" PersistMode="Nested"/>
+	</AudioObjects>
+</WwiseDocument>

@@ -6,7 +6,7 @@
 			<ShortName>PlayStinger_02</ShortName>
 			<Path>Event/PlayStinger_02.bnk</Path>
 			<Events>
-				<Event Id="3908403276" Name="PlayStinger_02" ObjectPath="\Events\Default Work Unit\PlayStinger_02" GUID="{CFCCCBBD-8D5C-45D2-9DF6-DA30EFD5ACB2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="3908403276" Name="PlayStinger_02" ObjectPath="\Events\MUS_Events\PlayStinger_02" GUID="{CFCCCBBD-8D5C-45D2-9DF6-DA30EFD5ACB2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionTrigger>
 						<ActionTriggerEntry Id="351475378" Name="stinger_02" ObjectPath="\Triggers\Default Work Unit\Music\stinger_02" GUID="{074F1A17-082F-45D8-B7D8-EC5D62078257}"/>
 					</ActionTrigger>
@@ -17,5 +17,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F131AED0-3802-8C3C-D5B9-0F8731483565}</FileHash>
+	<FileHash>{47E0B642-6D0B-C396-A7C4-B50785C24690}</FileHash>
 </SoundBanksInfo>

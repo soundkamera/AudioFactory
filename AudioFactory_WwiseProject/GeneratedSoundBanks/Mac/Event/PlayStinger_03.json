@@ -18,7 +18,7 @@
      {
       "Id": "3908403277",
       "Name": "PlayStinger_03",
-      "ObjectPath": "\\Events\\Default Work Unit\\PlayStinger_03",
+      "ObjectPath": "\\Events\\MUS_Events\\PlayStinger_03",
       "GUID": "{6A521B7D-233A-4145-947F-9DDEC2A25998}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{9E3BF3EE-5301-9E83-7CF8-EA048529F14C}"
+  "FileHash": "{B8829DAA-2A3A-4CC1-0702-45B1F3E65C81}"
  }
 }

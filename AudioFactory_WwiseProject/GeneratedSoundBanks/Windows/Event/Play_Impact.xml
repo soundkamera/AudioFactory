@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="2764105556" Type="Event" GUID="{B6B5AABC-C803-4E1E-A350-FFB447C3413C}" Language="SFX" Hash="{55FA138F-D717-B65B-F65C-C80EBD2978D1}">
+			<ObjectPath>Play_Impact</ObjectPath>
+			<ShortName>Play_Impact</ShortName>
+			<Path>Event/Play_Impact.bnk</Path>
+			<Media>
+				<File Id="719100591" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Crash Brick\Crash Brick Building 01.wav</ShortName>
+					<Path>Media/719100591.wem</Path>
+					<CachePath>SFX/Crash Brick/Crash Brick Building 01_707552D8.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2764105556" Name="Play_Impact" ObjectPath="\Events\SFX_Events\Play_Impact" GUID="{B6B5AABC-C803-4E1E-A350-FFB447C3413C}" DurationType="OneShot" DurationMin="0.40763098" DurationMax="0.40763098">
+					<MediaRefs>
+						<MediaRef Id="719100591"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="1951144523" Name="Collision_Velocity" ObjectPath="\Game Parameters\Default Work Unit\Collision_Velocity" GUID="{ECF948CA-46F0-4083-BD8F-B441FFCDF166}"/>
+			</GameParameters>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{12B90972-D270-4AE7-F961-CC5EDBD1C084}</FileHash>
+</SoundBanksInfo>

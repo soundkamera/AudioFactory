@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2764105556	Play_Impact			\SFX_Events\Play_Impact	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1951144523	Collision_Velocity			\Default Work Unit\Collision_Velocity	
+

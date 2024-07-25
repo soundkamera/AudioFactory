@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D89F869D-A977-4955-AE76-51BABC8AECB8}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="SFX_Events" ID="{D89F869D-A977-4955-AE76-51BABC8AECB8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Impact" ID="{B6B5AABC-C803-4E1E-A350-FFB447C3413C}">
+					<ChildrenList>
+						<Action Name="" ID="{3326BE33-68CA-4BFC-890D-A7FEE0F7BA88}" ShortID="745507156">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crash Brick Building 01" ID="{3915647D-7AA2-4686-894A-0A74DB9438FC}" WorkUnitID="{B8C65866-BECD-43F8-B2C8-C1F6C5885C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

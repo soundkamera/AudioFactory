@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "2937460503",
+    "Type": "Event",
+    "GUID": "{B10D85C3-2C52-43A3-878C-9CB610508D0A}",
+    "Language": "SFX",
+    "Hash": "{C328417C-E8FF-5C73-08D9-9A43DC65C325}",
+    "ObjectPath": "Play_AMBRoom",
+    "ShortName": "Play_AMBRoom",
+    "Path": "Event/Play_AMBRoom.bnk",
+    "Media": [
+     {
+      "Id": "888978017",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ambience_room_tone_large_room_loop_.wav",
+      "Path": "Media/888978017.wem",
+      "CachePath": "SFX/Ambience_room_tone_large_room_loop__FBC78EF0.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2937460503",
+      "Name": "Play_AMBRoom",
+      "ObjectPath": "\\Events\\AMB_Events\\Play_AMBRoom",
+      "GUID": "{B10D85C3-2C52-43A3-878C-9CB610508D0A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "888978017"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{AFE9601C-B2C3-F3E5-7533-A1CEDF9FAFD6}"
+ }
+}

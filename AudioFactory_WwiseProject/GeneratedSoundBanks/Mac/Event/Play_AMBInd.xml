@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="2450565445" Type="Event" GUID="{A6035210-A3D2-4F78-BD66-6004D4DBCE2A}" Language="SFX" Hash="{A6AF64A0-C777-D1FA-1066-23411D0EAD38}">
+			<ObjectPath>Play_AMBInd</ObjectPath>
+			<ShortName>Play_AMBInd</ShortName>
+			<Path>Event/Play_AMBInd.bnk</Path>
+			<Media>
+				<File Id="501126589" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience _factory_INT_loop_01.wav</ShortName>
+					<Path>Media/501126589.wem</Path>
+					<CachePath>SFX/Ambience _factory_INT_loop_01_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2450565445" Name="Play_AMBInd" ObjectPath="\Events\AMB_Events\Play_AMBInd" GUID="{A6035210-A3D2-4F78-BD66-6004D4DBCE2A}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="501126589"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{5D1B0EEF-EAB0-A3F7-E013-12C88F8163C7}</FileHash>
+</SoundBanksInfo>
