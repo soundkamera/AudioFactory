@@ -4,6 +4,7 @@
 		<WorkUnit Name="Default Work Unit" ID="{093ADEA3-E96F-43B2-A9DB-0EC1003CA2BD}" PersistMode="Standalone">
 			<ChildrenList>
 				<GameParameter Name="Shot_Distance" ID="{48160BC4-20A9-4C86-B2D5-02A3F723FC54}"/>
+				<GameParameter Name="Collision_Velocity" ID="{ECF948CA-46F0-4083-BD8F-B441FFCDF166}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{83E1530E-23BC-424A-B72E-34DF2CB21645}" SchemaVersion="119" RootDocumentID="{EAAC26E8-559A-4A0D-B30B-18BFEC4F4845}" ParentDocumentID="{EAAC26E8-559A-4A0D-B30B-18BFEC4F4845}">
+	<AudioObjects>
+		<WorkUnit Name="LOOPS" ID="{83E1530E-23BC-424A-B72E-34DF2CB21645}" OwnerID="{EAAC26E8-559A-4A0D-B30B-18BFEC4F4845}" PersistMode="Nested">
+			<ChildrenList>
+				<Sound Name="AMBInd" ID="{D9751613-AE03-44A8-B998-BCBB3A87636D}" ShortID="574926409">
+					<PropertyList>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-18</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ambience _factory_INT_loop_01" ID="{9B8B77BF-5C63-43ED-B080-109140CC4321}">
+							<Language>SFX</Language>
+							<AudioFile>Ambience _factory_INT_loop_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="501126589"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ambience _factory_INT_loop_01" ID="{9B8B77BF-5C63-43ED-B080-109140CC4321}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="AMBRoom" ID="{440CD6F0-1ACC-42F5-8183-20F5CC36E4C8}" ShortID="210293215">
+					<PropertyList>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-18</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ambience_room_tone_large_room_loop_" ID="{52C6381E-5958-47BC-8552-874650A16C78}">
+							<Language>SFX</Language>
+							<AudioFile>Ambience_room_tone_large_room_loop_.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="888978017"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ambience_room_tone_large_room_loop_" ID="{52C6381E-5958-47BC-8552-874650A16C78}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -6,15 +6,15 @@
 				<SoundcasterSession Name="MusicTest" ID="{327967B8-56FF-4595-847A-1069CF560712}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="PlayStinger_01" ID="{860D8A76-E397-4E8C-9A85-F22A04A9DC2F}" WorkUnitID="{DF481478-48A8-4A03-859E-297F590A4845}"/>
+							<ObjectRef Name="PlayStinger_01" ID="{860D8A76-E397-4E8C-9A85-F22A04A9DC2F}" WorkUnitID="{BCE5A219-3D36-4F51-A221-A0B9BA5B0285}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="PlayStinger_02" ID="{CFCCCBBD-8D5C-45D2-9DF6-DA30EFD5ACB2}" WorkUnitID="{DF481478-48A8-4A03-859E-297F590A4845}"/>
+							<ObjectRef Name="PlayStinger_02" ID="{CFCCCBBD-8D5C-45D2-9DF6-DA30EFD5ACB2}" WorkUnitID="{BCE5A219-3D36-4F51-A221-A0B9BA5B0285}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="PlayStinger_03" ID="{6A521B7D-233A-4145-947F-9DDEC2A25998}" WorkUnitID="{DF481478-48A8-4A03-859E-297F590A4845}"/>
+							<ObjectRef Name="PlayStinger_03" ID="{6A521B7D-233A-4145-947F-9DDEC2A25998}" WorkUnitID="{BCE5A219-3D36-4F51-A221-A0B9BA5B0285}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>

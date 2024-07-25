@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="2937460503" Type="Event" GUID="{B10D85C3-2C52-43A3-878C-9CB610508D0A}" Language="SFX" Hash="{C328417C-E8FF-5C73-08D9-9A43DC65C325}">
+			<ObjectPath>Play_AMBRoom</ObjectPath>
+			<ShortName>Play_AMBRoom</ShortName>
+			<Path>Event/Play_AMBRoom.bnk</Path>
+			<Media>
+				<File Id="888978017" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience_room_tone_large_room_loop_.wav</ShortName>
+					<Path>Media/888978017.wem</Path>
+					<CachePath>SFX/Ambience_room_tone_large_room_loop__FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2937460503" Name="Play_AMBRoom" ObjectPath="\Events\AMB_Events\Play_AMBRoom" GUID="{B10D85C3-2C52-43A3-878C-9CB610508D0A}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="888978017"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{9671A740-91FE-15BD-6F43-14365D5045F1}</FileHash>
+</SoundBanksInfo>

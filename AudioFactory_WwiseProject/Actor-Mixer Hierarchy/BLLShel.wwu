@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F3B993C2-1D34-4245-ABA6-C8033A38C149}" SchemaVersion="119" RootDocumentID="{4563B9EC-BC67-4C29-960B-4D642EDC73C7}" ParentDocumentID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}">
+	<AudioObjects>
+		<WorkUnit Name="BLLShel" ID="{F3B993C2-1D34-4245-ABA6-C8033A38C149}" OwnerID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}" PersistMode="Nested"/>
+	</AudioObjects>
+</WwiseDocument>

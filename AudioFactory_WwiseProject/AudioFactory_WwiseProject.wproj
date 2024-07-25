@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="119" WwiseVersion="v2023.1.4" WwiseBuild="8496">
+<WwiseDocument Type="Project" SchemaVersion="119" WwiseVersion="v2023.1.5" WwiseBuild="8522">
 	<ProjectInfo>
-		<Project Name="ProjectRayv3 5.4_WwiseProject" ID="{D2F69005-B6DA-4115-BC51-BF1EB4E9BE64}">
+		<Project Name="AudioFactory_WwiseProject" ID="{D2F69005-B6DA-4115-BC51-BF1EB4E9BE64}">
 			<Platforms>
 				<Platform Name="Mac" ReferencePlatform="Mac" ID="{7F6DE81C-B047-45DE-A069-404C5470CEC8}"/>
 				<Platform Name="Windows" ReferencePlatform="Windows" ID="{D15DBC1A-6A93-4A2A-98EC-BA1AB51E51C8}"/>

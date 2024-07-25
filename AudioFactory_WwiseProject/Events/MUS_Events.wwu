@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BCE5A219-3D36-4F51-A221-A0B9BA5B0285}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="MUS_Events" ID="{BCE5A219-3D36-4F51-A221-A0B9BA5B0285}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Gameplay_Music_Switch" ID="{A314E895-1A61-420E-8376-B4C295EACB0E}">
+					<ChildrenList>
+						<Action Name="" ID="{9644560C-B257-4630-A87F-06B201E8B840}" ShortID="803642469">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gameplay Music Switch" ID="{4B5804D6-EC97-4173-9DC4-5E40C1970D81}" WorkUnitID="{8AB7D293-EFE0-4D68-8EE6-739E9A2896E0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayStinger_01" ID="{860D8A76-E397-4E8C-9A85-F22A04A9DC2F}">
+					<ChildrenList>
+						<Action Name="" ID="{DE60A93D-78AF-4009-B51F-F674DD8DC0E5}" ShortID="813900685">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="35"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="stinger_01" ID="{BD9C69F6-2E41-44A5-9E36-8FB2C10949AB}" WorkUnitID="{1E09882A-D37B-4FCC-8644-457D8B7702EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayStinger_02" ID="{CFCCCBBD-8D5C-45D2-9DF6-DA30EFD5ACB2}">
+					<ChildrenList>
+						<Action Name="" ID="{26A42ECF-74E4-46FD-8C5F-219BEF94B81E}" ShortID="199537427">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="35"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="stinger_02" ID="{074F1A17-082F-45D8-B7D8-EC5D62078257}" WorkUnitID="{1E09882A-D37B-4FCC-8644-457D8B7702EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayStinger_03" ID="{6A521B7D-233A-4145-947F-9DDEC2A25998}">
+					<ChildrenList>
+						<Action Name="" ID="{2E55ED43-7BE0-44BD-A1D5-077E326641E5}" ShortID="638709689">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="35"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="stinger_03" ID="{6E80E59E-E374-434F-A63E-A374E8E284B5}" WorkUnitID="{1E09882A-D37B-4FCC-8644-457D8B7702EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

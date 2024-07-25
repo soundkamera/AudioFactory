@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{92AD68E0-0871-5B84-7B6B-3B3C8234740E}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{0E23954A-F11D-E96A-15FD-BC6E99CDB194}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -24,6 +24,7 @@
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="1636224025" Name="Shot_Distance" ObjectPath="\Game Parameters\Default Work Unit\Shot_Distance" GUID="{48160BC4-20A9-4C86-B2D5-02A3F723FC54}"/>
+				<GameParameter Id="1951144523" Name="Collision_Velocity" ObjectPath="\Game Parameters\Default Work Unit\Collision_Velocity" GUID="{ECF948CA-46F0-4083-BD8F-B441FFCDF166}"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="4167483016" Name="MUS_State_Group" ObjectPath="\States\Default Work Unit\MUS_State_Group" GUID="{4EBBCF84-E163-41A0-A663-F0BC2A860410}">
@@ -45,12 +46,72 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
+		<SoundBank Id="2450565445" Type="Event" GUID="{A6035210-A3D2-4F78-BD66-6004D4DBCE2A}" Language="SFX" Hash="{A6AF64A0-C777-D1FA-1066-23411D0EAD38}">
+			<ObjectPath>Play_AMBInd</ObjectPath>
+			<ShortName>Play_AMBInd</ShortName>
+			<Path>Event/Play_AMBInd.bnk</Path>
+			<Media>
+				<File Id="501126589" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience _factory_INT_loop_01.wav</ShortName>
+					<Path>Media/501126589.wem</Path>
+					<CachePath>SFX/Ambience _factory_INT_loop_01_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2450565445" Name="Play_AMBInd" ObjectPath="\Events\AMB_Events\Play_AMBInd" GUID="{A6035210-A3D2-4F78-BD66-6004D4DBCE2A}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="501126589"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="2764105556" Type="Event" GUID="{B6B5AABC-C803-4E1E-A350-FFB447C3413C}" Language="SFX" Hash="{55FA138F-D717-B65B-F65C-C80EBD2978D1}">
+			<ObjectPath>Play_Impact</ObjectPath>
+			<ShortName>Play_Impact</ShortName>
+			<Path>Event/Play_Impact.bnk</Path>
+			<Media>
+				<File Id="719100591" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Crash Brick\Crash Brick Building 01.wav</ShortName>
+					<Path>Media/719100591.wem</Path>
+					<CachePath>SFX/Crash Brick/Crash Brick Building 01_707552D8.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2764105556" Name="Play_Impact" ObjectPath="\Events\SFX_Events\Play_Impact" GUID="{B6B5AABC-C803-4E1E-A350-FFB447C3413C}" DurationType="OneShot" DurationMin="0.40763098" DurationMax="0.40763098">
+					<MediaRefs>
+						<MediaRef Id="719100591"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="1951144523" Name="Collision_Velocity" ObjectPath="\Game Parameters\Default Work Unit\Collision_Velocity" GUID="{ECF948CA-46F0-4083-BD8F-B441FFCDF166}"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="2937460503" Type="Event" GUID="{B10D85C3-2C52-43A3-878C-9CB610508D0A}" Language="SFX" Hash="{C328417C-E8FF-5C73-08D9-9A43DC65C325}">
+			<ObjectPath>Play_AMBRoom</ObjectPath>
+			<ShortName>Play_AMBRoom</ShortName>
+			<Path>Event/Play_AMBRoom.bnk</Path>
+			<Media>
+				<File Id="888978017" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience_room_tone_large_room_loop_.wav</ShortName>
+					<Path>Media/888978017.wem</Path>
+					<CachePath>SFX/Ambience_room_tone_large_room_loop__FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2937460503" Name="Play_AMBRoom" ObjectPath="\Events\AMB_Events\Play_AMBRoom" GUID="{B10D85C3-2C52-43A3-878C-9CB610508D0A}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="888978017"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="3161908922" Type="User" GUID="{CD5F07E0-1889-4E74-A575-602DBECFE0AA}" Language="SFX" Hash="{3B51E889-948F-7EDA-A1E8-111109B087A1}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{A4B0D43F-D71F-44F9-9250-D9712B6D1812}">
+		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{6C767F11-3736-8DF5-BC01-C5BFE1F05F45}">
 			<ObjectPath>Play_Gameplay_Music_Switch</ObjectPath>
 			<ShortName>Play_Gameplay_Music_Switch</ShortName>
 			<Path>Event/Play_Gameplay_Music_Switch.bnk</Path>
@@ -70,20 +131,15 @@
 					<Path>Media/46960146.wem</Path>
 					<CachePath>SFX/state_04/state_04_cineperc1_90BPM_4-4_P1M_FBC78EF0.wem</CachePath>
 				</File>
-				<File Id="82277003" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>state_03\state_03_cineperc1_90BPM_4-4_P2M.wav</ShortName>
-					<Path>Media/82277003.wem</Path>
-					<CachePath>SFX/state_03/state_03_cineperc1_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
+				<File Id="67317244" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Riser.wav</ShortName>
+					<Path>Media/67317244.wem</Path>
+					<CachePath>SFX/Riser_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="83335911" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>output loops_02.wav</ShortName>
 					<Path>Media/83335911.wem</Path>
 					<CachePath>SFX/output loops_02_FBC78EF0.wem</CachePath>
-				</File>
-				<File Id="217652010" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>state_03\state_03_synth high_90BPM_4-4_P2M.wav</ShortName>
-					<Path>Media/217652010.wem</Path>
-					<CachePath>SFX/state_03/state_03_synth high_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="261637511" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>WaterphoneRH_08.wav</ShortName>
@@ -120,11 +176,6 @@
 					<Path>Media/539139091.wem</Path>
 					<CachePath>SFX/state_04/state_04_synthlow_90BPM_4-4_P1M_FBC78EF0.wem</CachePath>
 				</File>
-				<File Id="549508724" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>state_03\state_03_synth low_90BPM_4-4_P2M.wav</ShortName>
-					<Path>Media/549508724.wem</Path>
-					<CachePath>SFX/state_03/state_03_synth low_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
-				</File>
 				<File Id="552141323" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>output one shot_01.wav</ShortName>
 					<Path>Media/552141323.wem</Path>
@@ -140,20 +191,10 @@
 					<Path>Media/666834122.wem</Path>
 					<CachePath>SFX/state_04/state_04_brassmid_90BPM_4-4_P1M_FBC78EF0.wem</CachePath>
 				</File>
-				<File Id="718743451" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>state_03\state_03_brassmid_90BPM_4-4_P2M.wav</ShortName>
-					<Path>Media/718743451.wem</Path>
-					<CachePath>SFX/state_03/state_03_brassmid_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
-				</File>
 				<File Id="781923683" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>state_01\state_01_synthhmidhigh_90BPM_4-4_P2M.wav</ShortName>
 					<Path>Media/781923683.wem</Path>
 					<CachePath>SFX/state_01/state_01_synthhmidhigh_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
-				</File>
-				<File Id="829996447" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>state_03\state_03_stringsmid_90BPM_4-4_P2M.wav</ShortName>
-					<Path>Media/829996447.wem</Path>
-					<CachePath>SFX/state_03/state_03_stringsmid_90BPM_4-4_P2M_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="882418969" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>state_04\state_04_cineperc3_90BPM_4-4_P0M.wav</ShortName>
@@ -177,7 +218,12 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3847527849" Name="Play_Gameplay_Music_Switch" ObjectPath="\Events\Default Work Unit\Play_Gameplay_Music_Switch" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" DurationType="Infinite">
+				<Event Id="3847527849" Name="Play_Gameplay_Music_Switch" ObjectPath="\Events\MUS_Events\Play_Gameplay_Music_Switch" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="67317244"/>
+						<MediaRef Id="261637511"/>
+						<MediaRef Id="1063273330"/>
+					</MediaRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091078" GUID="{0DBAFC0E-E0DC-447B-A08D-06FB3CF21BCD}"/>
@@ -202,16 +248,6 @@
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091076" GUID="{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"/>
-							<MediaRefs>
-								<MediaRef Id="82277003"/>
-								<MediaRef Id="217652010"/>
-								<MediaRef Id="549508724"/>
-								<MediaRef Id="718743451"/>
-								<MediaRef Id="829996447"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091075" GUID="{040860ED-C33B-4E10-A365-5819C4C844A4}"/>
 							<MediaRefs>
 								<MediaRef Id="27279813"/>
 								<MediaRef Id="46960146"/>
@@ -248,7 +284,7 @@
 			<ShortName>PlayStinger_02</ShortName>
 			<Path>Event/PlayStinger_02.bnk</Path>
 			<Events>
-				<Event Id="3908403276" Name="PlayStinger_02" ObjectPath="\Events\Default Work Unit\PlayStinger_02" GUID="{CFCCCBBD-8D5C-45D2-9DF6-DA30EFD5ACB2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="3908403276" Name="PlayStinger_02" ObjectPath="\Events\MUS_Events\PlayStinger_02" GUID="{CFCCCBBD-8D5C-45D2-9DF6-DA30EFD5ACB2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionTrigger>
 						<ActionTriggerEntry Id="351475378" Name="stinger_02" ObjectPath="\Triggers\Default Work Unit\Music\stinger_02" GUID="{074F1A17-082F-45D8-B7D8-EC5D62078257}"/>
 					</ActionTrigger>
@@ -263,7 +299,7 @@
 			<ShortName>PlayStinger_03</ShortName>
 			<Path>Event/PlayStinger_03.bnk</Path>
 			<Events>
-				<Event Id="3908403277" Name="PlayStinger_03" ObjectPath="\Events\Default Work Unit\PlayStinger_03" GUID="{6A521B7D-233A-4145-947F-9DDEC2A25998}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="3908403277" Name="PlayStinger_03" ObjectPath="\Events\MUS_Events\PlayStinger_03" GUID="{6A521B7D-233A-4145-947F-9DDEC2A25998}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionTrigger>
 						<ActionTriggerEntry Id="351475379" Name="stinger_03" ObjectPath="\Triggers\Default Work Unit\Music\stinger_03" GUID="{6E80E59E-E374-434F-A63E-A374E8E284B5}"/>
 					</ActionTrigger>
@@ -278,7 +314,7 @@
 			<ShortName>PlayStinger_01</ShortName>
 			<Path>Event/PlayStinger_01.bnk</Path>
 			<Events>
-				<Event Id="3908403279" Name="PlayStinger_01" ObjectPath="\Events\Default Work Unit\PlayStinger_01" GUID="{860D8A76-E397-4E8C-9A85-F22A04A9DC2F}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="3908403279" Name="PlayStinger_01" ObjectPath="\Events\MUS_Events\PlayStinger_01" GUID="{860D8A76-E397-4E8C-9A85-F22A04A9DC2F}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionTrigger>
 						<ActionTriggerEntry Id="351475377" Name="stinger_01" ObjectPath="\Triggers\Default Work Unit\Music\stinger_01" GUID="{BD9C69F6-2E41-44A5-9E36-8FB2C10949AB}"/>
 					</ActionTrigger>
@@ -289,5 +325,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DD60551F-10EB-B210-6AAD-477CA7785EC2}</FileHash>
+	<FileHash>{C72F7854-887B-469F-C359-E983A31C650E}</FileHash>
 </SoundBanksInfo>
