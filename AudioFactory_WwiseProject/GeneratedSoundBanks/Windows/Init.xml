@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{4F90227C-D0A9-5AAA-D1FB-63EBA88C5762}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{97293D03-CFDC-7527-94CF-55D7B69C4921}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -15,7 +15,6 @@
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 			</Busses>
 			<GameParameters>
-				<GameParameter Id="1636224025" Name="Shot_Distance" ObjectPath="\Game Parameters\Default Work Unit\Shot_Distance" GUID="{48160BC4-20A9-4C86-B2D5-02A3F723FC54}"/>
 				<GameParameter Id="1951144523" Name="Collision_Velocity" ObjectPath="\Game Parameters\Default Work Unit\Collision_Velocity" GUID="{ECF948CA-46F0-4083-BD8F-B441FFCDF166}"/>
 			</GameParameters>
 			<StateGroups>
@@ -36,8 +35,14 @@
 						<Switch Id="1888097758" Name="MUSState_02" ObjectPath="\Switches\Default Work Unit\MUSStateSwitchGroup\MUSState_02" GUID="{19B39C09-B84E-4B34-A3EA-C219E075734C}"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="3714303081" Name="SURFACES" ObjectPath="\Switches\Default Work Unit\SURFACES" GUID="{20861631-AAF1-4577-A3C6-EC1765939672}">
+					<Switches>
+						<Switch Id="841620460" Name="CONCRETE" ObjectPath="\Switches\Default Work Unit\SURFACES\CONCRETE" GUID="{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}"/>
+						<Switch Id="2030517811" Name="METAL_PLATE" ObjectPath="\Switches\Default Work Unit\SURFACES\METAL_PLATE" GUID="{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"/>
+					</Switches>
+				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B3934847-8612-EAFB-9EBE-A7C38A9C21C3}</FileHash>
+	<FileHash>{CC0B805A-0D44-C657-AD2F-FAFDD48AE46B}</FileHash>
 </SoundBanksInfo>

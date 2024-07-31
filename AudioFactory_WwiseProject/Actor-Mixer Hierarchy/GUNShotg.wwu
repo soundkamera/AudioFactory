@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C5B4A267-4C74-4330-AE66-C5B4EF79BFA7}" SchemaVersion="119" RootDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" ParentDocumentID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}">
+	<AudioObjects>
+		<WorkUnit Name="GUNShotg" ID="{C5B4A267-4C74-4330-AE66-C5B4EF79BFA7}" OwnerID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}" PersistMode="Nested"/>
+	</AudioObjects>
+</WwiseDocument>

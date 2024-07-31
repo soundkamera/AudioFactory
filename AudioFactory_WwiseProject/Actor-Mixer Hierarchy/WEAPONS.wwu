@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{109797FA-754C-46A5-9FEA-823F94656B7E}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{109797FA-754C-46A5-9FEA-823F94656B7E}" SchemaVersion="119" RootDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" ParentDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}">
 	<AudioObjects>
-		<WorkUnit Name="WEAPONS" ID="{109797FA-754C-46A5-9FEA-823F94656B7E}" PersistMode="Standalone">
+		<WorkUnit Name="WEAPONS" ID="{109797FA-754C-46A5-9FEA-823F94656B7E}" OwnerID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" PersistMode="Nested">
 			<ChildrenList>
 				<RandomSequenceContainer Name="WEAPKnif" ID="{9D05E30A-F05C-4F69-BEF7-69FF1AE7645B}" ShortID="119486288">
 					<ReferenceList>
@@ -13,7 +13,6 @@
 						</Reference>
 					</ReferenceList>
 				</RandomSequenceContainer>
-				<WorkUnit Name="GORE" ID="{E4BC5451-C169-40BA-9D59-C7D1A559D0FD}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

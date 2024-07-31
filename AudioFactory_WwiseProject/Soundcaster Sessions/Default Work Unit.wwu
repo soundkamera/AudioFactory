@@ -18,16 +18,11 @@
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="state_02" ID="{0B605D8B-1E80-4D33-9DE3-4996BC6A1249}" WorkUnitID="{8AB7D293-EFE0-4D68-8EE6-739E9A2896E0}"/>
+							<ObjectRef Name="state_03" ID="{0B605D8B-1E80-4D33-9DE3-4996BC6A1249}" WorkUnitID="{8AB7D293-EFE0-4D68-8EE6-739E9A2896E0}"/>
 							<Position X="3" Y="0"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true">
-						<RTPCValue>
-							<GameParameterRef Name="Shot_Distance" ID="{48160BC4-20A9-4C86-B2D5-02A3F723FC54}"/>
-							<Value>30.440414507772</Value>
-						</RTPCValue>
-					</RTPCValueList>
+					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="MUSstate_01" ID="{658F886C-7AF4-4BCC-ABAD-07F0FC1FD96D}"/>

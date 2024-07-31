@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{5A5ED019-E2CD-49AE-9D04-A202888A589C}" SchemaVersion="119" RootDocumentID="{4563B9EC-BC67-4C29-960B-4D642EDC73C7}" ParentDocumentID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}">
+<WwiseDocument Type="WorkUnit" ID="{5A5ED019-E2CD-49AE-9D04-A202888A589C}" SchemaVersion="119" RootDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" ParentDocumentID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}">
 	<AudioObjects>
 		<WorkUnit Name="BLLRico" ID="{5A5ED019-E2CD-49AE-9D04-A202888A589C}" OwnerID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}" PersistMode="Nested"/>
 	</AudioObjects>

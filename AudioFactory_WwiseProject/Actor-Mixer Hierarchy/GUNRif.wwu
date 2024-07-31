@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9BC8B622-DF60-458C-8427-F3E652BEE50A}" SchemaVersion="119" RootDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" ParentDocumentID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}">
+	<AudioObjects>
+		<WorkUnit Name="GUNRif" ID="{9BC8B622-DF60-458C-8427-F3E652BEE50A}" OwnerID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}" PersistMode="Nested"/>
+	</AudioObjects>
+</WwiseDocument>

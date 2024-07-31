@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{B6B5AABC-C803-4E1E-A350-FFB447C3413C}",
     "Language": "SFX",
-    "Hash": "{55FA138F-D717-B65B-F65C-C80EBD2978D1}",
+    "Hash": "{8DBFD5A6-0284-DE31-EB69-1BBD25D27F30}",
     "ObjectPath": "Play_Impact",
     "ShortName": "Play_Impact",
     "Path": "Event/Play_Impact.bnk",
@@ -32,8 +32,8 @@
       "ObjectPath": "\\Events\\SFX_Events\\Play_Impact",
       "GUID": "{B6B5AABC-C803-4E1E-A350-FFB447C3413C}",
       "DurationType": "OneShot",
-      "DurationMin": "0.40763098",
-      "DurationMax": "0.40763098",
+      "DurationMin": "0.47368577",
+      "DurationMax": "0.5400515",
       "MediaRefs": [
        {
         "Id": "719100591"
@@ -51,6 +51,6 @@
     ]
    }
   ],
-  "FileHash": "{C8E26DDC-0977-9E5F-2E4E-8D1A6CC76DB4}"
+  "FileHash": "{CDA8134F-0E05-D5BE-6727-22543851269E}"
  }
 }

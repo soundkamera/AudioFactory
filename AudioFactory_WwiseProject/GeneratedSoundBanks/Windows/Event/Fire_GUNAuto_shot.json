@@ -1,0 +1,216 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "2736774062",
+    "Type": "Event",
+    "GUID": "{00EEB85E-BE58-488E-98EF-F0EDADA35832}",
+    "Language": "SFX",
+    "Hash": "{225F73B8-70BC-9953-5551-A677896515EA}",
+    "ObjectPath": "Fire_GUNAuto_shot",
+    "ShortName": "Fire_GUNAuto_shot",
+    "Path": "Event/Fire_GUNAuto_shot.bnk",
+    "Media": [
+     {
+      "Id": "92195484",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Body A_01.wav",
+      "Path": "Media/92195484.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Body A_01_818F3B66.wem"
+     },
+     {
+      "Id": "156331430",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Body B_01.wav",
+      "Path": "Media/156331430.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Body B_01_818F3B66.wem"
+     },
+     {
+      "Id": "198925626",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Body B_03.wav",
+      "Path": "Media/198925626.wem",
+      "CachePath": "SFX/GUNAuto_Body B_03_818F3B66.wem"
+     },
+     {
+      "Id": "353500181",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Thump_01.wav",
+      "Path": "Media/353500181.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Thump_01_818F3B66.wem"
+     },
+     {
+      "Id": "404867771",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Onset A_03.wav",
+      "Path": "Media/404867771.wem",
+      "CachePath": "SFX/GUNAuto_Onset A_03_818F3B66.wem"
+     },
+     {
+      "Id": "492026425",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Onset A_02.wav",
+      "Path": "Media/492026425.wem",
+      "CachePath": "SFX/GUNAuto_Onset A_02_818F3B66.wem"
+     },
+     {
+      "Id": "561093389",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Onset B_03.wav",
+      "Path": "Media/561093389.wem",
+      "CachePath": "SFX/GUNAuto_Onset B_03_818F3B66.wem"
+     },
+     {
+      "Id": "685473835",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Body A_03.wav",
+      "Path": "Media/685473835.wem",
+      "CachePath": "SFX/GUNAuto_Body A_03_818F3B66.wem"
+     },
+     {
+      "Id": "715100059",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Thump_03.wav",
+      "Path": "Media/715100059.wem",
+      "CachePath": "SFX/GUNAuto_Thump_03_818F3B66.wem"
+     },
+     {
+      "Id": "748742939",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Body B_02.wav",
+      "Path": "Media/748742939.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Body B_02_818F3B66.wem"
+     },
+     {
+      "Id": "819924226",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Onset B_02.wav",
+      "Path": "Media/819924226.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Onset B_02_818F3B66.wem"
+     },
+     {
+      "Id": "857070341",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Thump_02.wav",
+      "Path": "Media/857070341.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Thump_02_818F3B66.wem"
+     },
+     {
+      "Id": "883024469",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Onset A_01.wav",
+      "Path": "Media/883024469.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Onset A_01_818F3B66.wem"
+     },
+     {
+      "Id": "893348370",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Body A_02.wav",
+      "Path": "Media/893348370.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Body A_02_818F3B66.wem"
+     },
+     {
+      "Id": "931404100",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Onset B_01.wav",
+      "Path": "Media/931404100.wem",
+      "CachePath": "SFX/GUNAuto_Onset B_01_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2736774062",
+      "Name": "Fire_GUNAuto_shot",
+      "ObjectPath": "\\Events\\SFX_Events\\Fire_GUNAuto_shot",
+      "GUID": "{00EEB85E-BE58-488E-98EF-F0EDADA35832}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.0193543",
+      "DurationMax": "7.4685397",
+      "MediaRefs": [
+       {
+        "Id": "92195484"
+       },
+       {
+        "Id": "156331430"
+       },
+       {
+        "Id": "198925626"
+       },
+       {
+        "Id": "353500181"
+       },
+       {
+        "Id": "404867771"
+       },
+       {
+        "Id": "492026425"
+       },
+       {
+        "Id": "561093389"
+       },
+       {
+        "Id": "685473835"
+       },
+       {
+        "Id": "715100059"
+       },
+       {
+        "Id": "748742939"
+       },
+       {
+        "Id": "819924226"
+       },
+       {
+        "Id": "857070341"
+       },
+       {
+        "Id": "883024469"
+       },
+       {
+        "Id": "893348370"
+       },
+       {
+        "Id": "931404100"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{653B6239-128C-8D36-F758-65DB81832FC5}"
+ }
+}

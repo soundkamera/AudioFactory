@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{B8C65866-BECD-43F8-B2C8-C1F6C5885C63}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{B8C65866-BECD-43F8-B2C8-C1F6C5885C63}" SchemaVersion="119" RootDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" ParentDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}">
 	<AudioObjects>
-		<WorkUnit Name="CRASH_DEBRIS" ID="{B8C65866-BECD-43F8-B2C8-C1F6C5885C63}" PersistMode="Standalone">
+		<WorkUnit Name="CRASH_DEBRIS" ID="{B8C65866-BECD-43F8-B2C8-C1F6C5885C63}" OwnerID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" PersistMode="Nested">
 			<ChildrenList>
 				<Folder Name="Crash Brick" ID="{BEA52500-F445-4214-9DB9-FF54285D31FF}" ShortID="330272062">
 					<ChildrenList>
 						<Sound Name="Crash Brick Building 01" ID="{3915647D-7AA2-4686-894A-0A74DB9438FC}" ShortID="574097408">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-260</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D96C60DE-0754-4FC8-9814-EE555CBCCF70}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-227"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-24</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>

@@ -18,7 +18,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{4F90227C-D0A9-5AAA-D1FB-63EBA88C5762}",
+    "Hash": "{97293D03-CFDC-7527-94CF-55D7B69C4921}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -51,12 +51,6 @@
      }
     ],
     "GameParameters": [
-     {
-      "Id": "1636224025",
-      "Name": "Shot_Distance",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Shot_Distance",
-      "GUID": "{48160BC4-20A9-4C86-B2D5-02A3F723FC54}"
-     },
      {
       "Id": "1951144523",
       "Name": "Collision_Velocity",
@@ -124,6 +118,26 @@
         "GUID": "{19B39C09-B84E-4B34-A3EA-C219E075734C}"
        }
       ]
+     },
+     {
+      "Id": "3714303081",
+      "Name": "SURFACES",
+      "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES",
+      "GUID": "{20861631-AAF1-4577-A3C6-EC1765939672}",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "CONCRETE",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES\\CONCRETE",
+        "GUID": "{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}"
+       },
+       {
+        "Id": "2030517811",
+        "Name": "METAL_PLATE",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES\\METAL_PLATE",
+        "GUID": "{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"
+       }
+      ]
      }
     ]
    },
@@ -163,11 +177,216 @@
     ]
    },
    {
+    "Id": "2736774062",
+    "Type": "Event",
+    "GUID": "{00EEB85E-BE58-488E-98EF-F0EDADA35832}",
+    "Language": "SFX",
+    "Hash": "{225F73B8-70BC-9953-5551-A677896515EA}",
+    "ObjectPath": "Fire_GUNAuto_shot",
+    "ShortName": "Fire_GUNAuto_shot",
+    "Path": "Event/Fire_GUNAuto_shot.bnk",
+    "Media": [
+     {
+      "Id": "92195484",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Body A_01.wav",
+      "Path": "Media/92195484.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Body A_01_818F3B66.wem"
+     },
+     {
+      "Id": "156331430",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Body B_01.wav",
+      "Path": "Media/156331430.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Body B_01_818F3B66.wem"
+     },
+     {
+      "Id": "198925626",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Body B_03.wav",
+      "Path": "Media/198925626.wem",
+      "CachePath": "SFX/GUNAuto_Body B_03_818F3B66.wem"
+     },
+     {
+      "Id": "353500181",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Thump_01.wav",
+      "Path": "Media/353500181.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Thump_01_818F3B66.wem"
+     },
+     {
+      "Id": "404867771",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Onset A_03.wav",
+      "Path": "Media/404867771.wem",
+      "CachePath": "SFX/GUNAuto_Onset A_03_818F3B66.wem"
+     },
+     {
+      "Id": "492026425",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Onset A_02.wav",
+      "Path": "Media/492026425.wem",
+      "CachePath": "SFX/GUNAuto_Onset A_02_818F3B66.wem"
+     },
+     {
+      "Id": "561093389",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Onset B_03.wav",
+      "Path": "Media/561093389.wem",
+      "CachePath": "SFX/GUNAuto_Onset B_03_818F3B66.wem"
+     },
+     {
+      "Id": "685473835",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Body A_03.wav",
+      "Path": "Media/685473835.wem",
+      "CachePath": "SFX/GUNAuto_Body A_03_818F3B66.wem"
+     },
+     {
+      "Id": "715100059",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Thump_03.wav",
+      "Path": "Media/715100059.wem",
+      "CachePath": "SFX/GUNAuto_Thump_03_818F3B66.wem"
+     },
+     {
+      "Id": "748742939",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Body B_02.wav",
+      "Path": "Media/748742939.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Body B_02_818F3B66.wem"
+     },
+     {
+      "Id": "819924226",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Onset B_02.wav",
+      "Path": "Media/819924226.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Onset B_02_818F3B66.wem"
+     },
+     {
+      "Id": "857070341",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Thump_02.wav",
+      "Path": "Media/857070341.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Thump_02_818F3B66.wem"
+     },
+     {
+      "Id": "883024469",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Onset A_01.wav",
+      "Path": "Media/883024469.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Onset A_01_818F3B66.wem"
+     },
+     {
+      "Id": "893348370",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNAuto\\GUNAuto_Body A_02.wav",
+      "Path": "Media/893348370.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNAuto/GUNAuto_Body A_02_818F3B66.wem"
+     },
+     {
+      "Id": "931404100",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GUNAuto_Onset B_01.wav",
+      "Path": "Media/931404100.wem",
+      "CachePath": "SFX/GUNAuto_Onset B_01_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2736774062",
+      "Name": "Fire_GUNAuto_shot",
+      "ObjectPath": "\\Events\\SFX_Events\\Fire_GUNAuto_shot",
+      "GUID": "{00EEB85E-BE58-488E-98EF-F0EDADA35832}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.0193543",
+      "DurationMax": "7.4685397",
+      "MediaRefs": [
+       {
+        "Id": "92195484"
+       },
+       {
+        "Id": "156331430"
+       },
+       {
+        "Id": "198925626"
+       },
+       {
+        "Id": "353500181"
+       },
+       {
+        "Id": "404867771"
+       },
+       {
+        "Id": "492026425"
+       },
+       {
+        "Id": "561093389"
+       },
+       {
+        "Id": "685473835"
+       },
+       {
+        "Id": "715100059"
+       },
+       {
+        "Id": "748742939"
+       },
+       {
+        "Id": "819924226"
+       },
+       {
+        "Id": "857070341"
+       },
+       {
+        "Id": "883024469"
+       },
+       {
+        "Id": "893348370"
+       },
+       {
+        "Id": "931404100"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "2764105556",
     "Type": "Event",
     "GUID": "{B6B5AABC-C803-4E1E-A350-FFB447C3413C}",
     "Language": "SFX",
-    "Hash": "{55FA138F-D717-B65B-F65C-C80EBD2978D1}",
+    "Hash": "{8DBFD5A6-0284-DE31-EB69-1BBD25D27F30}",
     "ObjectPath": "Play_Impact",
     "ShortName": "Play_Impact",
     "Path": "Event/Play_Impact.bnk",
@@ -189,8 +408,8 @@
       "ObjectPath": "\\Events\\SFX_Events\\Play_Impact",
       "GUID": "{B6B5AABC-C803-4E1E-A350-FFB447C3413C}",
       "DurationType": "OneShot",
-      "DurationMin": "0.40763098",
-      "DurationMax": "0.40763098",
+      "DurationMin": "0.47368577",
+      "DurationMax": "0.5400515",
       "MediaRefs": [
        {
         "Id": "719100591"
@@ -257,20 +476,11 @@
     "Type": "Event",
     "GUID": "{A314E895-1A61-420E-8376-B4C295EACB0E}",
     "Language": "SFX",
-    "Hash": "{6C767F11-3736-8DF5-BC01-C5BFE1F05F45}",
+    "Hash": "{74CE07B2-AE5C-726A-E241-F95E4DC74317}",
     "ObjectPath": "Play_Gameplay_Music_Switch",
     "ShortName": "Play_Gameplay_Music_Switch",
     "Path": "Event/Play_Gameplay_Music_Switch.bnk",
     "Media": [
-     {
-      "Id": "27279813",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_synthhigh_90BPM_4-4_P1M.wav",
-      "Path": "Media/27279813.wem",
-      "CachePath": "SFX/state_04/state_04_synthhigh_90BPM_4-4_P1M_FBC78EF0.wem"
-     },
      {
       "Id": "44284020",
       "Language": "SFX",
@@ -279,15 +489,6 @@
       "ShortName": "state_02\\state_02_synth low_90BPM_4-4_P1M.wav",
       "Path": "Media/44284020.wem",
       "CachePath": "SFX/state_02/state_02_synth low_90BPM_4-4_P1M_FBC78EF0.wem"
-     },
-     {
-      "Id": "46960146",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_cineperc1_90BPM_4-4_P1M.wav",
-      "Path": "Media/46960146.wem",
-      "CachePath": "SFX/state_04/state_04_cineperc1_90BPM_4-4_P1M_FBC78EF0.wem"
      },
      {
       "Id": "67317244",
@@ -317,24 +518,6 @@
       "CachePath": "SFX/WaterphoneRH_08_FBC78EF0.wem"
      },
      {
-      "Id": "299329259",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_synthmidhigh_90BPM_4-4_P0M.wav",
-      "Path": "Media/299329259.wem",
-      "CachePath": "SFX/state_04/state_04_synthmidhigh_90BPM_4-4_P0M_FBC78EF0.wem"
-     },
-     {
-      "Id": "423382415",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_stringsmid_90BPM_4-4_P1M.wav",
-      "Path": "Media/423382415.wem",
-      "CachePath": "SFX/state_04/state_04_stringsmid_90BPM_4-4_P1M_FBC78EF0.wem"
-     },
-     {
       "Id": "435511949",
       "Language": "SFX",
       "Streaming": "false",
@@ -362,15 +545,6 @@
       "CachePath": "SFX/WaterphoneRH_07_FBC78EF0.wem"
      },
      {
-      "Id": "539139091",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_synthlow_90BPM_4-4_P1M.wav",
-      "Path": "Media/539139091.wem",
-      "CachePath": "SFX/state_04/state_04_synthlow_90BPM_4-4_P1M_FBC78EF0.wem"
-     },
-     {
       "Id": "552141323",
       "Language": "SFX",
       "Streaming": "false",
@@ -380,24 +554,6 @@
       "CachePath": "SFX/output one shot_01_FBC78EF0.wem"
      },
      {
-      "Id": "653379172",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_cineperc2_90BPM_4-4_P0M.wav",
-      "Path": "Media/653379172.wem",
-      "CachePath": "SFX/state_04/state_04_cineperc2_90BPM_4-4_P0M_FBC78EF0.wem"
-     },
-     {
-      "Id": "666834122",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_brassmid_90BPM_4-4_P1M.wav",
-      "Path": "Media/666834122.wem",
-      "CachePath": "SFX/state_04/state_04_brassmid_90BPM_4-4_P1M_FBC78EF0.wem"
-     },
-     {
       "Id": "781923683",
       "Language": "SFX",
       "Streaming": "false",
@@ -405,15 +561,6 @@
       "ShortName": "state_01\\state_01_synthhmidhigh_90BPM_4-4_P2M.wav",
       "Path": "Media/781923683.wem",
       "CachePath": "SFX/state_01/state_01_synthhmidhigh_90BPM_4-4_P2M_FBC78EF0.wem"
-     },
-     {
-      "Id": "882418969",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_cineperc3_90BPM_4-4_P0M.wav",
-      "Path": "Media/882418969.wem",
-      "CachePath": "SFX/state_04/state_04_cineperc3_90BPM_4-4_P0M_FBC78EF0.wem"
      },
      {
       "Id": "992966600",
@@ -514,40 +661,6 @@
           "Id": "1063273330"
          }
         ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "4167483016",
-         "Id": "3794091076",
-         "GUID": "{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "27279813"
-         },
-         {
-          "Id": "46960146"
-         },
-         {
-          "Id": "299329259"
-         },
-         {
-          "Id": "423382415"
-         },
-         {
-          "Id": "539139091"
-         },
-         {
-          "Id": "653379172"
-         },
-         {
-          "Id": "666834122"
-         },
-         {
-          "Id": "882418969"
-         }
-        ]
        }
       ]
      }
@@ -610,6 +723,242 @@
       "Name": "stinger_03",
       "ObjectPath": "\\Triggers\\Default Work Unit\\Music\\stinger_03",
       "GUID": "{6E80E59E-E374-434F-A63E-A374E8E284B5}"
+     }
+    ]
+   },
+   {
+    "Id": "3854155799",
+    "Type": "Event",
+    "GUID": "{0D63CA0F-2818-41AC-B137-FB4975992982}",
+    "Language": "SFX",
+    "Hash": "{CEF82640-3796-4FC8-D789-D0AE5BF90D07}",
+    "ObjectPath": "Play_Footsteps",
+    "ShortName": "Play_Footsteps",
+    "Path": "Event/Play_Footsteps.bnk",
+    "Media": [
+     {
+      "Id": "36263286",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-11.L.wav",
+      "Path": "Media/36263286.wem",
+      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-11.L_818F3B66.wem"
+     },
+     {
+      "Id": "334648624",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-05.L.wav",
+      "Path": "Media/334648624.wem",
+      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-05.L_818F3B66.wem"
+     },
+     {
+      "Id": "380562320",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-12.L.wav",
+      "Path": "Media/380562320.wem",
+      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-12.L_818F3B66.wem"
+     },
+     {
+      "Id": "390804890",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-03.L.wav",
+      "Path": "Media/390804890.wem",
+      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-03.L_818F3B66.wem"
+     },
+     {
+      "Id": "414059036",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-09.L.wav",
+      "Path": "Media/414059036.wem",
+      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-09.L_818F3B66.wem"
+     },
+     {
+      "Id": "415841338",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-09.L.wav",
+      "Path": "Media/415841338.wem",
+      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-09.L_818F3B66.wem"
+     },
+     {
+      "Id": "470284971",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-05.L.wav",
+      "Path": "Media/470284971.wem",
+      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-05.L_818F3B66.wem"
+     },
+     {
+      "Id": "578769596",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-12.L.wav",
+      "Path": "Media/578769596.wem",
+      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-12.L_818F3B66.wem"
+     },
+     {
+      "Id": "604968869",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-01.L.wav",
+      "Path": "Media/604968869.wem",
+      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-01.L_818F3B66.wem"
+     },
+     {
+      "Id": "626163892",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-03.L.wav",
+      "Path": "Media/626163892.wem",
+      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-03.L_818F3B66.wem"
+     },
+     {
+      "Id": "637960541",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-07.L.wav",
+      "Path": "Media/637960541.wem",
+      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-07.L_818F3B66.wem"
+     },
+     {
+      "Id": "648895736",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-07.L.wav",
+      "Path": "Media/648895736.wem",
+      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-07.L_818F3B66.wem"
+     },
+     {
+      "Id": "805079255",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-11.L.wav",
+      "Path": "Media/805079255.wem",
+      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-11.L_818F3B66.wem"
+     },
+     {
+      "Id": "883164219",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-01.L.wav",
+      "Path": "Media/883164219.wem",
+      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-01.L_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3854155799",
+      "Name": "Play_Footsteps",
+      "ObjectPath": "\\Events\\FOL_Events\\Play_Footsteps",
+      "GUID": "{0D63CA0F-2818-41AC-B137-FB4975992982}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.36475",
+      "DurationMax": "0.879875",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3714303081",
+         "Id": "2030517811",
+         "GUID": "{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "334648624"
+         },
+         {
+          "Id": "380562320"
+         },
+         {
+          "Id": "390804890"
+         },
+         {
+          "Id": "415841338"
+         },
+         {
+          "Id": "604968869"
+         },
+         {
+          "Id": "648895736"
+         },
+         {
+          "Id": "805079255"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3714303081",
+         "Id": "841620460",
+         "GUID": "{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "36263286"
+         },
+         {
+          "Id": "414059036"
+         },
+         {
+          "Id": "470284971"
+         },
+         {
+          "Id": "578769596"
+         },
+         {
+          "Id": "626163892"
+         },
+         {
+          "Id": "637960541"
+         },
+         {
+          "Id": "883164219"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3714303081",
+      "Name": "SURFACES",
+      "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES",
+      "GUID": "{20861631-AAF1-4577-A3C6-EC1765939672}",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "CONCRETE",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES\\CONCRETE",
+        "GUID": "{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}"
+       },
+       {
+        "Id": "2030517811",
+        "Name": "METAL_PLATE",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES\\METAL_PLATE",
+        "GUID": "{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"
+       }
+      ]
      }
     ]
    },
@@ -728,6 +1077,6 @@
     ]
    }
   ],
-  "FileHash": "{56A7BC64-C61D-6456-AAD0-1DF22FFE0B8F}"
+  "FileHash": "{A996B612-82B0-49F4-B3BE-8D87D13BCC7F}"
  }
 }
