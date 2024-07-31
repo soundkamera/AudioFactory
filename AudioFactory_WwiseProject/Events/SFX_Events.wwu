@@ -14,6 +14,29 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Fire_GUNAuto_shot" ID="{00EEB85E-BE58-488E-98EF-F0EDADA35832}">
+					<ChildrenList>
+						<Action Name="" ID="{5B48A810-2C6C-4137-88FA-797743A793D1}" ShortID="596684579">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GUNAuto_shot" ID="{B1AAFEB4-F093-40CD-A506-A475D093D0D8}" WorkUnitID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Fire_GUNPis_shot" ID="{2FE08369-935E-44D4-9842-2D899178E0A9}">
+					<ChildrenList>
+						<Action Name="" ID="{E4722001-CA21-4594-9A12-6010CAAD774E}" ShortID="294961314">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GUNPis" ID="{5998690D-0A91-441B-88CA-B71AC60CCC8E}" WorkUnitID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Fire_GUNAuto_burst" ID="{0C6BB6EF-1465-487A-BCD7-6F1C3540B884}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

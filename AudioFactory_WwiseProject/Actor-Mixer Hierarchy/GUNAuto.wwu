@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{21710DD8-BA5A-4758-8EDA-463DCC95BD5B}" SchemaVersion="119" RootDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" ParentDocumentID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}">
+	<AudioObjects>
+		<WorkUnit Name="GUNAuto" ID="{21710DD8-BA5A-4758-8EDA-463DCC95BD5B}" OwnerID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}" PersistMode="Nested">
+			<ChildrenList>
+				<SwitchContainer Name="GUNAuto Switch Container" ID="{2B3B453E-51A3-46E3-8E04-ED850FD9A9E9}" ShortID="300416961">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="GUNAuto_single_shot" ID="{3D96987F-2973-491A-9F05-58D5FDBA6588}" ShortID="467245699">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+						</BlendContainer>
+						<BlendContainer Name="GUNAuto_auto_shot" ID="{4CA6156F-42F0-4871-9944-7AC810B72A6F}" ShortID="766780916">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="Onset_A" ID="{763DD633-7EE4-4B8F-93D7-1C014A1E96E0}" ShortID="1005478181">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GUNAuto_Onset A_02" ID="{88194CDB-8B8F-4BD5-9CC3-FC4348E8C7EB}" ShortID="484359102">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GUNAuto_Onset A_02" ID="{B84621F7-53CC-4928-ABFF-F7DC106152C7}">
+													<Language>SFX</Language>
+													<AudioFile>Weapon Files Output\GUNAuto\GUNAuto_Onset A_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="321517054"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GUNAuto_Onset A_02" ID="{B84621F7-53CC-4928-ABFF-F7DC106152C7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GUNAuto_Onset A_03" ID="{861FC667-8004-4C28-A6F6-AFC7CDDB4674}" ShortID="105874741">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GUNAuto_Onset A_03" ID="{49E96BD8-0361-430C-811E-0DAB5E4BBB3D}">
+													<Language>SFX</Language>
+													<AudioFile>Weapon Files Output\GUNAuto\GUNAuto_Onset A_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="632841123"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GUNAuto_Onset A_03" ID="{49E96BD8-0361-430C-811E-0DAB5E4BBB3D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+								<BlendContainer Name="Thump_A" ID="{9597B95F-EE96-4441-BA00-6291F2AF5F58}" ShortID="1027518830">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GUNAuto_Thump_03" ID="{27A7A6D4-EE95-42C9-818F-25ACA666A887}" ShortID="127381546">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GUNAuto_Thump_03" ID="{5EADDF45-5163-4CF0-A8F6-9AAC23416BC2}">
+													<Language>SFX</Language>
+													<AudioFile>Weapon Files Output\GUNAuto\GUNAuto_Thump_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="25270018"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GUNAuto_Thump_03" ID="{5EADDF45-5163-4CF0-A8F6-9AAC23416BC2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+								<RandomSequenceContainer Name="GUNAuto_single_shot" ID="{56DAE598-6575-47AF-8068-BE0FCB7762A4}" ShortID="80809763">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="Body_A" ID="{21C2B9D5-8C52-4812-B646-1D04555567A6}" ShortID="933646774">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="GUNAuto_Body A_03" ID="{E0B86410-3091-4BAF-9535-FF171EC2964D}" ShortID="99649020">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GUNAuto_Body A_03" ID="{A8F72BE1-2165-435B-BBF8-4ED8F9D1D736}">
+															<Language>SFX</Language>
+															<AudioFile>Weapon Files Output\GUNAuto\GUNAuto_Body A_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="349643779"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="GUNAuto_Body A_03" ID="{A8F72BE1-2165-435B-BBF8-4ED8F9D1D736}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<BlendTrackList>
+												<BlendTrack Name="New Blend Track" ID="{6B4E77F8-206B-4AA6-A1E4-DA2C5F215A77}" ShortID="961256084"/>
+											</BlendTrackList>
+										</BlendContainer>
+										<BlendContainer Name="Body_B" ID="{F0FB8D22-8C3A-4E10-A2CB-8B8FA0403DA1}" ShortID="158407505">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="GUNAuto_Body B_01" ID="{CEA16355-CA1B-40F4-9941-EABFA7EFB815}" ShortID="1071804736">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GUNAuto_Body B_01" ID="{545CA4F3-B1DF-4BAB-9DBC-7118B4E0399C}">
+															<Language>SFX</Language>
+															<AudioFile>Weapon Files Output\GUNAuto\GUNAuto_Body B_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="156331430"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="GUNAuto_Body B_01" ID="{545CA4F3-B1DF-4BAB-9DBC-7118B4E0399C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GUNAuto_Body B_02" ID="{4C75F916-10B2-479B-9834-DDF980E04BFC}" ShortID="41711963">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GUNAuto_Body B_02" ID="{C7AD577C-BEC7-4640-BD4A-89A9FED885D0}">
+															<Language>SFX</Language>
+															<AudioFile>Weapon Files Output\GUNAuto\GUNAuto_Body B_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="748742939"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="GUNAuto_Body B_02" ID="{C7AD577C-BEC7-4640-BD4A-89A9FED885D0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GUNAuto_Body B_03" ID="{724A24F6-A9DA-4A9F-B236-E871E11D9B57}" ShortID="990153008">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GUNAuto_Body B_03" ID="{3D4293A7-0D13-4DA0-BC56-127E1AFB7F6B}">
+															<Language>SFX</Language>
+															<AudioFile>Weapon Files Output\GUNAuto\GUNAuto_Body B_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="452499215"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="GUNAuto_Body B_03" ID="{3D4293A7-0D13-4DA0-BC56-127E1AFB7F6B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="GUNAuto_dry_fire" ID="{18756B06-2415-48D5-A9BA-3BAC669936A9}" ShortID="1061022310">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+						</BlendContainer>
+						<BlendContainer Name="GUNAuto_unstable_bullet" ID="{0BE46992-F510-4B82-BB8F-4D337924D057}" ShortID="373461840">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+						</BlendContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="GUNAuto_dry_fire" ID="{18756B06-2415-48D5-A9BA-3BAC669936A9}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="GUNAuto_auto_shot" ID="{4CA6156F-42F0-4871-9944-7AC810B72A6F}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="GUNAuto_single_shot" ID="{3D96987F-2973-491A-9F05-58D5FDBA6588}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="GUNAuto_unstable_bullet" ID="{0BE46992-F510-4B82-BB8F-4D337924D057}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+					</GroupingInfo>
+				</SwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

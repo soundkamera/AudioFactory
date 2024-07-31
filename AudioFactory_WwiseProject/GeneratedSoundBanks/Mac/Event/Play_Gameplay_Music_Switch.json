@@ -10,20 +10,11 @@
     "Type": "Event",
     "GUID": "{A314E895-1A61-420E-8376-B4C295EACB0E}",
     "Language": "SFX",
-    "Hash": "{6C767F11-3736-8DF5-BC01-C5BFE1F05F45}",
+    "Hash": "{74CE07B2-AE5C-726A-E241-F95E4DC74317}",
     "ObjectPath": "Play_Gameplay_Music_Switch",
     "ShortName": "Play_Gameplay_Music_Switch",
     "Path": "Event/Play_Gameplay_Music_Switch.bnk",
     "Media": [
-     {
-      "Id": "27279813",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_synthhigh_90BPM_4-4_P1M.wav",
-      "Path": "Media/27279813.wem",
-      "CachePath": "SFX/state_04/state_04_synthhigh_90BPM_4-4_P1M_FBC78EF0.wem"
-     },
      {
       "Id": "44284020",
       "Language": "SFX",
@@ -32,15 +23,6 @@
       "ShortName": "state_02\\state_02_synth low_90BPM_4-4_P1M.wav",
       "Path": "Media/44284020.wem",
       "CachePath": "SFX/state_02/state_02_synth low_90BPM_4-4_P1M_FBC78EF0.wem"
-     },
-     {
-      "Id": "46960146",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_cineperc1_90BPM_4-4_P1M.wav",
-      "Path": "Media/46960146.wem",
-      "CachePath": "SFX/state_04/state_04_cineperc1_90BPM_4-4_P1M_FBC78EF0.wem"
      },
      {
       "Id": "67317244",
@@ -70,24 +52,6 @@
       "CachePath": "SFX/WaterphoneRH_08_FBC78EF0.wem"
      },
      {
-      "Id": "299329259",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_synthmidhigh_90BPM_4-4_P0M.wav",
-      "Path": "Media/299329259.wem",
-      "CachePath": "SFX/state_04/state_04_synthmidhigh_90BPM_4-4_P0M_FBC78EF0.wem"
-     },
-     {
-      "Id": "423382415",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_stringsmid_90BPM_4-4_P1M.wav",
-      "Path": "Media/423382415.wem",
-      "CachePath": "SFX/state_04/state_04_stringsmid_90BPM_4-4_P1M_FBC78EF0.wem"
-     },
-     {
       "Id": "435511949",
       "Language": "SFX",
       "Streaming": "false",
@@ -115,15 +79,6 @@
       "CachePath": "SFX/WaterphoneRH_07_FBC78EF0.wem"
      },
      {
-      "Id": "539139091",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_synthlow_90BPM_4-4_P1M.wav",
-      "Path": "Media/539139091.wem",
-      "CachePath": "SFX/state_04/state_04_synthlow_90BPM_4-4_P1M_FBC78EF0.wem"
-     },
-     {
       "Id": "552141323",
       "Language": "SFX",
       "Streaming": "false",
@@ -133,24 +88,6 @@
       "CachePath": "SFX/output one shot_01_FBC78EF0.wem"
      },
      {
-      "Id": "653379172",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_cineperc2_90BPM_4-4_P0M.wav",
-      "Path": "Media/653379172.wem",
-      "CachePath": "SFX/state_04/state_04_cineperc2_90BPM_4-4_P0M_FBC78EF0.wem"
-     },
-     {
-      "Id": "666834122",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_brassmid_90BPM_4-4_P1M.wav",
-      "Path": "Media/666834122.wem",
-      "CachePath": "SFX/state_04/state_04_brassmid_90BPM_4-4_P1M_FBC78EF0.wem"
-     },
-     {
       "Id": "781923683",
       "Language": "SFX",
       "Streaming": "false",
@@ -158,15 +95,6 @@
       "ShortName": "state_01\\state_01_synthhmidhigh_90BPM_4-4_P2M.wav",
       "Path": "Media/781923683.wem",
       "CachePath": "SFX/state_01/state_01_synthhmidhigh_90BPM_4-4_P2M_FBC78EF0.wem"
-     },
-     {
-      "Id": "882418969",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "state_04\\state_04_cineperc3_90BPM_4-4_P0M.wav",
-      "Path": "Media/882418969.wem",
-      "CachePath": "SFX/state_04/state_04_cineperc3_90BPM_4-4_P0M_FBC78EF0.wem"
      },
      {
       "Id": "992966600",
@@ -267,40 +195,6 @@
           "Id": "1063273330"
          }
         ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "4167483016",
-         "Id": "3794091076",
-         "GUID": "{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "27279813"
-         },
-         {
-          "Id": "46960146"
-         },
-         {
-          "Id": "299329259"
-         },
-         {
-          "Id": "423382415"
-         },
-         {
-          "Id": "539139091"
-         },
-         {
-          "Id": "653379172"
-         },
-         {
-          "Id": "666834122"
-         },
-         {
-          "Id": "882418969"
-         }
-        ]
        }
       ]
      }
@@ -367,6 +261,6 @@
     ]
    }
   ],
-  "FileHash": "{F519A790-F401-FB07-8D61-D8AF2EA83301}"
+  "FileHash": "{9B637FD9-CC8F-7100-9674-A80C5409E905}"
  }
 }

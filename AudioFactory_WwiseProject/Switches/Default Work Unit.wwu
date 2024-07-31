@@ -9,6 +9,12 @@
 						<Switch Name="MUSState_02" ID="{19B39C09-B84E-4B34-A3EA-C219E075734C}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="SURFACES" ID="{20861631-AAF1-4577-A3C6-EC1765939672}">
+					<ChildrenList>
+						<Switch Name="CONCRETE" ID="{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}"/>
+						<Switch Name="METAL_PLATE" ID="{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

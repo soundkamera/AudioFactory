@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4AB921F6-E6D9-492F-B046-6FC6A76DAC08}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="FOL_Events" ID="{4AB921F6-E6D9-492F-B046-6FC6A76DAC08}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Footsteps" ID="{0D63CA0F-2818-41AC-B137-FB4975992982}">
+					<ChildrenList>
+						<Action Name="" ID="{F8E0FBC9-8A1E-4B96-8C39-2D71B2361E48}" ShortID="241972550">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BOOTS" ID="{BF6054B9-8ECC-4FE2-9847-F7742F9AA2AD}" WorkUnitID="{4BCF24F2-DE00-4E9D-850E-56F88B915A9E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

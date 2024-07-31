@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CDF934EB-E269-4079-985E-0406F4AD7D49}" SchemaVersion="119" RootDocumentID="{EAAC26E8-559A-4A0D-B30B-18BFEC4F4845}" ParentDocumentID="{EAAC26E8-559A-4A0D-B30B-18BFEC4F4845}">
+	<AudioObjects>
+		<WorkUnit Name="INT" ID="{CDF934EB-E269-4079-985E-0406F4AD7D49}" OwnerID="{EAAC26E8-559A-4A0D-B30B-18BFEC4F4845}" PersistMode="Nested">
+			<ChildrenList>
+				<WorkUnit Name="LOOPS" ID="{83E1530E-23BC-424A-B72E-34DF2CB21645}" PersistMode="Reference"/>
+				<WorkUnit Name="ONE_SHOTS" ID="{6E1D5C8A-7697-4866-8BDA-45F66A14E2B3}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

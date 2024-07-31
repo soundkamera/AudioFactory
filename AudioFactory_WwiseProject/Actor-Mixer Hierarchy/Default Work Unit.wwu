@@ -3,7 +3,6 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{41438E12-06F6-4831-816D-4BD85E54F0FD}" PersistMode="Standalone">
 			<ChildrenList>
-				<WorkUnit Name="EXPLOSIONS" ID="{428D3E7D-752B-46B2-A230-0A13027760D7}" PersistMode="Reference"/>
 				<Folder Name="Crash Brick" ID="{34F52A39-B006-4B2A-A72F-172387204E0A}" ShortID="287288966">
 					<ChildrenList>
 						<Sound Name="Crash Brick Building 01" ID="{13DB0E39-9563-48CF-B41B-E6B0C2821522}" ShortID="754496646">

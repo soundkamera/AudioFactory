@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{0E23954A-F11D-E96A-15FD-BC6E99CDB194}",
+    "Hash": "{5935681E-1141-66F5-717B-5E93D390F3A9}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -43,12 +43,6 @@
      }
     ],
     "GameParameters": [
-     {
-      "Id": "1636224025",
-      "Name": "Shot_Distance",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Shot_Distance",
-      "GUID": "{48160BC4-20A9-4C86-B2D5-02A3F723FC54}"
-     },
      {
       "Id": "1951144523",
       "Name": "Collision_Velocity",
@@ -116,10 +110,30 @@
         "GUID": "{19B39C09-B84E-4B34-A3EA-C219E075734C}"
        }
       ]
+     },
+     {
+      "Id": "3714303081",
+      "Name": "SURFACES",
+      "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES",
+      "GUID": "{20861631-AAF1-4577-A3C6-EC1765939672}",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "CONCRETE",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES\\CONCRETE",
+        "GUID": "{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}"
+       },
+       {
+        "Id": "2030517811",
+        "Name": "METAL_PLATE",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES\\METAL_PLATE",
+        "GUID": "{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{F68549B5-B773-3EBA-6A66-81171922F69E}"
+  "FileHash": "{D0FD8E9B-8277-25FC-74EC-56834CC749B0}"
  }
 }

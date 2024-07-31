@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2764105556" Type="Event" GUID="{B6B5AABC-C803-4E1E-A350-FFB447C3413C}" Language="SFX" Hash="{55FA138F-D717-B65B-F65C-C80EBD2978D1}">
+		<SoundBank Id="2764105556" Type="Event" GUID="{B6B5AABC-C803-4E1E-A350-FFB447C3413C}" Language="SFX" Hash="{8DBFD5A6-0284-DE31-EB69-1BBD25D27F30}">
 			<ObjectPath>Play_Impact</ObjectPath>
 			<ShortName>Play_Impact</ShortName>
 			<Path>Event/Play_Impact.bnk</Path>
@@ -13,7 +13,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2764105556" Name="Play_Impact" ObjectPath="\Events\SFX_Events\Play_Impact" GUID="{B6B5AABC-C803-4E1E-A350-FFB447C3413C}" DurationType="OneShot" DurationMin="0.40763098" DurationMax="0.40763098">
+				<Event Id="2764105556" Name="Play_Impact" ObjectPath="\Events\SFX_Events\Play_Impact" GUID="{B6B5AABC-C803-4E1E-A350-FFB447C3413C}" DurationType="OneShot" DurationMin="0.47368577" DurationMax="0.5400515">
 					<MediaRefs>
 						<MediaRef Id="719100591"/>
 					</MediaRefs>
@@ -24,5 +24,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{12B90972-D270-4AE7-F961-CC5EDBD1C084}</FileHash>
+	<FileHash>{2186B51F-E941-7FD7-3264-1181F16481BF}</FileHash>
 </SoundBanksInfo>

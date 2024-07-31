@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{9690288C-B9E7-4561-BBEA-50BA655AE713}" SchemaVersion="119" RootDocumentID="{4563B9EC-BC67-4C29-960B-4D642EDC73C7}" ParentDocumentID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}">
+<WwiseDocument Type="WorkUnit" ID="{9690288C-B9E7-4561-BBEA-50BA655AE713}" SchemaVersion="119" RootDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" ParentDocumentID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}">
 	<AudioObjects>
 		<WorkUnit Name="BLLImpt" ID="{9690288C-B9E7-4561-BBEA-50BA655AE713}" OwnerID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}" PersistMode="Nested">
 			<ChildrenList>
-				<RandomSequenceContainer Name="DIRT_SAND" ID="{E8ED6202-3C6A-4F38-9D33-1B4215E585A7}" ShortID="521904764">
+				<RandomSequenceContainer Name="WOOD" ID="{E8ED6202-3C6A-4F38-9D33-1B4215E585A7}" ShortID="521904764">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -24,6 +24,26 @@
 					</ReferenceList>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="METAL" ID="{AE227F6D-84E6-493E-8F52-9FAE74BA151E}" ShortID="934693794">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="HUMAN" ID="{A17F63E8-FA7C-4E2B-ADB4-147EACAF066C}" ShortID="328828567">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="GLASS" ID="{04763F24-1D2B-433E-B35D-DCC0311A80DC}" ShortID="73383188">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>

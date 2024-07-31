@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="SFX" ID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="CRASH_DEBRIS" ID="{B8C65866-BECD-43F8-B2C8-C1F6C5885C63}" PersistMode="Reference"/>
+				<WorkUnit Name="WEAPONS" ID="{109797FA-754C-46A5-9FEA-823F94656B7E}" PersistMode="Reference"/>
+				<WorkUnit Name="BULLETS" ID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}" PersistMode="Reference"/>
+				<WorkUnit Name="GORE" ID="{E4BC5451-C169-40BA-9D59-C7D1A559D0FD}" PersistMode="Reference"/>
+				<WorkUnit Name="EXPLOSIONS" ID="{428D3E7D-752B-46B2-A230-0A13027760D7}" PersistMode="Reference"/>
+				<WorkUnit Name="IMPACTS" ID="{19B200D4-711D-4834-BF42-EB40B37F205E}" PersistMode="Reference"/>
+				<WorkUnit Name="DESIGNED" ID="{6D07690D-9260-4D29-A933-C5C2D4F927DF}" PersistMode="Reference"/>
+				<WorkUnit Name="SWOOSHES" ID="{6DF3ACF4-BDB3-49D5-A698-84CCA114EF1C}" PersistMode="Reference"/>
+				<WorkUnit Name="GUNS" ID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
