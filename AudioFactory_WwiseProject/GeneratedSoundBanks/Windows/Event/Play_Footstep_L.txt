@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3731463309	Play_Footstep_L			\FOL_Events\Play_Footstep_L	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3714303081	SURFACES			\Default Work Unit\SURFACES	
+
+Switch	ID	Name	Switch Group			Notes
+	841620460	CONCRETE	SURFACES			
+	2030517811	METAL_PLATE	SURFACES			
+

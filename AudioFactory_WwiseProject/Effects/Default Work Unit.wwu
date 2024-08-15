@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{10A1B2A3-7F0E-413C-BE61-556FC7674856}" SchemaVersion="119">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{10A1B2A3-7F0E-413C-BE61-556FC7674856}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{10A1B2A3-7F0E-413C-BE61-556FC7674856}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_iZotope_Hybrid_Reverb" ID="{019AC3BF-F149-42EE-B893-903B97DE08D1}" PluginName="iZotope Hybrid Reverb" CompanyID="259" PluginID="2" PluginType="3">
+					<PropertyList>
+						<Property Name="EarlyGain" Type="Real32" Value="-1"/>
+						<Property Name="FrontWet" Type="Real32" Value="24"/>
+						<Property Name="PredelayFront" Type="Real32" Value="20"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_McDSP_FutzBox" ID="{F0EC49EC-DAC0-407E-97DF-C7CF59573160}" PluginName="McDSP FutzBox" CompanyID="256" PluginID="110" PluginType="3">
+					<PropertyList>
+						<Property Name="DistortionAmount" Type="Real32" Value="27.6"/>
+						<Property Name="DistortionIntensity" Type="Real32" Value="36.8"/>
+						<Property Name="DistortionRectify" Type="Real32" Value="100"/>
+						<Property Name="DistortionWobble" Type="Real32" Value="100"/>
+						<Property Name="SIMTuning" Type="Real32" Value="125.8197"/>
+						<Property Name="Version" Type="int32" Value="1"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

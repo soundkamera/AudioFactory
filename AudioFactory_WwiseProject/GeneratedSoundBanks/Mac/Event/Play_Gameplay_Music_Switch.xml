@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{74CE07B2-AE5C-726A-E241-F95E4DC74317}">
+		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{6729E989-0779-CE7B-12FE-FF54957A4428}">
 			<ObjectPath>Play_Gameplay_Music_Switch</ObjectPath>
 			<ShortName>Play_Gameplay_Music_Switch</ShortName>
 			<Path>Event/Play_Gameplay_Music_Switch.bnk</Path>
@@ -103,6 +103,7 @@
 				<StateGroup Id="4167483016" Name="MUS_State_Group" ObjectPath="\States\Default Work Unit\MUS_State_Group" GUID="{4EBBCF84-E163-41A0-A663-F0BC2A860410}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MUS_State_Group\None" GUID="{C41FB390-63C4-4CB1-AFB1-24503BFACF70}"/>
+						<State Id="3794091074" Name="state_05" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_05" GUID="{0015000B-A550-46D2-AB1A-A0CC41DD63F4}"/>
 						<State Id="3794091075" Name="state_04" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_04" GUID="{040860ED-C33B-4E10-A365-5819C4C844A4}"/>
 						<State Id="3794091076" Name="state_03" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_03" GUID="{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"/>
 						<State Id="3794091077" Name="state_02" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_02" GUID="{A62A0D80-F71D-40AF-A4A5-49905590B651}"/>
@@ -117,5 +118,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BFC4EDF6-7787-1B34-BA7D-A14B215BA4EA}</FileHash>
+	<FileHash>{F81E0445-7E68-6F4C-10CB-F26BE3058583}</FileHash>
 </SoundBanksInfo>

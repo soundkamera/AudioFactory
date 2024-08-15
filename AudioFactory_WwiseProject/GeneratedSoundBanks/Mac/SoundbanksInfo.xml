@@ -9,6 +9,14 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
+		<SoundBank Id="597080488" Type="Event" GUID="{0C6BB6EF-1465-487A-BCD7-6F1C3540B884}" Language="SFX" Hash="{0501504D-D42A-C206-5EAD-F880B179BA76}">
+			<ObjectPath>Fire_GUNAuto_burst</ObjectPath>
+			<ShortName>Fire_GUNAuto_burst</ShortName>
+			<Path>Event/Fire_GUNAuto_burst.bnk</Path>
+			<Events>
+				<Event Id="597080488" Name="Fire_GUNAuto_burst" ObjectPath="\Events\SFX_Events\Fire_GUNAuto_burst" GUID="{0C6BB6EF-1465-487A-BCD7-6F1C3540B884}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{5935681E-1141-66F5-717B-5E93D390F3A9}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -29,6 +37,7 @@
 				<StateGroup Id="4167483016" Name="MUS_State_Group" ObjectPath="\States\Default Work Unit\MUS_State_Group" GUID="{4EBBCF84-E163-41A0-A663-F0BC2A860410}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MUS_State_Group\None" GUID="{C41FB390-63C4-4CB1-AFB1-24503BFACF70}"/>
+						<State Id="3794091074" Name="state_05" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_05" GUID="{0015000B-A550-46D2-AB1A-A0CC41DD63F4}"/>
 						<State Id="3794091075" Name="state_04" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_04" GUID="{040860ED-C33B-4E10-A365-5819C4C844A4}"/>
 						<State Id="3794091076" Name="state_03" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_03" GUID="{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"/>
 						<State Id="3794091077" Name="state_02" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_02" GUID="{A62A0D80-F71D-40AF-A4A5-49905590B651}"/>
@@ -37,6 +46,15 @@
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
+				<SwitchGroup Id="800142166" Name="BULLET_IMPACTS_Materials" ObjectPath="\Switches\Default Work Unit\BULLET_IMPACTS_Materials" GUID="{5ADA9966-D07D-4D16-9943-E49139DAE58D}">
+					<Switches>
+						<Switch Id="841620460" Name="CONCRETE" ObjectPath="\Switches\Default Work Unit\BULLET_IMPACTS_Materials\CONCRETE" GUID="{729C7B70-5536-4AA7-AE50-B39843684E5F}"/>
+						<Switch Id="2058049674" Name="WOOD" ObjectPath="\Switches\Default Work Unit\BULLET_IMPACTS_Materials\WOOD" GUID="{CF6B93BE-440E-43E2-BD72-02D26EEC75E4}"/>
+						<Switch Id="2449969375" Name="GLASS" ObjectPath="\Switches\Default Work Unit\BULLET_IMPACTS_Materials\GLASS" GUID="{3547D8AC-50F0-4114-937A-432B972395E8}"/>
+						<Switch Id="2473969246" Name="METAL" ObjectPath="\Switches\Default Work Unit\BULLET_IMPACTS_Materials\METAL" GUID="{85662D46-408D-40A4-9078-EB4CB47C9D44}"/>
+						<Switch Id="3887404748" Name="HUMAN" ObjectPath="\Switches\Default Work Unit\BULLET_IMPACTS_Materials\HUMAN" GUID="{724CB739-058D-48DD-841E-08C4481EF9CF}"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="2441865070" Name="MUSStateSwitchGroup" ObjectPath="\Switches\Default Work Unit\MUSStateSwitchGroup" GUID="{BEEAE54E-0A23-47A3-A28C-74BE1DA64476}">
 					<Switches>
 						<Switch Id="1888097757" Name="MUSstate_01" ObjectPath="\Switches\Default Work Unit\MUSStateSwitchGroup\MUSstate_01" GUID="{658F886C-7AF4-4BCC-ABAD-07F0FC1FD96D}"/>
@@ -50,6 +68,287 @@
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="1595647367" Type="Event" GUID="{1F80F101-AEEE-43DD-BF46-C7ED0132777B}" Language="SFX" Hash="{8B75DBF0-01B1-348E-873B-BADDC552E065}">
+			<ObjectPath>Play_Bullet_Impact</ObjectPath>
+			<ShortName>Play_Bullet_Impact</ShortName>
+			<Path>Event/Play_Bullet_Impact.bnk</Path>
+			<Media>
+				<File Id="20358246" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_concrete_impact_04.wav</ShortName>
+					<Path>Media/20358246.wem</Path>
+					<CachePath>SFX/BLLTImpt_concrete_impact_04_818F3B66.wem</CachePath>
+				</File>
+				<File Id="131616039" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>metal_hit_clink_02.wav</ShortName>
+					<Path>Media/131616039.wem</Path>
+					<CachePath>SFX/metal_hit_clink_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="146847640" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_zip_02.wav</ShortName>
+					<Path>Media/146847640.wem</Path>
+					<CachePath>SFX/BLLTImpt_zip_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="210850333" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>metal_hit_clink_01.wav</ShortName>
+					<Path>Media/210850333.wem</Path>
+					<CachePath>SFX/metal_hit_clink_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="219027859" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_concrete_impact_02.wav</ShortName>
+					<Path>Media/219027859.wem</Path>
+					<CachePath>SFX/BLLTImpt_concrete_impact_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="267505568" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_sub_06.wav</ShortName>
+					<Path>Media/267505568.wem</Path>
+					<CachePath>SFX/BLLTImpt_sub_06_818F3B66.wem</CachePath>
+				</File>
+				<File Id="395316244" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_sub_04.wav</ShortName>
+					<Path>Media/395316244.wem</Path>
+					<CachePath>SFX/BLLTImpt_sub_04_818F3B66.wem</CachePath>
+				</File>
+				<File Id="433475579" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_sub_03.wav</ShortName>
+					<Path>Media/433475579.wem</Path>
+					<CachePath>SFX/BLLTImpt_sub_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="451624115" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_concrete_impact_01.wav</ShortName>
+					<Path>Media/451624115.wem</Path>
+					<CachePath>SFX/BLLTImpt_concrete_impact_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="588283851" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_sub_01.wav</ShortName>
+					<Path>Media/588283851.wem</Path>
+					<CachePath>SFX/BLLTImpt_sub_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="616770483" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_concrete_impact_03.wav</ShortName>
+					<Path>Media/616770483.wem</Path>
+					<CachePath>SFX/BLLTImpt_concrete_impact_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="687673835" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_zip_06.wav</ShortName>
+					<Path>Media/687673835.wem</Path>
+					<CachePath>SFX/BLLTImpt_zip_06_ABEE1E15.wem</CachePath>
+				</File>
+				<File Id="796702107" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_zip_03.wav</ShortName>
+					<Path>Media/796702107.wem</Path>
+					<CachePath>SFX/BLLTImpt_zip_03_D0310E13.wem</CachePath>
+				</File>
+				<File Id="878224553" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_concrete_impact_05.wav</ShortName>
+					<Path>Media/878224553.wem</Path>
+					<CachePath>SFX/BLLTImpt_concrete_impact_05_818F3B66.wem</CachePath>
+				</File>
+				<File Id="890919755" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_zip_04.wav</ShortName>
+					<Path>Media/890919755.wem</Path>
+					<CachePath>SFX/BLLTImpt_zip_04_5A2E4A1A.wem</CachePath>
+				</File>
+				<File Id="897249077" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_zip_01.wav</ShortName>
+					<Path>Media/897249077.wem</Path>
+					<CachePath>SFX/BLLTImpt_zip_01_89359EC3.wem</CachePath>
+				</File>
+				<File Id="915714382" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_concrete_impact_06.wav</ShortName>
+					<Path>Media/915714382.wem</Path>
+					<CachePath>SFX/BLLTImpt_concrete_impact_06_818F3B66.wem</CachePath>
+				</File>
+				<File Id="924641666" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>metal_hit_clink_04.wav</ShortName>
+					<Path>Media/924641666.wem</Path>
+					<CachePath>SFX/metal_hit_clink_04_818F3B66.wem</CachePath>
+				</File>
+				<File Id="937615435" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>metal_hit_clink_05.wav</ShortName>
+					<Path>Media/937615435.wem</Path>
+					<CachePath>SFX/metal_hit_clink_05_818F3B66.wem</CachePath>
+				</File>
+				<File Id="954201227" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_sub_05.wav</ShortName>
+					<Path>Media/954201227.wem</Path>
+					<CachePath>SFX/BLLTImpt_sub_05_818F3B66.wem</CachePath>
+				</File>
+				<File Id="958277865" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_sub_02.wav</ShortName>
+					<Path>Media/958277865.wem</Path>
+					<CachePath>SFX/BLLTImpt_sub_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1019353196" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>BLLTImpt_zip_05.wav</ShortName>
+					<Path>Media/1019353196.wem</Path>
+					<CachePath>SFX/BLLTImpt_zip_05_69EB3B00.wem</CachePath>
+				</File>
+				<File Id="1025331454" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>metal_hit_clink_03.wav</ShortName>
+					<Path>Media/1025331454.wem</Path>
+					<CachePath>SFX/metal_hit_clink_03_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1595647367" Name="Play_Bullet_Impact" ObjectPath="\Events\SFX_Events\Play_Bullet_Impact" GUID="{1F80F101-AEEE-43DD-BF46-C7ED0132777B}" DurationType="OneShot" DurationMin="0" DurationMax="0.5946875">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="800142166" Id="2473969246" GUID="{85662D46-408D-40A4-9078-EB4CB47C9D44}"/>
+							<MediaRefs>
+								<MediaRef Id="131616039"/>
+								<MediaRef Id="210850333"/>
+								<MediaRef Id="267505568"/>
+								<MediaRef Id="395316244"/>
+								<MediaRef Id="433475579"/>
+								<MediaRef Id="588283851"/>
+								<MediaRef Id="924641666"/>
+								<MediaRef Id="937615435"/>
+								<MediaRef Id="954201227"/>
+								<MediaRef Id="958277865"/>
+								<MediaRef Id="1025331454"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="800142166" Id="841620460" GUID="{729C7B70-5536-4AA7-AE50-B39843684E5F}"/>
+							<MediaRefs>
+								<MediaRef Id="20358246"/>
+								<MediaRef Id="146847640"/>
+								<MediaRef Id="219027859"/>
+								<MediaRef Id="267505568"/>
+								<MediaRef Id="395316244"/>
+								<MediaRef Id="433475579"/>
+								<MediaRef Id="451624115"/>
+								<MediaRef Id="588283851"/>
+								<MediaRef Id="616770483"/>
+								<MediaRef Id="687673835"/>
+								<MediaRef Id="796702107"/>
+								<MediaRef Id="878224553"/>
+								<MediaRef Id="890919755"/>
+								<MediaRef Id="897249077"/>
+								<MediaRef Id="915714382"/>
+								<MediaRef Id="954201227"/>
+								<MediaRef Id="958277865"/>
+								<MediaRef Id="1019353196"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="800142166" Name="BULLET_IMPACTS_Materials" ObjectPath="\Switches\Default Work Unit\BULLET_IMPACTS_Materials" GUID="{5ADA9966-D07D-4D16-9943-E49139DAE58D}">
+					<Switches>
+						<Switch Id="841620460" Name="CONCRETE" ObjectPath="\Switches\Default Work Unit\BULLET_IMPACTS_Materials\CONCRETE" GUID="{729C7B70-5536-4AA7-AE50-B39843684E5F}"/>
+						<Switch Id="2058049674" Name="WOOD" ObjectPath="\Switches\Default Work Unit\BULLET_IMPACTS_Materials\WOOD" GUID="{CF6B93BE-440E-43E2-BD72-02D26EEC75E4}"/>
+						<Switch Id="2449969375" Name="GLASS" ObjectPath="\Switches\Default Work Unit\BULLET_IMPACTS_Materials\GLASS" GUID="{3547D8AC-50F0-4114-937A-432B972395E8}"/>
+						<Switch Id="2473969246" Name="METAL" ObjectPath="\Switches\Default Work Unit\BULLET_IMPACTS_Materials\METAL" GUID="{85662D46-408D-40A4-9078-EB4CB47C9D44}"/>
+						<Switch Id="3887404748" Name="HUMAN" ObjectPath="\Switches\Default Work Unit\BULLET_IMPACTS_Materials\HUMAN" GUID="{724CB739-058D-48DD-841E-08C4481EF9CF}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="2336187817" Type="Event" GUID="{2FE08369-935E-44D4-9842-2D899178E0A9}" Language="SFX" Hash="{2E9ACCD6-B2EF-782F-1A74-71F199E5AA0C}">
+			<ObjectPath>Fire_GUNPis_shot</ObjectPath>
+			<ShortName>Fire_GUNPis_shot</ShortName>
+			<Path>Event/Fire_GUNPis_shot.bnk</Path>
+			<Media>
+				<File Id="7141275" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Onset B_01.wav</ShortName>
+					<Path>Media/7141275.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Onset B_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="8213302" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Body A_02.wav</ShortName>
+					<Path>Media/8213302.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Body A_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="186845809" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Onset A_01.wav</ShortName>
+					<Path>Media/186845809.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Onset A_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="293874458" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Onset A_03.wav</ShortName>
+					<Path>Media/293874458.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Onset A_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="413881738" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Body A_01.wav</ShortName>
+					<Path>Media/413881738.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Body A_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="441730692" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Thump_03.wav</ShortName>
+					<Path>Media/441730692.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Thump_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="454303851" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Body B_02.wav</ShortName>
+					<Path>Media/454303851.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Body B_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="478093747" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Thump_01.wav</ShortName>
+					<Path>Media/478093747.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Thump_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="503591782" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Onset B_03.wav</ShortName>
+					<Path>Media/503591782.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Onset B_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="626265998" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Onset B_02.wav</ShortName>
+					<Path>Media/626265998.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Onset B_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="651856835" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Body A_03.wav</ShortName>
+					<Path>Media/651856835.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Body A_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="710778897" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Onset A_02.wav</ShortName>
+					<Path>Media/710778897.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Onset A_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="735911742" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Body B_01.wav</ShortName>
+					<Path>Media/735911742.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Body B_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="885850868" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Body B_03.wav</ShortName>
+					<Path>Media/885850868.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Body B_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="968697689" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Thump_02.wav</ShortName>
+					<Path>Media/968697689.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Thump_02_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2336187817" Name="Fire_GUNPis_shot" ObjectPath="\Events\SFX_Events\Fire_GUNPis_shot" GUID="{2FE08369-935E-44D4-9842-2D899178E0A9}" DurationType="OneShot" DurationMin="4" DurationMax="5.207625">
+					<MediaRefs>
+						<MediaRef Id="7141275"/>
+						<MediaRef Id="8213302"/>
+						<MediaRef Id="186845809"/>
+						<MediaRef Id="293874458"/>
+						<MediaRef Id="413881738"/>
+						<MediaRef Id="441730692"/>
+						<MediaRef Id="454303851"/>
+						<MediaRef Id="478093747"/>
+						<MediaRef Id="503591782"/>
+						<MediaRef Id="626265998"/>
+						<MediaRef Id="651856835"/>
+						<MediaRef Id="710778897"/>
+						<MediaRef Id="735911742"/>
+						<MediaRef Id="885850868"/>
+						<MediaRef Id="968697689"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="2450565445" Type="Event" GUID="{A6035210-A3D2-4F78-BD66-6004D4DBCE2A}" Language="SFX" Hash="{A6AF64A0-C777-D1FA-1066-23411D0EAD38}">
 			<ObjectPath>Play_AMBInd</ObjectPath>
@@ -70,7 +369,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2736774062" Type="Event" GUID="{00EEB85E-BE58-488E-98EF-F0EDADA35832}" Language="SFX" Hash="{225F73B8-70BC-9953-5551-A677896515EA}">
+		<SoundBank Id="2736774062" Type="Event" GUID="{00EEB85E-BE58-488E-98EF-F0EDADA35832}" Language="SFX" Hash="{DB15DFED-1209-F8B4-B320-66351D6ACF3F}">
 			<ObjectPath>Fire_GUNAuto_shot</ObjectPath>
 			<ShortName>Fire_GUNAuto_shot</ShortName>
 			<Path>Event/Fire_GUNAuto_shot.bnk</Path>
@@ -219,7 +518,238 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{74CE07B2-AE5C-726A-E241-F95E4DC74317}">
+		<SoundBank Id="3731463309" Type="Event" GUID="{4D1D72B9-CB0F-4F43-A1E5-CB3D4EAE3858}" Language="SFX" Hash="{A361C0C8-A7B4-CA0B-A493-E00F70B1B9A6}">
+			<ObjectPath>Play_Footstep_L</ObjectPath>
+			<ShortName>Play_Footstep_L</ShortName>
+			<Path>Event/Play_Footstep_L.bnk</Path>
+			<Media>
+				<File Id="17510250" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYClth_cotton_movement_R_01.wav</ShortName>
+					<Path>Media/17510250.wem</Path>
+					<CachePath>SFX/FOLYClth_cotton_movement_R_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="22249884" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYClth_cotton_movement_R_02.wav</ShortName>
+					<Path>Media/22249884.wem</Path>
+					<CachePath>SFX/FOLYClth_cotton_movement_R_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="25798057" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYClth_cotton_movement_R_03.wav</ShortName>
+					<Path>Media/25798057.wem</Path>
+					<CachePath>SFX/FOLYClth_cotton_movement_R_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="32733725" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYClth_cotton_movement_L_01.wav</ShortName>
+					<Path>Media/32733725.wem</Path>
+					<CachePath>SFX/FOLYClth_cotton_movement_L_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="48399546" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYFeet_boots_concrete_L_02.wav</ShortName>
+					<Path>Media/48399546.wem</Path>
+					<CachePath>SFX/FOLYFeet_boots_concrete_L_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="66029619" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_zipper_movement_L_03.wav</ShortName>
+					<Path>Media/66029619.wem</Path>
+					<CachePath>SFX/FOLYProp_zipper_movement_L_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="77618937" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_zipper_movement_L_01.wav</ShortName>
+					<Path>Media/77618937.wem</Path>
+					<CachePath>SFX/FOLYProp_zipper_movement_L_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="108902205" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_gun_movement_L_02.wav</ShortName>
+					<Path>Media/108902205.wem</Path>
+					<CachePath>SFX/FOLYProp_gun_movement_L_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="137752479" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_zipper_movement_L_02.wav</ShortName>
+					<Path>Media/137752479.wem</Path>
+					<CachePath>SFX/FOLYProp_zipper_movement_L_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="181298720" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_zipper_movement_L_04.wav</ShortName>
+					<Path>Media/181298720.wem</Path>
+					<CachePath>SFX/FOLYProp_zipper_movement_L_04_818F3B66.wem</CachePath>
+				</File>
+				<File Id="183516667" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYFeet_boots_concrete_R_02.wav</ShortName>
+					<Path>Media/183516667.wem</Path>
+					<CachePath>SFX/FOLYFeet_boots_concrete_R_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="185270935" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_gun_movement_L_03.wav</ShortName>
+					<Path>Media/185270935.wem</Path>
+					<CachePath>SFX/FOLYProp_gun_movement_L_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="267655107" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYFeet_boots_concrete_L_01.wav</ShortName>
+					<Path>Media/267655107.wem</Path>
+					<CachePath>SFX/FOLYFeet_boots_concrete_L_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="269154971" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_zipper_movement_R_02.wav</ShortName>
+					<Path>Media/269154971.wem</Path>
+					<CachePath>SFX/FOLYProp_zipper_movement_R_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="275270133" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_gun_movement_R_02.wav</ShortName>
+					<Path>Media/275270133.wem</Path>
+					<CachePath>SFX/FOLYProp_gun_movement_R_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="299422004" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYFeet_boots_metal_L_03.wav</ShortName>
+					<Path>Media/299422004.wem</Path>
+					<CachePath>SFX/FOLYFeet_boots_metal_L_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="300968120" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYClth_cotton_movement_L_02.wav</ShortName>
+					<Path>Media/300968120.wem</Path>
+					<CachePath>SFX/FOLYClth_cotton_movement_L_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="445344550" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYFeet_boots_concrete_L_03.wav</ShortName>
+					<Path>Media/445344550.wem</Path>
+					<CachePath>SFX/FOLYFeet_boots_concrete_L_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="446905731" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYClth_cotton_movement_L_03.wav</ShortName>
+					<Path>Media/446905731.wem</Path>
+					<CachePath>SFX/FOLYClth_cotton_movement_L_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="446928607" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_zipper_movement_R_03.wav</ShortName>
+					<Path>Media/446928607.wem</Path>
+					<CachePath>SFX/FOLYProp_zipper_movement_R_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="467477099" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYFeet_boots_metal_R_01.wav</ShortName>
+					<Path>Media/467477099.wem</Path>
+					<CachePath>SFX/FOLYFeet_boots_metal_R_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="490438468" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_gun_movement_R_03.wav</ShortName>
+					<Path>Media/490438468.wem</Path>
+					<CachePath>SFX/FOLYProp_gun_movement_R_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="521496975" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_gun_movement_L_04.wav</ShortName>
+					<Path>Media/521496975.wem</Path>
+					<CachePath>SFX/FOLYProp_gun_movement_L_04_818F3B66.wem</CachePath>
+				</File>
+				<File Id="523570740" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYFeet_boots_metal_L_02.wav</ShortName>
+					<Path>Media/523570740.wem</Path>
+					<CachePath>SFX/FOLYFeet_boots_metal_L_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="541183303" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_zipper_movement_R_01.wav</ShortName>
+					<Path>Media/541183303.wem</Path>
+					<CachePath>SFX/FOLYProp_zipper_movement_R_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="644823737" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_gun_movement_L_01.wav</ShortName>
+					<Path>Media/644823737.wem</Path>
+					<CachePath>SFX/FOLYProp_gun_movement_L_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="661878775" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYFeet_boots_metal_L_01.wav</ShortName>
+					<Path>Media/661878775.wem</Path>
+					<CachePath>SFX/FOLYFeet_boots_metal_L_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="790081314" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYFeet_boots_concrete_R_03.wav</ShortName>
+					<Path>Media/790081314.wem</Path>
+					<CachePath>SFX/FOLYFeet_boots_concrete_R_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="850360109" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_gun_movement_R_01.wav</ShortName>
+					<Path>Media/850360109.wem</Path>
+					<CachePath>SFX/FOLYProp_gun_movement_R_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="936281280" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYClth_cotton_movement_L_04.wav</ShortName>
+					<Path>Media/936281280.wem</Path>
+					<CachePath>SFX/FOLYClth_cotton_movement_L_04_818F3B66.wem</CachePath>
+				</File>
+				<File Id="974371144" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYFeet_boots_concrete_R_01.wav</ShortName>
+					<Path>Media/974371144.wem</Path>
+					<CachePath>SFX/FOLYFeet_boots_concrete_R_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1067206573" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYFeet_boots_metal_R_03.wav</ShortName>
+					<Path>Media/1067206573.wem</Path>
+					<CachePath>SFX/FOLYFeet_boots_metal_R_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1073497575" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYFeet_boots_metal_R_02.wav</ShortName>
+					<Path>Media/1073497575.wem</Path>
+					<CachePath>SFX/FOLYFeet_boots_metal_R_02_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3731463309" Name="Play_Footstep_L" ObjectPath="\Events\FOL_Events\Play_Footstep_L" GUID="{4D1D72B9-CB0F-4F43-A1E5-CB3D4EAE3858}" DurationType="OneShot" DurationMin="0.30879068" DurationMax="0.30879068">
+					<MediaRefs>
+						<MediaRef Id="17510250"/>
+						<MediaRef Id="22249884"/>
+						<MediaRef Id="25798057"/>
+						<MediaRef Id="32733725"/>
+						<MediaRef Id="66029619"/>
+						<MediaRef Id="77618937"/>
+						<MediaRef Id="108902205"/>
+						<MediaRef Id="137752479"/>
+						<MediaRef Id="181298720"/>
+						<MediaRef Id="185270935"/>
+						<MediaRef Id="269154971"/>
+						<MediaRef Id="275270133"/>
+						<MediaRef Id="300968120"/>
+						<MediaRef Id="446905731"/>
+						<MediaRef Id="446928607"/>
+						<MediaRef Id="490438468"/>
+						<MediaRef Id="521496975"/>
+						<MediaRef Id="541183303"/>
+						<MediaRef Id="644823737"/>
+						<MediaRef Id="850360109"/>
+						<MediaRef Id="936281280"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3714303081" Id="2030517811" GUID="{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"/>
+							<MediaRefs>
+								<MediaRef Id="299422004"/>
+								<MediaRef Id="467477099"/>
+								<MediaRef Id="523570740"/>
+								<MediaRef Id="661878775"/>
+								<MediaRef Id="1067206573"/>
+								<MediaRef Id="1073497575"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3714303081" Id="841620460" GUID="{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="48399546"/>
+								<MediaRef Id="183516667"/>
+								<MediaRef Id="267655107"/>
+								<MediaRef Id="445344550"/>
+								<MediaRef Id="790081314"/>
+								<MediaRef Id="974371144"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="3714303081" Name="SURFACES" ObjectPath="\Switches\Default Work Unit\SURFACES" GUID="{20861631-AAF1-4577-A3C6-EC1765939672}">
+					<Switches>
+						<Switch Id="841620460" Name="CONCRETE" ObjectPath="\Switches\Default Work Unit\SURFACES\CONCRETE" GUID="{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}"/>
+						<Switch Id="2030517811" Name="METAL_PLATE" ObjectPath="\Switches\Default Work Unit\SURFACES\METAL_PLATE" GUID="{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{6729E989-0779-CE7B-12FE-FF54957A4428}">
 			<ObjectPath>Play_Gameplay_Music_Switch</ObjectPath>
 			<ShortName>Play_Gameplay_Music_Switch</ShortName>
 			<Path>Event/Play_Gameplay_Music_Switch.bnk</Path>
@@ -321,6 +851,7 @@
 				<StateGroup Id="4167483016" Name="MUS_State_Group" ObjectPath="\States\Default Work Unit\MUS_State_Group" GUID="{4EBBCF84-E163-41A0-A663-F0BC2A860410}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MUS_State_Group\None" GUID="{C41FB390-63C4-4CB1-AFB1-24503BFACF70}"/>
+						<State Id="3794091074" Name="state_05" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_05" GUID="{0015000B-A550-46D2-AB1A-A0CC41DD63F4}"/>
 						<State Id="3794091075" Name="state_04" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_04" GUID="{040860ED-C33B-4E10-A365-5819C4C844A4}"/>
 						<State Id="3794091076" Name="state_03" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_03" GUID="{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"/>
 						<State Id="3794091077" Name="state_02" ObjectPath="\States\Default Work Unit\MUS_State_Group\state_02" GUID="{A62A0D80-F71D-40AF-A4A5-49905590B651}"/>
@@ -333,121 +864,6 @@
 				<Trigger Id="351475378" Name="stinger_02" ObjectPath="\Triggers\Default Work Unit\Music\stinger_02" GUID="{074F1A17-082F-45D8-B7D8-EC5D62078257}"/>
 				<Trigger Id="351475379" Name="stinger_03" ObjectPath="\Triggers\Default Work Unit\Music\stinger_03" GUID="{6E80E59E-E374-434F-A63E-A374E8E284B5}"/>
 			</Triggers>
-		</SoundBank>
-		<SoundBank Id="3854155799" Type="Event" GUID="{0D63CA0F-2818-41AC-B137-FB4975992982}" Language="SFX" Hash="{CEF82640-3796-4FC8-D789-D0AE5BF90D07}">
-			<ObjectPath>Play_Footsteps</ObjectPath>
-			<ShortName>Play_Footsteps</ShortName>
-			<Path>Event/Play_Footsteps.bnk</Path>
-			<Media>
-				<File Id="36263286" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Soft Sole Work Boots Walking On Cement 01-11.L.wav</ShortName>
-					<Path>Media/36263286.wem</Path>
-					<CachePath>SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-11.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="334648624" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Cowboy Boots Walking On Metal Platform 01-05.L.wav</ShortName>
-					<Path>Media/334648624.wem</Path>
-					<CachePath>SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-05.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="380562320" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Cowboy Boots Walking On Metal Platform 01-12.L.wav</ShortName>
-					<Path>Media/380562320.wem</Path>
-					<CachePath>SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-12.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="390804890" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Cowboy Boots Walking On Metal Platform 01-03.L.wav</ShortName>
-					<Path>Media/390804890.wem</Path>
-					<CachePath>SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-03.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="414059036" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Soft Sole Work Boots Walking On Cement 01-09.L.wav</ShortName>
-					<Path>Media/414059036.wem</Path>
-					<CachePath>SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-09.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="415841338" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Cowboy Boots Walking On Metal Platform 01-09.L.wav</ShortName>
-					<Path>Media/415841338.wem</Path>
-					<CachePath>SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-09.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="470284971" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Soft Sole Work Boots Walking On Cement 01-05.L.wav</ShortName>
-					<Path>Media/470284971.wem</Path>
-					<CachePath>SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-05.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="578769596" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Soft Sole Work Boots Walking On Cement 01-12.L.wav</ShortName>
-					<Path>Media/578769596.wem</Path>
-					<CachePath>SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-12.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="604968869" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Cowboy Boots Walking On Metal Platform 01-01.L.wav</ShortName>
-					<Path>Media/604968869.wem</Path>
-					<CachePath>SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-01.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="626163892" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Soft Sole Work Boots Walking On Cement 01-03.L.wav</ShortName>
-					<Path>Media/626163892.wem</Path>
-					<CachePath>SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-03.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="637960541" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Soft Sole Work Boots Walking On Cement 01-07.L.wav</ShortName>
-					<Path>Media/637960541.wem</Path>
-					<CachePath>SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-07.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="648895736" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Cowboy Boots Walking On Metal Platform 01-07.L.wav</ShortName>
-					<Path>Media/648895736.wem</Path>
-					<CachePath>SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-07.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="805079255" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Cowboy Boots Walking On Metal Platform 01-11.L.wav</ShortName>
-					<Path>Media/805079255.wem</Path>
-					<CachePath>SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-11.L_818F3B66.wem</CachePath>
-				</File>
-				<File Id="883164219" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Foley Footstep Soft Sole Work Boots Walking On Cement 01-01.L.wav</ShortName>
-					<Path>Media/883164219.wem</Path>
-					<CachePath>SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-01.L_818F3B66.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\FOL_Events\Play_Footsteps" GUID="{0D63CA0F-2818-41AC-B137-FB4975992982}" DurationType="OneShot" DurationMin="0.36475" DurationMax="0.879875">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3714303081" Id="2030517811" GUID="{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"/>
-							<MediaRefs>
-								<MediaRef Id="334648624"/>
-								<MediaRef Id="380562320"/>
-								<MediaRef Id="390804890"/>
-								<MediaRef Id="415841338"/>
-								<MediaRef Id="604968869"/>
-								<MediaRef Id="648895736"/>
-								<MediaRef Id="805079255"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3714303081" Id="841620460" GUID="{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}" Default="true"/>
-							<MediaRefs>
-								<MediaRef Id="36263286"/>
-								<MediaRef Id="414059036"/>
-								<MediaRef Id="470284971"/>
-								<MediaRef Id="578769596"/>
-								<MediaRef Id="626163892"/>
-								<MediaRef Id="637960541"/>
-								<MediaRef Id="883164219"/>
-							</MediaRefs>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
-			</Events>
-			<SwitchGroups>
-				<SwitchGroup Id="3714303081" Name="SURFACES" ObjectPath="\Switches\Default Work Unit\SURFACES" GUID="{20861631-AAF1-4577-A3C6-EC1765939672}">
-					<Switches>
-						<Switch Id="841620460" Name="CONCRETE" ObjectPath="\Switches\Default Work Unit\SURFACES\CONCRETE" GUID="{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}"/>
-						<Switch Id="2030517811" Name="METAL_PLATE" ObjectPath="\Switches\Default Work Unit\SURFACES\METAL_PLATE" GUID="{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="3908403276" Type="Event" GUID="{CFCCCBBD-8D5C-45D2-9DF6-DA30EFD5ACB2}" Language="SFX" Hash="{4B803BA0-857D-1DA7-D70C-1C4D6EAB231A}">
 			<ObjectPath>PlayStinger_02</ObjectPath>
@@ -495,5 +911,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4299F419-153A-F7B3-5429-DB42B87CDF24}</FileHash>
+	<FileHash>{29E73CCC-EE88-2837-57D0-E427EB193D8C}</FileHash>
 </SoundBanksInfo>

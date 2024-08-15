@@ -12,6 +12,36 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="unsheath knife_01" ID="{F46F030D-4277-4590-B58C-804BBC9DD5C7}" ShortID="483891203">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="unsheath knife_01" ID="{4D0E4308-BF31-4038-8E87-F398A50E865C}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.819035860781556"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0972211577843219"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.916257018565878"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>unsheath knife_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="640968299"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="unsheath knife_01" ID="{4D0E4308-BF31-4038-8E87-F398A50E865C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>

@@ -666,11 +666,15 @@
 									<PropertyList>
 										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
-										<Property Name="FrequencyBand1" Type="Real32" Value="800"/>
-										<Property Name="FrequencyBand2" Type="Real32" Value="3000"/>
-										<Property Name="FrequencyBand3" Type="Real32" Value="4660"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="20"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="533"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="20000"/>
 										<Property Name="GainBand2" Type="Real32" Value="18"/>
+										<Property Name="OnOffBand1" Type="bool" Value="False"/>
+										<Property Name="OnOffBand3" Type="bool" Value="False"/>
 										<Property Name="OutputLevel" Type="Real32" Value="-12"/>
+										<Property Name="ProcessLFE" Type="bool" Value="False"/>
+										<Property Name="QFactorBand2" Type="Real32" Value="34.5"/>
 									</PropertyList>
 								</Effect>
 							</ChildrenList>
@@ -1859,12 +1863,13 @@
 					<ChildrenList>
 						<Effect Name="Say_what" ID="{E823825D-3114-4F6D-A6A4-7FB673A10A61}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
 							<PropertyList>
-								<Property Name="ModFrequency" Type="Real32" Value="1.18"/>
+								<Property Name="ModDepth" Type="Real32" Value="64.2"/>
+								<Property Name="ModFrequency" Type="Real32" Value="7.64"/>
 								<Property Name="ModPWM" Type="Real32" Value="27"/>
+								<Property Name="ModPhaseMode" Type="int32" Value="3"/>
 								<Property Name="ModPhaseOffset" Type="Real32" Value="-180"/>
-								<Property Name="ModPhaseSpread" Type="Real32" Value="58"/>
-								<Property Name="ModSmoothing" Type="Real32" Value="56"/>
-								<Property Name="ModWaveform" Type="int32" Value="2"/>
+								<Property Name="ModPhaseSpread" Type="Real32" Value="138"/>
+								<Property Name="ModSmoothing" Type="Real32" Value="100"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Rhythmic_Talk" ID="{F0F27454-4BCC-4302-A61D-C324E7187DD0}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
@@ -1942,6 +1947,7 @@
 								<Property Name="ModWaveform" Type="int32" Value="3"/>
 							</PropertyList>
 						</Effect>
+						<Effect Name="New_Tremolo" ID="{7F564D9B-4C71-4E14-B4A7-34D99790FDDC}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Pitch Shifter" ID="{CAAFBA9C-900A-43C9-A88A-5AC1B29DC25B}" ShortID="538169855">

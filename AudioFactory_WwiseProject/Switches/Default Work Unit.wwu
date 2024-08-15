@@ -15,6 +15,15 @@
 						<Switch Name="METAL_PLATE" ID="{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="BULLET_IMPACTS_Materials" ID="{5ADA9966-D07D-4D16-9943-E49139DAE58D}">
+					<ChildrenList>
+						<Switch Name="WOOD" ID="{CF6B93BE-440E-43E2-BD72-02D26EEC75E4}"/>
+						<Switch Name="CONCRETE" ID="{729C7B70-5536-4AA7-AE50-B39843684E5F}"/>
+						<Switch Name="METAL" ID="{85662D46-408D-40A4-9078-EB4CB47C9D44}"/>
+						<Switch Name="GLASS" ID="{3547D8AC-50F0-4114-937A-432B972395E8}"/>
+						<Switch Name="HUMAN" ID="{724CB739-058D-48DD-841E-08C4481EF9CF}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

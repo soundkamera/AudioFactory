@@ -64,6 +64,12 @@
         "GUID": "{C41FB390-63C4-4CB1-AFB1-24503BFACF70}"
        },
        {
+        "Id": "3794091074",
+        "Name": "state_05",
+        "ObjectPath": "\\States\\Default Work Unit\\MUS_State_Group\\state_05",
+        "GUID": "{0015000B-A550-46D2-AB1A-A0CC41DD63F4}"
+       },
+       {
         "Id": "3794091075",
         "Name": "state_04",
         "ObjectPath": "\\States\\Default Work Unit\\MUS_State_Group\\state_04",
@@ -91,6 +97,44 @@
      }
     ],
     "SwitchGroups": [
+     {
+      "Id": "800142166",
+      "Name": "BULLET_IMPACTS_Materials",
+      "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials",
+      "GUID": "{5ADA9966-D07D-4D16-9943-E49139DAE58D}",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "CONCRETE",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\CONCRETE",
+        "GUID": "{729C7B70-5536-4AA7-AE50-B39843684E5F}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "WOOD",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\WOOD",
+        "GUID": "{CF6B93BE-440E-43E2-BD72-02D26EEC75E4}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "GLASS",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\GLASS",
+        "GUID": "{3547D8AC-50F0-4114-937A-432B972395E8}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "METAL",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\METAL",
+        "GUID": "{85662D46-408D-40A4-9078-EB4CB47C9D44}"
+       },
+       {
+        "Id": "3887404748",
+        "Name": "HUMAN",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\HUMAN",
+        "GUID": "{724CB739-058D-48DD-841E-08C4481EF9CF}"
+       }
+      ]
+     },
      {
       "Id": "2441865070",
       "Name": "MUSStateSwitchGroup",
@@ -134,6 +178,6 @@
     ]
    }
   ],
-  "FileHash": "{F3F01BCF-47D8-EB3D-5694-F0F3ECEEBD38}"
+  "FileHash": "{F9B36702-462C-507A-2374-1BABC7CF9515}"
  }
 }

@@ -14,6 +14,28 @@
   "DialogueEvents": [],
   "SoundBanks": [
    {
+    "Id": "597080488",
+    "Type": "Event",
+    "GUID": "{0C6BB6EF-1465-487A-BCD7-6F1C3540B884}",
+    "Language": "SFX",
+    "Hash": "{0501504D-D42A-C206-5EAD-F880B179BA76}",
+    "ObjectPath": "Fire_GUNAuto_burst",
+    "ShortName": "Fire_GUNAuto_burst",
+    "Path": "Event/Fire_GUNAuto_burst.bnk",
+    "Events": [
+     {
+      "Id": "597080488",
+      "Name": "Fire_GUNAuto_burst",
+      "ObjectPath": "\\Events\\SFX_Events\\Fire_GUNAuto_burst",
+      "GUID": "{0C6BB6EF-1465-487A-BCD7-6F1C3540B884}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
     "Id": "1355168291",
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
@@ -72,6 +94,12 @@
         "GUID": "{C41FB390-63C4-4CB1-AFB1-24503BFACF70}"
        },
        {
+        "Id": "3794091074",
+        "Name": "state_05",
+        "ObjectPath": "\\States\\Default Work Unit\\MUS_State_Group\\state_05",
+        "GUID": "{0015000B-A550-46D2-AB1A-A0CC41DD63F4}"
+       },
+       {
         "Id": "3794091075",
         "Name": "state_04",
         "ObjectPath": "\\States\\Default Work Unit\\MUS_State_Group\\state_04",
@@ -99,6 +127,44 @@
      }
     ],
     "SwitchGroups": [
+     {
+      "Id": "800142166",
+      "Name": "BULLET_IMPACTS_Materials",
+      "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials",
+      "GUID": "{5ADA9966-D07D-4D16-9943-E49139DAE58D}",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "CONCRETE",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\CONCRETE",
+        "GUID": "{729C7B70-5536-4AA7-AE50-B39843684E5F}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "WOOD",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\WOOD",
+        "GUID": "{CF6B93BE-440E-43E2-BD72-02D26EEC75E4}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "GLASS",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\GLASS",
+        "GUID": "{3547D8AC-50F0-4114-937A-432B972395E8}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "METAL",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\METAL",
+        "GUID": "{85662D46-408D-40A4-9078-EB4CB47C9D44}"
+       },
+       {
+        "Id": "3887404748",
+        "Name": "HUMAN",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\HUMAN",
+        "GUID": "{724CB739-058D-48DD-841E-08C4481EF9CF}"
+       }
+      ]
+     },
      {
       "Id": "2441865070",
       "Name": "MUSStateSwitchGroup",
@@ -136,6 +202,590 @@
         "Name": "METAL_PLATE",
         "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES\\METAL_PLATE",
         "GUID": "{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "1595647367",
+    "Type": "Event",
+    "GUID": "{1F80F101-AEEE-43DD-BF46-C7ED0132777B}",
+    "Language": "SFX",
+    "Hash": "{8B75DBF0-01B1-348E-873B-BADDC552E065}",
+    "ObjectPath": "Play_Bullet_Impact",
+    "ShortName": "Play_Bullet_Impact",
+    "Path": "Event/Play_Bullet_Impact.bnk",
+    "Media": [
+     {
+      "Id": "20358246",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_concrete_impact_04.wav",
+      "Path": "Media/20358246.wem",
+      "CachePath": "SFX/BLLTImpt_concrete_impact_04_818F3B66.wem"
+     },
+     {
+      "Id": "131616039",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_hit_clink_02.wav",
+      "Path": "Media/131616039.wem",
+      "CachePath": "SFX/metal_hit_clink_02_818F3B66.wem"
+     },
+     {
+      "Id": "146847640",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_zip_02.wav",
+      "Path": "Media/146847640.wem",
+      "CachePath": "SFX/BLLTImpt_zip_02_818F3B66.wem"
+     },
+     {
+      "Id": "210850333",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_hit_clink_01.wav",
+      "Path": "Media/210850333.wem",
+      "CachePath": "SFX/metal_hit_clink_01_818F3B66.wem"
+     },
+     {
+      "Id": "219027859",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_concrete_impact_02.wav",
+      "Path": "Media/219027859.wem",
+      "CachePath": "SFX/BLLTImpt_concrete_impact_02_818F3B66.wem"
+     },
+     {
+      "Id": "267505568",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_sub_06.wav",
+      "Path": "Media/267505568.wem",
+      "CachePath": "SFX/BLLTImpt_sub_06_818F3B66.wem"
+     },
+     {
+      "Id": "395316244",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_sub_04.wav",
+      "Path": "Media/395316244.wem",
+      "CachePath": "SFX/BLLTImpt_sub_04_818F3B66.wem"
+     },
+     {
+      "Id": "433475579",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_sub_03.wav",
+      "Path": "Media/433475579.wem",
+      "CachePath": "SFX/BLLTImpt_sub_03_818F3B66.wem"
+     },
+     {
+      "Id": "451624115",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_concrete_impact_01.wav",
+      "Path": "Media/451624115.wem",
+      "CachePath": "SFX/BLLTImpt_concrete_impact_01_818F3B66.wem"
+     },
+     {
+      "Id": "588283851",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_sub_01.wav",
+      "Path": "Media/588283851.wem",
+      "CachePath": "SFX/BLLTImpt_sub_01_818F3B66.wem"
+     },
+     {
+      "Id": "616770483",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_concrete_impact_03.wav",
+      "Path": "Media/616770483.wem",
+      "CachePath": "SFX/BLLTImpt_concrete_impact_03_818F3B66.wem"
+     },
+     {
+      "Id": "687673835",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_zip_06.wav",
+      "Path": "Media/687673835.wem",
+      "CachePath": "SFX/BLLTImpt_zip_06_ABEE1E15.wem"
+     },
+     {
+      "Id": "796702107",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_zip_03.wav",
+      "Path": "Media/796702107.wem",
+      "CachePath": "SFX/BLLTImpt_zip_03_D0310E13.wem"
+     },
+     {
+      "Id": "878224553",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_concrete_impact_05.wav",
+      "Path": "Media/878224553.wem",
+      "CachePath": "SFX/BLLTImpt_concrete_impact_05_818F3B66.wem"
+     },
+     {
+      "Id": "890919755",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_zip_04.wav",
+      "Path": "Media/890919755.wem",
+      "CachePath": "SFX/BLLTImpt_zip_04_5A2E4A1A.wem"
+     },
+     {
+      "Id": "897249077",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_zip_01.wav",
+      "Path": "Media/897249077.wem",
+      "CachePath": "SFX/BLLTImpt_zip_01_89359EC3.wem"
+     },
+     {
+      "Id": "915714382",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_concrete_impact_06.wav",
+      "Path": "Media/915714382.wem",
+      "CachePath": "SFX/BLLTImpt_concrete_impact_06_818F3B66.wem"
+     },
+     {
+      "Id": "924641666",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_hit_clink_04.wav",
+      "Path": "Media/924641666.wem",
+      "CachePath": "SFX/metal_hit_clink_04_818F3B66.wem"
+     },
+     {
+      "Id": "937615435",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_hit_clink_05.wav",
+      "Path": "Media/937615435.wem",
+      "CachePath": "SFX/metal_hit_clink_05_818F3B66.wem"
+     },
+     {
+      "Id": "954201227",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_sub_05.wav",
+      "Path": "Media/954201227.wem",
+      "CachePath": "SFX/BLLTImpt_sub_05_818F3B66.wem"
+     },
+     {
+      "Id": "958277865",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_sub_02.wav",
+      "Path": "Media/958277865.wem",
+      "CachePath": "SFX/BLLTImpt_sub_02_818F3B66.wem"
+     },
+     {
+      "Id": "1019353196",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_zip_05.wav",
+      "Path": "Media/1019353196.wem",
+      "CachePath": "SFX/BLLTImpt_zip_05_69EB3B00.wem"
+     },
+     {
+      "Id": "1025331454",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_hit_clink_03.wav",
+      "Path": "Media/1025331454.wem",
+      "CachePath": "SFX/metal_hit_clink_03_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1595647367",
+      "Name": "Play_Bullet_Impact",
+      "ObjectPath": "\\Events\\SFX_Events\\Play_Bullet_Impact",
+      "GUID": "{1F80F101-AEEE-43DD-BF46-C7ED0132777B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0.5946875",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "800142166",
+         "Id": "2473969246",
+         "GUID": "{85662D46-408D-40A4-9078-EB4CB47C9D44}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "131616039"
+         },
+         {
+          "Id": "210850333"
+         },
+         {
+          "Id": "267505568"
+         },
+         {
+          "Id": "395316244"
+         },
+         {
+          "Id": "433475579"
+         },
+         {
+          "Id": "588283851"
+         },
+         {
+          "Id": "924641666"
+         },
+         {
+          "Id": "937615435"
+         },
+         {
+          "Id": "954201227"
+         },
+         {
+          "Id": "958277865"
+         },
+         {
+          "Id": "1025331454"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "800142166",
+         "Id": "841620460",
+         "GUID": "{729C7B70-5536-4AA7-AE50-B39843684E5F}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "20358246"
+         },
+         {
+          "Id": "146847640"
+         },
+         {
+          "Id": "219027859"
+         },
+         {
+          "Id": "267505568"
+         },
+         {
+          "Id": "395316244"
+         },
+         {
+          "Id": "433475579"
+         },
+         {
+          "Id": "451624115"
+         },
+         {
+          "Id": "588283851"
+         },
+         {
+          "Id": "616770483"
+         },
+         {
+          "Id": "687673835"
+         },
+         {
+          "Id": "796702107"
+         },
+         {
+          "Id": "878224553"
+         },
+         {
+          "Id": "890919755"
+         },
+         {
+          "Id": "897249077"
+         },
+         {
+          "Id": "915714382"
+         },
+         {
+          "Id": "954201227"
+         },
+         {
+          "Id": "958277865"
+         },
+         {
+          "Id": "1019353196"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "800142166",
+      "Name": "BULLET_IMPACTS_Materials",
+      "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials",
+      "GUID": "{5ADA9966-D07D-4D16-9943-E49139DAE58D}",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "CONCRETE",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\CONCRETE",
+        "GUID": "{729C7B70-5536-4AA7-AE50-B39843684E5F}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "WOOD",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\WOOD",
+        "GUID": "{CF6B93BE-440E-43E2-BD72-02D26EEC75E4}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "GLASS",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\GLASS",
+        "GUID": "{3547D8AC-50F0-4114-937A-432B972395E8}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "METAL",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\METAL",
+        "GUID": "{85662D46-408D-40A4-9078-EB4CB47C9D44}"
+       },
+       {
+        "Id": "3887404748",
+        "Name": "HUMAN",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\HUMAN",
+        "GUID": "{724CB739-058D-48DD-841E-08C4481EF9CF}"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "2336187817",
+    "Type": "Event",
+    "GUID": "{2FE08369-935E-44D4-9842-2D899178E0A9}",
+    "Language": "SFX",
+    "Hash": "{2E9ACCD6-B2EF-782F-1A74-71F199E5AA0C}",
+    "ObjectPath": "Fire_GUNPis_shot",
+    "ShortName": "Fire_GUNPis_shot",
+    "Path": "Event/Fire_GUNPis_shot.bnk",
+    "Media": [
+     {
+      "Id": "7141275",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Onset B_01.wav",
+      "Path": "Media/7141275.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Onset B_01_818F3B66.wem"
+     },
+     {
+      "Id": "8213302",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Body A_02.wav",
+      "Path": "Media/8213302.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Body A_02_818F3B66.wem"
+     },
+     {
+      "Id": "186845809",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Onset A_01.wav",
+      "Path": "Media/186845809.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Onset A_01_818F3B66.wem"
+     },
+     {
+      "Id": "293874458",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Onset A_03.wav",
+      "Path": "Media/293874458.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Onset A_03_818F3B66.wem"
+     },
+     {
+      "Id": "413881738",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Body A_01.wav",
+      "Path": "Media/413881738.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Body A_01_818F3B66.wem"
+     },
+     {
+      "Id": "441730692",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Thump_03.wav",
+      "Path": "Media/441730692.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Thump_03_818F3B66.wem"
+     },
+     {
+      "Id": "454303851",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Body B_02.wav",
+      "Path": "Media/454303851.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Body B_02_818F3B66.wem"
+     },
+     {
+      "Id": "478093747",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Thump_01.wav",
+      "Path": "Media/478093747.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Thump_01_818F3B66.wem"
+     },
+     {
+      "Id": "503591782",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Onset B_03.wav",
+      "Path": "Media/503591782.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Onset B_03_818F3B66.wem"
+     },
+     {
+      "Id": "626265998",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Onset B_02.wav",
+      "Path": "Media/626265998.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Onset B_02_818F3B66.wem"
+     },
+     {
+      "Id": "651856835",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Body A_03.wav",
+      "Path": "Media/651856835.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Body A_03_818F3B66.wem"
+     },
+     {
+      "Id": "710778897",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Onset A_02.wav",
+      "Path": "Media/710778897.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Onset A_02_818F3B66.wem"
+     },
+     {
+      "Id": "735911742",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Body B_01.wav",
+      "Path": "Media/735911742.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Body B_01_818F3B66.wem"
+     },
+     {
+      "Id": "885850868",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Body B_03.wav",
+      "Path": "Media/885850868.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Body B_03_818F3B66.wem"
+     },
+     {
+      "Id": "968697689",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon Files Output\\GUNPis\\GUNPis_Thump_02.wav",
+      "Path": "Media/968697689.wem",
+      "CachePath": "SFX/Weapon Files Output/GUNPis/GUNPis_Thump_02_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2336187817",
+      "Name": "Fire_GUNPis_shot",
+      "ObjectPath": "\\Events\\SFX_Events\\Fire_GUNPis_shot",
+      "GUID": "{2FE08369-935E-44D4-9842-2D899178E0A9}",
+      "DurationType": "OneShot",
+      "DurationMin": "4",
+      "DurationMax": "5.207625",
+      "MediaRefs": [
+       {
+        "Id": "7141275"
+       },
+       {
+        "Id": "8213302"
+       },
+       {
+        "Id": "186845809"
+       },
+       {
+        "Id": "293874458"
+       },
+       {
+        "Id": "413881738"
+       },
+       {
+        "Id": "441730692"
+       },
+       {
+        "Id": "454303851"
+       },
+       {
+        "Id": "478093747"
+       },
+       {
+        "Id": "503591782"
+       },
+       {
+        "Id": "626265998"
+       },
+       {
+        "Id": "651856835"
+       },
+       {
+        "Id": "710778897"
+       },
+       {
+        "Id": "735911742"
+       },
+       {
+        "Id": "885850868"
+       },
+       {
+        "Id": "968697689"
        }
       ]
      }
@@ -181,7 +831,7 @@
     "Type": "Event",
     "GUID": "{00EEB85E-BE58-488E-98EF-F0EDADA35832}",
     "Language": "SFX",
-    "Hash": "{225F73B8-70BC-9953-5551-A677896515EA}",
+    "Hash": "{DB15DFED-1209-F8B4-B320-66351D6ACF3F}",
     "ObjectPath": "Fire_GUNAuto_shot",
     "ShortName": "Fire_GUNAuto_shot",
     "Path": "Event/Fire_GUNAuto_shot.bnk",
@@ -472,11 +1122,477 @@
     "Path": "Main.bnk"
    },
    {
+    "Id": "3731463309",
+    "Type": "Event",
+    "GUID": "{4D1D72B9-CB0F-4F43-A1E5-CB3D4EAE3858}",
+    "Language": "SFX",
+    "Hash": "{A361C0C8-A7B4-CA0B-A493-E00F70B1B9A6}",
+    "ObjectPath": "Play_Footstep_L",
+    "ShortName": "Play_Footstep_L",
+    "Path": "Event/Play_Footstep_L.bnk",
+    "Media": [
+     {
+      "Id": "17510250",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYClth_cotton_movement_R_01.wav",
+      "Path": "Media/17510250.wem",
+      "CachePath": "SFX/FOLYClth_cotton_movement_R_01_818F3B66.wem"
+     },
+     {
+      "Id": "22249884",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYClth_cotton_movement_R_02.wav",
+      "Path": "Media/22249884.wem",
+      "CachePath": "SFX/FOLYClth_cotton_movement_R_02_818F3B66.wem"
+     },
+     {
+      "Id": "25798057",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYClth_cotton_movement_R_03.wav",
+      "Path": "Media/25798057.wem",
+      "CachePath": "SFX/FOLYClth_cotton_movement_R_03_818F3B66.wem"
+     },
+     {
+      "Id": "32733725",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYClth_cotton_movement_L_01.wav",
+      "Path": "Media/32733725.wem",
+      "CachePath": "SFX/FOLYClth_cotton_movement_L_01_818F3B66.wem"
+     },
+     {
+      "Id": "48399546",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYFeet_boots_concrete_L_02.wav",
+      "Path": "Media/48399546.wem",
+      "CachePath": "SFX/FOLYFeet_boots_concrete_L_02_818F3B66.wem"
+     },
+     {
+      "Id": "66029619",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_zipper_movement_L_03.wav",
+      "Path": "Media/66029619.wem",
+      "CachePath": "SFX/FOLYProp_zipper_movement_L_03_818F3B66.wem"
+     },
+     {
+      "Id": "77618937",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_zipper_movement_L_01.wav",
+      "Path": "Media/77618937.wem",
+      "CachePath": "SFX/FOLYProp_zipper_movement_L_01_818F3B66.wem"
+     },
+     {
+      "Id": "108902205",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_gun_movement_L_02.wav",
+      "Path": "Media/108902205.wem",
+      "CachePath": "SFX/FOLYProp_gun_movement_L_02_818F3B66.wem"
+     },
+     {
+      "Id": "137752479",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_zipper_movement_L_02.wav",
+      "Path": "Media/137752479.wem",
+      "CachePath": "SFX/FOLYProp_zipper_movement_L_02_818F3B66.wem"
+     },
+     {
+      "Id": "181298720",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_zipper_movement_L_04.wav",
+      "Path": "Media/181298720.wem",
+      "CachePath": "SFX/FOLYProp_zipper_movement_L_04_818F3B66.wem"
+     },
+     {
+      "Id": "183516667",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYFeet_boots_concrete_R_02.wav",
+      "Path": "Media/183516667.wem",
+      "CachePath": "SFX/FOLYFeet_boots_concrete_R_02_818F3B66.wem"
+     },
+     {
+      "Id": "185270935",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_gun_movement_L_03.wav",
+      "Path": "Media/185270935.wem",
+      "CachePath": "SFX/FOLYProp_gun_movement_L_03_818F3B66.wem"
+     },
+     {
+      "Id": "267655107",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYFeet_boots_concrete_L_01.wav",
+      "Path": "Media/267655107.wem",
+      "CachePath": "SFX/FOLYFeet_boots_concrete_L_01_818F3B66.wem"
+     },
+     {
+      "Id": "269154971",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_zipper_movement_R_02.wav",
+      "Path": "Media/269154971.wem",
+      "CachePath": "SFX/FOLYProp_zipper_movement_R_02_818F3B66.wem"
+     },
+     {
+      "Id": "275270133",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_gun_movement_R_02.wav",
+      "Path": "Media/275270133.wem",
+      "CachePath": "SFX/FOLYProp_gun_movement_R_02_818F3B66.wem"
+     },
+     {
+      "Id": "299422004",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYFeet_boots_metal_L_03.wav",
+      "Path": "Media/299422004.wem",
+      "CachePath": "SFX/FOLYFeet_boots_metal_L_03_818F3B66.wem"
+     },
+     {
+      "Id": "300968120",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYClth_cotton_movement_L_02.wav",
+      "Path": "Media/300968120.wem",
+      "CachePath": "SFX/FOLYClth_cotton_movement_L_02_818F3B66.wem"
+     },
+     {
+      "Id": "445344550",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYFeet_boots_concrete_L_03.wav",
+      "Path": "Media/445344550.wem",
+      "CachePath": "SFX/FOLYFeet_boots_concrete_L_03_818F3B66.wem"
+     },
+     {
+      "Id": "446905731",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYClth_cotton_movement_L_03.wav",
+      "Path": "Media/446905731.wem",
+      "CachePath": "SFX/FOLYClth_cotton_movement_L_03_818F3B66.wem"
+     },
+     {
+      "Id": "446928607",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_zipper_movement_R_03.wav",
+      "Path": "Media/446928607.wem",
+      "CachePath": "SFX/FOLYProp_zipper_movement_R_03_818F3B66.wem"
+     },
+     {
+      "Id": "467477099",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYFeet_boots_metal_R_01.wav",
+      "Path": "Media/467477099.wem",
+      "CachePath": "SFX/FOLYFeet_boots_metal_R_01_818F3B66.wem"
+     },
+     {
+      "Id": "490438468",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_gun_movement_R_03.wav",
+      "Path": "Media/490438468.wem",
+      "CachePath": "SFX/FOLYProp_gun_movement_R_03_818F3B66.wem"
+     },
+     {
+      "Id": "521496975",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_gun_movement_L_04.wav",
+      "Path": "Media/521496975.wem",
+      "CachePath": "SFX/FOLYProp_gun_movement_L_04_818F3B66.wem"
+     },
+     {
+      "Id": "523570740",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYFeet_boots_metal_L_02.wav",
+      "Path": "Media/523570740.wem",
+      "CachePath": "SFX/FOLYFeet_boots_metal_L_02_818F3B66.wem"
+     },
+     {
+      "Id": "541183303",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_zipper_movement_R_01.wav",
+      "Path": "Media/541183303.wem",
+      "CachePath": "SFX/FOLYProp_zipper_movement_R_01_818F3B66.wem"
+     },
+     {
+      "Id": "644823737",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_gun_movement_L_01.wav",
+      "Path": "Media/644823737.wem",
+      "CachePath": "SFX/FOLYProp_gun_movement_L_01_818F3B66.wem"
+     },
+     {
+      "Id": "661878775",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYFeet_boots_metal_L_01.wav",
+      "Path": "Media/661878775.wem",
+      "CachePath": "SFX/FOLYFeet_boots_metal_L_01_818F3B66.wem"
+     },
+     {
+      "Id": "790081314",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYFeet_boots_concrete_R_03.wav",
+      "Path": "Media/790081314.wem",
+      "CachePath": "SFX/FOLYFeet_boots_concrete_R_03_818F3B66.wem"
+     },
+     {
+      "Id": "850360109",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_gun_movement_R_01.wav",
+      "Path": "Media/850360109.wem",
+      "CachePath": "SFX/FOLYProp_gun_movement_R_01_818F3B66.wem"
+     },
+     {
+      "Id": "936281280",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYClth_cotton_movement_L_04.wav",
+      "Path": "Media/936281280.wem",
+      "CachePath": "SFX/FOLYClth_cotton_movement_L_04_818F3B66.wem"
+     },
+     {
+      "Id": "974371144",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYFeet_boots_concrete_R_01.wav",
+      "Path": "Media/974371144.wem",
+      "CachePath": "SFX/FOLYFeet_boots_concrete_R_01_818F3B66.wem"
+     },
+     {
+      "Id": "1067206573",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYFeet_boots_metal_R_03.wav",
+      "Path": "Media/1067206573.wem",
+      "CachePath": "SFX/FOLYFeet_boots_metal_R_03_818F3B66.wem"
+     },
+     {
+      "Id": "1073497575",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYFeet_boots_metal_R_02.wav",
+      "Path": "Media/1073497575.wem",
+      "CachePath": "SFX/FOLYFeet_boots_metal_R_02_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3731463309",
+      "Name": "Play_Footstep_L",
+      "ObjectPath": "\\Events\\FOL_Events\\Play_Footstep_L",
+      "GUID": "{4D1D72B9-CB0F-4F43-A1E5-CB3D4EAE3858}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.30879068",
+      "DurationMax": "0.30879068",
+      "MediaRefs": [
+       {
+        "Id": "17510250"
+       },
+       {
+        "Id": "22249884"
+       },
+       {
+        "Id": "25798057"
+       },
+       {
+        "Id": "32733725"
+       },
+       {
+        "Id": "66029619"
+       },
+       {
+        "Id": "77618937"
+       },
+       {
+        "Id": "108902205"
+       },
+       {
+        "Id": "137752479"
+       },
+       {
+        "Id": "181298720"
+       },
+       {
+        "Id": "185270935"
+       },
+       {
+        "Id": "269154971"
+       },
+       {
+        "Id": "275270133"
+       },
+       {
+        "Id": "300968120"
+       },
+       {
+        "Id": "446905731"
+       },
+       {
+        "Id": "446928607"
+       },
+       {
+        "Id": "490438468"
+       },
+       {
+        "Id": "521496975"
+       },
+       {
+        "Id": "541183303"
+       },
+       {
+        "Id": "644823737"
+       },
+       {
+        "Id": "850360109"
+       },
+       {
+        "Id": "936281280"
+       }
+      ],
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3714303081",
+         "Id": "2030517811",
+         "GUID": "{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "299422004"
+         },
+         {
+          "Id": "467477099"
+         },
+         {
+          "Id": "523570740"
+         },
+         {
+          "Id": "661878775"
+         },
+         {
+          "Id": "1067206573"
+         },
+         {
+          "Id": "1073497575"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3714303081",
+         "Id": "841620460",
+         "GUID": "{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "48399546"
+         },
+         {
+          "Id": "183516667"
+         },
+         {
+          "Id": "267655107"
+         },
+         {
+          "Id": "445344550"
+         },
+         {
+          "Id": "790081314"
+         },
+         {
+          "Id": "974371144"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3714303081",
+      "Name": "SURFACES",
+      "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES",
+      "GUID": "{20861631-AAF1-4577-A3C6-EC1765939672}",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "CONCRETE",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES\\CONCRETE",
+        "GUID": "{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}"
+       },
+       {
+        "Id": "2030517811",
+        "Name": "METAL_PLATE",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES\\METAL_PLATE",
+        "GUID": "{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "3847527849",
     "Type": "Event",
     "GUID": "{A314E895-1A61-420E-8376-B4C295EACB0E}",
     "Language": "SFX",
-    "Hash": "{74CE07B2-AE5C-726A-E241-F95E4DC74317}",
+    "Hash": "{6729E989-0779-CE7B-12FE-FF54957A4428}",
     "ObjectPath": "Play_Gameplay_Music_Switch",
     "ShortName": "Play_Gameplay_Music_Switch",
     "Path": "Event/Play_Gameplay_Music_Switch.bnk",
@@ -679,6 +1795,12 @@
         "GUID": "{C41FB390-63C4-4CB1-AFB1-24503BFACF70}"
        },
        {
+        "Id": "3794091074",
+        "Name": "state_05",
+        "ObjectPath": "\\States\\Default Work Unit\\MUS_State_Group\\state_05",
+        "GUID": "{0015000B-A550-46D2-AB1A-A0CC41DD63F4}"
+       },
+       {
         "Id": "3794091075",
         "Name": "state_04",
         "ObjectPath": "\\States\\Default Work Unit\\MUS_State_Group\\state_04",
@@ -723,242 +1845,6 @@
       "Name": "stinger_03",
       "ObjectPath": "\\Triggers\\Default Work Unit\\Music\\stinger_03",
       "GUID": "{6E80E59E-E374-434F-A63E-A374E8E284B5}"
-     }
-    ]
-   },
-   {
-    "Id": "3854155799",
-    "Type": "Event",
-    "GUID": "{0D63CA0F-2818-41AC-B137-FB4975992982}",
-    "Language": "SFX",
-    "Hash": "{CEF82640-3796-4FC8-D789-D0AE5BF90D07}",
-    "ObjectPath": "Play_Footsteps",
-    "ShortName": "Play_Footsteps",
-    "Path": "Event/Play_Footsteps.bnk",
-    "Media": [
-     {
-      "Id": "36263286",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-11.L.wav",
-      "Path": "Media/36263286.wem",
-      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-11.L_818F3B66.wem"
-     },
-     {
-      "Id": "334648624",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-05.L.wav",
-      "Path": "Media/334648624.wem",
-      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-05.L_818F3B66.wem"
-     },
-     {
-      "Id": "380562320",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-12.L.wav",
-      "Path": "Media/380562320.wem",
-      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-12.L_818F3B66.wem"
-     },
-     {
-      "Id": "390804890",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-03.L.wav",
-      "Path": "Media/390804890.wem",
-      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-03.L_818F3B66.wem"
-     },
-     {
-      "Id": "414059036",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-09.L.wav",
-      "Path": "Media/414059036.wem",
-      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-09.L_818F3B66.wem"
-     },
-     {
-      "Id": "415841338",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-09.L.wav",
-      "Path": "Media/415841338.wem",
-      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-09.L_818F3B66.wem"
-     },
-     {
-      "Id": "470284971",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-05.L.wav",
-      "Path": "Media/470284971.wem",
-      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-05.L_818F3B66.wem"
-     },
-     {
-      "Id": "578769596",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-12.L.wav",
-      "Path": "Media/578769596.wem",
-      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-12.L_818F3B66.wem"
-     },
-     {
-      "Id": "604968869",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-01.L.wav",
-      "Path": "Media/604968869.wem",
-      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-01.L_818F3B66.wem"
-     },
-     {
-      "Id": "626163892",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-03.L.wav",
-      "Path": "Media/626163892.wem",
-      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-03.L_818F3B66.wem"
-     },
-     {
-      "Id": "637960541",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-07.L.wav",
-      "Path": "Media/637960541.wem",
-      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-07.L_818F3B66.wem"
-     },
-     {
-      "Id": "648895736",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-07.L.wav",
-      "Path": "Media/648895736.wem",
-      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-07.L_818F3B66.wem"
-     },
-     {
-      "Id": "805079255",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Cowboy Boots Walking On Metal Platform 01-11.L.wav",
-      "Path": "Media/805079255.wem",
-      "CachePath": "SFX/Foley Footstep Cowboy Boots Walking On Metal Platform 01-11.L_818F3B66.wem"
-     },
-     {
-      "Id": "883164219",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Foley Footstep Soft Sole Work Boots Walking On Cement 01-01.L.wav",
-      "Path": "Media/883164219.wem",
-      "CachePath": "SFX/Foley Footstep Soft Sole Work Boots Walking On Cement 01-01.L_818F3B66.wem"
-     }
-    ],
-    "Events": [
-     {
-      "Id": "3854155799",
-      "Name": "Play_Footsteps",
-      "ObjectPath": "\\Events\\FOL_Events\\Play_Footsteps",
-      "GUID": "{0D63CA0F-2818-41AC-B137-FB4975992982}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.36475",
-      "DurationMax": "0.879875",
-      "SwitchContainers": [
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "3714303081",
-         "Id": "2030517811",
-         "GUID": "{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "334648624"
-         },
-         {
-          "Id": "380562320"
-         },
-         {
-          "Id": "390804890"
-         },
-         {
-          "Id": "415841338"
-         },
-         {
-          "Id": "604968869"
-         },
-         {
-          "Id": "648895736"
-         },
-         {
-          "Id": "805079255"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "3714303081",
-         "Id": "841620460",
-         "GUID": "{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}",
-         "Default": "true"
-        },
-        "MediaRefs": [
-         {
-          "Id": "36263286"
-         },
-         {
-          "Id": "414059036"
-         },
-         {
-          "Id": "470284971"
-         },
-         {
-          "Id": "578769596"
-         },
-         {
-          "Id": "626163892"
-         },
-         {
-          "Id": "637960541"
-         },
-         {
-          "Id": "883164219"
-         }
-        ]
-       }
-      ]
-     }
-    ],
-    "SwitchGroups": [
-     {
-      "Id": "3714303081",
-      "Name": "SURFACES",
-      "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES",
-      "GUID": "{20861631-AAF1-4577-A3C6-EC1765939672}",
-      "Switches": [
-       {
-        "Id": "841620460",
-        "Name": "CONCRETE",
-        "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES\\CONCRETE",
-        "GUID": "{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}"
-       },
-       {
-        "Id": "2030517811",
-        "Name": "METAL_PLATE",
-        "ObjectPath": "\\Switches\\Default Work Unit\\SURFACES\\METAL_PLATE",
-        "GUID": "{D3D1C02F-E40F-4E0D-9C66-73CCDCDAA0C4}"
-       }
-      ]
      }
     ]
    },
@@ -1077,6 +1963,6 @@
     ]
    }
   ],
-  "FileHash": "{A996B612-82B0-49F4-B3BE-8D87D13BCC7F}"
+  "FileHash": "{9D03E036-2E18-022C-E8BD-EB5AF5200958}"
  }
 }

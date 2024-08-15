@@ -37,7 +37,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-12_L" ID="{115FB646-0B13-4223-BD48-E61618EF9FC3}" ShortID="432863145">
+								<Sound Name="FOLYFeet_boots_concrete_L_01" ID="{869735CF-794F-4E97-B8DB-3B34AE5FFB9D}" ShortID="503109258">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -47,19 +47,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-12_L" ID="{884349D0-6DA9-42EB-B107-0FEB9CE3365F}">
+										<AudioFileSource Name="FOLYFeet_boots_concrete_L_01" ID="{E267730E-64D4-4627-B6D6-84767496D197}">
 											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Soft Sole Work Boots Walking On Cement 01-12.L.wav</AudioFile>
+											<AudioFile>FOLYFeet_boots_concrete_L_01.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="578769596"/>
+												<MediaID ID="267655107"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-12_L" ID="{884349D0-6DA9-42EB-B107-0FEB9CE3365F}" Platform="Linked"/>
+										<ActiveSource Name="FOLYFeet_boots_concrete_L_01" ID="{E267730E-64D4-4627-B6D6-84767496D197}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-01_L" ID="{0F7A3FCC-3E42-40AE-9199-95E090451CAB}" ShortID="117450236">
+								<Sound Name="FOLYFeet_boots_concrete_L_02" ID="{8FCE455E-BA13-4687-A0FF-C4DC4B900B25}" ShortID="304544324">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -69,19 +69,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-01_L" ID="{B4CFA6E9-4F0F-41DA-B54B-4D83460D6018}">
+										<AudioFileSource Name="FOLYFeet_boots_concrete_L_02" ID="{7A624F2F-9E67-4254-863C-7B55BF1A756B}">
 											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Soft Sole Work Boots Walking On Cement 01-01.L.wav</AudioFile>
+											<AudioFile>FOLYFeet_boots_concrete_L_02.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="883164219"/>
+												<MediaID ID="48399546"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-01_L" ID="{B4CFA6E9-4F0F-41DA-B54B-4D83460D6018}" Platform="Linked"/>
+										<ActiveSource Name="FOLYFeet_boots_concrete_L_02" ID="{7A624F2F-9E67-4254-863C-7B55BF1A756B}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-09_L" ID="{BEB3F722-B922-4816-9AC4-AD900820EE6C}" ShortID="413471432">
+								<Sound Name="FOLYFeet_boots_concrete_L_03" ID="{716095B6-098F-4A86-ABDA-A62CDDD80361}" ShortID="369062698">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -91,19 +91,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-09_L" ID="{D836CDE0-D01E-4B0A-8715-7D6791C2F4DF}">
+										<AudioFileSource Name="FOLYFeet_boots_concrete_L_03" ID="{81EB9565-2ECE-458A-834F-A234F11BD3AB}">
 											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Soft Sole Work Boots Walking On Cement 01-09.L.wav</AudioFile>
+											<AudioFile>FOLYFeet_boots_concrete_L_03.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="414059036"/>
+												<MediaID ID="445344550"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-09_L" ID="{D836CDE0-D01E-4B0A-8715-7D6791C2F4DF}" Platform="Linked"/>
+										<ActiveSource Name="FOLYFeet_boots_concrete_L_03" ID="{81EB9565-2ECE-458A-834F-A234F11BD3AB}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-11_L" ID="{4CB1A080-0069-4CA1-88E5-A97EE8E84EED}" ShortID="929354630">
+								<Sound Name="FOLYFeet_boots_concrete_R_01" ID="{36A99E40-4E0B-48EB-857E-C787CD261DA6}" ShortID="460071720">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -113,19 +113,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-11_L" ID="{59DDE04A-29C0-4206-86E2-C33D978AC8C5}">
+										<AudioFileSource Name="FOLYFeet_boots_concrete_R_01" ID="{0330DA9F-621D-4B17-B4C5-9C4AD4B3E507}">
 											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Soft Sole Work Boots Walking On Cement 01-11.L.wav</AudioFile>
+											<AudioFile>FOLYFeet_boots_concrete_R_01.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="36263286"/>
+												<MediaID ID="974371144"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-11_L" ID="{59DDE04A-29C0-4206-86E2-C33D978AC8C5}" Platform="Linked"/>
+										<ActiveSource Name="FOLYFeet_boots_concrete_R_01" ID="{0330DA9F-621D-4B17-B4C5-9C4AD4B3E507}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-05_L" ID="{B9EFA83F-1BDA-4027-8BDA-FAD4BBBC1746}" ShortID="497344879">
+								<Sound Name="FOLYFeet_boots_concrete_R_02" ID="{9D50FE2B-ED00-47DE-8B3B-463851BAEC0F}" ShortID="510483813">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -135,19 +135,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-05_L" ID="{81748DA1-56A8-41E1-B0C9-236F4CCA6890}">
+										<AudioFileSource Name="FOLYFeet_boots_concrete_R_02" ID="{FA5E9EEA-4189-4805-9125-5C5A86631B3D}">
 											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Soft Sole Work Boots Walking On Cement 01-05.L.wav</AudioFile>
+											<AudioFile>FOLYFeet_boots_concrete_R_02.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="470284971"/>
+												<MediaID ID="183516667"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-05_L" ID="{81748DA1-56A8-41E1-B0C9-236F4CCA6890}" Platform="Linked"/>
+										<ActiveSource Name="FOLYFeet_boots_concrete_R_02" ID="{FA5E9EEA-4189-4805-9125-5C5A86631B3D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-03_L" ID="{5390FE77-4CB2-4A8F-AA0F-C394C26090F1}" ShortID="301347034">
+								<Sound Name="FOLYFeet_boots_concrete_R_03" ID="{0CB03BDD-7ECA-4CE7-9E9F-F9CE63273D08}" ShortID="549302126">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -157,38 +157,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-03_L" ID="{95800D9E-9293-4E32-A68E-4C3F8E60488A}">
+										<AudioFileSource Name="FOLYFeet_boots_concrete_R_03" ID="{FC6C3430-0F98-4092-8C43-45DB2CEBD66B}">
 											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Soft Sole Work Boots Walking On Cement 01-03.L.wav</AudioFile>
+											<AudioFile>FOLYFeet_boots_concrete_R_03.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="626163892"/>
+												<MediaID ID="790081314"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-03_L" ID="{95800D9E-9293-4E32-A68E-4C3F8E60488A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-07_L" ID="{661A2EC4-588F-4FD2-B2CA-00A7E3D265EA}" ShortID="521641707">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-07_L" ID="{312D6199-C870-43D1-BB40-498F148CE4BE}">
-											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Soft Sole Work Boots Walking On Cement 01-07.L.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="637960541"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Soft Sole Work Boots Walking On Cement 01-07_L" ID="{312D6199-C870-43D1-BB40-498F148CE4BE}" Platform="Linked"/>
+										<ActiveSource Name="FOLYFeet_boots_concrete_R_03" ID="{FC6C3430-0F98-4092-8C43-45DB2CEBD66B}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -210,7 +188,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-03_L" ID="{1B6E01D9-D19F-45CB-B3CB-65B772B0503B}" ShortID="633622380">
+								<Sound Name="FOLYFeet_boots_metal_L_01" ID="{9A4D63B6-A83E-4EA2-9164-5A00A5043EA8}" ShortID="159178077">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -220,19 +198,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-03_L" ID="{B423295C-0F4F-4DCD-98BF-8D001A0D03C3}">
+										<AudioFileSource Name="FOLYFeet_boots_metal_L_01" ID="{997EE436-B523-4C44-B5C6-1ADB32F0AD00}">
 											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Cowboy Boots Walking On Metal Platform 01-03.L.wav</AudioFile>
+											<AudioFile>FOLYFeet_boots_metal_L_01.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="390804890"/>
+												<MediaID ID="661878775"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-03_L" ID="{B423295C-0F4F-4DCD-98BF-8D001A0D03C3}" Platform="Linked"/>
+										<ActiveSource Name="FOLYFeet_boots_metal_L_01" ID="{997EE436-B523-4C44-B5C6-1ADB32F0AD00}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-11_L" ID="{164F0A83-9FC9-49E2-9C91-952C7796247E}" ShortID="837344127">
+								<Sound Name="FOLYFeet_boots_metal_L_02" ID="{832005D7-9A87-46D9-8BB1-B2476E882A64}" ShortID="43874878">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -242,19 +220,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-11_L" ID="{54D2AF2E-7A95-4231-BD5F-6AA8257B6337}">
+										<AudioFileSource Name="FOLYFeet_boots_metal_L_02" ID="{29966B56-B389-4EB7-9D62-CD8E06504F39}">
 											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Cowboy Boots Walking On Metal Platform 01-11.L.wav</AudioFile>
+											<AudioFile>FOLYFeet_boots_metal_L_02.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="805079255"/>
+												<MediaID ID="523570740"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-11_L" ID="{54D2AF2E-7A95-4231-BD5F-6AA8257B6337}" Platform="Linked"/>
+										<ActiveSource Name="FOLYFeet_boots_metal_L_02" ID="{29966B56-B389-4EB7-9D62-CD8E06504F39}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-09_L" ID="{DD9AB21C-98D5-4C34-8C75-C3F2097B4E99}" ShortID="64866614">
+								<Sound Name="FOLYFeet_boots_metal_L_03" ID="{ADECB8CA-6187-43BE-8916-9A73AE6DC6BD}" ShortID="504628016">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -264,19 +242,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-09_L" ID="{542BA64C-73FB-4FE5-AE2A-E9248788D7FE}">
+										<AudioFileSource Name="FOLYFeet_boots_metal_L_03" ID="{DF72280A-C34A-4CDF-91D6-A690FC94E34A}">
 											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Cowboy Boots Walking On Metal Platform 01-09.L.wav</AudioFile>
+											<AudioFile>FOLYFeet_boots_metal_L_03.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="415841338"/>
+												<MediaID ID="299422004"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-09_L" ID="{542BA64C-73FB-4FE5-AE2A-E9248788D7FE}" Platform="Linked"/>
+										<ActiveSource Name="FOLYFeet_boots_metal_L_03" ID="{DF72280A-C34A-4CDF-91D6-A690FC94E34A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-01_L" ID="{2FEEA08C-39EE-4D68-819F-56445904ECAE}" ShortID="915741935">
+								<Sound Name="FOLYFeet_boots_metal_R_01" ID="{79F6F9A0-CFB2-44B4-94DD-6144FAC135AD}" ShortID="571124592">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -286,19 +264,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-01_L" ID="{4F01FAC1-7C1F-4FC9-BB34-E8A58D32068B}">
+										<AudioFileSource Name="FOLYFeet_boots_metal_R_01" ID="{D28F4269-42DA-4C41-ACBE-52F62B60446E}">
 											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Cowboy Boots Walking On Metal Platform 01-01.L.wav</AudioFile>
+											<AudioFile>FOLYFeet_boots_metal_R_01.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="604968869"/>
+												<MediaID ID="467477099"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-01_L" ID="{4F01FAC1-7C1F-4FC9-BB34-E8A58D32068B}" Platform="Linked"/>
+										<ActiveSource Name="FOLYFeet_boots_metal_R_01" ID="{D28F4269-42DA-4C41-ACBE-52F62B60446E}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-05_L" ID="{F5267325-43B2-4955-AC79-1381E99F57AD}" ShortID="907393660">
+								<Sound Name="FOLYFeet_boots_metal_R_02" ID="{EABC6F24-1326-4BB7-A007-BA2CD946C15D}" ShortID="746646205">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -308,19 +286,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-05_L" ID="{D188E233-4DD5-4F79-82DE-AFFF3654F0DB}">
+										<AudioFileSource Name="FOLYFeet_boots_metal_R_02" ID="{145D1F5C-4622-4AB2-9DD6-940C307983C0}">
 											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Cowboy Boots Walking On Metal Platform 01-05.L.wav</AudioFile>
+											<AudioFile>FOLYFeet_boots_metal_R_02.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="334648624"/>
+												<MediaID ID="1073497575"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-05_L" ID="{D188E233-4DD5-4F79-82DE-AFFF3654F0DB}" Platform="Linked"/>
+										<ActiveSource Name="FOLYFeet_boots_metal_R_02" ID="{145D1F5C-4622-4AB2-9DD6-940C307983C0}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-12_L" ID="{9EF1831B-AB40-4989-9ABB-165A87A66DEA}" ShortID="297215000">
+								<Sound Name="FOLYFeet_boots_metal_R_03" ID="{67132807-2C17-4571-82F6-B25839D0142B}" ShortID="1024477436">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -330,38 +308,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-12_L" ID="{2D99BA04-88DF-4A44-B262-0BE304D9AA41}">
+										<AudioFileSource Name="FOLYFeet_boots_metal_R_03" ID="{B8988EE9-F975-474F-B4BF-C6D93DEBE5BF}">
 											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Cowboy Boots Walking On Metal Platform 01-12.L.wav</AudioFile>
+											<AudioFile>FOLYFeet_boots_metal_R_03.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="380562320"/>
+												<MediaID ID="1067206573"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-12_L" ID="{2D99BA04-88DF-4A44-B262-0BE304D9AA41}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-07_L" ID="{100A931B-1132-4AF1-99CD-3586F9A098EE}" ShortID="905343510">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-07_L" ID="{F6E83A47-80EA-4938-94F1-A48FCC8D0450}">
-											<Language>SFX</Language>
-											<AudioFile>Foley Footstep Cowboy Boots Walking On Metal Platform 01-07.L.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="648895736"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Foley Footstep Cowboy Boots Walking On Metal Platform 01-07_L" ID="{F6E83A47-80EA-4938-94F1-A48FCC8D0450}" Platform="Linked"/>
+										<ActiveSource Name="FOLYFeet_boots_metal_R_03" ID="{B8988EE9-F975-474F-B4BF-C6D93DEBE5BF}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

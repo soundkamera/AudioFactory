@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	597080488	Fire_GUNAuto_burst			\SFX_Events\Fire_GUNAuto_burst	
+

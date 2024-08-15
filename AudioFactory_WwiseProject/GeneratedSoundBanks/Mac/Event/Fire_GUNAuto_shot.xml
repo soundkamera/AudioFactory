@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2736774062" Type="Event" GUID="{00EEB85E-BE58-488E-98EF-F0EDADA35832}" Language="SFX" Hash="{225F73B8-70BC-9953-5551-A677896515EA}">
+		<SoundBank Id="2736774062" Type="Event" GUID="{00EEB85E-BE58-488E-98EF-F0EDADA35832}" Language="SFX" Hash="{DB15DFED-1209-F8B4-B320-66351D6ACF3F}">
 			<ObjectPath>Fire_GUNAuto_shot</ObjectPath>
 			<ShortName>Fire_GUNAuto_shot</ShortName>
 			<Path>Event/Fire_GUNAuto_shot.bnk</Path>
@@ -105,5 +105,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3B77BCDD-E833-4545-C0B3-33D335BA7322}</FileHash>
+	<FileHash>{2D15E21D-B2F5-8A97-B424-5920114E8670}</FileHash>
 </SoundBanksInfo>

@@ -3,7 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="BLLImpt" ID="{9690288C-B9E7-4561-BBEA-50BA655AE713}" OwnerID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}" PersistMode="Nested">
 			<ChildrenList>
-				<RandomSequenceContainer Name="WOOD" ID="{E8ED6202-3C6A-4F38-9D33-1B4215E585A7}" ShortID="521904764">
+				<SwitchContainer Name="BLLImptSwitch" ID="{B609D0EB-C3A1-4534-882B-6C1ECE1901BE}" ShortID="203864848">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -11,48 +11,1075 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
 						</Reference>
-					</ReferenceList>
-				</RandomSequenceContainer>
-				<RandomSequenceContainer Name="CONCRETE" ID="{47B11710-D9C8-4DC8-A99C-3C63AA9591BD}" ShortID="939242459">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="BULLET_IMPACTS_Materials" ID="{5ADA9966-D07D-4D16-9943-E49139DAE58D}" WorkUnitID="{B7AC075B-4BF0-4C45-8DF5-28DC70223478}"/>
 						</Reference>
 					</ReferenceList>
-				</RandomSequenceContainer>
-				<RandomSequenceContainer Name="METAL" ID="{AE227F6D-84E6-493E-8F52-9FAE74BA151E}" ShortID="934693794">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
-						</Reference>
-					</ReferenceList>
-				</RandomSequenceContainer>
-				<RandomSequenceContainer Name="HUMAN" ID="{A17F63E8-FA7C-4E2B-ADB4-147EACAF066C}" ShortID="328828567">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
-						</Reference>
-					</ReferenceList>
-				</RandomSequenceContainer>
-				<RandomSequenceContainer Name="GLASS" ID="{04763F24-1D2B-433E-B35D-DCC0311A80DC}" ShortID="73383188">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
-						</Reference>
-					</ReferenceList>
-				</RandomSequenceContainer>
+					<ChildrenList>
+						<BlendContainer Name="WOOD" ID="{93AD96E4-FEDE-4887-8A7B-25D2768767CA}" ShortID="334119412">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+						</BlendContainer>
+						<BlendContainer Name="CONCRETE" ID="{2E6592CE-0526-43B0-B80B-4C599D94C9AC}" ShortID="606362176">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="IMPACT" ID="{ADFDEB09-704E-4B37-9D92-96FCC722DF84}" ShortID="190898671">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="BLLTImpt_concrete_impact_01" ID="{942EDE41-9EBC-407C-A4C3-8BC632F443FC}" ShortID="322019705">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_concrete_impact_01" ID="{0AA175A2-2702-486F-905B-2F1FE1E0637C}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_concrete_impact_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="451624115"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_concrete_impact_01" ID="{0AA175A2-2702-486F-905B-2F1FE1E0637C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_concrete_impact_02" ID="{243487A9-9CA1-4EBC-9569-C2FBAEDE1462}" ShortID="585436122">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_concrete_impact_02" ID="{D9596187-0A7E-4251-BDE4-CA99E7F81A95}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_concrete_impact_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="219027859"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_concrete_impact_02" ID="{D9596187-0A7E-4251-BDE4-CA99E7F81A95}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_concrete_impact_03" ID="{C4F7E859-30AF-42F4-86AE-230842489F42}" ShortID="723593660">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_concrete_impact_03" ID="{88B295E0-2865-4C71-A257-09584D1F2CA9}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_concrete_impact_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="616770483"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_concrete_impact_03" ID="{88B295E0-2865-4C71-A257-09584D1F2CA9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_concrete_impact_04" ID="{EB04AEA4-B775-4E7E-9CA8-7D5897A85C6E}" ShortID="581265718">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_concrete_impact_04" ID="{F3F8FA2B-BADE-4BD5-BE1B-C3DB2BF42615}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_concrete_impact_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="20358246"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_concrete_impact_04" ID="{F3F8FA2B-BADE-4BD5-BE1B-C3DB2BF42615}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_concrete_impact_05" ID="{CB1B1AE7-0586-458D-9D3C-D5444534CE90}" ShortID="495265982">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_concrete_impact_05" ID="{C0913EC9-2395-47A5-ABB1-A41188FEA0B7}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_concrete_impact_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="878224553"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_concrete_impact_05" ID="{C0913EC9-2395-47A5-ABB1-A41188FEA0B7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_concrete_impact_06" ID="{EFC0EEB1-556A-4F98-B560-956C1E34E25A}" ShortID="71247359">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_concrete_impact_06" ID="{4D85637B-A869-4A4F-B629-E583FEF8EA2D}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_concrete_impact_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="915714382"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_concrete_impact_06" ID="{4D85637B-A869-4A4F-B629-E583FEF8EA2D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="ZIP" ID="{DCA97B3F-CDD3-4155-BD1C-04E4F023376A}" ShortID="94487544">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="BLLTImpt_zip_01" ID="{B652AF0C-91BF-4733-96EA-697A282A7E95}" ShortID="641054815">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_zip_01" ID="{A2CAD871-9905-424B-8495-74ECA9665537}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.104623629385965"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_zip_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="897249077"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_zip_01" ID="{A2CAD871-9905-424B-8495-74ECA9665537}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_zip_02" ID="{6AC2A5B6-ADEF-478B-9ECC-B961A645A6D2}" ShortID="1055854751">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_zip_02" ID="{47A38A1C-2254-4520-AD1D-489A798EA641}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_zip_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="146847640"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_zip_02" ID="{47A38A1C-2254-4520-AD1D-489A798EA641}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_zip_03" ID="{E3B24859-487C-4BF9-A938-E8B44112206D}" ShortID="449649769">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_zip_03" ID="{75754D1D-9AD3-435A-AEF9-2125B210142E}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.123885416666667"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.123885416666667"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_zip_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="796702107"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_zip_03" ID="{75754D1D-9AD3-435A-AEF9-2125B210142E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_zip_04" ID="{8023271A-D526-49D2-A4B8-DD2E2160D556}" ShortID="332767556">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_zip_04" ID="{16D40BE5-838D-4F7F-81C1-8E6D2C9254EB}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.150505756578948"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.150505756578948"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_zip_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="890919755"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_zip_04" ID="{16D40BE5-838D-4F7F-81C1-8E6D2C9254EB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_zip_05" ID="{EFEADCF7-1E9E-4AAD-846A-6442A28B473A}" ShortID="789149791">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_zip_05" ID="{C2874D5A-5D04-4030-B962-2C61739CC7CA}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.121140350877193"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.121140350877193"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_zip_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1019353196"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_zip_05" ID="{C2874D5A-5D04-4030-B962-2C61739CC7CA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_zip_06" ID="{42B79C48-338C-49B9-8012-5715200F6336}" ShortID="956558995">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_zip_06" ID="{EEC34753-90ED-48E4-9213-6AD6B7A0612B}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.13249725877193"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.13249725877193"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_zip_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="687673835"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_zip_06" ID="{EEC34753-90ED-48E4-9213-6AD6B7A0612B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="SUB" ID="{5449AE6B-27CB-490E-AFC2-CB744DF477A9}" ShortID="1022830772">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="BLLTImpt_sub_01" ID="{DDFE4FA4-8129-4C42-A7DB-40933E2BFB53}" ShortID="29941469">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_sub_01" ID="{28AB79B5-9F6C-405A-B825-B913A2133AB6}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_sub_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="588283851"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_sub_01" ID="{28AB79B5-9F6C-405A-B825-B913A2133AB6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_sub_02" ID="{790B3F55-BCE7-4E42-B0DB-0B73AC3FA001}" ShortID="770176628">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_sub_02" ID="{8B1D9FE4-85BB-4507-B4F6-0FC23D5B5131}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_sub_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="958277865"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_sub_02" ID="{8B1D9FE4-85BB-4507-B4F6-0FC23D5B5131}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_sub_03" ID="{13628DFC-F7B8-43CE-B31A-9F5CD407E9E7}" ShortID="658589960">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_sub_03" ID="{26AA96DC-77F3-477E-AC05-17F67054DB60}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_sub_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="433475579"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_sub_03" ID="{26AA96DC-77F3-477E-AC05-17F67054DB60}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_sub_04" ID="{79EBB01B-BFCA-4F3C-9B1E-8FBA27646F8A}" ShortID="92221382">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_sub_04" ID="{B5FB44AB-09A8-48AD-9B3F-95BEFDDAD72D}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_sub_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="395316244"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_sub_04" ID="{B5FB44AB-09A8-48AD-9B3F-95BEFDDAD72D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_sub_05" ID="{E57583E7-6F8D-4204-AAEA-7E5A79412239}" ShortID="333351358">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_sub_05" ID="{4D01FA87-95A3-4855-9587-38C9C17139DE}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_sub_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="954201227"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_sub_05" ID="{4D01FA87-95A3-4855-9587-38C9C17139DE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_sub_06" ID="{2A1F376F-FD59-472B-8DC4-E039911903E0}" ShortID="233145462">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_sub_06" ID="{0CD66FF5-84E0-41A2-ADF0-B78880B6F3C5}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_sub_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="267505568"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_sub_06" ID="{0CD66FF5-84E0-41A2-ADF0-B78880B6F3C5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="BREAK" ID="{D13D2304-60B5-4C49-A998-4E726AD75815}" ShortID="946072980">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="METAL" ID="{352F1055-9567-4D4A-9A10-1BDC08E5C98C}" ShortID="978181157">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="BREAK" ID="{0E83A8F5-AAD1-4B64-A49A-2FCCD0856EA0}" ShortID="15688009">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="IMPACT" ID="{99707D09-A899-4AD6-A260-D3B4DFE2520C}" ShortID="89127832">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="metal_hit_clink_01" ID="{2CFBC1C3-5028-43D2-BE8D-D4C73BF72C59}" ShortID="15774495">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal_hit_clink_01" ID="{27ECB431-5A59-402E-A5AE-2B96907BCFC2}">
+													<Language>SFX</Language>
+													<AudioFile>metal_hit_clink_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="210850333"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal_hit_clink_01" ID="{27ECB431-5A59-402E-A5AE-2B96907BCFC2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="metal_hit_clink_02" ID="{8328DEFC-B3B0-4A07-A149-41F5940A3473}" ShortID="759405807">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal_hit_clink_02" ID="{D880B0D7-C018-4D67-B0A2-0647958889F5}">
+													<Language>SFX</Language>
+													<AudioFile>metal_hit_clink_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="131616039"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal_hit_clink_02" ID="{D880B0D7-C018-4D67-B0A2-0647958889F5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="metal_hit_clink_03" ID="{A2727BFB-AF1F-4E75-84B5-B2019B3C3F79}" ShortID="1000704597">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal_hit_clink_03" ID="{6957F922-2766-456C-92B1-870666AE9D67}">
+													<Language>SFX</Language>
+													<AudioFile>metal_hit_clink_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1025331454"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal_hit_clink_03" ID="{6957F922-2766-456C-92B1-870666AE9D67}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="metal_hit_clink_04" ID="{EDF0F393-F962-469A-A04A-14A238E91CFD}" ShortID="1068482413">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal_hit_clink_04" ID="{131FF5C1-4335-4F74-B8A5-EE6DCA9CE404}">
+													<Language>SFX</Language>
+													<AudioFile>metal_hit_clink_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="924641666"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal_hit_clink_04" ID="{131FF5C1-4335-4F74-B8A5-EE6DCA9CE404}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="metal_hit_clink_05" ID="{34C39AA4-C46D-408D-8EE4-6C3E3B07B0E9}" ShortID="190208528">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal_hit_clink_05" ID="{0685B6BF-12CA-4D42-8FE3-C67935B76B64}">
+													<Language>SFX</Language>
+													<AudioFile>metal_hit_clink_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="937615435"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal_hit_clink_05" ID="{0685B6BF-12CA-4D42-8FE3-C67935B76B64}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="SUB" ID="{486108B5-5E77-4ED1-A91D-E11EF9DB2719}" ShortID="679376057">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>11</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="BLLTImpt_sub_01" ID="{E20EB0C1-ADD9-4615-B731-6A9B39035719}" ShortID="832882962">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_sub_01" ID="{691E68E4-2D04-4FF3-84E3-CBD528BFEE12}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_sub_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="588283851"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_sub_01" ID="{691E68E4-2D04-4FF3-84E3-CBD528BFEE12}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_sub_02" ID="{DC059AA7-1D6E-4497-8DC3-094A47DE0390}" ShortID="323040691">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_sub_02" ID="{0194804F-B003-40AA-9D6A-73FA4B212EA5}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_sub_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="958277865"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_sub_02" ID="{0194804F-B003-40AA-9D6A-73FA4B212EA5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_sub_03" ID="{96D8E1F0-1C33-4006-ABC3-A144B50F7890}" ShortID="738346226">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_sub_03" ID="{FEB7A28B-0110-45DE-AE09-84D94E211BC8}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_sub_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="433475579"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_sub_03" ID="{FEB7A28B-0110-45DE-AE09-84D94E211BC8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_sub_04" ID="{C2C8C5BE-925D-4D23-838D-8CD73D023A85}" ShortID="740770623">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_sub_04" ID="{1C5A8B63-41D9-4720-ACE0-70DB4339A1F7}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_sub_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="395316244"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_sub_04" ID="{1C5A8B63-41D9-4720-ACE0-70DB4339A1F7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_sub_05" ID="{77A03A0D-CDCC-42C0-8A37-6723A04ED075}" ShortID="580620711">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_sub_05" ID="{5946AE24-973D-4598-BF75-D43A0DB752DA}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_sub_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="954201227"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_sub_05" ID="{5946AE24-973D-4598-BF75-D43A0DB752DA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_sub_06" ID="{FB2676CC-885C-4D1C-84B6-787414D923E2}" ShortID="360380077">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_sub_06" ID="{11ED9199-DD60-449F-84DD-5D88BC559365}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_sub_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="267505568"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_sub_06" ID="{11ED9199-DD60-449F-84DD-5D88BC559365}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="ZIP" ID="{1AA1771E-A65D-46AC-9EF9-266AB9576746}" ShortID="133944453">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="BLLTImpt_zip_01" ID="{460800DD-A7FB-4644-BE12-AA6AC917FE0B}" ShortID="433659477">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_zip_01" ID="{D83467D6-08AB-4AB9-8B7A-21E6A79BE238}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.104623629385965"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_zip_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="897249077"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_zip_01" ID="{D83467D6-08AB-4AB9-8B7A-21E6A79BE238}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_zip_02" ID="{E921056D-C396-4C53-AC1C-A45E192F229E}" ShortID="681638449">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_zip_02" ID="{1D4C8446-F28C-4887-AC8A-87D0F0318942}">
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_zip_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="146847640"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_zip_02" ID="{1D4C8446-F28C-4887-AC8A-87D0F0318942}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_zip_03" ID="{AAABF6E8-A1E1-4979-8B9D-EBAE246C8D3A}" ShortID="660220671">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_zip_03" ID="{D536B6FD-E69D-448B-BA61-F4C0D5E6675E}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.123885416666667"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.123885416666667"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_zip_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="796702107"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_zip_03" ID="{D536B6FD-E69D-448B-BA61-F4C0D5E6675E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_zip_04" ID="{2DAB3DBE-4A28-4133-8437-B13DEA6CEA5F}" ShortID="289050027">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_zip_04" ID="{137E70D7-D944-4EC1-81B0-4AB1E32A48CB}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.150505756578948"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.150505756578948"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_zip_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="890919755"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_zip_04" ID="{137E70D7-D944-4EC1-81B0-4AB1E32A48CB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_zip_05" ID="{445DC039-4ED0-4BF3-A483-331063829BD7}" ShortID="43235359">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_zip_05" ID="{B95B854A-3683-4D0E-85AE-45C178291FC0}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.121140350877193"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.121140350877193"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_zip_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1019353196"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_zip_05" ID="{B95B854A-3683-4D0E-85AE-45C178291FC0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BLLTImpt_zip_06" ID="{C9EED1CB-F518-4949-B0AD-15F8ECE72686}" ShortID="262655105">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BLLTImpt_zip_06" ID="{72F972F9-71AE-4A8E-B401-7F51EBEE73E4}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.13249725877193"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.13249725877193"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BLLTImpt_zip_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="687673835"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BLLTImpt_zip_06" ID="{72F972F9-71AE-4A8E-B401-7F51EBEE73E4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="HUMAN" ID="{177B24A8-9CAE-41DE-BEE9-9A677EDFF3E6}" ShortID="69680932">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+						</BlendContainer>
+						<BlendContainer Name="GLASS" ID="{55053FFF-0686-478E-8F9E-1D59BD82BCA0}" ShortID="12781181">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+						</BlendContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="METAL" ID="{352F1055-9567-4D4A-9A10-1BDC08E5C98C}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="HUMAN" ID="{177B24A8-9CAE-41DE-BEE9-9A677EDFF3E6}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="CONCRETE" ID="{2E6592CE-0526-43B0-B80B-4C599D94C9AC}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="WOOD" ID="{93AD96E4-FEDE-4887-8A7B-25D2768767CA}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="GLASS" ID="{55053FFF-0686-478E-8F9E-1D59BD82BCA0}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="HUMAN" ID="{724CB739-058D-48DD-841E-08C4481EF9CF}"/>
+								<ItemList>
+									<ItemRef Name="HUMAN" ID="{177B24A8-9CAE-41DE-BEE9-9A677EDFF3E6}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="METAL" ID="{85662D46-408D-40A4-9078-EB4CB47C9D44}"/>
+								<ItemList>
+									<ItemRef Name="METAL" ID="{352F1055-9567-4D4A-9A10-1BDC08E5C98C}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="CONCRETE" ID="{729C7B70-5536-4AA7-AE50-B39843684E5F}"/>
+								<ItemList>
+									<ItemRef Name="CONCRETE" ID="{2E6592CE-0526-43B0-B80B-4C599D94C9AC}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="GLASS" ID="{3547D8AC-50F0-4114-937A-432B972395E8}"/>
+								<ItemList>
+									<ItemRef Name="GLASS" ID="{55053FFF-0686-478E-8F9E-1D59BD82BCA0}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="WOOD" ID="{CF6B93BE-440E-43E2-BD72-02D26EEC75E4}"/>
+								<ItemList>
+									<ItemRef Name="WOOD" ID="{93AD96E4-FEDE-4887-8A7B-25D2768767CA}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

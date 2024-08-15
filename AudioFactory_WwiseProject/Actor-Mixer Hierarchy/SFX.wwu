@@ -3,7 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="SFX" ID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" PersistMode="Standalone">
 			<ChildrenList>
-				<WorkUnit Name="CRASH_DEBRIS" ID="{B8C65866-BECD-43F8-B2C8-C1F6C5885C63}" PersistMode="Reference"/>
+				<WorkUnit Name="CRASH_DEBRISSwitch" ID="{B8C65866-BECD-43F8-B2C8-C1F6C5885C63}" PersistMode="Reference"/>
 				<WorkUnit Name="WEAPONS" ID="{109797FA-754C-46A5-9FEA-823F94656B7E}" PersistMode="Reference"/>
 				<WorkUnit Name="BULLETS" ID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}" PersistMode="Reference"/>
 				<WorkUnit Name="GORE" ID="{E4BC5451-C169-40BA-9D59-C7D1A559D0FD}" PersistMode="Reference"/>

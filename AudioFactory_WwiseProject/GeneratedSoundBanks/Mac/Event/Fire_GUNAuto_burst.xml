@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="597080488" Type="Event" GUID="{0C6BB6EF-1465-487A-BCD7-6F1C3540B884}" Language="SFX" Hash="{0501504D-D42A-C206-5EAD-F880B179BA76}">
+			<ObjectPath>Fire_GUNAuto_burst</ObjectPath>
+			<ShortName>Fire_GUNAuto_burst</ShortName>
+			<Path>Event/Fire_GUNAuto_burst.bnk</Path>
+			<Events>
+				<Event Id="597080488" Name="Fire_GUNAuto_burst" ObjectPath="\Events\SFX_Events\Fire_GUNAuto_burst" GUID="{0C6BB6EF-1465-487A-BCD7-6F1C3540B884}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{0F7305D5-5B57-F55D-AC6D-0F9DA28B2E2B}</FileHash>
+</SoundBanksInfo>

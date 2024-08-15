@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="2336187817" Type="Event" GUID="{2FE08369-935E-44D4-9842-2D899178E0A9}" Language="SFX" Hash="{2E9ACCD6-B2EF-782F-1A74-71F199E5AA0C}">
+			<ObjectPath>Fire_GUNPis_shot</ObjectPath>
+			<ShortName>Fire_GUNPis_shot</ShortName>
+			<Path>Event/Fire_GUNPis_shot.bnk</Path>
+			<Media>
+				<File Id="7141275" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Onset B_01.wav</ShortName>
+					<Path>Media/7141275.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Onset B_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="8213302" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Body A_02.wav</ShortName>
+					<Path>Media/8213302.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Body A_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="186845809" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Onset A_01.wav</ShortName>
+					<Path>Media/186845809.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Onset A_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="293874458" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Onset A_03.wav</ShortName>
+					<Path>Media/293874458.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Onset A_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="413881738" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Body A_01.wav</ShortName>
+					<Path>Media/413881738.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Body A_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="441730692" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Thump_03.wav</ShortName>
+					<Path>Media/441730692.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Thump_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="454303851" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Body B_02.wav</ShortName>
+					<Path>Media/454303851.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Body B_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="478093747" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Thump_01.wav</ShortName>
+					<Path>Media/478093747.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Thump_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="503591782" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Onset B_03.wav</ShortName>
+					<Path>Media/503591782.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Onset B_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="626265998" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Onset B_02.wav</ShortName>
+					<Path>Media/626265998.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Onset B_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="651856835" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Body A_03.wav</ShortName>
+					<Path>Media/651856835.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Body A_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="710778897" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Onset A_02.wav</ShortName>
+					<Path>Media/710778897.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Onset A_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="735911742" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Body B_01.wav</ShortName>
+					<Path>Media/735911742.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Body B_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="885850868" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Body B_03.wav</ShortName>
+					<Path>Media/885850868.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Body B_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="968697689" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Weapon Files Output\GUNPis\GUNPis_Thump_02.wav</ShortName>
+					<Path>Media/968697689.wem</Path>
+					<CachePath>SFX/Weapon Files Output/GUNPis/GUNPis_Thump_02_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2336187817" Name="Fire_GUNPis_shot" ObjectPath="\Events\SFX_Events\Fire_GUNPis_shot" GUID="{2FE08369-935E-44D4-9842-2D899178E0A9}" DurationType="OneShot" DurationMin="4" DurationMax="5.207625">
+					<MediaRefs>
+						<MediaRef Id="7141275"/>
+						<MediaRef Id="8213302"/>
+						<MediaRef Id="186845809"/>
+						<MediaRef Id="293874458"/>
+						<MediaRef Id="413881738"/>
+						<MediaRef Id="441730692"/>
+						<MediaRef Id="454303851"/>
+						<MediaRef Id="478093747"/>
+						<MediaRef Id="503591782"/>
+						<MediaRef Id="626265998"/>
+						<MediaRef Id="651856835"/>
+						<MediaRef Id="710778897"/>
+						<MediaRef Id="735911742"/>
+						<MediaRef Id="885850868"/>
+						<MediaRef Id="968697689"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{3CEF7AB7-B2B8-EC33-4759-B86156F8C0ED}</FileHash>
+</SoundBanksInfo>

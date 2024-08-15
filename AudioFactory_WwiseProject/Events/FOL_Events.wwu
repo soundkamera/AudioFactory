@@ -3,12 +3,40 @@
 	<Events>
 		<WorkUnit Name="FOL_Events" ID="{4AB921F6-E6D9-492F-B046-6FC6A76DAC08}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_Footsteps" ID="{0D63CA0F-2818-41AC-B137-FB4975992982}">
+				<Event Name="Play_Footstep_L" ID="{4D1D72B9-CB0F-4F43-A1E5-CB3D4EAE3858}">
 					<ChildrenList>
-						<Action Name="" ID="{F8E0FBC9-8A1E-4B96-8C39-2D71B2361E48}" ShortID="241972550">
+						<Action Name="" ID="{4A5FFD7F-859C-4B06-B89D-D3992E6EAEEB}" ShortID="738009433">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="BOOTS" ID="{BF6054B9-8ECC-4FE2-9847-F7742F9AA2AD}" WorkUnitID="{4BCF24F2-DE00-4E9D-850E-56F88B915A9E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7720B869-F743-4B79-9F20-B2A53D1A5506}" ShortID="601277248">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FOLYClth_cotton_movement" ID="{54C894BF-B3B9-456D-93C5-F3EC99E5186D}" WorkUnitID="{DE74E53D-DD0B-4466-8F7B-A0807E1E00E9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3B32CF3E-9C78-4B9D-89C1-1DA4D4B9D6B5}" ShortID="296676701">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FOLYProp_gun_movement" ID="{CF8195A7-DF2B-44F2-9B0F-1A5CC06B2D4E}" WorkUnitID="{DE74E53D-DD0B-4466-8F7B-A0807E1E00E9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B4C70681-318D-4A7E-97A4-17A92218569D}" ShortID="120348559">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FOLYProp_knapsack_movement" ID="{DF1DC8B5-C0B6-4A00-914D-6E0F7FD04120}" WorkUnitID="{DE74E53D-DD0B-4466-8F7B-A0807E1E00E9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{394AE592-6997-4830-9078-F9AA8927D281}" ShortID="282301925">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FOLYProp_zipper_movement" ID="{EB2FA97A-8F7E-4CB5-856F-ED98AC1D65D0}" WorkUnitID="{DE74E53D-DD0B-4466-8F7B-A0807E1E00E9}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

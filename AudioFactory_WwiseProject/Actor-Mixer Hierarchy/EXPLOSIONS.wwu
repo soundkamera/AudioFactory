@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{428D3E7D-752B-46B2-A230-0A13027760D7}" SchemaVersion="119" RootDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" ParentDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}">
 	<AudioObjects>
-		<WorkUnit Name="EXPLOSIONS" ID="{428D3E7D-752B-46B2-A230-0A13027760D7}" OwnerID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" PersistMode="Nested"/>
+		<WorkUnit Name="EXPLOSIONS" ID="{428D3E7D-752B-46B2-A230-0A13027760D7}" OwnerID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<WorkUnit Name="Grenade" ID="{2293AD05-62F3-4AA2-815B-676AD1A72542}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

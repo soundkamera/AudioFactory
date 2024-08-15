@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A314E895-1A61-420E-8376-B4C295EACB0E}",
     "Language": "SFX",
-    "Hash": "{74CE07B2-AE5C-726A-E241-F95E4DC74317}",
+    "Hash": "{6729E989-0779-CE7B-12FE-FF54957A4428}",
     "ObjectPath": "Play_Gameplay_Music_Switch",
     "ShortName": "Play_Gameplay_Music_Switch",
     "Path": "Event/Play_Gameplay_Music_Switch.bnk",
@@ -213,6 +213,12 @@
         "GUID": "{C41FB390-63C4-4CB1-AFB1-24503BFACF70}"
        },
        {
+        "Id": "3794091074",
+        "Name": "state_05",
+        "ObjectPath": "\\States\\Default Work Unit\\MUS_State_Group\\state_05",
+        "GUID": "{0015000B-A550-46D2-AB1A-A0CC41DD63F4}"
+       },
+       {
         "Id": "3794091075",
         "Name": "state_04",
         "ObjectPath": "\\States\\Default Work Unit\\MUS_State_Group\\state_04",
@@ -261,6 +267,6 @@
     ]
    }
   ],
-  "FileHash": "{691290CB-63BC-D72A-0AAF-FE6F423E5CB2}"
+  "FileHash": "{A6CAD409-750E-39D0-DE5C-A625BDCB139B}"
  }
 }

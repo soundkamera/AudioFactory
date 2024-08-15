@@ -13,6 +13,7 @@
 						<State Name="state_02" ID="{A62A0D80-F71D-40AF-A4A5-49905590B651}"/>
 						<State Name="state_03" ID="{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"/>
 						<State Name="state_04" ID="{040860ED-C33B-4E10-A365-5819C4C844A4}"/>
+						<State Name="state_05" ID="{0015000B-A550-46D2-AB1A-A0CC41DD63F4}"/>
 					</ChildrenList>
 					<TransitionList>
 						<Transition>

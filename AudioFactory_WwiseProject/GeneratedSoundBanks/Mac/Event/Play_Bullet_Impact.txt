@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1595647367	Play_Bullet_Impact			\SFX_Events\Play_Bullet_Impact	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	800142166	BULLET_IMPACTS_Materials			\Default Work Unit\BULLET_IMPACTS_Materials	
+
+Switch	ID	Name	Switch Group			Notes
+	841620460	CONCRETE	BULLET_IMPACTS_Materials			
+	2058049674	WOOD	BULLET_IMPACTS_Materials			
+	2449969375	GLASS	BULLET_IMPACTS_Materials			
+	2473969246	METAL	BULLET_IMPACTS_Materials			
+	3887404748	HUMAN	BULLET_IMPACTS_Materials			
+

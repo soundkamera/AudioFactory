@@ -3,7 +3,14 @@
 	<AudioObjects>
 		<WorkUnit Name="MOVEMENT" ID="{DE74E53D-DD0B-4466-8F7B-A0807E1E00E9}" OwnerID="{B4A90745-95F2-47C5-A212-4F6A260D8029}" PersistMode="Nested">
 			<ChildrenList>
-				<RandomSequenceContainer Name="CLOTH" ID="{54C894BF-B3B9-456D-93C5-F3EC99E5186D}" ShortID="96567746">
+				<RandomSequenceContainer Name="FOLYClth_cotton_movement" ID="{54C894BF-B3B9-456D-93C5-F3EC99E5186D}" ShortID="96567746">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-20</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -12,8 +19,199 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="FOLYClth_cotton_movement_L_01" ID="{1D0C2320-15DA-41D4-B894-80067220A32C}" ShortID="339258139">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYClth_cotton_movement_L_01" ID="{155130C8-D737-4804-B965-29D357C62FF1}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYClth_cotton_movement_L_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="32733725"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYClth_cotton_movement_L_01" ID="{155130C8-D737-4804-B965-29D357C62FF1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYClth_cotton_movement_L_02" ID="{1BE50F3F-1D6C-4F6E-9C5A-7BDB98276C1C}" ShortID="1001854879">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYClth_cotton_movement_L_02" ID="{3CBB4EE5-54CB-4C82-8C6D-75110F2C901F}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYClth_cotton_movement_L_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="300968120"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYClth_cotton_movement_L_02" ID="{3CBB4EE5-54CB-4C82-8C6D-75110F2C901F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYClth_cotton_movement_L_03" ID="{9FE8A063-5E50-4401-87AC-627EB6453C6D}" ShortID="27204262">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYClth_cotton_movement_L_03" ID="{05C43F01-8C5D-42D9-8784-744EF5281D51}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYClth_cotton_movement_L_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="446905731"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYClth_cotton_movement_L_03" ID="{05C43F01-8C5D-42D9-8784-744EF5281D51}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYClth_cotton_movement_L_04" ID="{EC846B67-9F45-409F-9361-BD4C637F1D58}" ShortID="271617617">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYClth_cotton_movement_L_04" ID="{FBF328FE-3DD7-47D4-BC34-9D981EC4CCE8}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYClth_cotton_movement_L_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="936281280"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYClth_cotton_movement_L_04" ID="{FBF328FE-3DD7-47D4-BC34-9D981EC4CCE8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYClth_cotton_movement_R_01" ID="{0C9CC7CA-410A-4D0B-8A05-B00CE73CA570}" ShortID="1009644878">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYClth_cotton_movement_R_01" ID="{586F7029-8EB7-43F3-85F3-D1563C82791D}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYClth_cotton_movement_R_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="17510250"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYClth_cotton_movement_R_01" ID="{586F7029-8EB7-43F3-85F3-D1563C82791D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYClth_cotton_movement_R_02" ID="{F9FFB958-69E6-4A18-A2BA-5EB6CCB8384F}" ShortID="602802987">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYClth_cotton_movement_R_02" ID="{5492B9D4-7AE5-44A7-99C5-0F2AE1CDC48E}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYClth_cotton_movement_R_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="22249884"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYClth_cotton_movement_R_02" ID="{5492B9D4-7AE5-44A7-99C5-0F2AE1CDC48E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYClth_cotton_movement_R_03" ID="{ED672A28-6656-4E8D-814A-A6162175197B}" ShortID="464422708">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYClth_cotton_movement_R_03" ID="{2F98646C-F61D-4BB4-8B28-FBC4BDA46785}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYClth_cotton_movement_R_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="25798057"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYClth_cotton_movement_R_03" ID="{2F98646C-F61D-4BB4-8B28-FBC4BDA46785}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</RandomSequenceContainer>
-				<RandomSequenceContainer Name="COP_GEAR" ID="{F10626AA-AB00-4664-B527-5186DF6D6372}" ShortID="839378434">
+				<RandomSequenceContainer Name="FOLYProp_knapsack_movement" ID="{DF1DC8B5-C0B6-4A00-914D-6E0F7FD04120}" ShortID="950031153">
+					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1C5C7632-7365-4F70-8DF7-4587892ED722}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>510</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D8B8B42A-1E3A-4D2B-A76E-F7190BE89718}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
@@ -22,6 +220,578 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="FOLYProp_Khapsack_movement_L_01" ID="{31461761-E3AC-4906-8A8C-9A965D0ED3D4}" ShortID="326618597">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_Khapsack_movement_L_01" ID="{73866F97-D9F9-44F4-9516-66FE9DB6E4EF}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_Khapsack_movement_L_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1054903195"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_Khapsack_movement_L_01" ID="{73866F97-D9F9-44F4-9516-66FE9DB6E4EF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_Khapsack_movement_L_02" ID="{2C00161D-3805-4A47-99A3-FD770D648126}" ShortID="220555052">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_Khapsack_movement_L_02" ID="{4536D08F-0068-4FF0-8C71-FA1E7D023FD9}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_Khapsack_movement_L_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="202793439"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_Khapsack_movement_L_02" ID="{4536D08F-0068-4FF0-8C71-FA1E7D023FD9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_Khapsack_movement_L_03" ID="{D9A804A2-14BE-4C09-BDC4-9885499133E5}" ShortID="563375129">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_Khapsack_movement_L_03" ID="{29652854-687E-4CA5-902B-61A2BC53A40D}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_Khapsack_movement_L_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="905964507"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_Khapsack_movement_L_03" ID="{29652854-687E-4CA5-902B-61A2BC53A40D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_Khapsack_movement_L_04" ID="{1E0C861F-B02F-48C3-959E-FEE331E1A289}" ShortID="404916680">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_Khapsack_movement_L_04" ID="{7AB4D379-CE23-45D0-AC74-24318AAF5F25}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_Khapsack_movement_L_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="41447012"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_Khapsack_movement_L_04" ID="{7AB4D379-CE23-45D0-AC74-24318AAF5F25}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_Khapsack_movement_R_01" ID="{5AF210B7-3459-4679-A761-EB493C3168C6}" ShortID="957202904">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_Khapsack_movement_R_01" ID="{F3375869-73E8-4AF2-B3B8-1897005509DE}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_Khapsack_movement_R_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="509100826"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_Khapsack_movement_R_01" ID="{F3375869-73E8-4AF2-B3B8-1897005509DE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_Khapsack_movement_R_02" ID="{300BD5F6-E3B9-4072-8038-7F2A0078D59C}" ShortID="812312491">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_Khapsack_movement_R_02" ID="{6C1008D3-25D9-4CE8-B853-F0BFFBDE90C8}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_Khapsack_movement_R_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="669418438"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_Khapsack_movement_R_02" ID="{6C1008D3-25D9-4CE8-B853-F0BFFBDE90C8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_Khapsack_movement_R_03" ID="{74658DFF-31CC-4FCB-AC62-6397F290F9AF}" ShortID="755483655">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_Khapsack_movement_R_03" ID="{5A9BBA9B-1746-4125-9DE9-D87FAEFF3295}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_Khapsack_movement_R_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="751875760"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_Khapsack_movement_R_03" ID="{5A9BBA9B-1746-4125-9DE9-D87FAEFF3295}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="FOLYProp_zipper_movement" ID="{EB2FA97A-8F7E-4CB5-856F-ED98AC1D65D0}" ShortID="825104598">
+					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{14FCA389-AE55-4D85-96BC-3318CBAC4D37}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>50</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{EE1F9187-0621-43D9-83B7-196ED16A597F}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-29</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="FOLYProp_zipper_movement_L_01" ID="{038796A8-D63E-441D-9ACB-C48D75E10AA6}" ShortID="859520826">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_zipper_movement_L_01" ID="{050DBD10-E77E-4E15-86E3-FBD223AB4DAA}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_zipper_movement_L_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="77618937"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_zipper_movement_L_01" ID="{050DBD10-E77E-4E15-86E3-FBD223AB4DAA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_zipper_movement_L_02" ID="{92C0C662-13A6-43F9-83D4-CFD8FB1EC615}" ShortID="1005788946">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_zipper_movement_L_02" ID="{37D0C8A6-33AB-4B8B-884F-64B6C49123AE}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_zipper_movement_L_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="137752479"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_zipper_movement_L_02" ID="{37D0C8A6-33AB-4B8B-884F-64B6C49123AE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_zipper_movement_L_03" ID="{91159BEB-051E-45B1-828A-0867BBD80835}" ShortID="69688705">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_zipper_movement_L_03" ID="{2A7DE165-DAD7-463D-9BF7-CCC350155A84}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_zipper_movement_L_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="66029619"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_zipper_movement_L_03" ID="{2A7DE165-DAD7-463D-9BF7-CCC350155A84}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_zipper_movement_L_04" ID="{E80A903B-A9C5-48F0-9886-924124B40358}" ShortID="701944984">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_zipper_movement_L_04" ID="{5AE394D4-09FF-45A6-82D6-23D95F2FD85F}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_zipper_movement_L_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="181298720"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_zipper_movement_L_04" ID="{5AE394D4-09FF-45A6-82D6-23D95F2FD85F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_zipper_movement_R_01" ID="{2AF3ED2E-6D71-4FD3-9A12-A503667BBFAE}" ShortID="471982676">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_zipper_movement_R_01" ID="{FFA41649-3996-4FCF-B470-14ED63E3FFE8}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_zipper_movement_R_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="541183303"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_zipper_movement_R_01" ID="{FFA41649-3996-4FCF-B470-14ED63E3FFE8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_zipper_movement_R_02" ID="{A253CC89-0E2F-4B74-B8FF-0944CE0764F5}" ShortID="168159747">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_zipper_movement_R_02" ID="{79634A97-FDD8-4BF1-A19B-C95787334C70}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_zipper_movement_R_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="269154971"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_zipper_movement_R_02" ID="{79634A97-FDD8-4BF1-A19B-C95787334C70}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_zipper_movement_R_03" ID="{2D5D43A7-0403-48A1-A5C3-9B909D42BB51}" ShortID="3826912">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_zipper_movement_R_03" ID="{1818B88B-B6E1-4A56-B581-BE38D7232F28}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_zipper_movement_R_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="446928607"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_zipper_movement_R_03" ID="{1818B88B-B6E1-4A56-B581-BE38D7232F28}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="FOLYProp_gun_movement" ID="{CF8195A7-DF2B-44F2-9B0F-1A5CC06B2D4E}" ShortID="509984793">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>20</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{6A7F6321-6A08-4C31-9C5B-393C33AF42D3}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D16C5A6D-72D8-4763-8750-152E31A2153A}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-50</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{663D1146-C809-41AB-A99D-BC6C9D439A1D}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-16</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="FOLYProp_gun_movement_L_01" ID="{393483BA-4B73-49EE-878C-9C900DE38E2C}" ShortID="113407914">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_gun_movement_L_01" ID="{1789E5DC-BD54-4287-BDD9-ECBAF5247BDF}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_gun_movement_L_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="644823737"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_gun_movement_L_01" ID="{1789E5DC-BD54-4287-BDD9-ECBAF5247BDF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_gun_movement_L_02" ID="{950A7F61-D256-4014-BFF8-6F26647B51B3}" ShortID="424838999">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_gun_movement_L_02" ID="{95E46439-B878-4F50-AC0D-A2BFBA30330B}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_gun_movement_L_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="108902205"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_gun_movement_L_02" ID="{95E46439-B878-4F50-AC0D-A2BFBA30330B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_gun_movement_L_03" ID="{CB344351-B71D-4F5C-9542-43CD769C650A}" ShortID="383923035">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_gun_movement_L_03" ID="{7D11CCA1-A9EF-47E6-9E5D-211E40374B66}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_gun_movement_L_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="185270935"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_gun_movement_L_03" ID="{7D11CCA1-A9EF-47E6-9E5D-211E40374B66}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_gun_movement_L_04" ID="{EDACA901-55C3-4D71-B7CF-4D24D459DCE2}" ShortID="474691303">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_gun_movement_L_04" ID="{E2497B2D-9C04-47E4-A63A-D4E24EBB926D}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_gun_movement_L_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="521496975"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_gun_movement_L_04" ID="{E2497B2D-9C04-47E4-A63A-D4E24EBB926D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_gun_movement_R_01" ID="{49CA09A0-1E9F-4970-9EA4-8C081F619FC7}" ShortID="908012222">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_gun_movement_R_01" ID="{635194CC-429F-4AD2-860B-39C5366EEE0D}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_gun_movement_R_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="850360109"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_gun_movement_R_01" ID="{635194CC-429F-4AD2-860B-39C5366EEE0D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_gun_movement_R_02" ID="{87EFB90A-808D-429E-BE7D-529403036B96}" ShortID="194445347">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_gun_movement_R_02" ID="{3DB831C3-519D-4430-96C3-50FA3A0E984B}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_gun_movement_R_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="275270133"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_gun_movement_R_02" ID="{3DB831C3-519D-4430-96C3-50FA3A0E984B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FOLYProp_gun_movement_R_03" ID="{3F287AAF-6950-40A9-8F77-D8E87D7F341F}" ShortID="629036444">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_gun_movement_R_03" ID="{1EE13349-17AC-4187-8726-1719D7BE7AA7}">
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_gun_movement_R_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="490438468"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_gun_movement_R_03" ID="{1EE13349-17AC-4187-8726-1719D7BE7AA7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>

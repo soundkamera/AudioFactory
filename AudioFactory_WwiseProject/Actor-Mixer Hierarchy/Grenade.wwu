@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2293AD05-62F3-4AA2-815B-676AD1A72542}" SchemaVersion="119" RootDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" ParentDocumentID="{428D3E7D-752B-46B2-A230-0A13027760D7}">
+	<AudioObjects>
+		<WorkUnit Name="Grenade" ID="{2293AD05-62F3-4AA2-815B-676AD1A72542}" OwnerID="{428D3E7D-752B-46B2-A230-0A13027760D7}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="GranadeToss" ID="{DAFD1F4C-3FF5-4C67-B7C6-896CF95BF580}" ShortID="781166314">
+					<PropertyList>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="MOVEHmn_pull_grenade_pin_from_vest_01_L" ID="{9FA84380-AAF4-4D0A-A713-38B164056FF1}" ShortID="936412942">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MOVEHmn_pull_grenade_pin_from_vest_01_L" ID="{BCD8D4BF-98F0-484E-8E5B-485372AD8D3E}">
+									<Language>SFX</Language>
+									<AudioFile>MOVEHmn_pull_grenade_pin_from_vest_01.L.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="816957698"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MOVEHmn_pull_grenade_pin_from_vest_01_L" ID="{BCD8D4BF-98F0-484E-8E5B-485372AD8D3E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MOVEHmn_throw_grenade_01_L" ID="{1D81581A-7F07-42F9-8737-9FC654C39648}" ShortID="777231891">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MOVEHmn_throw_grenade_01_L" ID="{22861659-2CB5-486A-B92A-E96135BF6313}">
+									<Language>SFX</Language>
+									<AudioFile>MOVEHmn_throw_grenade_01.L.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="802012091"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MOVEHmn_throw_grenade_01_L" ID="{22861659-2CB5-486A-B92A-E96135BF6313}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WEAPMisc_grenade_lever_pop_off_01_L" ID="{E14F0F21-0A38-4307-A10A-58DA78176452}" ShortID="271824487">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WEAPMisc_grenade_lever_pop_off_01_L" ID="{3834E64F-6D7F-49EF-AE19-9F686A202B6B}">
+									<Language>SFX</Language>
+									<AudioFile>WEAPMisc_grenade_lever_pop_off_01.L.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="21050475"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WEAPMisc_grenade_lever_pop_off_01_L" ID="{3834E64F-6D7F-49EF-AE19-9F686A202B6B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WEAPMisc_pull_grande_pin_drop_on_cement_01_L" ID="{192BE2A9-3187-42AD-AFBB-F98A14E95EE5}" ShortID="1042207746">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WEAPMisc_pull_grande_pin_drop_on_cement_01_L" ID="{BA4B2C84-E8E4-4C5F-930E-73C672C077E8}">
+									<Language>SFX</Language>
+									<AudioFile>WEAPMisc_pull_grande_pin_drop_on_cement_01.L.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="692597076"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WEAPMisc_pull_grande_pin_drop_on_cement_01_L" ID="{BA4B2C84-E8E4-4C5F-930E-73C672C077E8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<Sound Name="CEMTImpt_grade_impact_cement_01_L" ID="{AD3DD637-5B3E-47FA-8D94-CF27C4377805}" ShortID="479592982">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="CEMTImpt_grade_impact_cement_01_L" ID="{11D31483-2D01-4B87-A4FA-C382032F4130}">
+							<Language>SFX</Language>
+							<AudioFile>CEMTImpt_grade_impact_cement_01.L.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1071956473"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="CEMTImpt_grade_impact_cement_01_L" ID="{11D31483-2D01-4B87-A4FA-C382032F4130}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="METLMvmt_grenadt_start_rolling_cement_01_L" ID="{512C7807-2630-4201-AABF-8866765C2C2D}" ShortID="771259439">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="METLMvmt_grenadt_start_rolling_cement_01_L" ID="{AA07E58E-6006-4CBB-B419-4D65C2C29225}">
+							<Language>SFX</Language>
+							<AudioFile>METLMvmt_grenadt_start_rolling_cement_01.L.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1020977376"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="METLMvmt_grenadt_start_rolling_cement_01_L" ID="{AA07E58E-6006-4CBB-B419-4D65C2C29225}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="METLMvmt_grenadt_stop_rolling_cement_01_L" ID="{F176CB6B-78A8-4ED4-AAE4-226CE91FDA7B}" ShortID="726492701">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="METLMvmt_grenadt_stop_rolling_cement_01_L" ID="{5872D864-F3F4-4EA1-9425-B701C5CA187C}">
+							<Language>SFX</Language>
+							<AudioFile>METLMvmt_grenadt_stop_rolling_cement_01.L.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="372678295"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="METLMvmt_grenadt_stop_rolling_cement_01_L" ID="{5872D864-F3F4-4EA1-9425-B701C5CA187C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="GrenadeExplodes" ID="{FA169BA1-0978-42BE-901C-992EA007681B}" ShortID="203474248">
+					<PropertyList>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="Crash" ID="{5540FC93-2D61-445D-8363-E0BB1FD47D61}" ShortID="760144899">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="EXPLReal_grenade_detonate_01_L" ID="{BB03058D-D6C3-43A5-874B-5B4D70DD8A3E}" ShortID="420082373">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EXPLReal_grenade_detonate_01_L" ID="{0A28CA3D-C750-485D-8586-AAFAE546D7FE}">
+											<Language>SFX</Language>
+											<AudioFile>EXPLReal_grenade_detonate_01.L.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="456517248"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="EXPLReal_grenade_detonate_01_L" ID="{0A28CA3D-C750-485D-8586-AAFAE546D7FE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="ExplosiongDebris" ID="{044D3076-841A-4506-8929-2939D7722AFA}" ShortID="354626914">
+									<PropertyList>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="CEMTCrsh_cement-explosion_debris_01_L" ID="{B2ED2EAD-1E86-4967-8525-C131E791E1D1}" ShortID="54259644">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="CEMTCrsh_cement-explosion_debris_01_L" ID="{8D17546C-7FE0-4840-AB60-BF9911533D98}">
+													<Language>SFX</Language>
+													<AudioFile>CEMTCrsh_cement-explosion_debris_01.L.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="777806522"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="CEMTCrsh_cement-explosion_debris_01_L" ID="{8D17546C-7FE0-4840-AB60-BF9911533D98}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="CEMTCrsh_cement-explosion_crash_01_L" ID="{1874445F-BF58-4DCD-B111-283325E790FB}" ShortID="195427593">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="CEMTCrsh_cement-explosion_crash_01_L" ID="{3BF26035-6786-45DD-9B96-00FA1109D753}">
+													<Language>SFX</Language>
+													<AudioFile>CEMTCrsh_cement-explosion_crash_01.L.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="858971222"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="CEMTCrsh_cement-explosion_crash_01_L" ID="{3BF26035-6786-45DD-9B96-00FA1109D753}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

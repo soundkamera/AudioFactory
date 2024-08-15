@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2736774062" Type="Event" GUID="{00EEB85E-BE58-488E-98EF-F0EDADA35832}" Language="SFX" Hash="{225F73B8-70BC-9953-5551-A677896515EA}">
+		<SoundBank Id="2736774062" Type="Event" GUID="{00EEB85E-BE58-488E-98EF-F0EDADA35832}" Language="SFX" Hash="{DB15DFED-1209-F8B4-B320-66351D6ACF3F}">
 			<ObjectPath>Fire_GUNAuto_shot</ObjectPath>
 			<ShortName>Fire_GUNAuto_shot</ShortName>
 			<Path>Event/Fire_GUNAuto_shot.bnk</Path>
@@ -105,5 +105,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{075F030D-E8BA-C62A-2CF4-39A1F85B3BDA}</FileHash>
+	<FileHash>{717CA2FB-B134-EB00-2231-8AF8360261C3}</FileHash>
 </SoundBanksInfo>

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{00EEB85E-BE58-488E-98EF-F0EDADA35832}",
     "Language": "SFX",
-    "Hash": "{225F73B8-70BC-9953-5551-A677896515EA}",
+    "Hash": "{DB15DFED-1209-F8B4-B320-66351D6ACF3F}",
     "ObjectPath": "Fire_GUNAuto_shot",
     "ShortName": "Fire_GUNAuto_shot",
     "Path": "Event/Fire_GUNAuto_shot.bnk",
@@ -211,6 +211,6 @@
     ]
    }
   ],
-  "FileHash": "{653B6239-128C-8D36-F758-65DB81832FC5}"
+  "FileHash": "{2B415D5A-03CD-E697-4AF3-C47D6377801E}"
  }
 }

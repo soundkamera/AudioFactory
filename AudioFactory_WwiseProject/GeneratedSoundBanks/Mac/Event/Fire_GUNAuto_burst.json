@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "597080488",
+    "Type": "Event",
+    "GUID": "{0C6BB6EF-1465-487A-BCD7-6F1C3540B884}",
+    "Language": "SFX",
+    "Hash": "{0501504D-D42A-C206-5EAD-F880B179BA76}",
+    "ObjectPath": "Fire_GUNAuto_burst",
+    "ShortName": "Fire_GUNAuto_burst",
+    "Path": "Event/Fire_GUNAuto_burst.bnk",
+    "Events": [
+     {
+      "Id": "597080488",
+      "Name": "Fire_GUNAuto_burst",
+      "ObjectPath": "\\Events\\SFX_Events\\Fire_GUNAuto_burst",
+      "GUID": "{0C6BB6EF-1465-487A-BCD7-6F1C3540B884}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{99A44203-34A1-A225-1ACA-B0AAD3BCE7E9}"
+ }
+}

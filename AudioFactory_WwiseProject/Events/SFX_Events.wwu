@@ -37,6 +37,17 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Fire_GUNAuto_burst" ID="{0C6BB6EF-1465-487A-BCD7-6F1C3540B884}"/>
+				<Event Name="Play_Bullet_Impact" ID="{1F80F101-AEEE-43DD-BF46-C7ED0132777B}">
+					<ChildrenList>
+						<Action Name="" ID="{1D78D5BC-9F0A-4A64-9316-CA14FD747623}" ShortID="422915903">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BLLImptSwitch" ID="{B609D0EB-C3A1-4534-882B-6C1ECE1901BE}" WorkUnitID="{9690288C-B9E7-4561-BBEA-50BA655AE713}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

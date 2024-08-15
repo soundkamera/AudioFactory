@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B8C65866-BECD-43F8-B2C8-C1F6C5885C63}" SchemaVersion="119" RootDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" ParentDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}">
+	<AudioObjects>
+		<WorkUnit Name="CRASH_DEBRISSwitch" ID="{B8C65866-BECD-43F8-B2C8-C1F6C5885C63}" OwnerID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="Crash Brick" ID="{BEA52500-F445-4214-9DB9-FF54285D31FF}" ShortID="330272062">
+					<ChildrenList>
+						<Sound Name="Crash Brick Building 01" ID="{3915647D-7AA2-4686-894A-0A74DB9438FC}" ShortID="574097408">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-260</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D96C60DE-0754-4FC8-9814-EE555CBCCF70}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-227"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-24</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Crash Brick Building 01" ID="{3BE90903-A634-4C0A-81A2-CA90D90394CA}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.118455160744501"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.997475065616798"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.40510605606406"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Crash Brick\Crash Brick Building 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="719100591"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{051F7D0A-0B4B-4952-8080-3E65B8C80857}" ShortID="233661952">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Collision_Velocity" ID="{ECF948CA-46F0-4083-BD8F-B441FFCDF166}" WorkUnitID="{093ADEA3-E96F-43B2-A9DB-0EC1003CA2BD}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{203E228B-52A9-4995-AF99-FE0961AF054E}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-17.01529</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>InvertedSCurve</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>15.59721</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{12491E9B-4EC9-4DE4-809D-9D62492C85C9}" ShortID="980686991">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Highpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Collision_Velocity" ID="{ECF948CA-46F0-4083-BD8F-B441FFCDF166}" WorkUnitID="{093ADEA3-E96F-43B2-A9DB-0EC1003CA2BD}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{D2A68749-C757-4014-A5C4-9FF6B90CADDF}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>71</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-30</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{FF246614-262D-4D39-A745-44DC1CC53E90}" ShortID="299414888">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Collision_Velocity" ID="{ECF948CA-46F0-4083-BD8F-B441FFCDF166}" WorkUnitID="{093ADEA3-E96F-43B2-A9DB-0EC1003CA2BD}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{2E4679F9-5109-473D-894D-3A3EB18BED35}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-967</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>931</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="Crash Brick Building 01" ID="{3BE90903-A634-4C0A-81A2-CA90D90394CA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Crash Brick On Pavement 01" ID="{D8FB4003-72BA-46C7-B299-BC33D61A2290}" ShortID="238313899">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Crash Brick On Pavement 01" ID="{BAF912E5-6BF6-4787-816B-5E36719560A5}">
+									<Language>SFX</Language>
+									<AudioFile>Crash Brick\Crash Brick On Pavement 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="689900754"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Crash Brick On Pavement 01" ID="{BAF912E5-6BF6-4787-816B-5E36719560A5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Crash Brick Tumble Down 01" ID="{4CC73EFD-273D-4C7F-B45F-26ADDD017179}" ShortID="359380589">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Crash Brick Tumble Down 01" ID="{16180E2F-7E63-4F93-8EA3-1226AAF8D7C3}">
+									<Language>SFX</Language>
+									<AudioFile>Crash Brick\Crash Brick Tumble Down 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="787991992"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Crash Brick Tumble Down 01" ID="{16180E2F-7E63-4F93-8EA3-1226AAF8D7C3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Impact Brick Falling Down 01" ID="{8EF08249-9C90-4579-84EF-50AED3A93217}" ShortID="614192672">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Impact Brick Falling Down 01" ID="{A9BC5C70-2DEB-4ACA-9326-E2141C10865B}">
+									<Language>SFX</Language>
+									<AudioFile>Crash Brick\Impact Brick Falling Down 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="419637616"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Impact Brick Falling Down 01" ID="{A9BC5C70-2DEB-4ACA-9326-E2141C10865B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Impact Brick Falling Down Long 01" ID="{A0A52ED6-1A71-4548-AAD3-8DDD81A0DE9B}" ShortID="597358143">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Impact Brick Falling Down Long 01" ID="{15B0E746-40B0-4844-A29D-8C6E50AB1810}">
+									<Language>SFX</Language>
+									<AudioFile>Crash Brick\Impact Brick Falling Down Long 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="106112174"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Impact Brick Falling Down Long 01" ID="{15B0E746-40B0-4844-A29D-8C6E50AB1810}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<BlendContainer Name="GLASS" ID="{2B7609B5-B5C4-42AF-9B91-2D296E28EEF9}" ShortID="327054078">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5DB88D91-2BC5-4844-BC3D-AA2B0ECFAC41}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{421B458C-7418-4875-8634-D686EB882A68}"/>
+						</Reference>
+					</ReferenceList>
+				</BlendContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,0 +1,390 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "1595647367",
+    "Type": "Event",
+    "GUID": "{1F80F101-AEEE-43DD-BF46-C7ED0132777B}",
+    "Language": "SFX",
+    "Hash": "{8B75DBF0-01B1-348E-873B-BADDC552E065}",
+    "ObjectPath": "Play_Bullet_Impact",
+    "ShortName": "Play_Bullet_Impact",
+    "Path": "Event/Play_Bullet_Impact.bnk",
+    "Media": [
+     {
+      "Id": "20358246",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_concrete_impact_04.wav",
+      "Path": "Media/20358246.wem",
+      "CachePath": "SFX/BLLTImpt_concrete_impact_04_818F3B66.wem"
+     },
+     {
+      "Id": "131616039",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_hit_clink_02.wav",
+      "Path": "Media/131616039.wem",
+      "CachePath": "SFX/metal_hit_clink_02_818F3B66.wem"
+     },
+     {
+      "Id": "146847640",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_zip_02.wav",
+      "Path": "Media/146847640.wem",
+      "CachePath": "SFX/BLLTImpt_zip_02_818F3B66.wem"
+     },
+     {
+      "Id": "210850333",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_hit_clink_01.wav",
+      "Path": "Media/210850333.wem",
+      "CachePath": "SFX/metal_hit_clink_01_818F3B66.wem"
+     },
+     {
+      "Id": "219027859",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_concrete_impact_02.wav",
+      "Path": "Media/219027859.wem",
+      "CachePath": "SFX/BLLTImpt_concrete_impact_02_818F3B66.wem"
+     },
+     {
+      "Id": "267505568",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_sub_06.wav",
+      "Path": "Media/267505568.wem",
+      "CachePath": "SFX/BLLTImpt_sub_06_818F3B66.wem"
+     },
+     {
+      "Id": "395316244",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_sub_04.wav",
+      "Path": "Media/395316244.wem",
+      "CachePath": "SFX/BLLTImpt_sub_04_818F3B66.wem"
+     },
+     {
+      "Id": "433475579",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_sub_03.wav",
+      "Path": "Media/433475579.wem",
+      "CachePath": "SFX/BLLTImpt_sub_03_818F3B66.wem"
+     },
+     {
+      "Id": "451624115",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_concrete_impact_01.wav",
+      "Path": "Media/451624115.wem",
+      "CachePath": "SFX/BLLTImpt_concrete_impact_01_818F3B66.wem"
+     },
+     {
+      "Id": "588283851",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_sub_01.wav",
+      "Path": "Media/588283851.wem",
+      "CachePath": "SFX/BLLTImpt_sub_01_818F3B66.wem"
+     },
+     {
+      "Id": "616770483",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_concrete_impact_03.wav",
+      "Path": "Media/616770483.wem",
+      "CachePath": "SFX/BLLTImpt_concrete_impact_03_818F3B66.wem"
+     },
+     {
+      "Id": "687673835",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_zip_06.wav",
+      "Path": "Media/687673835.wem",
+      "CachePath": "SFX/BLLTImpt_zip_06_ABEE1E15.wem"
+     },
+     {
+      "Id": "796702107",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_zip_03.wav",
+      "Path": "Media/796702107.wem",
+      "CachePath": "SFX/BLLTImpt_zip_03_D0310E13.wem"
+     },
+     {
+      "Id": "878224553",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_concrete_impact_05.wav",
+      "Path": "Media/878224553.wem",
+      "CachePath": "SFX/BLLTImpt_concrete_impact_05_818F3B66.wem"
+     },
+     {
+      "Id": "890919755",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_zip_04.wav",
+      "Path": "Media/890919755.wem",
+      "CachePath": "SFX/BLLTImpt_zip_04_5A2E4A1A.wem"
+     },
+     {
+      "Id": "897249077",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_zip_01.wav",
+      "Path": "Media/897249077.wem",
+      "CachePath": "SFX/BLLTImpt_zip_01_89359EC3.wem"
+     },
+     {
+      "Id": "915714382",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_concrete_impact_06.wav",
+      "Path": "Media/915714382.wem",
+      "CachePath": "SFX/BLLTImpt_concrete_impact_06_818F3B66.wem"
+     },
+     {
+      "Id": "924641666",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_hit_clink_04.wav",
+      "Path": "Media/924641666.wem",
+      "CachePath": "SFX/metal_hit_clink_04_818F3B66.wem"
+     },
+     {
+      "Id": "937615435",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_hit_clink_05.wav",
+      "Path": "Media/937615435.wem",
+      "CachePath": "SFX/metal_hit_clink_05_818F3B66.wem"
+     },
+     {
+      "Id": "954201227",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_sub_05.wav",
+      "Path": "Media/954201227.wem",
+      "CachePath": "SFX/BLLTImpt_sub_05_818F3B66.wem"
+     },
+     {
+      "Id": "958277865",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_sub_02.wav",
+      "Path": "Media/958277865.wem",
+      "CachePath": "SFX/BLLTImpt_sub_02_818F3B66.wem"
+     },
+     {
+      "Id": "1019353196",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BLLTImpt_zip_05.wav",
+      "Path": "Media/1019353196.wem",
+      "CachePath": "SFX/BLLTImpt_zip_05_69EB3B00.wem"
+     },
+     {
+      "Id": "1025331454",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_hit_clink_03.wav",
+      "Path": "Media/1025331454.wem",
+      "CachePath": "SFX/metal_hit_clink_03_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1595647367",
+      "Name": "Play_Bullet_Impact",
+      "ObjectPath": "\\Events\\SFX_Events\\Play_Bullet_Impact",
+      "GUID": "{1F80F101-AEEE-43DD-BF46-C7ED0132777B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0.5946875",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "800142166",
+         "Id": "2473969246",
+         "GUID": "{85662D46-408D-40A4-9078-EB4CB47C9D44}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "131616039"
+         },
+         {
+          "Id": "210850333"
+         },
+         {
+          "Id": "267505568"
+         },
+         {
+          "Id": "395316244"
+         },
+         {
+          "Id": "433475579"
+         },
+         {
+          "Id": "588283851"
+         },
+         {
+          "Id": "924641666"
+         },
+         {
+          "Id": "937615435"
+         },
+         {
+          "Id": "954201227"
+         },
+         {
+          "Id": "958277865"
+         },
+         {
+          "Id": "1025331454"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "800142166",
+         "Id": "841620460",
+         "GUID": "{729C7B70-5536-4AA7-AE50-B39843684E5F}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "20358246"
+         },
+         {
+          "Id": "146847640"
+         },
+         {
+          "Id": "219027859"
+         },
+         {
+          "Id": "267505568"
+         },
+         {
+          "Id": "395316244"
+         },
+         {
+          "Id": "433475579"
+         },
+         {
+          "Id": "451624115"
+         },
+         {
+          "Id": "588283851"
+         },
+         {
+          "Id": "616770483"
+         },
+         {
+          "Id": "687673835"
+         },
+         {
+          "Id": "796702107"
+         },
+         {
+          "Id": "878224553"
+         },
+         {
+          "Id": "890919755"
+         },
+         {
+          "Id": "897249077"
+         },
+         {
+          "Id": "915714382"
+         },
+         {
+          "Id": "954201227"
+         },
+         {
+          "Id": "958277865"
+         },
+         {
+          "Id": "1019353196"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "800142166",
+      "Name": "BULLET_IMPACTS_Materials",
+      "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials",
+      "GUID": "{5ADA9966-D07D-4D16-9943-E49139DAE58D}",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "CONCRETE",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\CONCRETE",
+        "GUID": "{729C7B70-5536-4AA7-AE50-B39843684E5F}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "WOOD",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\WOOD",
+        "GUID": "{CF6B93BE-440E-43E2-BD72-02D26EEC75E4}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "GLASS",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\GLASS",
+        "GUID": "{3547D8AC-50F0-4114-937A-432B972395E8}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "METAL",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\METAL",
+        "GUID": "{85662D46-408D-40A4-9078-EB4CB47C9D44}"
+       },
+       {
+        "Id": "3887404748",
+        "Name": "HUMAN",
+        "ObjectPath": "\\Switches\\Default Work Unit\\BULLET_IMPACTS_Materials\\HUMAN",
+        "GUID": "{724CB739-058D-48DD-841E-08C4481EF9CF}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F26C6DC2-C7D4-6B65-C61E-E60E78AA613A}"
+ }
+}
