@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A314E895-1A61-420E-8376-B4C295EACB0E}",
     "Language": "SFX",
-    "Hash": "{6729E989-0779-CE7B-12FE-FF54957A4428}",
+    "Hash": "{792BABD9-0451-581D-37B6-B14C746DD6BD}",
     "ObjectPath": "Play_Gameplay_Music_Switch",
     "ShortName": "Play_Gameplay_Music_Switch",
     "Path": "Event/Play_Gameplay_Music_Switch.bnk",
@@ -34,13 +34,13 @@
       "CachePath": "SFX/Riser_FBC78EF0.wem"
      },
      {
-      "Id": "83335911",
+      "Id": "243474004",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "output loops_02.wav",
-      "Path": "Media/83335911.wem",
-      "CachePath": "SFX/output loops_02_FBC78EF0.wem"
+      "ShortName": "Gameplay Loops V2\\gameplayStings_01.wav",
+      "Path": "Media/243474004.wem",
+      "CachePath": "SFX/Gameplay Loops V2/gameplayStings_01_FBC78EF0.wem"
      },
      {
       "Id": "261637511",
@@ -50,6 +50,24 @@
       "ShortName": "WaterphoneRH_08.wav",
       "Path": "Media/261637511.wem",
       "CachePath": "SFX/WaterphoneRH_08_FBC78EF0.wem"
+     },
+     {
+      "Id": "292660562",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Gameplay Loops V2\\gameplaySnyths_03.wav",
+      "Path": "Media/292660562.wem",
+      "CachePath": "SFX/Gameplay Loops V2/gameplaySnyths_03_FBC78EF0.wem"
+     },
+     {
+      "Id": "293826706",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Gameplay Loops V2\\gameplaySnyths_04.wav",
+      "Path": "Media/293826706.wem",
+      "CachePath": "SFX/Gameplay Loops V2/gameplaySnyths_04_FBC78EF0.wem"
      },
      {
       "Id": "435511949",
@@ -79,13 +97,22 @@
       "CachePath": "SFX/WaterphoneRH_07_FBC78EF0.wem"
      },
      {
-      "Id": "552141323",
+      "Id": "517614636",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "output one shot_01.wav",
-      "Path": "Media/552141323.wem",
-      "CachePath": "SFX/output one shot_01_FBC78EF0.wem"
+      "ShortName": "Gameplay Loops V2\\gameplaySnyths_02.wav",
+      "Path": "Media/517614636.wem",
+      "CachePath": "SFX/Gameplay Loops V2/gameplaySnyths_02_FBC78EF0.wem"
+     },
+     {
+      "Id": "763824918",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Gameplay Loops V2\\gameplayPerc_01.wav",
+      "Path": "Media/763824918.wem",
+      "CachePath": "SFX/Gameplay Loops V2/gameplayPerc_01_FBC78EF0.wem"
      },
      {
       "Id": "781923683",
@@ -104,15 +131,6 @@
       "ShortName": "state_02\\state_02_stringsmid_90BPM_4-4_P1M.wav",
       "Path": "Media/992966600.wem",
       "CachePath": "SFX/state_02/state_02_stringsmid_90BPM_4-4_P1M_FBC78EF0.wem"
-     },
-     {
-      "Id": "1037934717",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "output loops_01.wav",
-      "Path": "Media/1037934717.wem",
-      "CachePath": "SFX/output loops_01_FBC78EF0.wem"
      },
      {
       "Id": "1063273330",
@@ -152,19 +170,16 @@
         },
         "MediaRefs": [
          {
-          "Id": "83335911"
+          "Id": "243474004"
          },
          {
           "Id": "435511949"
          },
          {
-          "Id": "552141323"
+          "Id": "517614636"
          },
          {
           "Id": "781923683"
-         },
-         {
-          "Id": "1037934717"
          }
         ]
        },
@@ -183,6 +198,9 @@
           "Id": "261637511"
          },
          {
+          "Id": "292660562"
+         },
+         {
           "Id": "449565344"
          },
          {
@@ -193,6 +211,22 @@
          },
          {
           "Id": "1063273330"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4167483016",
+         "Id": "3794091076",
+         "GUID": "{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "293826706"
+         },
+         {
+          "Id": "763824918"
          }
         ]
        }
@@ -267,6 +301,6 @@
     ]
    }
   ],
-  "FileHash": "{A6CAD409-750E-39D0-DE5C-A625BDCB139B}"
+  "FileHash": "{46DB1ED3-9B34-36E2-5C5D-DD8EB9879231}"
  }
 }

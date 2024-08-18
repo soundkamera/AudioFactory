@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4D1D72B9-CB0F-4F43-A1E5-CB3D4EAE3858}",
     "Language": "SFX",
-    "Hash": "{A361C0C8-A7B4-CA0B-A493-E00F70B1B9A6}",
+    "Hash": "{DF687571-1038-C5C3-3199-848CD7A31BE1}",
     "ObjectPath": "Play_Footstep_L",
     "ShortName": "Play_Footstep_L",
     "Path": "Event/Play_Footstep_L.bnk",
@@ -50,6 +50,15 @@
       "ShortName": "FOLYClth_cotton_movement_L_01.wav",
       "Path": "Media/32733725.wem",
       "CachePath": "SFX/FOLYClth_cotton_movement_L_01_818F3B66.wem"
+     },
+     {
+      "Id": "41447012",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_Khapsack_movement_L_04.wav",
+      "Path": "Media/41447012.wem",
+      "CachePath": "SFX/FOLYProp_Khapsack_movement_L_04_818F3B66.wem"
      },
      {
       "Id": "48399546",
@@ -122,6 +131,15 @@
       "ShortName": "FOLYProp_gun_movement_L_03.wav",
       "Path": "Media/185270935.wem",
       "CachePath": "SFX/FOLYProp_gun_movement_L_03_818F3B66.wem"
+     },
+     {
+      "Id": "202793439",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_Khapsack_movement_L_02.wav",
+      "Path": "Media/202793439.wem",
+      "CachePath": "SFX/FOLYProp_Khapsack_movement_L_02_818F3B66.wem"
      },
      {
       "Id": "267655107",
@@ -214,6 +232,15 @@
       "CachePath": "SFX/FOLYProp_gun_movement_R_03_818F3B66.wem"
      },
      {
+      "Id": "509100826",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_Khapsack_movement_R_01.wav",
+      "Path": "Media/509100826.wem",
+      "CachePath": "SFX/FOLYProp_Khapsack_movement_R_01_818F3B66.wem"
+     },
+     {
       "Id": "521496975",
       "Language": "SFX",
       "Streaming": "false",
@@ -259,6 +286,24 @@
       "CachePath": "SFX/FOLYFeet_boots_metal_L_01_818F3B66.wem"
      },
      {
+      "Id": "669418438",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_Khapsack_movement_R_02.wav",
+      "Path": "Media/669418438.wem",
+      "CachePath": "SFX/FOLYProp_Khapsack_movement_R_02_818F3B66.wem"
+     },
+     {
+      "Id": "751875760",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_Khapsack_movement_R_03.wav",
+      "Path": "Media/751875760.wem",
+      "CachePath": "SFX/FOLYProp_Khapsack_movement_R_03_818F3B66.wem"
+     },
+     {
       "Id": "790081314",
       "Language": "SFX",
       "Streaming": "false",
@@ -277,6 +322,15 @@
       "CachePath": "SFX/FOLYProp_gun_movement_R_01_818F3B66.wem"
      },
      {
+      "Id": "905964507",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_Khapsack_movement_L_03.wav",
+      "Path": "Media/905964507.wem",
+      "CachePath": "SFX/FOLYProp_Khapsack_movement_L_03_818F3B66.wem"
+     },
+     {
       "Id": "936281280",
       "Language": "SFX",
       "Streaming": "false",
@@ -293,6 +347,15 @@
       "ShortName": "FOLYFeet_boots_concrete_R_01.wav",
       "Path": "Media/974371144.wem",
       "CachePath": "SFX/FOLYFeet_boots_concrete_R_01_818F3B66.wem"
+     },
+     {
+      "Id": "1054903195",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FOLYProp_Khapsack_movement_L_01.wav",
+      "Path": "Media/1054903195.wem",
+      "CachePath": "SFX/FOLYProp_Khapsack_movement_L_01_818F3B66.wem"
      },
      {
       "Id": "1067206573",
@@ -336,6 +399,9 @@
         "Id": "32733725"
        },
        {
+        "Id": "41447012"
+       },
+       {
         "Id": "66029619"
        },
        {
@@ -352,6 +418,9 @@
        },
        {
         "Id": "185270935"
+       },
+       {
+        "Id": "202793439"
        },
        {
         "Id": "269154971"
@@ -372,6 +441,9 @@
         "Id": "490438468"
        },
        {
+        "Id": "509100826"
+       },
+       {
         "Id": "521496975"
        },
        {
@@ -381,10 +453,22 @@
         "Id": "644823737"
        },
        {
+        "Id": "669418438"
+       },
+       {
+        "Id": "751875760"
+       },
+       {
         "Id": "850360109"
        },
        {
+        "Id": "905964507"
+       },
+       {
         "Id": "936281280"
+       },
+       {
+        "Id": "1054903195"
        }
       ],
       "SwitchContainers": [
@@ -472,6 +556,6 @@
     ]
    }
   ],
-  "FileHash": "{C931D91C-4F08-1245-AE78-623959CEE829}"
+  "FileHash": "{A9473D05-7D29-369F-CE04-F943A130ECF5}"
  }
 }

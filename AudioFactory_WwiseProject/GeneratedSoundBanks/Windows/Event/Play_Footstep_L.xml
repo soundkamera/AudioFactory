@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3731463309" Type="Event" GUID="{4D1D72B9-CB0F-4F43-A1E5-CB3D4EAE3858}" Language="SFX" Hash="{A361C0C8-A7B4-CA0B-A493-E00F70B1B9A6}">
+		<SoundBank Id="3731463309" Type="Event" GUID="{4D1D72B9-CB0F-4F43-A1E5-CB3D4EAE3858}" Language="SFX" Hash="{DF687571-1038-C5C3-3199-848CD7A31BE1}">
 			<ObjectPath>Play_Footstep_L</ObjectPath>
 			<ShortName>Play_Footstep_L</ShortName>
 			<Path>Event/Play_Footstep_L.bnk</Path>
@@ -25,6 +25,11 @@
 					<ShortName>FOLYClth_cotton_movement_L_01.wav</ShortName>
 					<Path>Media/32733725.wem</Path>
 					<CachePath>SFX/FOLYClth_cotton_movement_L_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="41447012" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_L_04.wav</ShortName>
+					<Path>Media/41447012.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_L_04_818F3B66.wem</CachePath>
 				</File>
 				<File Id="48399546" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>FOLYFeet_boots_concrete_L_02.wav</ShortName>
@@ -65,6 +70,11 @@
 					<ShortName>FOLYProp_gun_movement_L_03.wav</ShortName>
 					<Path>Media/185270935.wem</Path>
 					<CachePath>SFX/FOLYProp_gun_movement_L_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="202793439" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_L_02.wav</ShortName>
+					<Path>Media/202793439.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_L_02_818F3B66.wem</CachePath>
 				</File>
 				<File Id="267655107" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>FOLYFeet_boots_concrete_L_01.wav</ShortName>
@@ -116,6 +126,11 @@
 					<Path>Media/490438468.wem</Path>
 					<CachePath>SFX/FOLYProp_gun_movement_R_03_818F3B66.wem</CachePath>
 				</File>
+				<File Id="509100826" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_R_01.wav</ShortName>
+					<Path>Media/509100826.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_R_01_818F3B66.wem</CachePath>
+				</File>
 				<File Id="521496975" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>FOLYProp_gun_movement_L_04.wav</ShortName>
 					<Path>Media/521496975.wem</Path>
@@ -141,6 +156,16 @@
 					<Path>Media/661878775.wem</Path>
 					<CachePath>SFX/FOLYFeet_boots_metal_L_01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="669418438" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_R_02.wav</ShortName>
+					<Path>Media/669418438.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_R_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="751875760" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_R_03.wav</ShortName>
+					<Path>Media/751875760.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_R_03_818F3B66.wem</CachePath>
+				</File>
 				<File Id="790081314" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>FOLYFeet_boots_concrete_R_03.wav</ShortName>
 					<Path>Media/790081314.wem</Path>
@@ -151,6 +176,11 @@
 					<Path>Media/850360109.wem</Path>
 					<CachePath>SFX/FOLYProp_gun_movement_R_01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="905964507" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_L_03.wav</ShortName>
+					<Path>Media/905964507.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_L_03_818F3B66.wem</CachePath>
+				</File>
 				<File Id="936281280" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>FOLYClth_cotton_movement_L_04.wav</ShortName>
 					<Path>Media/936281280.wem</Path>
@@ -160,6 +190,11 @@
 					<ShortName>FOLYFeet_boots_concrete_R_01.wav</ShortName>
 					<Path>Media/974371144.wem</Path>
 					<CachePath>SFX/FOLYFeet_boots_concrete_R_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1054903195" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_L_01.wav</ShortName>
+					<Path>Media/1054903195.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_L_01_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1067206573" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>FOLYFeet_boots_metal_R_03.wav</ShortName>
@@ -179,23 +214,30 @@
 						<MediaRef Id="22249884"/>
 						<MediaRef Id="25798057"/>
 						<MediaRef Id="32733725"/>
+						<MediaRef Id="41447012"/>
 						<MediaRef Id="66029619"/>
 						<MediaRef Id="77618937"/>
 						<MediaRef Id="108902205"/>
 						<MediaRef Id="137752479"/>
 						<MediaRef Id="181298720"/>
 						<MediaRef Id="185270935"/>
+						<MediaRef Id="202793439"/>
 						<MediaRef Id="269154971"/>
 						<MediaRef Id="275270133"/>
 						<MediaRef Id="300968120"/>
 						<MediaRef Id="446905731"/>
 						<MediaRef Id="446928607"/>
 						<MediaRef Id="490438468"/>
+						<MediaRef Id="509100826"/>
 						<MediaRef Id="521496975"/>
 						<MediaRef Id="541183303"/>
 						<MediaRef Id="644823737"/>
+						<MediaRef Id="669418438"/>
+						<MediaRef Id="751875760"/>
 						<MediaRef Id="850360109"/>
+						<MediaRef Id="905964507"/>
 						<MediaRef Id="936281280"/>
+						<MediaRef Id="1054903195"/>
 					</MediaRefs>
 					<SwitchContainers>
 						<SwitchContainer>
@@ -233,5 +275,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{ABDC32EB-B899-CCAE-4B20-DC5DBAF46751}</FileHash>
+	<FileHash>{CBC45DAD-AF5B-DEBB-50C0-0410837C6EA4}</FileHash>
 </SoundBanksInfo>

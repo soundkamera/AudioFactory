@@ -518,7 +518,7 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3731463309" Type="Event" GUID="{4D1D72B9-CB0F-4F43-A1E5-CB3D4EAE3858}" Language="SFX" Hash="{A361C0C8-A7B4-CA0B-A493-E00F70B1B9A6}">
+		<SoundBank Id="3731463309" Type="Event" GUID="{4D1D72B9-CB0F-4F43-A1E5-CB3D4EAE3858}" Language="SFX" Hash="{DF687571-1038-C5C3-3199-848CD7A31BE1}">
 			<ObjectPath>Play_Footstep_L</ObjectPath>
 			<ShortName>Play_Footstep_L</ShortName>
 			<Path>Event/Play_Footstep_L.bnk</Path>
@@ -542,6 +542,11 @@
 					<ShortName>FOLYClth_cotton_movement_L_01.wav</ShortName>
 					<Path>Media/32733725.wem</Path>
 					<CachePath>SFX/FOLYClth_cotton_movement_L_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="41447012" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_L_04.wav</ShortName>
+					<Path>Media/41447012.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_L_04_818F3B66.wem</CachePath>
 				</File>
 				<File Id="48399546" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>FOLYFeet_boots_concrete_L_02.wav</ShortName>
@@ -582,6 +587,11 @@
 					<ShortName>FOLYProp_gun_movement_L_03.wav</ShortName>
 					<Path>Media/185270935.wem</Path>
 					<CachePath>SFX/FOLYProp_gun_movement_L_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="202793439" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_L_02.wav</ShortName>
+					<Path>Media/202793439.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_L_02_818F3B66.wem</CachePath>
 				</File>
 				<File Id="267655107" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>FOLYFeet_boots_concrete_L_01.wav</ShortName>
@@ -633,6 +643,11 @@
 					<Path>Media/490438468.wem</Path>
 					<CachePath>SFX/FOLYProp_gun_movement_R_03_818F3B66.wem</CachePath>
 				</File>
+				<File Id="509100826" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_R_01.wav</ShortName>
+					<Path>Media/509100826.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_R_01_818F3B66.wem</CachePath>
+				</File>
 				<File Id="521496975" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>FOLYProp_gun_movement_L_04.wav</ShortName>
 					<Path>Media/521496975.wem</Path>
@@ -658,6 +673,16 @@
 					<Path>Media/661878775.wem</Path>
 					<CachePath>SFX/FOLYFeet_boots_metal_L_01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="669418438" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_R_02.wav</ShortName>
+					<Path>Media/669418438.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_R_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="751875760" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_R_03.wav</ShortName>
+					<Path>Media/751875760.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_R_03_818F3B66.wem</CachePath>
+				</File>
 				<File Id="790081314" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>FOLYFeet_boots_concrete_R_03.wav</ShortName>
 					<Path>Media/790081314.wem</Path>
@@ -668,6 +693,11 @@
 					<Path>Media/850360109.wem</Path>
 					<CachePath>SFX/FOLYProp_gun_movement_R_01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="905964507" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_L_03.wav</ShortName>
+					<Path>Media/905964507.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_L_03_818F3B66.wem</CachePath>
+				</File>
 				<File Id="936281280" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>FOLYClth_cotton_movement_L_04.wav</ShortName>
 					<Path>Media/936281280.wem</Path>
@@ -677,6 +707,11 @@
 					<ShortName>FOLYFeet_boots_concrete_R_01.wav</ShortName>
 					<Path>Media/974371144.wem</Path>
 					<CachePath>SFX/FOLYFeet_boots_concrete_R_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1054903195" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FOLYProp_Khapsack_movement_L_01.wav</ShortName>
+					<Path>Media/1054903195.wem</Path>
+					<CachePath>SFX/FOLYProp_Khapsack_movement_L_01_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1067206573" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>FOLYFeet_boots_metal_R_03.wav</ShortName>
@@ -696,23 +731,30 @@
 						<MediaRef Id="22249884"/>
 						<MediaRef Id="25798057"/>
 						<MediaRef Id="32733725"/>
+						<MediaRef Id="41447012"/>
 						<MediaRef Id="66029619"/>
 						<MediaRef Id="77618937"/>
 						<MediaRef Id="108902205"/>
 						<MediaRef Id="137752479"/>
 						<MediaRef Id="181298720"/>
 						<MediaRef Id="185270935"/>
+						<MediaRef Id="202793439"/>
 						<MediaRef Id="269154971"/>
 						<MediaRef Id="275270133"/>
 						<MediaRef Id="300968120"/>
 						<MediaRef Id="446905731"/>
 						<MediaRef Id="446928607"/>
 						<MediaRef Id="490438468"/>
+						<MediaRef Id="509100826"/>
 						<MediaRef Id="521496975"/>
 						<MediaRef Id="541183303"/>
 						<MediaRef Id="644823737"/>
+						<MediaRef Id="669418438"/>
+						<MediaRef Id="751875760"/>
 						<MediaRef Id="850360109"/>
+						<MediaRef Id="905964507"/>
 						<MediaRef Id="936281280"/>
+						<MediaRef Id="1054903195"/>
 					</MediaRefs>
 					<SwitchContainers>
 						<SwitchContainer>
@@ -749,7 +791,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{6729E989-0779-CE7B-12FE-FF54957A4428}">
+		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{792BABD9-0451-581D-37B6-B14C746DD6BD}">
 			<ObjectPath>Play_Gameplay_Music_Switch</ObjectPath>
 			<ShortName>Play_Gameplay_Music_Switch</ShortName>
 			<Path>Event/Play_Gameplay_Music_Switch.bnk</Path>
@@ -764,15 +806,25 @@
 					<Path>Media/67317244.wem</Path>
 					<CachePath>SFX/Riser_FBC78EF0.wem</CachePath>
 				</File>
-				<File Id="83335911" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>output loops_02.wav</ShortName>
-					<Path>Media/83335911.wem</Path>
-					<CachePath>SFX/output loops_02_FBC78EF0.wem</CachePath>
+				<File Id="243474004" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Gameplay Loops V2\gameplayStings_01.wav</ShortName>
+					<Path>Media/243474004.wem</Path>
+					<CachePath>SFX/Gameplay Loops V2/gameplayStings_01_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="261637511" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>WaterphoneRH_08.wav</ShortName>
 					<Path>Media/261637511.wem</Path>
 					<CachePath>SFX/WaterphoneRH_08_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="292660562" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Gameplay Loops V2\gameplaySnyths_03.wav</ShortName>
+					<Path>Media/292660562.wem</Path>
+					<CachePath>SFX/Gameplay Loops V2/gameplaySnyths_03_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="293826706" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Gameplay Loops V2\gameplaySnyths_04.wav</ShortName>
+					<Path>Media/293826706.wem</Path>
+					<CachePath>SFX/Gameplay Loops V2/gameplaySnyths_04_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="435511949" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>state_01\state_01_synthhlow_90BPM_4-4_P1M.wav</ShortName>
@@ -789,10 +841,15 @@
 					<Path>Media/460007877.wem</Path>
 					<CachePath>SFX/WaterphoneRH_07_FBC78EF0.wem</CachePath>
 				</File>
-				<File Id="552141323" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>output one shot_01.wav</ShortName>
-					<Path>Media/552141323.wem</Path>
-					<CachePath>SFX/output one shot_01_FBC78EF0.wem</CachePath>
+				<File Id="517614636" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Gameplay Loops V2\gameplaySnyths_02.wav</ShortName>
+					<Path>Media/517614636.wem</Path>
+					<CachePath>SFX/Gameplay Loops V2/gameplaySnyths_02_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="763824918" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Gameplay Loops V2\gameplayPerc_01.wav</ShortName>
+					<Path>Media/763824918.wem</Path>
+					<CachePath>SFX/Gameplay Loops V2/gameplayPerc_01_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="781923683" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>state_01\state_01_synthhmidhigh_90BPM_4-4_P2M.wav</ShortName>
@@ -803,11 +860,6 @@
 					<ShortName>state_02\state_02_stringsmid_90BPM_4-4_P1M.wav</ShortName>
 					<Path>Media/992966600.wem</Path>
 					<CachePath>SFX/state_02/state_02_stringsmid_90BPM_4-4_P1M_FBC78EF0.wem</CachePath>
-				</File>
-				<File Id="1037934717" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>output loops_01.wav</ShortName>
-					<Path>Media/1037934717.wem</Path>
-					<CachePath>SFX/output loops_01_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="1063273330" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Boom.wav</ShortName>
@@ -826,11 +878,10 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091078" GUID="{0DBAFC0E-E0DC-447B-A08D-06FB3CF21BCD}"/>
 							<MediaRefs>
-								<MediaRef Id="83335911"/>
+								<MediaRef Id="243474004"/>
 								<MediaRef Id="435511949"/>
-								<MediaRef Id="552141323"/>
+								<MediaRef Id="517614636"/>
 								<MediaRef Id="781923683"/>
-								<MediaRef Id="1037934717"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -838,10 +889,18 @@
 							<MediaRefs>
 								<MediaRef Id="44284020"/>
 								<MediaRef Id="261637511"/>
+								<MediaRef Id="292660562"/>
 								<MediaRef Id="449565344"/>
 								<MediaRef Id="460007877"/>
 								<MediaRef Id="992966600"/>
 								<MediaRef Id="1063273330"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091076" GUID="{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"/>
+							<MediaRefs>
+								<MediaRef Id="293826706"/>
+								<MediaRef Id="763824918"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -911,5 +970,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5F5E461A-F486-923D-A14F-EB7E02EE4665}</FileHash>
+	<FileHash>{42742917-B23A-526D-3A3B-EB17999BC58C}</FileHash>
 </SoundBanksInfo>
