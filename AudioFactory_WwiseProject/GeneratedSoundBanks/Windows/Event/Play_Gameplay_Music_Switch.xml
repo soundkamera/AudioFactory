@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{792BABD9-0451-581D-37B6-B14C746DD6BD}">
+		<SoundBank Id="3847527849" Type="Event" GUID="{A314E895-1A61-420E-8376-B4C295EACB0E}" Language="SFX" Hash="{793D28D3-6DF2-102C-CF50-13BDDE104B96}">
 			<ObjectPath>Play_Gameplay_Music_Switch</ObjectPath>
 			<ShortName>Play_Gameplay_Music_Switch</ShortName>
 			<Path>Event/Play_Gameplay_Music_Switch.bnk</Path>
@@ -51,10 +51,30 @@
 					<Path>Media/460007877.wem</Path>
 					<CachePath>SFX/WaterphoneRH_07_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="492634640" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Gameplay Loops V2\gameplaySnyths_01.wav</ShortName>
+					<Path>Media/492634640.wem</Path>
+					<CachePath>SFX/Gameplay Loops V2/gameplaySnyths_01_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="517614636" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Gameplay Loops V2\gameplaySnyths_02.wav</ShortName>
 					<Path>Media/517614636.wem</Path>
 					<CachePath>SFX/Gameplay Loops V2/gameplaySnyths_02_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="552141323" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>output one shot_01.wav</ShortName>
+					<Path>Media/552141323.wem</Path>
+					<CachePath>SFX/output one shot_01_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="562538146" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Gameplay Loops V2\gameplayPerc_02.wav</ShortName>
+					<Path>Media/562538146.wem</Path>
+					<CachePath>SFX/Gameplay Loops V2/gameplayPerc_02_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="752828401" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Gameplay Loops V2\gameplaySnyths_05.wav</ShortName>
+					<Path>Media/752828401.wem</Path>
+					<CachePath>SFX/Gameplay Loops V2/gameplaySnyths_05_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="763824918" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Gameplay Loops V2\gameplayPerc_01.wav</ShortName>
@@ -88,6 +108,14 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091078" GUID="{0DBAFC0E-E0DC-447B-A08D-06FB3CF21BCD}"/>
 							<MediaRefs>
+								<MediaRef Id="435511949"/>
+								<MediaRef Id="492634640"/>
+								<MediaRef Id="552141323"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091077" GUID="{A62A0D80-F71D-40AF-A4A5-49905590B651}"/>
+							<MediaRefs>
 								<MediaRef Id="243474004"/>
 								<MediaRef Id="435511949"/>
 								<MediaRef Id="517614636"/>
@@ -95,7 +123,7 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091077" GUID="{A62A0D80-F71D-40AF-A4A5-49905590B651}"/>
+							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091076" GUID="{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"/>
 							<MediaRefs>
 								<MediaRef Id="44284020"/>
 								<MediaRef Id="261637511"/>
@@ -107,10 +135,19 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091076" GUID="{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"/>
+							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091075" GUID="{040860ED-C33B-4E10-A365-5819C4C844A4}"/>
 							<MediaRefs>
 								<MediaRef Id="293826706"/>
 								<MediaRef Id="763824918"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4167483016" Id="3794091074" GUID="{0015000B-A550-46D2-AB1A-A0CC41DD63F4}"/>
+							<MediaRefs>
+								<MediaRef Id="435511949"/>
+								<MediaRef Id="562538146"/>
+								<MediaRef Id="752828401"/>
+								<MediaRef Id="781923683"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -135,5 +172,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F649C8FE-0E20-FCB9-E8B7-23AD50134D8C}</FileHash>
+	<FileHash>{34278066-F269-1D46-5906-54B2ACDF3B1D}</FileHash>
 </SoundBanksInfo>

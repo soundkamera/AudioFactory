@@ -3,6 +3,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 
 State	ID	Name	State Group			Notes
 	748895195	None	MUS_State_Group			
+	3794091074	state_05	MUS_State_Group			
 	3794091075	state_04	MUS_State_Group			
 	3794091076	state_03	MUS_State_Group			
 	3794091077	state_02	MUS_State_Group			

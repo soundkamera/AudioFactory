@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A314E895-1A61-420E-8376-B4C295EACB0E}",
     "Language": "SFX",
-    "Hash": "{792BABD9-0451-581D-37B6-B14C746DD6BD}",
+    "Hash": "{793D28D3-6DF2-102C-CF50-13BDDE104B96}",
     "ObjectPath": "Play_Gameplay_Music_Switch",
     "ShortName": "Play_Gameplay_Music_Switch",
     "Path": "Event/Play_Gameplay_Music_Switch.bnk",
@@ -97,6 +97,15 @@
       "CachePath": "SFX/WaterphoneRH_07_FBC78EF0.wem"
      },
      {
+      "Id": "492634640",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Gameplay Loops V2\\gameplaySnyths_01.wav",
+      "Path": "Media/492634640.wem",
+      "CachePath": "SFX/Gameplay Loops V2/gameplaySnyths_01_FBC78EF0.wem"
+     },
+     {
       "Id": "517614636",
       "Language": "SFX",
       "Streaming": "false",
@@ -104,6 +113,33 @@
       "ShortName": "Gameplay Loops V2\\gameplaySnyths_02.wav",
       "Path": "Media/517614636.wem",
       "CachePath": "SFX/Gameplay Loops V2/gameplaySnyths_02_FBC78EF0.wem"
+     },
+     {
+      "Id": "552141323",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "output one shot_01.wav",
+      "Path": "Media/552141323.wem",
+      "CachePath": "SFX/output one shot_01_FBC78EF0.wem"
+     },
+     {
+      "Id": "562538146",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Gameplay Loops V2\\gameplayPerc_02.wav",
+      "Path": "Media/562538146.wem",
+      "CachePath": "SFX/Gameplay Loops V2/gameplayPerc_02_FBC78EF0.wem"
+     },
+     {
+      "Id": "752828401",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Gameplay Loops V2\\gameplaySnyths_05.wav",
+      "Path": "Media/752828401.wem",
+      "CachePath": "SFX/Gameplay Loops V2/gameplaySnyths_05_FBC78EF0.wem"
      },
      {
       "Id": "763824918",
@@ -170,6 +206,25 @@
         },
         "MediaRefs": [
          {
+          "Id": "435511949"
+         },
+         {
+          "Id": "492634640"
+         },
+         {
+          "Id": "552141323"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4167483016",
+         "Id": "3794091077",
+         "GUID": "{A62A0D80-F71D-40AF-A4A5-49905590B651}"
+        },
+        "MediaRefs": [
+         {
           "Id": "243474004"
          },
          {
@@ -187,8 +242,8 @@
         "SwitchValue": {
          "GroupType": "State",
          "GroupId": "4167483016",
-         "Id": "3794091077",
-         "GUID": "{A62A0D80-F71D-40AF-A4A5-49905590B651}"
+         "Id": "3794091076",
+         "GUID": "{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"
         },
         "MediaRefs": [
          {
@@ -218,8 +273,8 @@
         "SwitchValue": {
          "GroupType": "State",
          "GroupId": "4167483016",
-         "Id": "3794091076",
-         "GUID": "{B6C2B8FF-8BBE-433F-ACD2-798BC11B2B5F}"
+         "Id": "3794091075",
+         "GUID": "{040860ED-C33B-4E10-A365-5819C4C844A4}"
         },
         "MediaRefs": [
          {
@@ -227,6 +282,28 @@
          },
          {
           "Id": "763824918"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4167483016",
+         "Id": "3794091074",
+         "GUID": "{0015000B-A550-46D2-AB1A-A0CC41DD63F4}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "435511949"
+         },
+         {
+          "Id": "562538146"
+         },
+         {
+          "Id": "752828401"
+         },
+         {
+          "Id": "781923683"
          }
         ]
        }
@@ -301,6 +378,6 @@
     ]
    }
   ],
-  "FileHash": "{46DB1ED3-9B34-36E2-5C5D-DD8EB9879231}"
+  "FileHash": "{4391A910-1731-9E53-DA37-26785236580E}"
  }
 }

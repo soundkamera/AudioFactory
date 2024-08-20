@@ -41,7 +41,7 @@
 							<IsShared>true</IsShared>
 						</Transition>
 						<Transition>
-							<StartState Name="state_01" ID="{0DBAFC0E-E0DC-447B-A08D-06FB3CF21BCD}"/>
+							<StartState Name="state_05" ID="{0015000B-A550-46D2-AB1A-A0CC41DD63F4}"/>
 							<EndState Name="None" ID="{C41FB390-63C4-4CB1-AFB1-24503BFACF70}"/>
 							<Time>0.5</Time>
 							<IsShared>true</IsShared>
