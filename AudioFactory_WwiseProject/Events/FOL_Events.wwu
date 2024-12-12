@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{4AB921F6-E6D9-492F-B046-6FC6A76DAC08}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{4AB921F6-E6D9-492F-B046-6FC6A76DAC08}" SchemaVersion="123">
 	<Events>
 		<WorkUnit Name="FOL_Events" ID="{4AB921F6-E6D9-492F-B046-6FC6A76DAC08}" PersistMode="Standalone">
 			<ChildrenList>

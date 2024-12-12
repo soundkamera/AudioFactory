@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{1E09882A-D37B-4FCC-8644-457D8B7702EB}" SchemaVersion="119" RootDocumentID="{13071A0F-3FF2-4E29-8A05-A987FC0D336C}" ParentDocumentID="{13071A0F-3FF2-4E29-8A05-A987FC0D336C}">
+<WwiseDocument Type="WorkUnit" ID="{1E09882A-D37B-4FCC-8644-457D8B7702EB}" SchemaVersion="123" RootDocumentID="{13071A0F-3FF2-4E29-8A05-A987FC0D336C}" ParentDocumentID="{13071A0F-3FF2-4E29-8A05-A987FC0D336C}">
 	<Triggers>
 		<WorkUnit Name="Music" ID="{1E09882A-D37B-4FCC-8644-457D8B7702EB}" OwnerID="{13071A0F-3FF2-4E29-8A05-A987FC0D336C}" PersistMode="Nested">
 			<ChildrenList>

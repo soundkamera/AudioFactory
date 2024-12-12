@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{9690288C-B9E7-4561-BBEA-50BA655AE713}" SchemaVersion="119" RootDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" ParentDocumentID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}">
+<WwiseDocument Type="WorkUnit" ID="{9690288C-B9E7-4561-BBEA-50BA655AE713}" SchemaVersion="123" RootDocumentID="{5EC8248F-35DC-4E42-BD5F-8285CE29EF1F}" ParentDocumentID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}">
 	<AudioObjects>
 		<WorkUnit Name="BLLImpt" ID="{9690288C-B9E7-4561-BBEA-50BA655AE713}" OwnerID="{B311E8EE-0AB7-431A-AEB8-214CF75A1269}" PersistMode="Nested">
 			<ChildrenList>
