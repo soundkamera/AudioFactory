@@ -17,17 +17,16 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Wwise/Metadata/WwiseMetadataProject.h"
 #include "Wwise/Metadata/WwiseMetadataLoader.h"
-#include "Wwise/Stats/ProjectDatabase.h"
 
-FWwiseMetadataProject::FWwiseMetadataProject()
+WwiseMetadataProject::WwiseMetadataProject()
 {
-	UE_LOG(LogWwiseProjectDatabase, Error, TEXT("Using default Project"));
+	WWISE_DB_LOG(Error, "Using default Project");
 }
 
-FWwiseMetadataProject::FWwiseMetadataProject(FWwiseMetadataLoader& Loader) :
-	Name(Loader.GetString(this, TEXT("Name"))),
-	GUID(Loader.GetGuid(this, TEXT("GUID"))),
-	Generator(Loader.GetString(this, TEXT("Generator")))
+WwiseMetadataProject::WwiseMetadataProject(WwiseMetadataLoader& Loader) :
+	Name(Loader.GetString(this, "Name"_wwise_db)),
+	GUID(Loader.GetGuid(this, "GUID"_wwise_db)),
+	Generator(Loader.GetString(this, "Generator"_wwise_db))
 {
-	Loader.LogParsed(TEXT("Project"));
+	Loader.LogParsed("Project"_wwise_db);
 }

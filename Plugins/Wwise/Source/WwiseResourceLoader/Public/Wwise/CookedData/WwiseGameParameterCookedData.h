@@ -18,6 +18,8 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #pragma once
 
+#include "Wwise/WwiseUnrealVersion.h"
+
 #include "WwiseGameParameterCookedData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -36,6 +38,9 @@ struct WWISERESOURCELOADER_API FWwiseGameParameterCookedData
 
 	FWwiseGameParameterCookedData();
 	void Serialize(FArchive& Ar);
-
+#if WITH_EDITORONLY_DATA && UE_5_5_OR_LATER
+	void PreSave(FObjectPreSaveContext& SaveContext, FCbWriter& Writer) const;
+#endif
+	
 	FString GetDebugString() const;
 };

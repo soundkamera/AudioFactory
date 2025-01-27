@@ -19,24 +19,24 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/Metadata/WwiseMetadataPluginGroup.h"
 #include "Wwise/Metadata/WwiseMetadataLoader.h"
 
-FWwiseMetadataPluginReference::FWwiseMetadataPluginReference(FWwiseMetadataLoader& Loader) :
-	Id(Loader.GetUint32(this, TEXT("Id")))
+WwiseMetadataPluginReference::WwiseMetadataPluginReference(WwiseMetadataLoader& Loader) :
+	Id(Loader.GetWwiseShortId(this, "Id"_wwise_db))
 {
-	Loader.LogParsed(TEXT("PluginReference"), Id);
+	Loader.LogParsed("PluginReference"_wwise_db, Id);
 }
 
-FWwiseMetadataPluginAttributes::FWwiseMetadataPluginAttributes(FWwiseMetadataLoader& Loader) :
-	FWwiseMetadataBasicReference(Loader),
-	LibName(Loader.GetString(this, TEXT("LibName"))),
-	LibId(Loader.GetUint32(this, TEXT("LibId")))
+WwiseMetadataPluginAttributes::WwiseMetadataPluginAttributes(WwiseMetadataLoader& Loader) :
+	WwiseMetadataBasicReference(Loader),
+	LibName(Loader.GetString(this, "LibName"_wwise_db)),
+	LibId(Loader.GetWwiseShortId(this, "LibId"_wwise_db))
 {
-	Loader.LogParsed(TEXT("PluginAttributes"), Id, Name);
+	Loader.LogParsed("PluginAttributes"_wwise_db, Id, Name);
 }
 
-FWwiseMetadataPlugin::FWwiseMetadataPlugin(FWwiseMetadataLoader& Loader) :
-	FWwiseMetadataPluginAttributes(Loader),
-	MediaRefs(Loader.GetArray<FWwiseMetadataMediaReference>(this, TEXT("MediaRefs"))),
-	PluginRefs(Loader.GetObjectPtr<FWwiseMetadataPluginReferenceGroup>(this, TEXT("PluginRefs")))
+WwiseMetadataPlugin::WwiseMetadataPlugin(WwiseMetadataLoader& Loader) :
+	WwiseMetadataPluginAttributes(Loader),
+	MediaRefs(Loader.GetArray<WwiseMetadataMediaReference>(this, "MediaRefs"_wwise_db)),
+	PluginRefs(Loader.GetObjectPtr<WwiseMetadataPluginReferenceGroup>(this, "PluginRefs"_wwise_db))
 {
-	Loader.LogParsed(TEXT("Plugin"), Id, Name);
+	Loader.LogParsed("Plugin"_wwise_db, Id, Name);
 }

@@ -24,17 +24,12 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 class UAkEnvironmentOctree;
 
-#if UE_4_26_OR_LATER
 #define AK_OCTREE_TYPE TOctree2
 #define AK_OCTREE_ELEMENT_ID FOctreeElementId2
-#else
-#define AK_OCTREE_TYPE TOctree
-#define AK_OCTREE_ELEMENT_ID FOctreeElementId
-#endif
 
 struct FAkEnvironmentOctreeElement
 {
-	USceneComponent* Component;
+	TWeakObjectPtr<USceneComponent> Component;
 
 	FBoxCenterAndExtent BoundingBox;
 
@@ -96,10 +91,13 @@ public:
 
 		if (Octree != nullptr)
 		{
-#if UE_4_26_OR_LATER
 			FBoxCenterAndExtent BoxBounds(Location, FVector::ZeroVector);
 			(*Octree)->FindElementsWithBoundsTest(BoxBounds, [&Result, Location](const FAkEnvironmentOctreeElement& Element)
 				{
+					if (!Element.Component.IsValid())
+					{
+						return;
+					}
 					EnvironmentType* Env = Cast<EnvironmentType>(Element.Component);
 					if (Env &&
 						Env->bEnable &&
@@ -108,21 +106,6 @@ public:
 						Result.Add(Env);
 					}
 				});
-#else
-			for (UAkEnvironmentOctree::TConstElementBoxIterator<>	It(**Octree, FBoxCenterAndExtent(Location, FVector(ForceInitToZero)));
-				It.HasPendingElements();
-				It.Advance())
-			{
-				const FAkEnvironmentOctreeElement& Element = It.GetCurrentElement();
-				EnvironmentType* Env = Cast<EnvironmentType>(Element.Component);
-				if (Env &&
-					Env->bEnable &&
-					Env->HasEffectOnLocation(Location))
-				{
-					Result.Add(Env);
-				}
-			}
-#endif
 		}
 
 		// Sort the found Volumes

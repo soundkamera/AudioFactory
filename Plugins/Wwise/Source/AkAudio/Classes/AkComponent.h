@@ -70,7 +70,7 @@ public:
 /*------------------------------------------------------------------------------------
 	UAkComponent
 ------------------------------------------------------------------------------------*/
-UCLASS(ClassGroup=Audiokinetic, BlueprintType, Blueprintable, hidecategories=(Transform,Rendering,Mobility,LOD,Component,Activation), AutoExpandCategories=AkComponent, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Audiokinetic, BlueprintType, Blueprintable, hidecategories=(Transform,Rendering,Mobility,LOD,Component,Activation), DisplayName= "AkComponent", AutoExpandCategories=AkComponent, meta=(BlueprintSpawnableComponent))
 class AKAUDIO_API UAkComponent: public UAkGameObject
 {
 	GENERATED_BODY()
@@ -137,7 +137,7 @@ private:
 	*	Setting a value here will apply only to sounds playing on the AK Component that do not have an Auxiliary Bus set in the Wwise Authoring tool.
 	*/
 	UPROPERTY(EditAnywhere, Category = "AkComponent|Spatial Audio|Reflect")
-	class UAkAuxBus * EarlyReflectionAuxBus = nullptr;
+	TObjectPtr<class UAkAuxBus> EarlyReflectionAuxBus = nullptr;
 
 	/**
 	*	Send to an Auxiliary Bus containing the Wwise Reflect plugin for early reflections rendering.
@@ -197,7 +197,7 @@ public:
 	 * @param Trigger		The name of the trigger
 	 */
 	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category="Audiokinetic|AkComponent", meta = (AdvancedDisplay = "1"))
-	void PostTrigger(class UAkTrigger const* TriggerValue, FString Trigger);
+	void PostTrigger(class UAkTrigger const* TriggerValue);
 	
 	/**
 	 * Sets a switch group in wwise, using this component as the game object source
@@ -206,7 +206,7 @@ public:
 	 * @param SwitchState	The new state of the switch
 	 */
 	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category="Audiokinetic|AkComponent", meta = (AdvancedDisplay = "1"))
-	void SetSwitch(class UAkSwitchValue const* SwitchValue, FString SwitchGroup, FString SwitchState);
+	void SetSwitch(class UAkSwitchValue const* SwitchValue);
 
 	/**
 	 * Sets whether or not to stop sounds when the component's owner is destroyed
@@ -254,19 +254,9 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category = "Audiokinetic|AkComponent")
 	void SetOutputBusVolume(float BusVolume);
 
-
-	/** Modifies the attenuation computations on this game object to simulate sounds with a larger or smaller area of effect. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AkComponent")
-	float AttenuationScalingFactor = 1.f;
-
-	/** Sets the attenuation scaling factor, which modifies the attenuation computations on this game object to simulate sounds with a a larger or smaller area of effect. */
-	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category = "Audiokinetic|AkComponent")
-	void SetAttenuationScalingFactor(float Value);
-
 	/** Whether to use reverb volumes or not */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AkComponent")
 	bool bUseReverbVolumes = true;
-
 
 	/**
 	 * Return the real attenuation radius for this component (AttenuationScalingFactor * AkAudioEvent->MaxAttenuationRadius)
@@ -294,7 +284,7 @@ public:
 	/**
 	 * Called after component is unregistered
 	 */
-	virtual void OnUnregister();
+	virtual void OnUnregister() override;
 
 	/**
 	 * Clean up
@@ -416,7 +406,11 @@ private:
 
 	bool bUseDefaultListeners;
 	FCriticalSection ListenerCriticalSection;
-	TSet<TWeakObjectPtr<UAkComponent>> Listeners;
+	// Using TWeakObjectPtrSetKeyFuncs since different stale items will be indistinguishable using the default key func
+	TSet<TWeakObjectPtr<UAkComponent>, TWeakObjectPtrSetKeyFuncs<TWeakObjectPtr<UAkComponent>>> Listeners;
+
+	// Remove Invalid and Stale pointers from Listeners
+	void CleanListeners();
 
 	void DebugDrawReflections() const;
 	void _DebugDrawReflections(const AkVector64& akEmitterPos, const AkVector64& akListenerPos, const AkReflectionPathInfo* paths, AkUInt32 uNumPaths) const;

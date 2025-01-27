@@ -22,6 +22,11 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "AkAudioDevice.h"
 #include "Wwise/Stats/AkAudio.h"
 
+#if WITH_EDITORONLY_DATA && UE_5_5_OR_LATER
+#include "UObject/ObjectSaveContext.h"
+#include "Serialization/CompactBinaryWriter.h"
+#endif
+
 #if WITH_EDITORONLY_DATA
 #include "Wwise/WwiseProjectDatabase.h"
 #include "Wwise/WwiseResourceCooker.h"
@@ -40,16 +45,18 @@ void UAkAuxBus::Serialize(FArchive& Ar)
 	if (Ar.IsCooking() && Ar.IsSaving() && !Ar.CookingTarget()->IsServerOnly())
 	{
 		FWwiseLocalizedAuxBusCookedData CookedDataToArchive;
-		if (auto* ResourceCooker = FWwiseResourceCooker::GetForArchive(Ar))
+		if (auto* ResourceCooker = IWwiseResourceCooker::GetForArchive(Ar))
 		{
-			ResourceCooker->PrepareCookedData(CookedDataToArchive, GetValidatedInfo(AuxBusInfo));
+			ResourceCooker->PrepareCookedData(CookedDataToArchive, this, GetValidatedInfo(AuxBusInfo));
 			FillMetadata(ResourceCooker->GetProjectDatabase());
 		}
 		CookedDataToArchive.Serialize(Ar);
+		CookedDataToArchive.SerializeBulkData(Ar, this);
 		Ar << MaxAttenuationRadius;
 	}
 #else
 	AuxBusCookedData.Serialize(Ar);
+	AuxBusCookedData.SerializeBulkData(Ar, this);
 	Ar << MaxAttenuationRadius;
 #endif
 #endif
@@ -78,15 +85,26 @@ void UAkAuxBus::LoadAuxBus()
 		UE_LOG(LogAkAudio, VeryVerbose, TEXT("UAkAuxBus::LoadAuxBus: Not loading '%s' because project database is not parsed."), *GetName())
 		return;
 	}
-	auto* ResourceCooker = FWwiseResourceCooker::GetDefault();
+	auto* ResourceCooker = IWwiseResourceCooker::GetDefault();
 	if (UNLIKELY(!ResourceCooker))
 	{
 		return;
 	}
-	if (UNLIKELY(!ResourceCooker->PrepareCookedData(AuxBusCookedData, GetValidatedInfo(AuxBusInfo))))
+	
+	if (!ResourceCooker->PrepareCookedData(AuxBusCookedData, this, GetValidatedInfo(AuxBusInfo)))
 	{
-		return;
+		const auto* AudioDevice = FAkAudioDevice::Get();
+		if( AudioDevice && AudioDevice->IsWwiseProfilerConnected())
+		{
+			UE_LOG(LogAkAudio, Verbose, TEXT("Could not fetch CookedData for Aux Bus %s, but Wwise profiler is connected. Previous errors can be ignored."),
+			*GetName());
+		}
+		else
+		{
+			return;
+		}
 	}
+	
 	FillMetadata(ResourceCooker->GetProjectDatabase());
 #endif
 
@@ -131,29 +149,28 @@ void UAkAuxBus::CookAdditionalFilesOverride(const TCHAR* PackageFilename, const 
 		return;
 	}
 
-	FWwiseResourceCooker* ResourceCooker = FWwiseResourceCooker::GetForPlatform(TargetPlatform);
+	EnsureResourceCookerCreated(TargetPlatform);
+	IWwiseResourceCooker* ResourceCooker = IWwiseResourceCooker::GetForPlatform(TargetPlatform);
 	if (!ResourceCooker)
 	{
 		return;
 	}
-	ResourceCooker->SetSandboxRootPath(PackageFilename);
-
-	ResourceCooker->CookAuxBus(GetValidatedInfo(AuxBusInfo), WriteAdditionalFile);
+	ResourceCooker->CookAuxBus(GetValidatedInfo(AuxBusInfo), this, PackageFilename, WriteAdditionalFile);
 }
 
 void UAkAuxBus::FillMetadata(FWwiseProjectDatabase* ProjectDatabase)
 {
 	Super::FillMetadata(ProjectDatabase);
 	
-	const auto AuxBusRef = FWwiseDataStructureScopeLock(*ProjectDatabase).GetAuxBus(GetValidatedInfo(AuxBusInfo));
+	const auto AuxBusRef = WwiseDataStructureScopeLock(*ProjectDatabase).GetAuxBus(GetValidatedInfo(AuxBusInfo));
 	if (UNLIKELY(!AuxBusRef.IsValid()))
 	{
 		UE_LOG(LogAkAudio, Log, TEXT("UAkAuxBus::FillMetadata (%s): Cannot fill Metadata - Aux Bus not found in Project Database"), *GetName());
 		return;
 	}
 
-	const FWwiseMetadataBus* AuxBusMetadata = AuxBusRef.GetAuxBus();
-	if (AuxBusMetadata->Name.ToString().IsEmpty() || !AuxBusMetadata->GUID.IsValid() || AuxBusMetadata->Id == AK_INVALID_UNIQUE_ID)
+	const WwiseMetadataBus* AuxBusMetadata = AuxBusRef.GetAuxBus();
+	if (AuxBusMetadata->Name.IsEmpty() || !AuxBusMetadata->GUID.IsValid() || AuxBusMetadata->Id == AK_INVALID_UNIQUE_ID)
 	{
 		UE_LOG(LogAkAudio, Warning, TEXT("UAkAuxBus::FillMetadata: Valid object not found in Project Database"));
 		return;
@@ -164,7 +181,7 @@ void UAkAuxBus::FillMetadata(FWwiseProjectDatabase* ProjectDatabase)
 
 bool UAkAuxBus::ObjectIsInSoundBanks()
 {
-	auto* ResourceCooker = FWwiseResourceCooker::GetDefault();
+	auto* ResourceCooker = IWwiseResourceCooker::GetDefault();
 	if (UNLIKELY(!ResourceCooker))
 	{
 		UE_LOG(LogAkAudio, Error, TEXT("UAkAuxBus::GetWwiseRef: ResourceCooker not initialized"));
@@ -179,15 +196,53 @@ bool UAkAuxBus::ObjectIsInSoundBanks()
 	}
 
 	FWwiseObjectInfo* AudioTypeInfo = &AuxBusInfo;
-	const FWwiseRefAuxBus AudioTypeRef = FWwiseDataStructureScopeLock(*ProjectDatabase).GetAuxBus(
+	const WwiseRefAuxBus AudioTypeRef = WwiseDataStructureScopeLock(*ProjectDatabase).GetAuxBus(
 		GetValidatedInfo(AuxBusInfo));
 
 	return AudioTypeRef.IsValid();
 }
 
+#if WITH_EDITORONLY_DATA && UE_5_5_OR_LATER
+UE_COOK_DEPENDENCY_FUNCTION(HashWwiseAuxBusDependenciesForCook, UAkAudioType::HashDependenciesForCook);
+
+void UAkAuxBus::PreSave(FObjectPreSaveContext SaveContext)
+{
+	ON_SCOPE_EXIT
+	{
+		Super::PreSave(SaveContext);
+	};
+
+	if (!SaveContext.IsCooking())
+	{
+		return;
+	}
+
+	auto* ResourceCooker = IWwiseResourceCooker::GetForPlatform(SaveContext.GetTargetPlatform());
+	if (UNLIKELY(!ResourceCooker))
+	{
+		return;
+	}
+
+	FWwiseLocalizedAuxBusCookedData CookedDataToArchive;
+	ResourceCooker->PrepareCookedData(CookedDataToArchive, this, GetValidatedInfo(AuxBusInfo));
+	FillMetadata(ResourceCooker->GetProjectDatabase());
+
+	FCbWriter Writer;
+	Writer.BeginObject();
+	CookedDataToArchive.PreSave(SaveContext, Writer);
+	Writer
+		<< "Radius" << MaxAttenuationRadius;
+	Writer.EndObject();
+	
+	SaveContext.AddCookBuildDependency(
+		UE::Cook::FCookDependency::Function(
+			UE_COOK_DEPENDENCY_FUNCTION_CALL(HashWwiseAuxBusDependenciesForCook), Writer.Save()));
+}
+#endif
+
 void UAkAuxBus::FillInfo()
 {
-	auto* ResourceCooker = FWwiseResourceCooker::GetDefault();
+	auto* ResourceCooker = IWwiseResourceCooker::GetDefault();
 	if (UNLIKELY(!ResourceCooker))
 	{
 		UE_LOG(LogAkAudio, Error, TEXT("UAkAuxBus::FillInfo: ResourceCooker not initialized"));
@@ -202,17 +257,19 @@ void UAkAuxBus::FillInfo()
 	}
 
 	FWwiseObjectInfo* AudioTypeInfo = &AuxBusInfo;
-	const FWwiseRefAuxBus AudioTypeRef = FWwiseDataStructureScopeLock(*ProjectDatabase).GetAuxBus(
+	const WwiseRefAuxBus AudioTypeRef = WwiseDataStructureScopeLock(*ProjectDatabase).GetAuxBus(
 		GetValidatedInfo(AuxBusInfo));
 
-	if (AudioTypeRef.AuxBusName().ToString().IsEmpty() || !AudioTypeRef.AuxBusGuid().IsValid() || AudioTypeRef.AuxBusId() == AK_INVALID_UNIQUE_ID)
+	if (AudioTypeRef.AuxBusName()->IsEmpty() || !AudioTypeRef.AuxBusGuid().IsValid() || AudioTypeRef.AuxBusId() == AK_INVALID_UNIQUE_ID)
 	{
 		UE_LOG(LogAkAudio, Warning, TEXT("UAkAuxBus::FillInfo: Valid object not found in Project Database"));
 		return;
 	}
 
-	AudioTypeInfo->WwiseName = AudioTypeRef.AuxBusName();
-	AudioTypeInfo->WwiseGuid = AudioTypeRef.AuxBusGuid();
+	int A, B, C, D;
+	AudioTypeRef.AuxBusGuid().GetGuidValues(A, B, C, D);
+	AudioTypeInfo->WwiseName = FName(**AudioTypeRef.AuxBusName());
+	AudioTypeInfo->WwiseGuid = FGuid(A, B, C, D);
 	AudioTypeInfo->WwiseShortId = AudioTypeRef.AuxBusId();
 }
 #endif

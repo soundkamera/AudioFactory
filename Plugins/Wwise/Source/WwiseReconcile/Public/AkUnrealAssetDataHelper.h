@@ -21,7 +21,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "WwiseItemType.h"
 #include "AssetRegistry/AssetData.h"
 
-class FWwiseAnyRef;
+class WwiseAnyRef;
 
 namespace AkUnrealAssetDataHelper
 {
@@ -41,20 +41,16 @@ namespace AkUnrealAssetDataHelper
 
 	WWISERECONCILE_API FString GetAssetDefaultPackagePath(const FAssetData& AssetData);
 
-	WWISERECONCILE_API FString GetAssetDefaultPackagePath(const FWwiseAnyRef* WwiseRef);
+	WWISERECONCILE_API FString GetAssetDefaultPackagePath(const WwiseAnyRef* WwiseRef);
 
 	WWISERECONCILE_API FName GetAssetDefaultName(const FAssetData& AssetData);
 
-	WWISERECONCILE_API FName GetAssetDefaultName(const FWwiseAnyRef* WwiseRef);
+	WWISERECONCILE_API FName GetAssetDefaultName(const WwiseAnyRef* WwiseRef);
 	
 	template <typename T>
 	bool AssetOfType(const FAssetData& AssetData)
 	{
-#if UE_5_1_OR_LATER
 	return AssetData.AssetClassPath == T::StaticClass()->GetClassPathName();
-#else
-	return AssetData.AssetClass == T::StaticClass()->GetFName();
-#endif
 	}
 
 }

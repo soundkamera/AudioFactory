@@ -25,10 +25,11 @@ public class WwiseConcurrency : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[] {
 			"Core",
-			"WwiseUtils"
+			"WwiseLowLevelUtils",
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {
+			"WwiseUtils",
 		});
 
 #if UE_5_3_OR_LATER

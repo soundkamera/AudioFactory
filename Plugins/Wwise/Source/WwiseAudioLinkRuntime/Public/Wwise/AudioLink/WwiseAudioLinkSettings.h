@@ -65,7 +65,7 @@ private:
 using FSharedAudioLinkSettingProxyWwisePtr = TSharedPtr<FWwiseAudioLinkSettingsProxy, ESPMode::ThreadSafe>;
 
 UCLASS(config = Game, defaultconfig)
-class WWISE_API UWwiseAudioLinkSettings : public UAudioLinkSettingsAbstract
+class WWISEAUDIOLINKRUNTIME_API UWwiseAudioLinkSettings : public UAudioLinkSettingsAbstract
 {
 	GENERATED_BODY()
 

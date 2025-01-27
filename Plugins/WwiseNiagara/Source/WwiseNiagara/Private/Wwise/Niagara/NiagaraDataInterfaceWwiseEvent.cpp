@@ -118,7 +118,6 @@ bool UNiagaraDataInterfaceWwiseEvent::UpgradeFunctionCall(FNiagaraFunctionSignat
 {
 	bool bChanged = false;
 
-#if UE_5_0_OR_LATER
 	// Update out UE4 assets to UE5. We need to make sure that Positions are using the latest type
 	if (FunctionSignature.FunctionVersion < FNiagaraPostEventDIFunctionVersion::VersionUE5)
 	{
@@ -152,7 +151,6 @@ bool UNiagaraDataInterfaceWwiseEvent::UpgradeFunctionCall(FNiagaraFunctionSignat
 
 		FunctionSignature.FunctionVersion = FNiagaraPostEventDIFunctionVersion::LatestVersion;
 	}
-#endif
 
 	return bChanged;
 }
@@ -173,9 +171,7 @@ bool UNiagaraDataInterfaceWwiseEvent::InitPerInstanceData(void* PerInstanceData,
 {
 	SCOPED_WWISENIAGARA_EVENT(TEXT("NiagaraDataInterfaceWwiseEvent::InitPerInstanceData"));
 	FWwiseEventInterface_InstanceData* PIData = new (PerInstanceData) FWwiseEventInterface_InstanceData;
-#if UE_5_0_OR_LATER
 	PIData->LWCConverter = SystemInstance->GetLWCConverter();
-#endif
 	if (bLimitPostsPerTick)
 	{
 		PIData->MaxPlaysPerTick = MaxPostsPerTick;
@@ -217,7 +213,7 @@ bool UNiagaraDataInterfaceWwiseEvent::PerInstanceTick(void* PerInstanceData, FNi
 		PIData->EventToPost = EventToPost;
 
 		PIData->GameParameters.Empty();
-		for (const auto GameParameter : GameParameters)
+		for (const auto& GameParameter : GameParameters)
 		{
 			PIData->GameParameters.Add(GameParameter);
 		}
@@ -351,11 +347,7 @@ void UNiagaraDataInterfaceWwiseEvent::GetFunctions(TArray<FNiagaraFunctionSignat
 	Sig.bRequiresExecPin = true;
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition(GetClass()), TEXT("Wwise Event Interface")));
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetBoolDef(), TEXT("Post Event")));
-#if UE_5_0_OR_LATER
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetPositionDef(), TEXT("Position")));
-#else
-	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetVec3Def(), TEXT("Position")));
-#endif
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetVec3Def(), TEXT("Rotation")));
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetFloatDef(), TEXT("StartTime")));
 	Sig.Outputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetBoolDef(), TEXT("Success")));
@@ -374,11 +366,7 @@ void UNiagaraDataInterfaceWwiseEvent::GetFunctions(TArray<FNiagaraFunctionSignat
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition(GetClass()), TEXT("Wwise Event Interface")));
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetBoolDef(), TEXT("Post Event")));
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetIntDef(), TEXT("Existing Audio Handle")));
-#if UE_5_0_OR_LATER
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetPositionDef(), TEXT("Position")));
-#else
-	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetVec3Def(), TEXT("Position")));
-#endif
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetVec3Def(), TEXT("Rotation")));
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetFloatDef(), TEXT("Start Time")));
 	Sig.Outputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetIntDef(), TEXT("Audio Handle")));
@@ -396,11 +384,7 @@ void UNiagaraDataInterfaceWwiseEvent::GetFunctions(TArray<FNiagaraFunctionSignat
 	Sig.bRequiresExecPin = true;
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition(GetClass()), TEXT("Wwise Event Interface")));
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetIntDef(), TEXT("Audio Handle")));
-#if UE_5_0_OR_LATER
 	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetPositionDef(), TEXT("Position")));
-#else
-	Sig.Inputs.Add(FNiagaraVariable(FNiagaraTypeDefinition::GetVec3Def(), TEXT("Position")));
-#endif
 	OutFunctions.Add(Sig);
 
 	Sig = FNiagaraFunctionSignature();
@@ -529,11 +513,7 @@ void UNiagaraDataInterfaceWwiseEvent::UpdatePosition(FUnrealVectorVMContext& Con
 	for (int32 i = 0; i < Context.GetNumInstances(); ++i)
 	{
 		int32 Handle = AudioHandleInParam.GetAndAdvance();
-#if UE_5_0_OR_LATER
 		FVector Position = InstData->LWCConverter.ConvertSimulationPositionToWorld(PositionParam.GetAndAdvance());
-#else
-		FVector Position = PositionParam.GetAndAdvance();
-#endif
 		if (Handle > 0)
 		{
 
@@ -711,11 +691,7 @@ void UNiagaraDataInterfaceWwiseEvent::PostEventAtLocation(FUnrealVectorVMContext
 		FNiagaraBool ShouldPlay = PlayDataParam.GetAndAdvance();
 		FWwiseEventParticleData Data;
 
-#if UE_5_0_OR_LATER
 		Data.Position = InstData->LWCConverter.ConvertSimulationVectorToWorld(PositionParam.GetAndAdvance());
-#else
-		Data.Position = PositionParam.GetAndAdvance();
-#endif
 		const auto InRot = RotationParam.GetAndAdvance();
 		Data.Rotation = FRotator(InRot.X, InRot.Y, InRot.Z);
 		Data.StartTime = StartTimeParam.GetAndAdvance();
@@ -748,11 +724,7 @@ void UNiagaraDataInterfaceWwiseEvent::PostPersistentEvent(FUnrealVectorVMContext
 	{
 		bool ShouldPlay = PlayAudioParam.GetAndAdvance();
 		int32 Handle = AudioHandleInParam.GetAndAdvance();
-#if UE_5_0_OR_LATER
 		FVector Position = InstData->LWCConverter.ConvertSimulationVectorToWorld(PositionParam.GetAndAdvance());
-#else
-		FVector Position = PositionParam.GetAndAdvance();
-#endif
 		FUnrealFloatVector InRot = RotationParam.GetAndAdvance();
 		float StartTime = StartTimeParam.GetAndAdvance();
 

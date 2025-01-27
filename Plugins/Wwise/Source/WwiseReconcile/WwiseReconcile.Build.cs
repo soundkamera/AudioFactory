@@ -23,17 +23,19 @@ public class WwiseReconcile : ModuleRules
 	{
 		PrivateDependencyModuleNames.AddRange(new[]
 		{
-			"AkAudio",
-			"WwiseSoundEngine",
-			"WwiseResourceLoader",
-			"WwiseProjectDatabase",
-			"WwiseUtils",
 			"AssetTools",
 			"EditorStyle",
 			"InputCore",
 			"MainFrame",
 			"Slate",
-			"SlateCore"
+			"SlateCore",
+
+			"AkAudio",
+			"WwiseEditorUtils",
+			"WwiseLowLevelUtils",
+			"WwiseProjectDatabase",
+			"WwiseResourceLoader",
+			"WwiseSoundEngine",
 		});
 		PublicDependencyModuleNames.AddRange(new[]
 		{

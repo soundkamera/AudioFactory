@@ -17,18 +17,18 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Wwise/Metadata/WwiseMetadataBasicReference.h"
 #include "Wwise/Metadata/WwiseMetadataLoader.h"
-#include "Wwise/Stats/ProjectDatabase.h"
 
-FWwiseMetadataBasicReference::FWwiseMetadataBasicReference()
+WwiseMetadataBasicReference::WwiseMetadataBasicReference()
 {
-	UE_LOG(LogWwiseProjectDatabase, Error, TEXT("Using default FWwiseMetadataBasicReference"));
+	WWISE_DB_LOG(Error, "Using default WwiseMetadataBasicReference");
 }
 
-FWwiseMetadataBasicReference::FWwiseMetadataBasicReference(FWwiseMetadataLoader& Loader) :
-	Id(Loader.GetUint32(this, TEXT("Id"))),
-	Name(Loader.GetString(this, TEXT("Name"))),
-	ObjectPath(Loader.GetString(this, TEXT("ObjectPath"))),
-	GUID(Loader.GetGuid(this, TEXT("GUID")))
+WwiseMetadataBasicReference::WwiseMetadataBasicReference(WwiseMetadataLoader& Loader) :
+	Id(Loader.GetWwiseShortId(this, "Id"_wwise_db)),
+	Name(Loader.GetString(this, "Name"_wwise_db)),
+	ObjectPath(Loader.GetString(this, "ObjectPath"_wwise_db)),
+	GUID(Loader.GetGuid(this, "GUID"_wwise_db)),
+	Color(Loader.GetInt(this, "Color"_wwise_db, WwiseRequiredMetadata::Optional))
 {
-	Loader.LogParsed(TEXT("BasicReference"), Id, Name);
+	Loader.LogParsed("BasicReference"_wwise_db, Id, Name);
 }

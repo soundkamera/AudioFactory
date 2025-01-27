@@ -19,24 +19,23 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/Metadata/WwiseMetadataLoader.h"
 #include "WwiseDefines.h"
 
-FWwiseMetadataAcousticTexture::FWwiseMetadataAcousticTexture(FWwiseMetadataLoader& Loader) :
-	FWwiseMetadataBasicReference(Loader)
+WwiseMetadataAcousticTexture::WwiseMetadataAcousticTexture(WwiseMetadataLoader& Loader) :
+	WwiseMetadataBasicReference(Loader)
 {
 	Loader.GetPropertyArray(this, FloatProperties);
-	Loader.LogParsed(TEXT("AcousticTexture"), Id, Name);
+	Loader.LogParsed("AcousticTexture"_wwise_db, Id, Name);
 }
 
-const TMap<FName, size_t> FWwiseMetadataAcousticTexture::FloatProperties = FWwiseMetadataAcousticTexture::FillFloatProperties();
-const TMap<FName, size_t> FWwiseMetadataAcousticTexture::FillFloatProperties()
+const WwiseDBMap<WwiseDBString, size_t> WwiseMetadataAcousticTexture::FloatProperties = WwiseMetadataAcousticTexture::FillFloatProperties();
+const WwiseDBMap<WwiseDBString, size_t> WwiseMetadataAcousticTexture::FillFloatProperties()
 {
-	TMap<FName, size_t> Result;
-	Result.Add(FName(TEXT("AbsorptionLow")), offsetof(FWwiseMetadataAcousticTexture, AbsorptionLow));
-	Result.Add(FName(TEXT("AbsorptionMidLow")), offsetof(FWwiseMetadataAcousticTexture, AbsorptionMidLow));
-	Result.Add(FName(TEXT("AbsorptionMidHigh")), offsetof(FWwiseMetadataAcousticTexture, AbsorptionMidHigh));
-	Result.Add(FName(TEXT("AbsorptionHigh")), offsetof(FWwiseMetadataAcousticTexture, AbsorptionHigh));
-
+	WwiseDBMap<WwiseDBString, size_t> Result;
+	Result.Add("AbsorptionLow"_wwise_db, offsetof(WwiseMetadataAcousticTexture, AbsorptionLow));
+	Result.Add("AbsorptionMidLow"_wwise_db, offsetof(WwiseMetadataAcousticTexture, AbsorptionMidLow));
+	Result.Add("AbsorptionMidHigh"_wwise_db, offsetof(WwiseMetadataAcousticTexture, AbsorptionMidHigh));
+	Result.Add("AbsorptionHigh"_wwise_db, offsetof(WwiseMetadataAcousticTexture, AbsorptionHigh));
 #if WWISE_2023_1_OR_LATER
-	Result.Add(FName(TEXT("Scattering")), offsetof(FWwiseMetadataAcousticTexture, Scattering));
+	Result.Add("Scattering"_wwise_db, offsetof(WwiseMetadataAcousticTexture, Scattering));
 #endif
 	return Result;
 }

@@ -25,6 +25,11 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/WwiseResourceCooker.h"
 #endif
 
+#if WITH_EDITORONLY_DATA && UE_5_5_OR_LATER
+#include "UObject/ObjectSaveContext.h"
+#include "Serialization/CompactBinaryWriter.h"
+#endif
+
 void UAkEffectShareSet::Serialize(FArchive& Ar)
 {
 	Super::Serialize(Ar);
@@ -38,9 +43,9 @@ void UAkEffectShareSet::Serialize(FArchive& Ar)
 	if (Ar.IsCooking() && Ar.IsSaving() && !Ar.CookingTarget()->IsServerOnly())
 	{
 		FWwiseLocalizedShareSetCookedData CookedDataToArchive;
-		if (auto* ResourceCooker = FWwiseResourceCooker::GetForArchive(Ar))
+		if (auto* ResourceCooker = IWwiseResourceCooker::GetForArchive(Ar))
 		{
-			ResourceCooker->PrepareCookedData(CookedDataToArchive, GetValidatedInfo(ShareSetInfo));
+			ResourceCooker->PrepareCookedData(CookedDataToArchive, this, GetValidatedInfo(ShareSetInfo));
 		}
 		CookedDataToArchive.Serialize(Ar);
 	}
@@ -72,14 +77,24 @@ void UAkEffectShareSet::LoadEffectShareSet()
 		UE_LOG(LogAkAudio, VeryVerbose, TEXT("UAkEffectShareSet::LoadEffectShareSet: Not loading '%s' because project database is not parsed."), *GetName())
 		return;
 	}
-	auto* ResourceCooker = FWwiseResourceCooker::GetDefault();
+	auto* ResourceCooker = IWwiseResourceCooker::GetDefault();
 	if (UNLIKELY(!ResourceCooker))
 	{
 		return;
 	}
-	if (UNLIKELY(!ResourceCooker->PrepareCookedData(ShareSetCookedData, GetValidatedInfo(ShareSetInfo))))
+	
+	if (!ResourceCooker->PrepareCookedData(ShareSetCookedData, this, GetValidatedInfo(ShareSetInfo)))
 	{
-		return;
+		const auto* AudioDevice = FAkAudioDevice::Get();
+		if( AudioDevice && AudioDevice->IsWwiseProfilerConnected())
+		{
+			UE_LOG(LogAkAudio, Verbose, TEXT("Could not fetch CookedData for ShareSet %s, but Wwise profiler is connected. Previous errors can be ignored."),
+			*GetName());
+		}
+		else
+		{
+			return;
+		}
 	}
 #endif
 	
@@ -117,7 +132,7 @@ void UAkEffectShareSet::UnloadEffectShareSet(bool bAsync)
 #if WITH_EDITORONLY_DATA
 bool UAkEffectShareSet::ObjectIsInSoundBanks()
 {
-	auto* ResourceCooker = FWwiseResourceCooker::GetDefault();
+	auto* ResourceCooker = IWwiseResourceCooker::GetDefault();
 	if (UNLIKELY(!ResourceCooker))
 	{
 		UE_LOG(LogAkAudio, Error, TEXT("UAkEffectShareSet::GetWwiseRef: ResourceCooker not initialized"));
@@ -132,7 +147,7 @@ bool UAkEffectShareSet::ObjectIsInSoundBanks()
 	}
 
 	FWwiseObjectInfo* AudioTypeInfo = &ShareSetInfo;
-	const FWwiseRefPluginShareSet AudioTypeRef = FWwiseDataStructureScopeLock(*ProjectDatabase).GetPluginShareSet(
+	const WwiseRefPluginShareSet AudioTypeRef = WwiseDataStructureScopeLock(*ProjectDatabase).GetPluginShareSet(
 		GetValidatedInfo(ShareSetInfo));
 
 	return AudioTypeRef.IsValid();
@@ -146,18 +161,18 @@ void UAkEffectShareSet::CookAdditionalFilesOverride(const TCHAR* PackageFilename
 		return;
 	}
 
-	FWwiseResourceCooker* ResourceCooker = FWwiseResourceCooker::GetForPlatform(TargetPlatform);
+	EnsureResourceCookerCreated(TargetPlatform);
+	IWwiseResourceCooker* ResourceCooker = IWwiseResourceCooker::GetForPlatform(TargetPlatform);
 	if (!ResourceCooker)
 	{
 		return;
 	}
-	ResourceCooker->SetSandboxRootPath(PackageFilename);
-	ResourceCooker->CookShareSet(GetValidatedInfo(ShareSetInfo), WriteAdditionalFile);
+	ResourceCooker->CookShareSet(GetValidatedInfo(ShareSetInfo), this, PackageFilename, WriteAdditionalFile);
 }
 
 void UAkEffectShareSet::FillInfo()
 {
-	auto* ResourceCooker = FWwiseResourceCooker::GetDefault();
+	auto* ResourceCooker = IWwiseResourceCooker::GetDefault();
 	if (UNLIKELY(!ResourceCooker))
 	{
 		UE_LOG(LogAkAudio, Error, TEXT("UAkEffectShareSet::FillInfo: ResourceCooker not initialized"));
@@ -172,18 +187,56 @@ void UAkEffectShareSet::FillInfo()
 	}
 
 	FWwiseObjectInfo* AudioTypeInfo = &ShareSetInfo;
-	const FWwiseRefPluginShareSet AudioTypeRef = FWwiseDataStructureScopeLock(*ProjectDatabase).GetPluginShareSet(
+	const WwiseRefPluginShareSet AudioTypeRef = WwiseDataStructureScopeLock(*ProjectDatabase).GetPluginShareSet(
 		GetValidatedInfo(ShareSetInfo));
 
-	if (AudioTypeRef.PluginShareSetName().ToString().IsEmpty() || !AudioTypeRef.PluginShareSetGuid().IsValid() || AudioTypeRef.PluginShareSetId() == AK_INVALID_UNIQUE_ID)
+	if (AudioTypeRef.PluginShareSetName()->IsEmpty() || !AudioTypeRef.PluginShareSetGuid().IsValid() || AudioTypeRef.PluginShareSetId() == AK_INVALID_UNIQUE_ID)
 	{
 		UE_LOG(LogAkAudio, Warning, TEXT("UAkEffectShareSet::FillInfo: Valid object not found in Project Database"));
 		return;
 	}
 
-	AudioTypeInfo->WwiseName = AudioTypeRef.PluginShareSetName();
-	AudioTypeInfo->WwiseGuid = AudioTypeRef.PluginShareSetGuid();
+	int A, B, C, D;
+	AudioTypeRef.PluginShareSetGuid().GetGuidValues(A, B, C, D);
+	AudioTypeInfo->WwiseName = FName(**AudioTypeRef.PluginShareSetName());
+	AudioTypeInfo->WwiseGuid = FGuid(A, B, C, D);
 	AudioTypeInfo->WwiseShortId = AudioTypeRef.PluginShareSetId();
 }
 
+#endif
+
+#if WITH_EDITORONLY_DATA && UE_5_5_OR_LATER
+UE_COOK_DEPENDENCY_FUNCTION(HashWwiseEffectShareSetDependenciesForCook, UAkAudioType::HashDependenciesForCook);
+
+void UAkEffectShareSet::PreSave(FObjectPreSaveContext SaveContext)
+{
+	ON_SCOPE_EXIT
+	{
+		Super::PreSave(SaveContext);
+	};
+
+	if (!SaveContext.IsCooking())
+	{
+		return;
+	}
+
+	auto* ResourceCooker = IWwiseResourceCooker::GetForPlatform(SaveContext.GetTargetPlatform());
+	if (UNLIKELY(!ResourceCooker))
+	{
+		return;
+	}
+
+	FWwiseLocalizedShareSetCookedData CookedDataToArchive;
+	ResourceCooker->PrepareCookedData(CookedDataToArchive, this, GetValidatedInfo(ShareSetInfo));
+	FillMetadata(ResourceCooker->GetProjectDatabase());
+
+	FCbWriter Writer;
+	Writer.BeginObject();
+	CookedDataToArchive.PreSave(SaveContext, Writer);
+	Writer.EndObject();
+	
+	SaveContext.AddCookBuildDependency(
+		UE::Cook::FCookDependency::Function(
+			UE_COOK_DEPENDENCY_FUNCTION_CALL(HashWwiseEffectShareSetDependenciesForCook), Writer.Save()));
+}
 #endif

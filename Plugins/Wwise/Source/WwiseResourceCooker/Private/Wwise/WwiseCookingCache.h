@@ -30,7 +30,6 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/CookedData/WwiseTriggerCookedData.h"
 
 #include "Wwise/Info/WwiseObjectInfo.h"
-
 #include "Wwise/WwiseDatabaseIdentifiers.h"
 
 class IWwiseExternalSourceManager;
@@ -42,13 +41,13 @@ public:
 		ExternalSourceManager(nullptr)
 	{}
 
-	TMap<FString, FString> StagedFiles;
+	TMap<FName, FString> StagedFiles;
 	TMap<FWwiseObjectInfo, FWwiseLocalizedAuxBusCookedData> AuxBusCache;
 	TMap<FWwiseObjectInfo, FWwiseLocalizedSoundBankCookedData> SoundBankCache;
 	TMap<FWwiseEventInfo, FWwiseLocalizedEventCookedData> EventCache;
 	TMap<uint32, FWwiseExternalSourceCookedData> ExternalSourceCache;
 	TMap<FWwiseObjectInfo, FWwiseInitBankCookedData> InitBankCache;
-	TMap<FWwiseDatabaseMediaIdKey, FWwiseMediaCookedData> MediaCache;
+	TMap<WwiseDatabaseMediaIdKey, FWwiseMediaCookedData> MediaCache;
 	TMap<FWwiseObjectInfo, FWwiseLocalizedShareSetCookedData> ShareSetCache;
 	TMap<FWwiseGroupValueInfo, FWwiseGroupValueCookedData> StateCache;
 	TMap<FWwiseGroupValueInfo, FWwiseGroupValueCookedData> SwitchCache;
@@ -56,6 +55,10 @@ public:
 	TMap<FWwiseObjectInfo, FWwiseAcousticTextureCookedData> AcousticTextureCache;
 	TMap<FWwiseObjectInfo, FWwiseAudioDeviceShareSetCookedData> AudioDeviceShareSetCache;
 	TMap<FWwiseObjectInfo, FWwiseTriggerCookedData> TriggerCache;
+
+	using FCookedAssetLibraryFiles = TArray<FWwisePackagedFile>;
+	using FCookedAssetLibraryMap = TMap<UObject*, FCookedAssetLibraryFiles>;
+	FCookedAssetLibraryMap CookedAssetLibraryMap;
 
 	IWwiseExternalSourceManager* ExternalSourceManager;
 };

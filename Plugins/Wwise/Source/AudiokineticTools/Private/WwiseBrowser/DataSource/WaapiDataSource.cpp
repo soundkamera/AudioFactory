@@ -25,10 +25,11 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "IAudiokineticTools.h"
 #include "PackageTools.h"
 #include "WwiseItemType.h"
+#include "WwiseUnrealHelper.h"
 #include "Async/Async.h"
 #include "Dom/JsonObject.h"
 #include "Misc/Paths.h"
-#include "WaapiPicker/WwiseTreeItem.h"
+#include "Wwise/WwiseTreeItem.h"
 
 FWaapiDataSource::~FWaapiDataSource()
 {
@@ -107,6 +108,7 @@ bool FWaapiDataSource::ConstructTree(bool bShouldRefresh)
 	{
 
 		FWwiseTreeItemPtr TreeRoot = ConstructTreeRoot(static_cast<EWwiseItemType::Type>(i));
+		if(TreeRoot)
 		{
 			FScopeLock AutoLock(&WaapiRootItemsLock);
 			RootItems.Add(TreeRoot);
@@ -1070,14 +1072,47 @@ EWwiseConnectionStatus FWaapiDataSource::IsProjectLoaded()
 			return EWwiseConnectionStatus::SettingDisabled;
 		}
 	}
+#if AK_SUPPORT_WAAPI
 	if(FAkWaapiClient::IsProjectLoaded())
 	{
+		if(auto AkWaapiClient = FAkWaapiClient::Get())
+		{
+			FString WaapiPath;
+			TSharedPtr<FJsonObject> outJsonResult;
+			AkWaapiClient->Call(ak::wwise::core::getProjectInfo, MakeShareable(new FJsonObject()), MakeShareable(new FJsonObject()), outJsonResult, 500, false);
+			if(auto directoriesObject = outJsonResult->GetObjectField(TEXT("directories")))
+			{
+				WaapiPath = directoriesObject->GetStringField(TEXT("soundBankOutputRoot"));
+			}
+			FString UnrealPath = GetDefault<UAkSettings>()->RootOutputPath.Path;
+			auto UnrealRootOutputPath = FPaths::ConvertRelativePathToFull(WwiseUnrealHelper::GetContentDirectory(), UnrealPath);
+			auto WaapiRootOutputPath = FPaths::ConvertRelativePathToFull(WwiseUnrealHelper::GetContentDirectory(), WaapiPath);
+
+			WaapiRootOutputPath = WaapiRootOutputPath.Replace(TEXT("\\"), TEXT("/"));
+			UnrealRootOutputPath = UnrealRootOutputPath.Replace(TEXT("\\"), TEXT("/"));
+			if(!WaapiRootOutputPath.EndsWith("/"))
+			{
+				WaapiRootOutputPath += "/";
+			}
+
+			if(!UnrealRootOutputPath.EndsWith("/"))
+			{
+				UnrealRootOutputPath += "/";
+			}
+			FAkWaapiClient::ConvertProjectPath(WaapiRootOutputPath);
+			if(WaapiRootOutputPath != UnrealRootOutputPath)
+			{
+				return EWwiseConnectionStatus::WrongRootOutputPath;
+			}
+		}
+
 		return EWwiseConnectionStatus::Connected;
 	}
 	if(FAkWaapiClient::Get()->bIsWrongProjectLoaded)
 	{
 		return EWwiseConnectionStatus::WrongProjectOpened;
 	}
+#endif
 	return EWwiseConnectionStatus::WwiseNotOpen;
 }
 

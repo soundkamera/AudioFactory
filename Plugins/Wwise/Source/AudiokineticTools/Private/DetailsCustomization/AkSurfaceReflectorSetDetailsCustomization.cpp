@@ -147,6 +147,8 @@ void FAkSurfaceReflectorSetDetailsCustomization::CustomizeDetails(const TSharedP
 
 void FAkSurfaceReflectorSetDetailsCustomization::CustomizeDetails(IDetailLayoutBuilder& InDetailBuilder)
 {
+	FWwiseDetailsCustomization::CustomizeDetails(InDetailBuilder);
+	
 	InDetailBuilder.GetObjectsBeingCustomized(ObjectsBeingCustomized);
 	auto AcousticPolysPropHandle = InDetailBuilder.GetProperty("AcousticPolys");
 	InDetailBuilder.HideProperty("AcousticPolys");

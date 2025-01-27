@@ -17,6 +17,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "AkInitBank.h"
 
+#include "AkAudioModule.h"
 #include "AkSettings.h"
 #include "Platforms/AkPlatformInfo.h"
 #include "Wwise/WwiseResourceLoader.h"
@@ -26,29 +27,32 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/WwiseResourceCooker.h"
 #endif
 
+#if WITH_EDITORONLY_DATA && UE_5_5_OR_LATER
+#include "UObject/ObjectSaveContext.h"
+#include "Serialization/CompactBinaryWriter.h"
+#endif
+
 #if WITH_EDITORONLY_DATA
 void UAkInitBank::CookAdditionalFilesOverride(const TCHAR* PackageFilename, const ITargetPlatform* TargetPlatform,
                                               TFunctionRef<void(const TCHAR* Filename, void* Data, int64 Size)> WriteAdditionalFile)
 {
-	auto* ResourceCooker = FWwiseResourceCooker::GetForPlatform(TargetPlatform);
+	if (HasAnyFlags(RF_ClassDefaultObject))
+	{
+		return;
+	}
+
+	EnsureResourceCookerCreated(TargetPlatform);
+	auto* ResourceCooker = IWwiseResourceCooker::GetForPlatform(TargetPlatform);
 	if (!ResourceCooker)
 	{
 		return;
 	}
-	ResourceCooker->SetSandboxRootPath(PackageFilename);
-	ResourceCooker->CookInitBank(FWwiseObjectInfo::DefaultInitBank, WriteAdditionalFile);
+	ResourceCooker->CookInitBank(FWwiseObjectInfo::DefaultInitBank, this, PackageFilename, WriteAdditionalFile);
 }
 
 void UAkInitBank::BeginCacheForCookedPlatformData(const ITargetPlatform* TargetPlatform)
 {
-	if (auto* AkSettings = GetDefault<UAkSettings>())
-	{
-		if (AkSettings->AreSoundBanksGenerated())
-		{
-			auto PlatformID = UAkPlatformInfo::GetSharedPlatformInfo(TargetPlatform->IniPlatformName());
-			FWwiseResourceCooker::CreateForPlatform(TargetPlatform, PlatformID, EWwiseExportDebugNameRule::Name);
-		}
-	}
+	EnsureResourceCookerCreated(TargetPlatform);
 }
 #endif
 
@@ -67,14 +71,16 @@ void UAkInitBank::Serialize(FArchive& Ar)
  	if (Ar.IsCooking() && Ar.IsSaving() && !Ar.CookingTarget()->IsServerOnly())
 	{
 		FWwiseInitBankCookedData CookedDataToArchive;
-		if (auto* ResourceCooker = FWwiseResourceCooker::GetForArchive(Ar))
+		if (auto* ResourceCooker = IWwiseResourceCooker::GetForArchive(Ar))
 		{
-			ResourceCooker->PrepareCookedData(CookedDataToArchive, FWwiseObjectInfo::DefaultInitBank);
+			ResourceCooker->PrepareCookedData(CookedDataToArchive, this, FWwiseObjectInfo::DefaultInitBank);
 		}
 		CookedDataToArchive.Serialize(Ar);
+	 	CookedDataToArchive.SerializeBulkData(Ar, this);
 	}
  #else
  	InitBankCookedData.Serialize(Ar);
+ 	InitBankCookedData.SerializeBulkData(Ar, this);
  #endif
  #endif
 }
@@ -103,6 +109,42 @@ void UAkInitBank::UnloadInitBank(bool bAsync)
 	}
 }
 
+#if WITH_EDITORONLY_DATA && UE_5_5_OR_LATER
+UE_COOK_DEPENDENCY_FUNCTION(HashWwiseInitBankDependenciesForCook, UAkAudioType::HashDependenciesForCook);
+
+void UAkInitBank::PreSave(FObjectPreSaveContext SaveContext)
+{
+	ON_SCOPE_EXIT
+	{
+		Super::PreSave(SaveContext);
+	};
+
+	if (!SaveContext.IsCooking())
+	{
+		return;
+	}
+
+	auto* ResourceCooker = IWwiseResourceCooker::GetForPlatform(SaveContext.GetTargetPlatform());
+	if (UNLIKELY(!ResourceCooker))
+	{
+		return;
+	}
+
+	FWwiseInitBankCookedData CookedDataToArchive;
+	ResourceCooker->PrepareCookedData(CookedDataToArchive, this, FWwiseObjectInfo::DefaultInitBank);
+	FillMetadata(ResourceCooker->GetProjectDatabase());
+
+	FCbWriter Writer;
+	Writer.BeginObject();
+	CookedDataToArchive.PreSave(SaveContext, Writer);
+	Writer.EndObject();
+	
+	SaveContext.AddCookBuildDependency(
+		UE::Cook::FCookDependency::Function(
+			UE_COOK_DEPENDENCY_FUNCTION_CALL(HashWwiseInitBankDependenciesForCook), Writer.Save()));
+}
+#endif
+
 #if WITH_EDITORONLY_DATA
 void UAkInitBank::PrepareCookedData()
 {
@@ -110,14 +152,22 @@ void UAkInitBank::PrepareCookedData()
 	{
 		return;
 	}
-	auto* ResourceCooker = FWwiseResourceCooker::GetDefault();
+	auto* ResourceCooker = IWwiseResourceCooker::GetDefault();
 	if (UNLIKELY(!ResourceCooker))
 	{
 		return;
 	}
-	if (UNLIKELY(!ResourceCooker->PrepareCookedData(InitBankCookedData, FWwiseObjectInfo::DefaultInitBank)))
+	if (!ResourceCooker->PrepareCookedData(InitBankCookedData, this, FWwiseObjectInfo::DefaultInitBank))
 	{
-		return;
+		const auto* AudioDevice = FAkAudioDevice::Get();
+		if( AudioDevice && AudioDevice->IsWwiseProfilerConnected())
+		{
+			UE_LOG(LogAkAudio, Verbose, TEXT("Could not fetch CookedData for Init Bank, but Wwise profiler is connected. Previous errors can be ignored."));
+		}
+		else
+		{
+			return;
+		}
 	}
 }
 #endif

@@ -18,8 +18,6 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "AkSettingsPerUser.h"
 
 #include "AkAudioDevice.h"
-#include "Misc/Paths.h"
-#include "WwiseUnrealDefines.h"
 
 #if WITH_EDITOR
 #include "AkUnrealEditorHelper.h"

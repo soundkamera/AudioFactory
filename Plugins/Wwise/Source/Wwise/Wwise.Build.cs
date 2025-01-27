@@ -32,25 +32,23 @@ public class Wwise : ModuleRules
 				"Core",
 				"CoreUObject",
 				"Engine",
-				"WwiseUtils"
+				"WwiseAudioLinkRuntime",
+				"WwiseLowLevelUtils",
+				"WwiseUtils",
 			}
 		);
-
 
 		if (Target.bBuildEditor)
 		{
 			PrivateDependencyModuleNames.AddRange(
 				new string[]
 				{
+					"AudiokineticTools",
 					"UnrealEd",
-					"AudiokineticTools"
+					"WwiseAudioLinkEditor",
 				}
 			);
 		}
-
-		// Optional modules
-		WwiseAudioLinkEditor.Apply(this, Target);
-		WwiseAudioLinkRuntime.Apply(this, Target);
 
 #if UE_5_3_OR_LATER
 		bLegacyParentIncludePaths = false;
@@ -60,13 +58,8 @@ public class Wwise : ModuleRules
 
 	public void AddOptionalModule(string Module, bool AddPublic = true)
 	{
-#if UE_5_0_OR_LATER
 		ConditionalAddModuleDirectory(
 			EpicGames.Core.DirectoryReference.Combine(new EpicGames.Core.DirectoryReference(ModuleDirectory),  "..", Module));
-#else
-		ConditionalAddModuleDirectory(
-			Tools.DotNETCommon.DirectoryReference.Combine(new Tools.DotNETCommon.DirectoryReference(ModuleDirectory),  "..", Module));
-#endif
 		ExternalDependencies.Add(Path.Combine(ModuleDirectory, "..", Module, Module + "_OptionalModule.Build.cs"));
 		if (AddPublic)
 		{

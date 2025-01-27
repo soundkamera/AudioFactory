@@ -48,7 +48,7 @@ public:
 	FWwiseLocalizedAuxBusCookedData AuxBusCookedData;
 
 	UPROPERTY()
-	UAkAudioBank* RequiredBank_DEPRECATED = nullptr;
+	TObjectPtr<UAkAudioBank> RequiredBank_DEPRECATED = nullptr;
 
 public:
 	void Serialize(FArchive& Ar) override;
@@ -62,6 +62,10 @@ public:
 	virtual FWwiseObjectInfo* GetInfoMutable() override {return &AuxBusInfo;}
 	virtual FWwiseObjectInfo GetInfo() const override{return AuxBusInfo;}
 	virtual bool ObjectIsInSoundBanks() override;
+#endif
+
+#if WITH_EDITORONLY_DATA && UE_5_5_OR_LATER
+	virtual void PreSave(FObjectPreSaveContext SaveContext) override;
 #endif
 
 private:

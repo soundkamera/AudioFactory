@@ -22,7 +22,6 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "IWwiseBrowserDataSource.h"
 #include "WwiseItemType.h"
 #include "../WwiseBrowserForwards.h"
-#include "WaapiPicker/SWaapiPicker.h"
 
 class FJsonValue;
 class FJsonObject;
@@ -34,7 +33,8 @@ enum EWwiseConnectionStatus
 	Connected,
 	SettingDisabled,
 	WrongProjectOpened,
-	WwiseNotOpen
+	WwiseNotOpen,
+	WrongRootOutputPath
 };
 
 struct WaapiTransformStringField
@@ -49,6 +49,13 @@ struct WWiseWaapiItem
 	FGuid Guid;
 	FName Name;
 	FName FullPath;
+};
+
+struct TransformStringField
+{
+	const FString keyArg;
+	const TArray<FString> valueStringArgs;
+	const TArray<int32> valueNumberArgs;
 };
 
 class FWaapiDataSource : IWwiseBrowserDataSource

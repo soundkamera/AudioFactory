@@ -18,18 +18,16 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/Ref/WwiseRefProjectInfo.h"
 
 #include "Wwise/Metadata/WwiseMetadataRootFile.h"
-#include "Wwise/WwiseProjectDatabaseModule.h"
-#include "Wwise/Stats/ProjectDatabase.h"
 
-const TCHAR* const FWwiseRefProjectInfo::NAME = TEXT("ProjectInfo");
+const WwiseDBString WwiseRefProjectInfo::NAME = "ProjectInfo"_wwise_db;
 
-const FWwiseMetadataProjectInfo* FWwiseRefProjectInfo::GetProjectInfo() const
+const WwiseMetadataProjectInfo* WwiseRefProjectInfo::GetProjectInfo() const
 {
 	const auto* RootFile = GetRootFile();
-	if (UNLIKELY(!RootFile))
+	if (!RootFile) [[unlikely]]
 	{
 		return nullptr;
 	}
-	UE_CLOG(!RootFile->ProjectInfo, LogWwiseProjectDatabase, Error, TEXT("Could not get ProjectInfo"));
+	WWISE_DB_CLOG(!RootFile->ProjectInfo, Error, "Could not get ProjectInfo");
 	return RootFile->ProjectInfo;
 }

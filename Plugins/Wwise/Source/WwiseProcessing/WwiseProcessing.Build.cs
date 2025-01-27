@@ -26,13 +26,14 @@ public class WwiseProcessing : ModuleRules
 		PublicDependencyModuleNames.AddRange(new string[] {
 			"Core",
 			"Engine",
+			"WwiseConcurrency",
+			"WwiseLowLevelUtils",
 			"WwiseSoundEngine",
-			"WwiseUtils",
-			"WwiseConcurrency"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[]
 		{
+			"WwiseUtils",
 		});
 
 #if UE_5_3_OR_LATER

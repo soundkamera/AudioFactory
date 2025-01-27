@@ -22,6 +22,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Async/Async.h"
 #include "Framework/Notifications/NotificationManager.h"
 #include "Widgets/Notifications/SNotificationList.h"
+#include "Wwise/WwisePluginStyle.h"
 
 #define LOCTEXT_NAMESPACE "AkAudio"
 
@@ -51,7 +52,7 @@ void FReloadPopup::NotifyProjectRefresh()
 		FNotificationInfo Info(InfoString);
 		Info.ButtonDetails.Add(RefreshButton);
 		Info.ButtonDetails.Add(HideButton);
-		Info.Image = FAkAudioStyle::GetBrush(TEXT("AudiokineticTools.AkBrowserTabIcon"));
+		Info.Image = FWwisePluginStyle::Get()->GetBrush(FWwisePluginStyle::WwiseIconName);
 		Info.bUseSuccessFailIcons = false;
 		Info.FadeOutDuration = 0.5f;
 		Info.ExpireDuration = 10.0f;

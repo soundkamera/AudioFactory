@@ -17,7 +17,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Wwise/WwiseUnitTests.h"
 
-#if WWISE_UNIT_TESTS && UE_5_1_OR_LATER
+#if WWISE_UNIT_TESTS
 
 #include "AkComponentCallbackManager.h"
 #include "Tasks/Task.h"

@@ -31,18 +31,18 @@ public:
 
 	const TCHAR* GetManagingTypeName() const override { return TEXT("MockMedia"); }
 
-	void LoadMedia(const FWwiseMediaCookedData& InMediaCookedData, const FString& InRootPath, FLoadMediaCallback&& InCallback) override
+	void LoadMedia(const FWwiseMediaCookedData& InMediaCookedData, FLoadMediaCallback&& InCallback) override
 	{
 		SCOPED_WWISEFILEHANDLER_EVENT_4(TEXT("FWwiseMockMediaManager::LoadMedia"));
-		IncrementFileStateUseAsync(InMediaCookedData.MediaId, EWwiseFileStateOperationOrigin::Loading, [this, InMediaCookedData, InRootPath]() mutable
+		IncrementFileStateUseAsync(InMediaCookedData.MediaId, EWwiseFileStateOperationOrigin::Loading, [this, InMediaCookedData]() mutable
 		{
-			return CreateOp(InMediaCookedData, InRootPath);
+			return CreateOp(InMediaCookedData);
 		}, [InCallback = MoveTemp(InCallback)](const FWwiseFileStateSharedPtr, bool bInResult)
 		{
 			InCallback(bInResult);
 		});
 	}
-	void UnloadMedia(const FWwiseMediaCookedData& InMediaCookedData, const FString& InRootPath, FUnloadMediaCallback&& InCallback) override
+	void UnloadMedia(const FWwiseMediaCookedData& InMediaCookedData, FUnloadMediaCallback&& InCallback) override
 	{
 		SCOPED_WWISEFILEHANDLER_EVENT_4(TEXT("FWwiseMockMediaManager::UnloadMedia"));
 		DecrementFileStateUseAsync(InMediaCookedData.MediaId, nullptr, EWwiseFileStateOperationOrigin::Loading, MoveTemp(InCallback));
@@ -69,10 +69,10 @@ public:
 	}
 
 protected:
-	virtual FWwiseFileStateSharedPtr CreateOp(const FWwiseMediaCookedData& InMediaCookedData, const FString& InRootPath)
+	virtual FWwiseFileStateSharedPtr CreateOp(const FWwiseMediaCookedData& InMediaCookedData)
 	{
 		auto* FileState = new FWwiseMockFileState(InMediaCookedData.MediaId);
-		if (InMediaCookedData.bStreaming)
+		if (InMediaCookedData.PackagedFile.bStreaming)
 		{
 			FileState->bIsStreamedState = FWwiseMockFileState::OptionalBool::True;
 		}

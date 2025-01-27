@@ -19,16 +19,16 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Wwise/Metadata/WwiseMetadataBasicReference.h"
 
-struct WWISEPROJECTDATABASE_API FWwiseMetadataBusReference : public FWwiseMetadataBasicReference
+struct WwiseMetadataBusReference : public WwiseMetadataBasicReference
 {
-	FWwiseMetadataBusReference(FWwiseMetadataLoader& Loader);
+	WwiseMetadataBusReference(WwiseMetadataLoader& Loader);
 };
 
-struct WWISEPROJECTDATABASE_API FWwiseMetadataBus : public FWwiseMetadataBusReference
+struct WwiseMetadataBus : public WwiseMetadataBusReference
 {
-	FWwiseMetadataPluginReferenceGroup* PluginRefs;
-	TArray<FWwiseMetadataBusReference> AuxBusRefs;
+	WwiseMetadataPluginReferenceGroup* PluginRefs;
+	WwiseDBArray<WwiseMetadataBusReference> AuxBusRefs;
 	float MaxAttenuation;
 
-	FWwiseMetadataBus(FWwiseMetadataLoader& Loader);
+	WwiseMetadataBus(WwiseMetadataLoader& Loader);
 };

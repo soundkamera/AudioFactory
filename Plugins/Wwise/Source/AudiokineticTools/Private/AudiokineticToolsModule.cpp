@@ -32,6 +32,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "AkSettings.h"
 #include "AkSettingsPerUser.h"
 #include "AkSurfaceReflectorSetComponent.h"
+#include "AkSpatialAudioVolume.h"
 #include "AkReverbZone.h"
 #include "WwiseUnrealDefines.h"
 #include "AssetManagement/AkAssetDatabase.h"
@@ -48,16 +49,13 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "DetailsCustomization/AkSurfaceReflectorSetDetailsCustomization.h"
 #include "DetailsCustomization/AkSettingsDetailsCustomization.h"
 #include "DetailsCustomization/AkReverbZoneDetailsCustomization.h"
+#include "DetailsCustomization/AkSpatialAudioVolumeActorDetailsCustomization.h"
 #include "LevelEditor.h"
 #include "Editor/UnrealEdEngine.h"
 #include "Factories/ActorFactoryAkAmbientSound.h"
 #include "Factories/AkAssetTypeActions.h"
 #include "Framework/Application/SlateApplication.h"
-#if UE_5_0_OR_LATER
 #include "HAL/PlatformFileManager.h"
-#else
-#include "HAL/PlatformFilemanager.h"
-#endif
 #include "Interfaces/IProjectManager.h"
 #include "Internationalization/Culture.h"
 #include "Internationalization/Internationalization.h"
@@ -72,7 +70,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "ProjectDescriptor.h"
 #include "PropertyEditorModule.h"
 #include "Sequencer/MovieSceneAkAudioEventTrackEditor.h"
-#include "Sequencer/MovieSceneAkAudioRTPCTrackEditor.h"
+#include "Sequencer/MovieSceneWwiseGameParameterTrackEditor.h"
 #include "Settings/ProjectPackagingSettings.h"
 #include "AkUnrealEditorHelper.h"
 #include "EditorBuildUtils.h"
@@ -81,7 +79,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Visualizer/AkAcousticPortalVisualizer.h"
 #include "Visualizer/AkComponentVisualizer.h"
 #include "Visualizer/AkSurfaceReflectorSetComponentVisualizer.h"
-#include "WaapiPicker/WwiseTreeItem.h"
+#include "Wwise/WwiseTreeItem.h"
 #include "Widgets/Docking/SDockTab.h"
 #include "Widgets/Input/SButton.h"
 #include "Widgets/Input/SCheckBox.h"
@@ -98,6 +96,8 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/WwiseProjectDatabaseDelegates.h"
 #include "AkAudioModule.h"
 #include "AssetManagement/StaticPluginWriter.h"
+#include "DetailsCustomization/WwiseDetailsCustomization.h"
+#include "Wwise/WwisePluginStyle.h"
 
 #include "WwiseInitBankLoader/WwiseInitBankLoader.h"
 
@@ -215,7 +215,6 @@ void FAudiokineticToolsModule::CreateAkViewportCommands()
 void FAudiokineticToolsModule::RegisterWwiseMenus()
 {
 	// Extend the build menu to handle Audiokinetic-specific entries
-#if UE_5_0_OR_LATER
 	{
 		UToolMenu* BuildMenu = UToolMenus::Get()->ExtendMenu("LevelEditor.MainMenu.Build");
 		FToolMenuSection& WwiseBuildSection = BuildMenu->AddSection("AkBuild", LOCTEXT("AkBuildLabel", "Audiokinetic"), FToolMenuInsert("LevelEditorGeometry", EToolMenuInsertType::Default));
@@ -240,42 +239,6 @@ void FAudiokineticToolsModule::RegisterWwiseMenus()
 			RefreshProjectUIAction
 		);
 	}
-#else
-	FLevelEditorModule& LevelEditorModule = FModuleManager::GetModuleChecked<FLevelEditorModule>(TEXT("LevelEditor"));
-	LevelViewportToolbarBuildMenuExtenderAk = FLevelEditorModule::FLevelEditorMenuExtender::CreateLambda([this](const TSharedRef<FUICommandList> CommandList)
-	{
-		TSharedPtr<FExtender> Extender = MakeShared<FExtender>();
-		Extender->AddMenuExtension("LevelEditorGeometry", EExtensionHook::After, CommandList, FMenuExtensionDelegate::CreateLambda([this](FMenuBuilder& MenuBuilder)
-		{
-			MenuBuilder.BeginSection("Audiokinetic", LOCTEXT("Audiokinetic", "Audiokinetic"));
-			{
-				FUIAction GenerateSoundDataUIAction;
-				GenerateSoundDataUIAction.ExecuteAction.BindStatic(&AkAudioBankGenerationHelper::CreateGenerateSoundDataWindow, false);
-				MenuBuilder.AddMenuEntry(
-					LOCTEXT("AkAudioBank_GenerateSoundBanks", "Generate SoundBanks..."),
-					LOCTEXT("AkAudioBank_GenerateSoundBanksTooltip", "Generates Wwise SoundBanks."),
-					FSlateIcon(),
-					GenerateSoundDataUIAction
-				);
-
-				FUIAction RefreshProjectUIAction;
-				RefreshProjectUIAction.ExecuteAction.BindRaw(this, &FAudiokineticToolsModule::RefreshWwiseProject);
-				MenuBuilder.AddMenuEntry(
-					LOCTEXT("AkAudioBank_RefreshProject", "Refresh Project"),
-					LOCTEXT("AkAudioBank_RefreshProjectTooltip", "Refresh the Wwise Project"),
-					FSlateIcon(),
-					RefreshProjectUIAction
-				);
-			}
-			MenuBuilder.EndSection();
-
-		}));
-
-		return Extender.ToSharedRef();
-	});
-	LevelEditorModule.GetAllLevelEditorToolbarBuildMenuExtenders().Add(LevelViewportToolbarBuildMenuExtenderAk);
-	LevelViewportToolbarBuildMenuExtenderAkHandle = LevelEditorModule.GetAllLevelEditorToolbarBuildMenuExtenders().Last().GetHandle();
-#endif
 
 	// Extend the Help menu to display a link to our documentation
 	{
@@ -585,6 +548,8 @@ void FAudiokineticToolsModule::StartupModule()
 			MakeShared<FAssetTypeActions_AkAuxBus>(AudiokineticAssetCategoryBit),
 			MakeShared<FAssetTypeActions_AkRtpc>(AudiokineticAssetCategoryBit),
 			MakeShared<FAssetTypeActions_AkTrigger>(AudiokineticAssetCategoryBit),
+			MakeShared<FAssetTypeActions_AkSwitchValue>(AudiokineticAssetCategoryBit),
+			MakeShared<FAssetTypeActions_AkStateValue>(AudiokineticAssetCategoryBit),
 		};
 
 		for (auto& AkAssetTypeActions : AkAssetTypeActionsArray)
@@ -606,13 +571,13 @@ void FAudiokineticToolsModule::StartupModule()
 		.SetDisplayName(NSLOCTEXT("FAudiokineticToolsModule", "BrowserTabTitle", "Wwise Browser"))
 		.SetTooltipText(NSLOCTEXT("FAudiokineticToolsModule", "BrowserTooltipText", "Open the Wwise Browser tab."))
 		.SetGroup(WorkspaceMenu::GetMenuStructure().GetLevelEditorCategory())
-		.SetIcon(FSlateIcon(FAkAudioStyle::GetStyleSetName(), "AudiokineticTools.AkBrowserTabIcon"));
+		.SetIcon(FSlateIcon(FWwisePluginStyle::Get()->GetStyleSetName(), FWwisePluginStyle::WwiseIconName));
 
 	FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>(TEXT("AssetRegistry"));
 	OnAssetRegistryFilesLoadedHandle = AssetRegistryModule.Get().OnFilesLoaded().AddRaw(this, &FAudiokineticToolsModule::OnAssetRegistryFilesLoaded);
 
 	ISequencerModule& SequencerModule = FModuleManager::LoadModuleChecked<ISequencerModule>(TEXT("Sequencer"));
-	RTPCTrackEditorHandle = SequencerModule.RegisterTrackEditor(FOnCreateTrackEditor::CreateStatic(&FMovieSceneAkAudioRTPCTrackEditor::CreateTrackEditor));
+	RTPCTrackEditorHandle = SequencerModule.RegisterTrackEditor(FOnCreateTrackEditor::CreateStatic(&FMovieSceneWwiseGameParameterTrackEditor::CreateTrackEditor));
 	EventTrackEditorHandle = SequencerModule.RegisterTrackEditor(FOnCreateTrackEditor::CreateStatic(&FMovieSceneAkAudioEventTrackEditor::CreateTrackEditor));
 
 	// Since we are initialized in the PostEngineInit phase, our Ambient Sound actor factory is not registered. We need to register it ourselves.
@@ -632,6 +597,8 @@ void FAudiokineticToolsModule::StartupModule()
 	PropertyModule.RegisterCustomClassLayout(UAkGeometryComponent::StaticClass()->GetFName(), FOnGetDetailCustomizationInstance::CreateStatic(&FAkGeometryComponentDetailsCustomization::MakeInstance));
 	PropertyModule.RegisterCustomClassLayout(UAkSettings::StaticClass()->GetFName(), FOnGetDetailCustomizationInstance::CreateStatic(&FAkSettingsDetailsCustomization::MakeInstance));
 	PropertyModule.RegisterCustomClassLayout(AAkReverbZone::StaticClass()->GetFName(), FOnGetDetailCustomizationInstance::CreateStatic(&FAkReverbZoneDetailsCustomization::MakeInstance));
+	PropertyModule.RegisterCustomClassLayout(UAkPlatformInitializationSettingsBase::StaticClass()->GetFName(), FOnGetDetailCustomizationInstance::CreateStatic(&FWwiseDetailsCustomization::MakeInstance));
+	PropertyModule.RegisterCustomClassLayout(AAkSpatialAudioVolume::StaticClass()->GetFName(), FOnGetDetailCustomizationInstance::CreateStatic(&FAkSpatialAudioVolumeActorDetailsCustomization::MakeInstance));
 
 	if (!IWwiseProjectDatabaseModule::ShouldInitializeProjectDatabase())
 	{
@@ -654,6 +621,7 @@ void FAudiokineticToolsModule::StartupModule()
 		[this]()
 		{
 			SetStaticPluginsInformation();
+			FAkAudioModule::UpdateWwiseResourceCookerSettings();
 		}
 	);
 	
@@ -689,7 +657,7 @@ void FAudiokineticToolsModule::OnAkAudioInit()
 
 void FAudiokineticToolsModule::OnSoundBanksFolderChanged()
 {
-	FAkAudioModule::AkAudioModuleInstance->UpdateWwiseResourceLoaderSettings();
+	FAkAudioModule::UpdateWwiseResourceCookerSettings();
 	ParseGeneratedSoundBankData();
 }
 
@@ -799,15 +767,11 @@ void FAudiokineticToolsModule::ShutdownModule()
 	// Only found way to close the tab in the case of a hot-reload. We need a pointer to the DockTab, and the only way of getting it seems to be InvokeTab.
 	if (IsValid(GUnrealEd))
 	{
-#if UE_4_26_OR_LATER
 		auto WwiseBrowserTab = FGlobalTabmanager::Get()->TryInvokeTab(SWwiseBrowser::WwiseBrowserTabName);
 		if (WwiseBrowserTab.IsValid())
 		{
 			WwiseBrowserTab->RequestCloseTab();
 		}
-#else
-		FGlobalTabmanager::Get()->InvokeTab(SWwiseBrowser::WwiseBrowserTabName)->RequestCloseTab();
-#endif
 	}
 
 	FGlobalTabmanager::Get()->UnregisterNomadTabSpawner(SWwiseBrowser::WwiseBrowserTabName);
@@ -893,14 +857,10 @@ TMap<FString, SettingsRegistrationStruct>& FAudiokineticToolsModule::GetWwisePla
 		WwisePlatformNameToWwiseSettingsRegistrationMap.Add(FString("Integration"), RegisterIntegrationSettings);
 		WwisePlatformNameToWwiseSettingsRegistrationMap.Add(FString("User"), RegisterPerUserSettings);
 
-		for (const auto& AvailablePlatform : AkUnrealPlatformHelper::GetAllSupportedUnrealPlatforms())
+		for (const auto& AvailablePlatform : AkUnrealPlatformHelper::GetAllWwiseProjectPlatforms())
 		{
 			FString SettingsClassName = FString::Format(TEXT("/Script/AkAudio.Ak{0}InitializationSettings"), { *AvailablePlatform });
-#if UE_5_1_OR_LATER
 			auto* SettingsClass = UClass::TryFindTypeSlow<UClass>(*SettingsClassName);
-#else
-			auto* SettingsClass = FindObject<UClass>(ANY_PACKAGE, *SettingsClassName);
-#endif
 			if (SettingsClass)
 			{
 				FString CategoryNameKey = FString::Format(TEXT("Wwise{0}SettingsName"), { *AvailablePlatform });
@@ -933,7 +893,7 @@ void FAudiokineticToolsModule::RegisterSettings()
 
 			TSet<FString> SettingsThatShouldBeRegistered = { FString("Integration"), FString("User") };
 
-			for (const auto& AvailablePlatform : AkUnrealPlatformHelper::GetAllSupportedUnrealPlatformsForProject())
+			for (const auto& AvailablePlatform : AkUnrealPlatformHelper::GetAllWwiseProjectPlatforms())
 			{
 				if (SettingsRegistrationMap.Contains(AvailablePlatform))
 				{

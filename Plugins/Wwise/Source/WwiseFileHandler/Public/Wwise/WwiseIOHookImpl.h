@@ -19,7 +19,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Wwise/WwiseIOHook.h"
 #include "Wwise/WwiseExecutionQueue.h"
-
+#include "WwiseDefines.h"
 #include "Templates/Atomic.h"
 
 class IWwiseStreamingManagerHooks;
@@ -66,6 +66,7 @@ public:
 		BatchIoTransferItem*	in_pTransferItems
 	) override;
 
+#if !WWISE_2024_1_OR_LATER
 	/**
 	 * @brief Cancel IO from multiple files (asynchronous).
 	 *
@@ -77,6 +78,7 @@ public:
 		BatchIoTransferItem*	in_pTransferItems,
 		bool**					io_ppbCancelAllTransfersForThisFile
 	) override;
+#endif
 
 	/**
 	 * Cleans up a file.

@@ -51,6 +51,8 @@ void FAkLateReverbComponentDetailsCustomization::CustomizeDetails(const TSharedP
 
 void FAkLateReverbComponentDetailsCustomization::CustomizeDetails(IDetailLayoutBuilder& InDetailBuilder)
 {
+	FWwiseDetailsCustomization::CustomizeDetails(InDetailBuilder);
+	
 	TArray<TWeakObjectPtr<UObject>> ObjectsBeingCustomized;
 	InDetailBuilder.GetObjectsBeingCustomized(ObjectsBeingCustomized);
 	InDetailBuilder.HideProperty("AuxBusManual");

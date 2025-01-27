@@ -19,12 +19,12 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "AkInclude.h"
 #include "InitializationSettings/AkInitializationSettings.h"
-#include "InitializationSettings/AkPlatformInitialisationSettingsBase.h"
+#include "InitializationSettings/AkPlatformInitializationSettingsBase.h"
 
 #include "AkLinuxInitializationSettings.generated.h"
 
 UCLASS(config = Game, defaultconfig)
-class AKAUDIO_API UAkLinuxInitializationSettings : public UObject, public IAkPlatformInitialisationSettingsBase
+class AKAUDIO_API UAkLinuxInitializationSettings : public UAkPlatformInitializationSettingsBase
 {
 	GENERATED_BODY()
 

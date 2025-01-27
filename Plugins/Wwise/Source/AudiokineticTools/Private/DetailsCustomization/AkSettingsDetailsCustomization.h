@@ -17,10 +17,10 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #pragma once
 
-#include "IDetailCustomization.h"
+#include "WwiseDetailsCustomization.h"
 #include "Input/Reply.h"
 
-class FAkSettingsDetailsCustomization : public IDetailCustomization
+class FAkSettingsDetailsCustomization : public FWwiseDetailsCustomization
 {
 public:
 	/** Makes a new instance of this detail layout class for a specific detail view requesting it */

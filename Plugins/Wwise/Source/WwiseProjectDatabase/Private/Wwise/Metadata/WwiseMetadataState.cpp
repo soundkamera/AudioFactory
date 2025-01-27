@@ -18,8 +18,8 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/Metadata/WwiseMetadataState.h"
 #include "Wwise/Metadata/WwiseMetadataLoader.h"
 
-FWwiseMetadataState::FWwiseMetadataState(FWwiseMetadataLoader& Loader) :
-	FWwiseMetadataBasicReference(Loader)
+WwiseMetadataState::WwiseMetadataState(WwiseMetadataLoader& Loader) :
+	WwiseMetadataBasicReference(Loader)
 {
-	Loader.LogParsed(TEXT("State"), Id, Name);
+	Loader.LogParsed("State"_wwise_db, Id, Name);
 }

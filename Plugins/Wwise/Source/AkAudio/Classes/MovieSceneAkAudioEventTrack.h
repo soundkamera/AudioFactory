@@ -23,11 +23,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "AkAudioEvent.h"
 #include "WwiseUnrealDefines.h"
 
-#if UE_4_26_OR_LATER
 #include "Compilation/IMovieSceneTrackTemplateProducer.h"
-#else
-#include "MovieSceneBackwardsCompatibility.h"
-#endif
 #include "MovieSceneAkAudioEventTrack.generated.h"
 
 class UMovieSceneAkAudioEventSection;
@@ -58,7 +54,7 @@ public:
 #endif
 
 #if WITH_EDITOR
-	AKAUDIO_API bool AddNewEvent(FFrameNumber Time, UAkAudioEvent* Event, const FString& EventName = FString());
+	AKAUDIO_API bool AddNewEvent(FFrameNumber Time, UAkAudioEvent* Event);
 
     void WorkUnitChangesDetectedFromSection(UMovieSceneAkAudioEventSection* in_pSection);
 #endif

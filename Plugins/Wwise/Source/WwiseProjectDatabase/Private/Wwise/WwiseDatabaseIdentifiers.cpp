@@ -17,44 +17,45 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Wwise/WwiseDatabaseIdentifiers.h"
 
-uint32 GetTypeHash(const FWwiseDatabaseMediaIdKey& MediaId)
+WwiseDBShortId GetTypeHash(const WwiseDatabaseMediaIdKey& MediaId)
 {
-	return HashCombine(
+	return WwiseDBHashCombine(
 		GetTypeHash(MediaId.MediaId),
 		GetTypeHash(MediaId.SoundBankId));
 }
 
-uint32 GetTypeHash(const FWwiseDatabaseLocalizableIdKey& LocalizableId)
+WwiseDBShortId GetTypeHash(const WwiseDatabaseLocalizableIdKey& LocalizableId)
 {
-	return HashCombine(HashCombine(
+	return WwiseDBHashCombine(WwiseDBHashCombine(
 		GetTypeHash(LocalizableId.Id),
 		GetTypeHash(LocalizableId.SoundBankId)),
 		GetTypeHash(LocalizableId.LanguageId));
 }
 
-uint32 GetTypeHash(const FWwiseDatabaseGroupValueKey& GroupId)
+WwiseDBShortId GetTypeHash(const WwiseDatabaseGroupValueKey& GroupId)
 {
-	return HashCombine(
+	return WwiseDBHashCombine(
 		GetTypeHash(GroupId.GroupId),
 		GetTypeHash(GroupId.Id));
 }
 
-uint32 GetTypeHash(const FWwiseDatabaseLocalizableGroupValueKey& LocalizableGroupValue)
+WwiseDBShortId GetTypeHash(const WwiseDatabaseLocalizableGroupValueKey& LocalizableGroupValue)
 {
-	return HashCombine(
+	return WwiseDBHashCombine(
 		GetTypeHash(LocalizableGroupValue.GroupValue),
 		GetTypeHash(LocalizableGroupValue.LanguageId));
 }
 
-uint32 GetTypeHash(const FWwiseDatabaseLocalizableGuidKey& LocalizableGuid)
+WwiseDBShortId GetTypeHash(const WwiseDatabaseLocalizableGuidKey& LocalizableGuid)
 {
-	return HashCombine(
+	return WwiseDBHashCombine(
 		GetTypeHash(LocalizableGuid.Guid),
 		GetTypeHash(LocalizableGuid.LanguageId));
 }
-uint32 GetTypeHash(const FWwiseDatabaseLocalizableNameKey& LocalizableName)
+
+WwiseDBShortId GetTypeHash(const WwiseDatabaseLocalizableNameKey& LocalizableName)
 {
-	return HashCombine(
+	return WwiseDBHashCombine(
 		GetTypeHash(LocalizableName.Name),
 		GetTypeHash(LocalizableName.LanguageId));
 }

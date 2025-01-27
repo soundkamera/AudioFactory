@@ -44,9 +44,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Mathematics/UIntegerAP32.h"
 #include "Mathematics/BSRational.h"
 #include "Mathematics/MinimumVolumeBox3.h"
-#if UE_5_1_OR_LATER
 #include "Misc/TransactionObjectEvent.h"
-#endif
 #endif
 
 static const float kScaleEpsilon = 0.001;

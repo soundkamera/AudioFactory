@@ -45,47 +45,8 @@ public:
 		}
 		return {};
 	}
-
-	static FWwiseSharedPlatformId GetSharedPlatformInfo(const FString& PlatformName)
-	{
-		if (UnrealTargetNameToSharedPlatformId.Contains(PlatformName))
-		{
-			return UnrealTargetNameToSharedPlatformId[PlatformName];
-		}
-
-		const auto ProjectDatabase = FWwiseProjectDatabase::Get();
-		if (UNLIKELY(!ProjectDatabase))
-		{
-			UE_LOG(LogAkAudio, Warning, TEXT("ProjectDatabase is not initialized"));
-			return {};
-		}
-		
-		const FWwiseDataStructureScopeLock DataStructure(*ProjectDatabase);
-		auto Platforms = DataStructure.GetPlatforms();
-
-		if (const auto* CurrentPlatformInfo = GetAkPlatformInfo(PlatformName))
-		{
-			TArray<FString> AvailablePlatforms;
-			for (auto WwisePlatform : Platforms)
-			{
-				AvailablePlatforms.Add(WwisePlatform.GetPlatformName().ToString());
-			}
-			const FString WwisePlatformName = CurrentPlatformInfo->GetWwiseBankPlatformName(AvailablePlatforms);
-			for (auto WwisePlatform : Platforms)
-			{
-				if (WwisePlatform.GetPlatformName().ToString() == WwisePlatformName)
-				{
-					UnrealTargetNameToSharedPlatformId.Add(PlatformName, WwisePlatform);
-					return UnrealTargetNameToSharedPlatformId[PlatformName];
-				}
-			}
-			UE_LOG(LogAkAudio, Warning, TEXT("Could not find parsed platform that matches %s"), *CurrentPlatformInfo->WwisePlatform);
-			return {};
-		}
-
-		UE_LOG(LogAkAudio, Warning, TEXT("Could not find platform info for %s"), *PlatformName)
-		return {};
-	}
+	
+	static FWwiseSharedPlatformId GetSharedPlatformInfo(const FString& PlatformName);
 #endif
 
 	static UAkPlatformInfo* GetAkPlatformInfo(const FString& PlatformName)
@@ -98,11 +59,7 @@ public:
 		if (!RetVal)
 		{
 			const FString PlatformInfoClassName = FString::Format(TEXT("Ak{0}PlatformInfo"), { *PlatformName });
-#if UE_5_1_OR_LATER
 			auto* PlatformInfoClass = UClass::TryFindTypeSlow<UClass>(*PlatformInfoClassName);
-#else
-			auto* PlatformInfoClass = FindObject<UClass>(ANY_PACKAGE, *PlatformInfoClassName);
-#endif
 			if (PlatformInfoClass)
 			{
 				RetVal = PlatformInfoClass->GetDefaultObject<UAkPlatformInfo>();

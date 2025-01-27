@@ -62,6 +62,11 @@ struct WWISERESOURCELOADER_API FWwisePlatformId
 		FName ExternalSourceRootPath;
 #endif
 
+	bool IsValid() const
+	{
+		return PlatformGuid.IsValid();
+	}
+
 	bool operator==(const FWwisePlatformId& Rhs) const
 	{
 		return PlatformGuid == Rhs.PlatformGuid;

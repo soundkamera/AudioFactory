@@ -21,6 +21,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/WwiseFileCache.h"
 #include "Wwise/WwiseMediaManagerImpl.h"
 #include "Wwise/WwiseIOHookImpl.h"
+#include "Wwise/API/WwiseSoundEngineAPI.h"
 #include "Wwise/Stats/FileHandler.h"
 
 IMPLEMENT_MODULE(FWwiseFileHandlerModule, WwiseFileHandler)
@@ -147,7 +148,10 @@ FWwiseExecutionQueue* FWwiseFileHandlerModule::GetBankExecutionQueue()
 		Lock.WriteLock();
 		if (LIKELY(!BankExecutionQueue))
 		{
-			BankExecutionQueue.Reset(InstantiateBankExecutionQueue());
+			if (!IsEngineExitRequested())
+			{
+				BankExecutionQueue.Reset(InstantiateBankExecutionQueue());
+			}
 		}
 		Lock.WriteUnlock();
 	}
@@ -186,7 +190,7 @@ FWwiseFileCache* FWwiseFileHandlerModule::InstantiateFileCache()
 FWwiseExecutionQueue* FWwiseFileHandlerModule::InstantiateBankExecutionQueue()
 {
 	UE_LOG(LogWwiseFileHandler, Verbose, TEXT("Initializing default Bank Execution Queue."));
-	return new FWwiseExecutionQueue(TEXT("BankExecutionQueue"));
+	return new FWwiseExecutionQueue(TEXT("BankExecutionQueue"), EWwiseTaskPriority::BackgroundNormal);
 }
 
 void FWwiseFileHandlerModule::StartupModule()

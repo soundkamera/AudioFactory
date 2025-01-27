@@ -33,7 +33,7 @@ FWwiseResourceLoader* FWwiseResourceLoaderModule::GetResourceLoader()
 		Lock.WriteLock();
 		if (LIKELY(!ResourceLoader))
 		{
-			UE_LOG(LogWwiseResourceLoader, Display, TEXT("Initializing default Resource Loader."));
+			UE_LOG(LogWwiseResourceLoader, Log, TEXT("Initializing default Resource Loader."));
 			ResourceLoader.Reset(InstantiateResourceLoader());
 		}
 		Lock.WriteUnlock();
@@ -41,16 +41,10 @@ FWwiseResourceLoader* FWwiseResourceLoaderModule::GetResourceLoader()
 	return ResourceLoader.Get();
 }
 
-FWwiseResourceLoaderImpl* FWwiseResourceLoaderModule::InstantiateResourceLoaderImpl()
-{
-	SCOPED_WWISERESOURCELOADER_EVENT(TEXT("FWwiseResourceLoaderModule::InstantiateResourceLoaderImpl"));
-	return new FWwiseResourceLoaderImpl;
-}
-
 FWwiseResourceLoader* FWwiseResourceLoaderModule::InstantiateResourceLoader()
 {
 	SCOPED_WWISERESOURCELOADER_EVENT(TEXT("FWwiseResourceLoaderModule::InstantiateResourceLoader"));
-	return new FWwiseResourceLoader;
+	return new FWwiseResourceLoaderImpl;
 }
 
 void FWwiseResourceLoaderModule::ShutdownModule()
@@ -58,7 +52,7 @@ void FWwiseResourceLoaderModule::ShutdownModule()
 	Lock.WriteLock();
 	if (ResourceLoader.IsValid())
 	{
-		UE_LOG(LogWwiseResourceLoader, Display, TEXT("Shutting down default Resource Loader."));
+		UE_LOG(LogWwiseResourceLoader, Log, TEXT("Shutting down default Resource Loader."));
 		ResourceLoader.Reset();
 	}
 	Lock.WriteUnlock();

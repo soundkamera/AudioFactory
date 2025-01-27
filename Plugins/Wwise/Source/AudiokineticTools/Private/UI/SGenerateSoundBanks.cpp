@@ -31,11 +31,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Dom/JsonObject.h"
 #include "Framework/Application/SlateApplication.h"
 #include "GenericPlatform/GenericPlatformFile.h"
-#if UE_5_0_OR_LATER
 #include "HAL/PlatformFileManager.h"
-#else
-#include "HAL/PlatformFilemanager.h"
-#endif
 #include "Interfaces/ITargetPlatform.h"
 #include "Interfaces/ITargetPlatformManagerModule.h"
 #include "Misc/FileHelper.h"

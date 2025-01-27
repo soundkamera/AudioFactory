@@ -24,28 +24,14 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 // Styling naming changed between UE4 and UE5.
 #if WITH_EDITOR && defined(COREUOBJECT_API)
-#if UE_5_0_OR_LATER
 #include "Styling/AppStyle.h"
 using FAkAppStyle = FAppStyle;
-#else
-#include "EditorStyleSet.h"
-using FAkAppStyle = FEditorStyle;
-#endif
 #endif
 
 // UE 5.0 typedefs
-#if UE_5_0_OR_LATER
 using FUnrealFloatVector = FVector3f;
 using FUnrealFloatVector2D = FVector2f;
 using FUnrealFloatPlane = FPlane4f;
 using FTickerDelegateHandle = FTSTicker::FDelegateHandle;
 using FCoreTickerType = FTSTicker;
-#else
-using FUnrealFloatVector = FVector;
-using FUnrealFloatVector2D = FVector2D;
-using FCoreTickerType = FTicker;
-using FUnrealFloatPlane = FPlane;
-using FTickerDelegateHandle = FDelegateHandle;
-#endif
-
 

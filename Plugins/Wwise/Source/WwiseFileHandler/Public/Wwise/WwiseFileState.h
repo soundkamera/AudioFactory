@@ -18,7 +18,6 @@ Copyright (c) 2024 Audiokinetic Inc.
 #pragma once
 
 #include "Wwise/WwiseExecutionQueue.h"
-#include "Wwise/WwiseFileStateTools.h"
 #include <atomic>
 
 class FWwiseAsyncCycleCounter;
@@ -30,10 +29,10 @@ enum class WWISEFILEHANDLER_API EWwiseFileStateOperationOrigin
 	Streaming
 };
 
-class WWISEFILEHANDLER_API FWwiseFileState : protected FWwiseFileStateTools
+class WWISEFILEHANDLER_API FWwiseFileState
 {
 public:
-	~FWwiseFileState() override;
+	virtual ~FWwiseFileState();
 
 	template <typename RequestedType>
 	RequestedType* GetStateAs()

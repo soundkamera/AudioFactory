@@ -22,11 +22,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "WwiseUnrealDefines.h"
 #include "WwiseUnrealHelper.h"
 #include "HAL/FileManager.h"
-#if UE_5_0_OR_LATER
 #include "HAL/PlatformFileManager.h"
-#else
-#include "HAL/PlatformFilemanager.h"
-#endif
 #include "Misc/Paths.h"
 #include "AssetManagement/WwiseProjectInfo.h"
 

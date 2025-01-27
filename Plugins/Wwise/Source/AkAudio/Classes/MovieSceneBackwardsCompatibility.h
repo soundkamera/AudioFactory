@@ -17,6 +17,3 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #pragma once
 #include "WwiseUnrealDefines.h"
-#if !UE_4_26_OR_LATER
-class IMovieSceneTrackTemplateProducer {};
-#endif

@@ -89,13 +89,13 @@ public:
 #endif
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SpatialAudioVolume", meta = (ShowOnlyInnerProperties))
-	UAkSurfaceReflectorSetComponent* SurfaceReflectorSet = nullptr;
+	TObjectPtr<UAkSurfaceReflectorSetComponent> SurfaceReflectorSet = nullptr;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SpatialAudioVolume", meta = (ShowOnlyInnerProperties))
-	UAkLateReverbComponent* LateReverb = nullptr;
+	TObjectPtr<UAkLateReverbComponent> LateReverb = nullptr;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SpatialAudioVolume", meta = (ShowOnlyInnerProperties))
-	UAkRoomComponent* Room = nullptr;
+	TObjectPtr<UAkRoomComponent> Room = nullptr;
 
 #if WITH_EDITORONLY_DATA
 	/**

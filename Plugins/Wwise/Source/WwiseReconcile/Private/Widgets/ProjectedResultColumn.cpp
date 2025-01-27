@@ -18,7 +18,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "ProjectedResultColumn.h"
 
 #include "AkAudioStyle.h"
-#include "WaapiPicker/WwiseTreeItem.h"
+#include "Wwise/WwiseTreeItem.h"
 #include "Widgets/SWidget.h"
 #include "AkUnrealAssetDataHelper.h"
 #include "WwiseUnrealHelper.h"
@@ -113,12 +113,7 @@ const TSharedRef<SWidget> FProjectedResultColumn::ConstructRowWidget(FWwiseRecon
 	if(EnumHasAnyFlags(TreeItem.OperationRequired, EWwiseReconcileOperationFlags::Create | EWwiseReconcileOperationFlags::RenameExisting | EWwiseReconcileOperationFlags::Move))
 	{
 		FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>(TEXT("AssetRegistry"));
-#if UE_5_1_OR_LATER
 		FAssetData Asset = AssetRegistryModule.GetRegistry().GetAssetByObjectPath(AssetPackagePath / AkUnrealAssetDataHelper::GetAssetDefaultName(WwiseRef).ToString() + "." + AkUnrealAssetDataHelper::GetAssetDefaultName(WwiseRef).ToString());
-#else
-		FName AssetPath = FName(AssetPackagePath / AkUnrealAssetDataHelper::GetAssetDefaultName(WwiseRef).ToString() + "." + AkUnrealAssetDataHelper::GetAssetDefaultName(WwiseRef).ToString());
-		FAssetData Asset = AssetRegistryModule.GetRegistry().GetAssetByObjectPath(AssetPath);
-#endif
 		if(Asset.IsValid())
 		{
 			return SNew(SHorizontalBox)
@@ -158,11 +153,7 @@ SHeaderRow::FColumn::FArguments FProjectedResultColumn::ConstructHeaderRowColumn
 	StatusLabel.Set(FText::FromString("Projected Result"));
 	ProjectedResultColumnHeader.DefaultLabel(StatusLabel);
 	ProjectedResultColumnHeader.DefaultTooltip(LOCTEXT("ProjectedResult_Tooltip", "The expected result of Reconciling an asset."));
-#if UE_5_0_OR_LATER
 	ProjectedResultColumnHeader.FillSized(600.f);
-#else
-	ProjectedResultColumnHeader.ManualWidth(600.f);
-#endif
 	return ProjectedResultColumnHeader;
 }
 

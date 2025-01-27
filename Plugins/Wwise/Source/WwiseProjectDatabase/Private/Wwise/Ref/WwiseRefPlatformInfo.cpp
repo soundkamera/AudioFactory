@@ -17,19 +17,17 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Wwise/Ref/WwiseRefPlatformInfo.h"
 
-#include "Wwise/Stats/ProjectDatabase.h"
 #include "Wwise/Metadata/WwiseMetadataRootFile.h"
-#include "Wwise/WwiseProjectDatabaseModule.h"
 
-const TCHAR* const FWwiseRefPlatformInfo::NAME = TEXT("PlatformInfo");
+const WwiseDBString WwiseRefPlatformInfo::NAME = "PlatformInfo"_wwise_db;
 
-const FWwiseMetadataPlatformInfo* FWwiseRefPlatformInfo::GetPlatformInfo() const
+const WwiseMetadataPlatformInfo* WwiseRefPlatformInfo::GetPlatformInfo() const
 {
 	const auto* RootFile = GetRootFile();
-	if (UNLIKELY(!RootFile))
+	if (!RootFile) [[unlikely]]
 	{
 		return nullptr;
 	}
-	UE_CLOG(!RootFile->PlatformInfo, LogWwiseProjectDatabase, Error, TEXT("Could not get PlatformInfo"));
+	WWISE_DB_CLOG(!RootFile->PlatformInfo, Error, "Could not get PlatformInfo");
 	return RootFile->PlatformInfo;
 }

@@ -25,11 +25,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 FMovieSceneEvalTemplatePtr UMovieSceneAkAudioEventTrack::CreateTemplateForSection(const UMovieSceneSection& InSection) const
 {
-#if UE_4_26_OR_LATER
 	return FMovieSceneAkAudioEventTemplate(CastChecked<UMovieSceneAkAudioEventSection>(&InSection));
-#else
-	return InSection.GenerateTemplate();
-#endif
 }
 
 UMovieSceneSection* UMovieSceneAkAudioEventTrack::CreateNewSection()
@@ -38,12 +34,12 @@ UMovieSceneSection* UMovieSceneAkAudioEventTrack::CreateNewSection()
 }
 
 #if WITH_EDITOR
-bool UMovieSceneAkAudioEventTrack::AddNewEvent(FFrameNumber Time, UAkAudioEvent* Event, const FString& EventName)
+bool UMovieSceneAkAudioEventTrack::AddNewEvent(FFrameNumber Time, UAkAudioEvent* Event)
 {
     UMovieSceneAkAudioEventSection* NewSection = NewObject<UMovieSceneAkAudioEventSection>(this);
 	ensure(NewSection);
 
-	bool eventSet = NewSection->SetEvent(Event, EventName);
+	bool eventSet = NewSection->SetEvent(Event);
 	if (eventSet)
 	{
 		const auto Duration = NewSection->GetMaxEventDuration();

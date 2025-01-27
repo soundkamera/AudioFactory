@@ -19,7 +19,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Wwise/Metadata/WwiseMetadataBasicReference.h"
 
-struct WWISEPROJECTDATABASE_API FWwiseMetadataTrigger : public FWwiseMetadataBasicReference
+struct WwiseMetadataTrigger : public WwiseMetadataBasicReference
 {
-	FWwiseMetadataTrigger(FWwiseMetadataLoader& Loader);
+	WwiseMetadataTrigger(WwiseMetadataLoader& Loader);
 };

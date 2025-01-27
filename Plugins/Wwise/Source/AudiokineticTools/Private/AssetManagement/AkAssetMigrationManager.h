@@ -53,9 +53,5 @@ public:
 	static bool IsSoundDataPathInDirectoriesToAlwaysStage(const FString& SoundDataPath);
 
 private:
-#if !UE_5_0_OR_LATER
-	FLevelEditorModule::FLevelEditorMenuExtender LevelViewportToolbarBuildMenuExtenderAkMigration;
-	FDelegateHandle LevelViewportToolbarBuildMenuExtenderAkMigrationHandle;
-#endif 
 	FName MigrationMenuSectionName = "AkMigration";
 };

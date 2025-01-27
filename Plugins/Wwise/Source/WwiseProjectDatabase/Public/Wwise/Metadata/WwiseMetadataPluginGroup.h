@@ -20,20 +20,20 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/Metadata/WwiseMetadataLoadable.h"
 #include "Wwise/Metadata/WwiseMetadataPlugin.h"
 
-struct WWISEPROJECTDATABASE_API FWwiseMetadataPluginReferenceGroup : public FWwiseMetadataLoadable
+struct WwiseMetadataPluginReferenceGroup : public WwiseMetadataLoadable
 {
-	TArray<FWwiseMetadataPluginReference> Custom;
-	TArray<FWwiseMetadataPluginReference> ShareSets;
-	TArray<FWwiseMetadataPluginReference> AudioDevices;
+	WwiseDBArray<WwiseMetadataPluginReference> Custom;
+	WwiseDBArray<WwiseMetadataPluginReference> ShareSets;
+	WwiseDBArray<WwiseMetadataPluginReference> AudioDevices;
 
-	FWwiseMetadataPluginReferenceGroup(FWwiseMetadataLoader& Loader);
+	WwiseMetadataPluginReferenceGroup(WwiseMetadataLoader& Loader);
 };
 
-struct WWISEPROJECTDATABASE_API FWwiseMetadataPluginGroup : public FWwiseMetadataLoadable
+struct WwiseMetadataPluginGroup : public WwiseMetadataLoadable
 {
-	TArray<FWwiseMetadataPlugin> Custom;
-	TArray<FWwiseMetadataPlugin> ShareSets;
-	TArray<FWwiseMetadataPlugin> AudioDevices;
+	WwiseDBArray<WwiseMetadataPlugin> Custom;
+	WwiseDBArray<WwiseMetadataPlugin> ShareSets;
+	WwiseDBArray<WwiseMetadataPlugin> AudioDevices;
 
-	FWwiseMetadataPluginGroup(FWwiseMetadataLoader& Loader);
+	WwiseMetadataPluginGroup(WwiseMetadataLoader& Loader);
 };

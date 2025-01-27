@@ -21,13 +21,13 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/Metadata/WwiseMetadataPlatform.h"
 #include "Wwise/Metadata/WwiseMetadataProject.h"
 
-struct WWISEPROJECTDATABASE_API FWwiseMetadataProjectInfo : public FWwiseMetadataLoadable
+struct WwiseMetadataProjectInfo : public WwiseMetadataLoadable
 {
-	FWwiseMetadataProject Project;
-	FName CacheRoot;
-	TArray<FWwiseMetadataPlatformReference> Platforms;
-	TArray<FWwiseMetadataLanguage> Languages;
-	FGuid FileHash;
+	WwiseMetadataProject Project;
+	WwiseDBString CacheRoot;
+	WwiseDBArray<WwiseMetadataPlatformReference> Platforms;
+	WwiseDBArray<WwiseMetadataLanguage> Languages;
+	WwiseDBGuid FileHash;
 
-	FWwiseMetadataProjectInfo(FWwiseMetadataLoader& Loader);
+	WwiseMetadataProjectInfo(WwiseMetadataLoader& Loader);
 };

@@ -113,7 +113,10 @@ void UAkRoomComponent::SetTransmissionLoss(float InTransmissionLoss)
 	if (InTransmissionLoss != WallOcclusion)
 	{
 		WallOcclusion = InTransmissionLoss;
-		if (IsRegisteredWithWwise) UpdateSpatialAudioRoom();
+		if (bIsRegisteredWithWwise)
+		{
+			UpdateSpatialAudioRoom();
+		}
 	}
 }
 
@@ -122,7 +125,10 @@ void UAkRoomComponent::SetAuxSendLevel(float InAuxSendLevel)
 	if (InAuxSendLevel != AuxSendLevel)
 	{
 		AuxSendLevel = InAuxSendLevel;
-		if (IsRegisteredWithWwise) UpdateSpatialAudioRoom();
+		if (bIsRegisteredWithWwise)
+		{
+			UpdateSpatialAudioRoom();
+		}
 	}
 }
 
@@ -163,11 +169,14 @@ void UAkRoomComponent::OnRegister()
 	SetRelativeTransform(FTransform::Identity);
 	InitializeParent();
 	// We want to add / update the room both in BeginPlay and OnRegister. BeginPlay for aux bus and reverb level assignment, OnRegister for portal room assignment and visualization
-	if (!IsRegisteredWithWwise)
+	if (!bIsRegisteredWithWwise)
+	{
 		AddSpatialAudioRoom();
+	}
 	else
+	{
 		UpdateSpatialAudioRoom();
-
+	}
 #if WITH_EDITOR
 	if (GetDefault<UAkSettingsPerUser>()->VisualizeRoomsAndPortals)
 	{
@@ -178,8 +187,8 @@ void UAkRoomComponent::OnRegister()
 
 void UAkRoomComponent::OnUnregister()
 {
-	Super::OnUnregister();
 	RemoveSpatialAudioRoom();
+	Super::OnUnregister();
 }
 
 #if WITH_EDITOR
@@ -209,6 +218,7 @@ void UAkRoomComponent::OnComponentDestroyed(bool bDestroyingHierarchy)
 	ShowRoomsChangedHandle.Reset();
 	ConnectedPortals.Empty();
 	DestroyDrawComponent();
+	Super::OnComponentDestroyed(bDestroyingHierarchy);
 }
 #endif // WITH_EDITOR
 
@@ -226,7 +236,9 @@ void UAkRoomComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, 
 	bool bUpdate = true;
 #if WITH_EDITOR
 	if (AkComponentHelpers::IsInGameWorld(this))
+	{
 		bUpdate = bDynamic;
+	}
 #endif
 	if (bUpdate)
 	{
@@ -238,10 +250,8 @@ void UAkRoomComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, 
 				FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
 				if (AkAudioDevice != nullptr)
 				{
-					AkAudioDevice->ReindexRoom(this);
-					AkAudioDevice->PortalsNeedRoomUpdate(GetWorld());
 					//Update room facing in sound engine
-					UpdateSpatialAudioRoom();
+					UpdateSpatialAudioRoom(true);
 				}
 				Moving = false;
 			}
@@ -263,16 +273,17 @@ void UAkRoomComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, 
 			bReverbZoneNeedsUpdate = false;
 		}
 	}
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 }
 
 #if WITH_EDITOR
 void UAkRoomComponent::BeginDestroy()
 {
-	Super::BeginDestroy();
 	if (AkSpatialAudioHelper::GetObjectReplacedEvent())
 	{
 		AkSpatialAudioHelper::GetObjectReplacedEvent()->RemoveAll(this);
 	}
+	Super::BeginDestroy();
 }
 
 void UAkRoomComponent::HandleObjectsReplaced(const TMap<UObject*, UObject*>& ReplacementMap)
@@ -280,10 +291,14 @@ void UAkRoomComponent::HandleObjectsReplaced(const TMap<UObject*, UObject*>& Rep
 	if (ReplacementMap.Contains(Parent.Get()))
 	{
 		InitializeParent();
-		if (!IsRegisteredWithWwise)
+		if (!bIsRegisteredWithWwise)
+		{
 			AddSpatialAudioRoom();
+		}
 		else
+		{
 			UpdateSpatialAudioRoom();
+		}
 	}
 	if (ReplacementMap.Contains(GeometryComponent))
 	{
@@ -355,6 +370,7 @@ void UAkRoomComponent::OnUpdateTransform(EUpdateTransformFlags UpdateTransformFl
 {
 	Moving = true;
 	SecondsSinceMovement = 0.0f;
+	Super::OnUpdateTransform(UpdateTransformFlags, Teleport);
 }
 
 bool UAkRoomComponent::MoveComponentImpl(
@@ -366,8 +382,9 @@ bool UAkRoomComponent::MoveComponentImpl(
 	ETeleportType Teleport)
 {
 	if (AkComponentHelpers::DoesMovementRecenterChild(this, Parent.Get(), Delta))
+	{
 		Super::MoveComponentImpl(Delta, NewRotation, bSweep, Hit, MoveFlags, Teleport);
-
+	}
 	return false;
 }
 
@@ -388,9 +405,13 @@ void UAkRoomComponent::InitializeParent()
 		if (bodySetup == nullptr || !AkComponentHelpers::HasSimpleCollisionGeometry(bodySetup))
 		{
 			if (UBrushComponent* brush = Cast<UBrushComponent>(Parent))
+			{
 				brush->BuildSimpleBrushCollision();
+			}
 			else
+			{
 				AkComponentHelpers::LogSimpleGeometryWarning(Parent.Get(), this);
+			}
 		}
 	}
 }
@@ -448,6 +469,8 @@ void UAkRoomComponent::GetRoomParams(AkRoomParams& outParams)
 
 	if (GeometryComponent != nullptr)
 		outParams.GeometryInstanceID = GeometryComponent->GetGeometrySetID();
+
+	outParams.RoomPriority = Priority;
 	
 	outParams.RoomGameObj_AuxSendLevelToSelf = AuxSendLevel;
 	outParams.RoomGameObj_KeepRegistered = AkAudioEvent == NULL ? false : true;
@@ -508,32 +531,55 @@ void UAkRoomComponent::AddSpatialAudioRoom()
 		SendGeometry();
 
 		FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
-		IWwiseSpatialAudioAPI* SpatialAudio = IWwiseSpatialAudioAPI::Get();
-		if (AkAudioDevice && SpatialAudio)
+		if (AkAudioDevice)
 		{
 			AkRoomParams Params;
 			GetRoomParams(Params);
-			AkAudioDevice->AddRoom(this, Params);
-			IsRegisteredWithWwise = true;
-			if (GetOwner() != nullptr && IsRegisteredWithWwise && AkComponentHelpers::IsInGameWorld(this))
+			if (AkAudioDevice->AddRoom(this, Params) == AK_Success)
 			{
-				UAkLateReverbComponent* pRvbComp = GetReverbComponent();
-				if (pRvbComp != nullptr)
-					pRvbComp->UpdateRTPCs(this);
+				bIsRegisteredWithWwise = true;
+				if (Params.RoomGameObj_KeepRegistered)
+				{
+					Super::SetAttenuationScalingFactor();
+				}
 			}
+
+			AkAudioDevice->IndexRoom(this);
+			// Update all portals. This room might be colliding with one of them.
+			AkAudioDevice->PortalsNeedRoomUpdate(GetWorld());
+		}
+
+		if (GetOwner() != nullptr && bIsRegisteredWithWwise && AkComponentHelpers::IsInGameWorld(this))
+		{
+			UAkLateReverbComponent* pRvbComp = GetReverbComponent();
+			if (pRvbComp != nullptr)
+				pRvbComp->UpdateRTPCs(this);
 		}
 	}
 }
 
-void UAkRoomComponent::UpdateSpatialAudioRoom()
+void UAkRoomComponent::UpdateSpatialAudioRoom(bool bUpdateRoomIndex)
 {
-	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
-	IWwiseSpatialAudioAPI* SpatialAudio = IWwiseSpatialAudioAPI::Get();
-	if (RoomIsActive() && AkAudioDevice && SpatialAudio && IsRegisteredWithWwise)
+	if (RoomIsActive())
 	{
-		AkRoomParams Params;
-		GetRoomParams(Params);
-		AkAudioDevice->UpdateRoom(this, Params);
+		FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
+		if (AkAudioDevice)
+		{
+			if (bIsRegisteredWithWwise)
+			{
+				AkRoomParams Params;
+				GetRoomParams(Params);
+				AkAudioDevice->UpdateRoom(this, Params);
+			}
+
+			if (bUpdateRoomIndex)
+			{
+				AkAudioDevice->ReindexRoom(this);
+			}
+			// Update all portals. This room might be colliding with one of them after this update.
+			AkAudioDevice->PortalsNeedRoomUpdate(GetWorld());
+		}
+
 		if (GetOwner() != nullptr && AkComponentHelpers::IsInGameWorld(this))
 		{
 			UAkLateReverbComponent* pRvbComp = GetReverbComponent();
@@ -545,11 +591,6 @@ void UAkRoomComponent::UpdateSpatialAudioRoom()
 
 void UAkRoomComponent::RemoveSpatialAudioRoom()
 {
-	if (!IsRegisteredWithWwise)
-	{
-		return;
-	}
-
 	if (Parent.IsValid() && !IsRunningCommandlet())
 	{
 		RemoveGeometry();
@@ -562,9 +603,27 @@ void UAkRoomComponent::RemoveSpatialAudioRoom()
 				// stop all sounds posted on the room
 				Stop();
 			}
-			AkAudioDevice->RemoveRoom(this);
-			IsRegisteredWithWwise = false;
-			bIsAReverbZoneInWwise = false;
+
+			if (AkAudioDevice->RemoveRoom(this) == AK_Success)
+			{
+				bIsRegisteredWithWwise = false;
+				bIsAReverbZoneInWwise = false;
+			}
+
+			AkAudioDevice->UnindexRoom(this);
+			// Update connected portals. They have lost a connection with this room. No need to update all other portals.
+			for (auto& Portal : ConnectedPortals)
+			{
+				if (Portal.Value.IsValid())
+				{
+					Portal.Value->PortalRoomsNeedUpdate();
+					if (!bIsRegisteredWithWwise) // Only need to do this if remove room succeeded
+					{
+						// Connected portals have lost the connection with this room in Wwise. We need to call SetPortal() again.
+						Portal.Value->PortalNeedsUpdate();
+					}
+				}
+			}
 		}
 	}
 }
@@ -632,7 +691,7 @@ void UAkRoomComponent::BeginPlayInternal()
 	}
 
 	// We want to add / update the room both in BeginPlay and OnRegister. BeginPlay for aux bus and reverb level assignment, OnRegister for portal room assignment and visualization
-	if (!IsRegisteredWithWwise)
+	if (!bIsRegisteredWithWwise)
 	{
 		AddSpatialAudioRoom();
 	}
@@ -690,7 +749,7 @@ void UAkRoomComponent::PostEditChangeProperty(FPropertyChangedEvent& PropertyCha
 		memberPropertyName == GET_MEMBER_NAME_CHECKED(UAkRoomComponent, AuxSendLevel))
 	{
 		// Set the room in Spatial Audio again to update the room parameters, if it has already been set.
-		if (IsRegisteredWithWwise) UpdateSpatialAudioRoom();
+		if (bIsRegisteredWithWwise) UpdateSpatialAudioRoom();
 	}
 	if (memberPropertyName == GET_MEMBER_NAME_CHECKED(UAkRoomComponent, bEnableReverbZone))
 	{
@@ -707,6 +766,7 @@ void UAkRoomComponent::PostEditChangeProperty(FPropertyChangedEvent& PropertyCha
 
 		bReverbZoneNeedsUpdate = true;
 	}
+
 	if (IsAReverbZone())
 	{
 		UpdateParentRoom();

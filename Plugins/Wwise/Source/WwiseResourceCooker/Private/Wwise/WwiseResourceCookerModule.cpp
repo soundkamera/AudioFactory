@@ -17,13 +17,13 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Wwise/WwiseResourceCookerModule.h"
 #include "Wwise/WwiseResourceCookerImpl.h"
+#include "WwiseUnrealDefines.h"
 #include "GameDelegates.h"
 
 FDelegateHandle IWwiseResourceCookerModule::ModifyCookDelegateHandle;
 
 void IWwiseResourceCookerModule::StartupModule()
 {
-#if UE_5_0_OR_LATER
 	// This StartupModule can be executed multiple times as more than one module can derive from the interface.
 	// Use GetModule to load what the user wishes, and ignore the current "this".
 	auto* This = GetModule();
@@ -38,12 +38,10 @@ void IWwiseResourceCookerModule::StartupModule()
 		return;
 	}
 	ModifyCookDelegateHandle = FGameDelegates::Get().GetModifyCookDelegate().AddRaw(This, &IWwiseResourceCookerModule::OnModifyCook);
-#endif
 }
 
 void IWwiseResourceCookerModule::ShutdownModule()
 {
-#if UE_5_0_OR_LATER
 	if (!ModifyCookDelegateHandle.IsValid())
 	{
 		return;
@@ -51,5 +49,4 @@ void IWwiseResourceCookerModule::ShutdownModule()
 
 	FGameDelegates::Get().GetModifyCookDelegate().Remove(ModifyCookDelegateHandle);
 	ModifyCookDelegateHandle.Reset();
-#endif
 }

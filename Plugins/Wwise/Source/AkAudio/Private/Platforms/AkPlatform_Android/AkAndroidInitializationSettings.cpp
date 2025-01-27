@@ -27,11 +27,6 @@ Copyright (c) 2024 Audiokinetic Inc.
 //////////////////////////////////////////////////////////////////////////
 // FAkAndroidAdvancedInitializationSettings
 
-FAkAndroidAdvancedInitializationSettings::FAkAndroidAdvancedInitializationSettings()
-{
-	VmPageSize = 16 * 1024;
-}
-
 void FAkAndroidAdvancedInitializationSettings::FillInitializationStructure(FAkInitializationStructure& InitializationStructure) const
 {
 	Super::FillInitializationStructure(InitializationStructure);

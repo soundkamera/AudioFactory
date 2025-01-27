@@ -18,8 +18,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #pragma once
 
 #include "Wwise/WwiseExecutionQueue.h"
-
-#include "WwiseUnrealDefines.h"
+#include "Wwise/WwiseUnrealVersion.h"
 
 namespace AK
 {
@@ -43,11 +42,7 @@ struct WWISECONCURRENCY_API FWwiseDeferredQueue
 {
 	using FFunction = TUniqueFunction<EWwiseDeferredAsyncResult()>;
 	using FSyncFunction = TUniqueFunction<EWwiseDeferredAsyncResult (AK::IAkGlobalPluginContext*)>;
-#if UE_5_1_OR_LATER
 	DECLARE_TS_MULTICAST_DELEGATE_OneParam(FThreadSafeDelegate, AK::IAkGlobalPluginContext*);
-#else
-	DECLARE_MULTICAST_DELEGATE_OneParam(FThreadSafeDelegate, AK::IAkGlobalPluginContext*);
-#endif
 	DECLARE_MULTICAST_DELEGATE(FGameThreadDelegate);
 
 #define WWISE_DQ_NAME(name) TEXT(name ## " Deferred Queue worker") 

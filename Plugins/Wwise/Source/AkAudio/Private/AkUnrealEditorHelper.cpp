@@ -33,11 +33,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "WwiseUnrealDefines.h"
 #include "Wwise/Stats/AkAudio.h"
 
-#if UE_5_0_OR_LATER
 #include "HAL/PlatformFileManager.h"
-#else
-#include "HAL/PlatformFilemanager.h"
-#endif
 
 #define LOCTEXT_NAMESPACE "AkAudio"
 namespace AkUnrealEditorHelper
@@ -151,12 +147,7 @@ namespace AkUnrealEditorHelper
 			}
 		}
 
-#if UE_5_0_OR_LATER
 		return ConfigObject->TryUpdateDefaultConfigFile();
-#else
-		ConfigObject->UpdateDefaultConfigFile();
-		return true;
-#endif
 	}
 
 	FString GetLegacySoundBankDirectory()

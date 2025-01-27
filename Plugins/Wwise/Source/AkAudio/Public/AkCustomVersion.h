@@ -32,7 +32,7 @@ struct AKAUDIO_API FAkCustomVersion
 		BeforeCustomVersionWasAdded = 0,
 
 		AddedSpatialAudio = 1,
-		NewRTPCTrackDataContainer = 2,
+		NewGameParameterTrackDataContainer = 2,
 		
 		NewAssetManagement = 3,
 

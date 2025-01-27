@@ -18,14 +18,14 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/Metadata/WwiseMetadataGameParameter.h"
 #include "Wwise/Metadata/WwiseMetadataLoader.h"
 
-FWwiseMetadataGameParameterReference::FWwiseMetadataGameParameterReference(FWwiseMetadataLoader& Loader) :
-	Id(Loader.GetUint32(this, TEXT("Id")))
+WwiseMetadataGameParameterReference::WwiseMetadataGameParameterReference(WwiseMetadataLoader& Loader) :
+	Id(Loader.GetWwiseShortId(this, "Id"_wwise_db))
 {
-	Loader.LogParsed(TEXT("GameParameterReference"), Id);
+	Loader.LogParsed("GameParameterReference"_wwise_db, Id);
 }
 
-FWwiseMetadataGameParameter::FWwiseMetadataGameParameter(FWwiseMetadataLoader& Loader) :
-	FWwiseMetadataBasicReference(Loader)
+WwiseMetadataGameParameter::WwiseMetadataGameParameter(WwiseMetadataLoader& Loader) :
+	WwiseMetadataBasicReference(Loader)
 {
-	Loader.LogParsed(TEXT("GameParameter"), Id, Name);
+	Loader.LogParsed("GameParameter"_wwise_db, Id, Name);
 }

@@ -17,12 +17,13 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #pragma once
 
-#include "PropertyEditorModule.h"
-#include "IDetailCustomization.h"
+#include "WwiseDetailsCustomization.h"
+#include "UI/SAkGeometrySurfaceOverrideController.h"
+
 //////////////////////////////////////////////////////////////////////////
 // FAkGeometryDetailsCustomization
 
-class FAkGeometryComponentDetailsCustomization : public IDetailCustomization
+class FAkGeometryComponentDetailsCustomization : public FWwiseDetailsCustomization
 {
 public:
 	FAkGeometryComponentDetailsCustomization();

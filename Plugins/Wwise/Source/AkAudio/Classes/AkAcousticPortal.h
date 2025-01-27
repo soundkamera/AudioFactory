@@ -167,6 +167,9 @@ public:
 
 	FString GetPortalName();
 
+	void PortalNeedsUpdate() { bPortalNeedsUpdate = true; }
+	void PortalRoomsNeedUpdate() { bPortalRoomsNeedUpdate = true; }
+
 private:
 	TWeakObjectPtr<class UPrimitiveComponent> Parent;
 
@@ -186,9 +189,9 @@ private:
 	FVector PreviousLocation;
 	FRotator PreviousRotation;
 
-	bool PortalNeedsUpdate = false;
+	bool bPortalNeedsUpdate = false;
 	bool PortalOcclusionChanged = false;
-	bool PortalRoomsNeedUpdate = false;
+	bool bPortalRoomsNeedUpdate = false;
 	TWeakObjectPtr<UAkRoomComponent> FrontRoom;
 	TWeakObjectPtr<UAkRoomComponent> BackRoom;
 
@@ -215,10 +218,10 @@ private:
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(SkipSerialization, NonTransactional)
-	mutable UTextRenderComponent* FrontRoomText = nullptr;
+	mutable TObjectPtr<UTextRenderComponent> FrontRoomText = nullptr;
 
 	UPROPERTY(SkipSerialization, NonTransactional)
-	mutable UTextRenderComponent* BackRoomText = nullptr;
+	mutable TObjectPtr<UTextRenderComponent> BackRoomText = nullptr;
 #endif
 };
 
@@ -240,7 +243,7 @@ public:
 	AkAcousticPortalState GetCurrentState() const;
 
 	UPROPERTY(VisibleAnywhere, Category = "AcousticPortal", BlueprintReadOnly, meta = (ShowOnlyInnerProperties))
-	UAkPortalComponent* Portal = nullptr;
+	TObjectPtr<UAkPortalComponent> Portal = nullptr;
 
 	virtual void PostRegisterAllComponents() override;
 	virtual void PostLoad() override;

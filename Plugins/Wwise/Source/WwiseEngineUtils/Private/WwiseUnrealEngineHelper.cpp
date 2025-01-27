@@ -18,20 +18,14 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "WwiseUnrealEngineHelper.h"
 #include "WwiseUnrealDefines.h"
 
-#if UE_5_1_OR_LATER
 #include "Engine/HitResult.h"
-#endif
 
 namespace WwiseUnrealHelper
 {
 	AActor* GetActorFromHitResult(const FHitResult& HitResult)
 	{
 		AActor* HitActor = nullptr;
-#if UE_5_0_OR_LATER
 		HitActor = HitResult.HitObjectHandle.FetchActor();
-#else
-		HitActor = HitResult.Actor.Get();
-#endif
 
 		return HitActor;
 	}

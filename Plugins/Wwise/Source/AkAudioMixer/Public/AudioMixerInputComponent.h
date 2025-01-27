@@ -21,7 +21,6 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "AkInclude.h"
 #include "AkAudioInputManager.h"
 
-// FIXME Rename this class
 class FAudioMixerInputComponent
 {
 

@@ -28,6 +28,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "AssetRegistry/AssetData.h"
 #include "Framework/Docking/TabManager.h"
 #include "Framework/Notifications/NotificationManager.h"
+#include "Interfaces/IPluginManager.h"
 #include "StringMatchAlgos/Array2D.h"
 #include "StringMatchAlgos/StringMatching.h"
 #include "UObject/UnrealType.h"
@@ -37,11 +38,9 @@ Copyright (c) 2024 Audiokinetic Inc.
 #if WITH_EDITOR
 #include "AkAudioStyle.h"
 #include "AssetToolsModule.h"
-#if UE_5_0_OR_LATER
+
 #include "HAL/PlatformFileManager.h"
-#else
-#include "HAL/PlatformFilemanager.h"
-#endif
+
 #include "Misc/ConfigCacheIni.h"
 #include "Misc/FileHelper.h"
 #include "Misc/MessageDialog.h"
@@ -51,6 +50,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "ISourceControlModule.h"
 #include "SourceControlHelpers.h"
 #include "AkUnrealEditorHelper.h"
+#include "FileHelpers.h"
 #include "PackageTools.h"
 
 #if AK_SUPPORT_WAAPI
@@ -185,12 +185,8 @@ namespace AkSettings_Helper
 	void MigrateMultiCoreRendering(bool EnableMultiCoreRendering, const FString& PlatformName)
 	{
 		FString SettingsClassName = FString::Format(TEXT("Ak{0}InitializationSettings"), { *PlatformName });
-#if UE_5_1_OR_LATER
 		SettingsClassName = "/Script/AkAudio." + SettingsClassName;
 		auto* SettingsClass = UClass::TryFindTypeSlow<UClass>(*SettingsClassName);
-#else
-		auto* SettingsClass = FindObject<UClass>(ANY_PACKAGE, *SettingsClassName);
-#endif
 		if (!SettingsClass)
 		{
 			return;
@@ -405,7 +401,6 @@ void UAkSettings::PostInitProperties()
 		RootOutputPath = GeneratedSoundBanksFolder_DEPRECATED;
 		AkUnrealEditorHelper::SaveConfigFile(this);
 	}
-
 #endif // WITH_EDITOR
 }
 
@@ -414,6 +409,7 @@ void UAkSettings::PreEditChange(FProperty* PropertyAboutToChange)
 {
 	PreviousWwiseProjectPath = WwiseProjectPath.FilePath;
 	PreviousWwiseGeneratedSoundBankFolder = RootOutputPath.Path;
+	PreviousDefaultScalingFactor = DefaultListenerScalingFactor;
 
 	Super::PreEditChange(PropertyAboutToChange);
 }
@@ -515,7 +511,7 @@ void UAkSettings::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedE
 	}
 	else if (MemberPropertyName == GET_MEMBER_NAME_CHECKED(UAkSettings, WwiseStagingDirectory))
 	{
-		FAkAudioModule::AkAudioModuleInstance->UpdateWwiseResourceLoaderSettings();
+		FAkAudioModule::UpdateWwiseResourceCookerSettings();
 	}
 	else if (MemberPropertyName == GET_MEMBER_NAME_CHECKED(UAkSettings, RootOutputPath))
 	{
@@ -523,6 +519,14 @@ void UAkSettings::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedE
 		{
 			FWwiseInitBankLoader::Get()->UpdateInitBankInSettings();
 			FAkAudioModule::AkAudioModuleInstance->ReloadWwiseAssetData();
+		}
+	}
+	else if (MemberPropertyName == GET_MEMBER_NAME_CHECKED(UAkSettings, DefaultListenerScalingFactor))
+	{
+		if (DefaultListenerScalingFactor <= 0.f)
+		{
+			DefaultListenerScalingFactor = PreviousDefaultScalingFactor;
+			UE_LOG(LogAkAudio, Warning, TEXT("UAkSettings::PostEditChangeProperty: Default Scaling Factor must be greater than 0. Setting Default Scaling Factor to the previous value."));
 		}
 	}
 
@@ -657,13 +661,8 @@ void UAkSettings::FillGeometrySurfacePropertiesTable()
 {
 	// Fill the table with existing physical materials and acoustic textures
 	TArray<FAssetData> PhysicalMaterialAssets, AcousticTextureAssets;
-#if UE_5_1_OR_LATER
 	AssetRegistryModule->Get().GetAssetsByClass(UPhysicalMaterial::StaticClass()->GetClassPathName(), PhysicalMaterialAssets);
 	AssetRegistryModule->Get().GetAssetsByClass(UAkAcousticTexture::StaticClass()->GetClassPathName(), AcousticTextureAssets);
-#else
-	AssetRegistryModule->Get().GetAssetsByClass(UPhysicalMaterial::StaticClass()->GetFName(), PhysicalMaterialAssets);
-	AssetRegistryModule->Get().GetAssetsByClass(UAkAcousticTexture::StaticClass()->GetFName(), AcousticTextureAssets);
-#endif
 	UpdateGeometrySurfacePropertiesTable(PhysicalMaterialAssets, AcousticTextureAssets);
 }
 
@@ -681,11 +680,7 @@ void UAkSettings::VerifyAndUpdateGeometrySurfacePropertiesTable()
 	GeometryTable->ForeachRow<FWwiseGeometrySurfacePropertiesRow>("Verify GeometrySurfacePropertiesTable contents",
 		[this, &ToRemove](const FName& Key, const FWwiseGeometrySurfacePropertiesRow& Value)
 		{
-#if UE_5_1_OR_LATER
 			auto PhysicalMaterialAsset = AssetRegistryModule->Get().GetAssetByObjectPath(FSoftObjectPath(Key.ToString()));
-#else
-			auto PhysicalMaterialAsset = AssetRegistryModule->Get().GetAssetByObjectPath(Key);
-#endif
 			if (PhysicalMaterialAsset == nullptr)
 			{
 				ToRemove.Add(Key);
@@ -914,11 +909,7 @@ void UAkSettings::UpdateTextureColor(const FGuid& textureID)
 void UAkSettings::SetTextureColor(FGuid textureID, int colorIndex)
 {
 	TArray<FAssetData> AcousticTextures;
-#if UE_5_1_OR_LATER
 	AssetRegistryModule->Get().GetAssetsByClass(UAkAcousticTexture::StaticClass()->GetClassPathName(), AcousticTextures);
-#else
-	AssetRegistryModule->Get().GetAssetsByClass(UAkAcousticTexture::StaticClass()->GetFName(), AcousticTextures);
-#endif
 
 	FLinearColor color = FAkAudioStyle::GetWwiseObjectColor(colorIndex);
 	for (FAssetData& textureAsset : AcousticTextures)
@@ -944,39 +935,23 @@ void UAkSettings::OnAssetAdded(const FAssetData& NewAssetData)
 		return;
 	}
 
-#if UE_5_1_OR_LATER
 	if (NewAssetData.AssetClassPath == UPhysicalMaterial::StaticClass()->GetClassPathName())
-#else
-	if (NewAssetData.AssetClass == UPhysicalMaterial::StaticClass()->GetFName())
-#endif
 	{
 		if (auto physicalMaterial = Cast<UPhysicalMaterial>(NewAssetData.GetAsset()))
 		{
 			TArray<FAssetData> PhysicalMaterials, AcousticTextures;
 			PhysicalMaterials.Add(NewAssetData);
-#if UE_5_1_OR_LATER
 			AssetRegistryModule->Get().GetAssetsByClass(UAkAcousticTexture::StaticClass()->GetClassPathName(), AcousticTextures);
-#else
-			AssetRegistryModule->Get().GetAssetsByClass(UAkAcousticTexture::StaticClass()->GetFName(), AcousticTextures);
-#endif
 
 			UpdateGeometrySurfacePropertiesTable(PhysicalMaterials, AcousticTextures);
 		}
 	} 
-#if UE_5_1_OR_LATER
 	else if (NewAssetData.AssetClassPath == UAkAcousticTexture::StaticClass()->GetClassPathName())
-#else
-	else if (NewAssetData.AssetClass == UAkAcousticTexture::StaticClass()->GetFName())
-#endif
 	{
 		if (auto acousticTexture = Cast<UAkAcousticTexture>(NewAssetData.GetAsset()))
 		{
 			TArray<FAssetData> PhysicalMaterials, AcousticTextures;
-#if UE_5_1_OR_LATER
 			AssetRegistryModule->Get().GetAssetsByClass(UPhysicalMaterial::StaticClass()->GetClassPathName(), PhysicalMaterials);
-#else
-			AssetRegistryModule->Get().GetAssetsByClass(UPhysicalMaterial::StaticClass()->GetFName(), PhysicalMaterials);
-#endif
 			AcousticTextures.Add(NewAssetData);
 
 			UpdateGeometrySurfacePropertiesTable(PhysicalMaterials, AcousticTextures);
@@ -1004,11 +979,7 @@ void UAkSettings::OnAssetAdded(const FAssetData& NewAssetData)
 
 void UAkSettings::OnAssetRemoved(const struct FAssetData& AssetData)
 {
-#if UE_5_1_OR_LATER
 	if (AssetData.AssetClassPath == UPhysicalMaterial::StaticClass()->GetClassPathName())
-#else
-	if (AssetData.AssetClass == UPhysicalMaterial::StaticClass()->GetFName())
-#endif
 	{
 		if (auto physicalMaterial = Cast<UPhysicalMaterial>(AssetData.GetAsset()))
 		{
@@ -1019,11 +990,7 @@ void UAkSettings::OnAssetRemoved(const struct FAssetData& AssetData)
 			}
 		}
 	}
-#if UE_5_1_OR_LATER
 	else if(AssetData.AssetClassPath == UAkAcousticTexture::StaticClass()->GetClassPathName())
-#else
-	else if(AssetData.AssetClass == UAkAcousticTexture::StaticClass()->GetFName())
-#endif
 	{
 		if(auto acousticTexture = Cast<UAkAcousticTexture>(AssetData.GetAsset()))
 		{
@@ -1141,11 +1108,7 @@ void UAkSettings::SanitizeProjectPath(FString& Path, const FString& PreviousPath
 
 	if (Path != PreviousPath)
 	{
-#if UE_4_26_OR_LATER
 		auto WwiseBrowserTab = FGlobalTabmanager::Get()->TryInvokeTab(FName("WwiseBrowser"));
-#else
-		TSharedRef<SDockTab> WwiseBrowserTab = FGlobalTabmanager::Get()->InvokeTab(FName("WwiseBrowser"));
-#endif
 		bRequestRefresh = true;
 	}
 }
@@ -1156,8 +1119,8 @@ void UAkSettings::OnAudioRoutingUpdate()
 	bool bExpectedCustom = false;
 	bool bExpectedSeparate = false;
 	bool bExpectedUsingAudioMixer = false;
-	bool bExpectedAudioModuleOverride = true;
-	bool bExpectedWwiseSoundEngineEnabled = true;
+	bool bExpectedAudioModuleOverride = false;
+	bool bExpectedWwiseSoundEngineEnabled = false;
 	bool bExpectedWwiseAudioLinkEnabled = false;
 	bool bExpectedAkAudioMixerEnabled = false;
 	FString ExpectedAudioDeviceModuleName;
@@ -1166,19 +1129,19 @@ void UAkSettings::OnAudioRoutingUpdate()
 	{
 	case EAkUnrealAudioRouting::Custom:
 		UE_LOG(LogAkAudio, VeryVerbose, TEXT("OnAudioRoutingUpdate: Setting for Custom"));
-		bExpectedCustom = true;
-		break;
+		return;
 
 	case EAkUnrealAudioRouting::Separate:
 		UE_LOG(LogAkAudio, VeryVerbose, TEXT("OnAudioRoutingUpdate: Setting for Separate"));
 		bExpectedSeparate = true;
 		bExpectedUsingAudioMixer = true;
-		bExpectedAudioModuleOverride = false;
+		bExpectedWwiseSoundEngineEnabled = true;
 		break;
 
 	case EAkUnrealAudioRouting::EnableWwiseOnly:
 		UE_LOG(LogAkAudio, VeryVerbose, TEXT("OnAudioRoutingUpdate: Setting for DisableUnreal"));
-		bExpectedUsingAudioMixer = false;
+		bExpectedAudioModuleOverride = true;
+		bExpectedWwiseSoundEngineEnabled = true;
 		ExpectedAudioDeviceModuleName = TEXT("");
 		ExpectedAudioMixerModuleName = TEXT("");
 		break;
@@ -1187,13 +1150,13 @@ void UAkSettings::OnAudioRoutingUpdate()
 		UE_LOG(LogAkAudio, VeryVerbose, TEXT("OnAudioRoutingUpdate: Setting for DisableWwise"));
 		bExpectedSeparate = true;
 		bExpectedUsingAudioMixer = true;
-		bExpectedAudioModuleOverride = false;
-		bExpectedWwiseSoundEngineEnabled = false;
 		break;
 
 	case EAkUnrealAudioRouting::AudioMixer:
 		UE_LOG(LogAkAudio, VeryVerbose, TEXT("OnAudioRoutingUpdate: Setting for AudioMixer"));
 		bExpectedUsingAudioMixer = true;
+		bExpectedAudioModuleOverride = true;
+		bExpectedWwiseSoundEngineEnabled = true;
 		bExpectedAkAudioMixerEnabled = true;
 		ExpectedAudioDeviceModuleName = TEXT("AkAudioMixer");
 		ExpectedAudioMixerModuleName = TEXT("AkAudioMixer");
@@ -1202,13 +1165,14 @@ void UAkSettings::OnAudioRoutingUpdate()
 	case EAkUnrealAudioRouting::AudioLink:
 		UE_LOG(LogAkAudio, VeryVerbose, TEXT("OnAudioRoutingUpdate: Setting for AudioLink"));
 		bExpectedSeparate = true;
-		bExpectedUsingAudioMixer = true;
+		bExpectedAudioModuleOverride = true;
+		bExpectedWwiseSoundEngineEnabled = true;
+		ExpectedAudioMixerModuleName = TEXT("AudioMixerPlatformAudioLink");
 		bExpectedWwiseAudioLinkEnabled = true;
-		bExpectedAudioModuleOverride = false;
 		break;
 
 	default:
-		UE_LOG(LogAkAudio, Warning, TEXT("OnAudioRoutingUpdate: Unknown AudioRouting"));
+		UE_LOG(LogAkAudio, Error, TEXT("OnAudioRoutingUpdate: Unknown AudioRouting"));
 		return;
 	}
 
@@ -1227,16 +1191,11 @@ void UAkSettings::OnAudioRoutingUpdate()
 
 		bAkAudioMixerEnabled = bExpectedAkAudioMixerEnabled;
 		UE_LOG(LogAkAudio, Log, TEXT("OnAudioRoutingUpdate: Wwise AudioMixer Enabled: %s"), bExpectedAkAudioMixerEnabled ? TEXT("true") : TEXT("false"));
-#if UE_5_0_OR_LATER
 		TryUpdateDefaultConfigFile();
-#else
-		UpdateDefaultConfigFile();
-#endif
 	}
 
 	TArray<FString> IniPlatformNames;
 
-#if UE_5_0_OR_LATER
 	for (const auto& PlatformInfo : FDataDrivenPlatformInfoRegistry::GetAllPlatformInfos())
 	{
 		if (!PlatformInfo.Value.bIsFakePlatform)
@@ -1244,23 +1203,12 @@ void UAkSettings::OnAudioRoutingUpdate()
 			IniPlatformNames.Add(PlatformInfo.Value.IniPlatformName.ToString());
 		}
 	}
-#else
-	for (const auto& Platform : GetTargetPlatformManagerRef().GetTargetPlatforms())
-	{
-		IniPlatformNames.Add(Platform->IniPlatformName());
-	}
-#endif
 	for (const auto& IniPlatformName : IniPlatformNames)
 	{
 		const auto RelativePlatformEnginePath = FString::Printf(TEXT("%s/%sEngine.ini"), *IniPlatformName, *IniPlatformName);
 		auto PlatformEnginePath = FString::Printf(TEXT("%s%s"), *FPaths::SourceConfigDir(), *RelativePlatformEnginePath);
 
-#if UE_5_1_OR_LATER
 		PlatformEnginePath = FConfigCacheIni::NormalizeConfigIniPath(PlatformEnginePath);
-#else
-		FPaths::RemoveDuplicateSlashes(PlatformEnginePath);
-		PlatformEnginePath = FPaths::CreateStandardFilename(PlatformEnginePath);
-#endif
 
 		const FString FullPlatformEnginePath = FPaths::ConvertRelativePathToFull(PlatformEnginePath);
 
@@ -1450,7 +1398,7 @@ bool UAkSettings::PredelayRTPCInUse() const
 	return validPath || !TimeToFirstReflectionName.IsEmpty();
 }
 
-bool UAkSettings::GetAssociatedAcousticTexture(const UPhysicalMaterial* physMaterial, UAkAcousticTexture*& acousticTexture) const
+bool UAkSettings::GetAssociatedAcousticTexture(const UPhysicalMaterial* physMaterial, TObjectPtr<UAkAcousticTexture>& acousticTexture) const
 {
 	auto GeometryTable = GeometrySurfacePropertiesTable.LoadSynchronous();
 	if (GeometryTable == nullptr)
@@ -1474,6 +1422,11 @@ bool UAkSettings::GetAssociatedOcclusionValue(const UPhysicalMaterial* physMater
 {
 	auto GeometryTable = GeometrySurfacePropertiesTable.LoadSynchronous();
 	if (GeometryTable == nullptr)
+	{
+		return false;
+	}
+
+	if (physMaterial == nullptr)
 	{
 		return false;
 	}

@@ -20,6 +20,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 void FAkEnvironmentOctreeSemantics::SetElementId(AK_OCTREE_TYPE<FAkEnvironmentOctreeElement, FAkEnvironmentOctreeSemantics>& OctreeOwner, const FAkEnvironmentOctreeElement& Element, AK_OCTREE_ELEMENT_ID Id)
 {
+	if (!Element.Component.IsValid()) return;
 	static_cast<UAkEnvironmentOctree&>(OctreeOwner).ObjectToOctreeId.Add(Element.Component->GetUniqueID(), Id);
 }
 

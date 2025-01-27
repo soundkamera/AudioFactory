@@ -44,5 +44,5 @@ struct AKAUDIO_API FMovieSceneAkAudioEventTemplate
 	virtual void SetupOverrides() override { EnableOverrides(RequiresSetupFlag | RequiresTearDownFlag); }
 
 	UPROPERTY()
-	const UMovieSceneAkAudioEventSection* Section = nullptr;
+	TObjectPtr<const UMovieSceneAkAudioEventSection> Section = nullptr;
 };

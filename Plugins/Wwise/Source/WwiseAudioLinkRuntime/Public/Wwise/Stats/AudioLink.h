@@ -20,5 +20,5 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Stats/Stats.h"
 #include "Logging/LogMacros.h"
 
-WWISE_API DECLARE_LOG_CATEGORY_EXTERN(LogWwiseAudioLink, Log, All);
-WWISE_API DECLARE_LOG_CATEGORY_EXTERN(LogWwiseAudioLinkLowLevel, Log, Log);
+WWISEAUDIOLINKRUNTIME_API DECLARE_LOG_CATEGORY_EXTERN(LogWwiseAudioLink, Log, All);
+WWISEAUDIOLINKRUNTIME_API DECLARE_LOG_CATEGORY_EXTERN(LogWwiseAudioLinkLowLevel, Log, Log);

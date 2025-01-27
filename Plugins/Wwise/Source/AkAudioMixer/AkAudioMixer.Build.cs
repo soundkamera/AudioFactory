@@ -32,9 +32,7 @@ public class AkAudioMixer : ModuleRules
 
 				"AudioMixer",
 				"AudioMixerCore",
-#if UE_5_0_OR_LATER
 				"BinkAudioDecoder",
-#endif
 
 				"AkAudio",
 				"WwiseSoundEngine",

@@ -23,25 +23,27 @@ Copyright (c) 2024 Audiokinetic Inc.
 class WWISERESOURCECOOKER_API FWwiseResourceCookerModule : public IWwiseResourceCookerModule
 {
 public:
-	FWwiseResourceCooker* GetResourceCooker() override;
-	FWwiseResourceCooker* InstantiateResourceCooker() override;
+	virtual IWwiseResourceCooker* GetResourceCooker() override;
+	virtual IWwiseResourceCooker* InstantiateResourceCooker() override;
 
-	FWwiseResourceCooker* CreateCookerForPlatform(
+	virtual IWwiseResourceCooker* CreateCookerForPlatform(
 		const ITargetPlatform* TargetPlatform,
 		const FWwiseSharedPlatformId& InPlatform,
-		EWwiseExportDebugNameRule InExportDebugNameRule = EWwiseExportDebugNameRule::Release) override;
-	void DestroyCookerForPlatform(const ITargetPlatform* TargetPlatform) override;
-	FWwiseResourceCooker* GetCookerForPlatform(const ITargetPlatform* TargetPlatform) override;
+		EWwisePackagingStrategy InTargetPackagingStrategy,
+		EWwiseExportDebugNameRule InExportDebugNameRule) override;
+	virtual void DestroyCookerForPlatform(const ITargetPlatform* TargetPlatform) override;
+	virtual IWwiseResourceCooker* GetCookerForPlatform(const ITargetPlatform* TargetPlatform) override;
 
-	void DestroyAllCookerPlatforms() override;
-	
-	void ShutdownModule() override;
+	virtual void DestroyAllCookerPlatforms() override;
+
+	virtual void StartupModule() override;
+	virtual void ShutdownModule() override;
 
 protected:
 	FRWLock Lock;
-	TUniquePtr<FWwiseResourceCooker> ResourceCooker;
+	TUniquePtr<IWwiseResourceCooker> ResourceCooker;
 
-	TMap<const ITargetPlatform*, TUniquePtr<FWwiseResourceCooker>> CookingPlatforms;
+	TMap<const ITargetPlatform*, TUniquePtr<IWwiseResourceCooker>> CookingPlatforms;
 
 	void OnModifyCook(TConstArrayView<const ITargetPlatform*> InTargetPlatforms, TArray<FName>& InOutPackagesToCook, TArray<FName>& InOutPackagesToNeverCook) override;
 };

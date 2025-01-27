@@ -27,9 +27,6 @@ public class WwiseEngineUtils : ModuleRules
 			"Core",
 			"Engine",
 			"WwiseSoundEngine",
-#if !UE_5_0_OR_LATER
-			"CoreUObject",
-#endif
 			"WwiseUtils"
 		});
 

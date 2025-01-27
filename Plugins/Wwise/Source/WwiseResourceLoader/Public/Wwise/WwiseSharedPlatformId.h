@@ -52,6 +52,16 @@ struct WWISERESOURCELOADER_API FWwiseSharedPlatformId
 		return Platform->PlatformName;
 	}
 
+	bool IsValid() const
+	{
+		return Platform->IsValid();
+	}
+
+	bool operator<(const FWwiseSharedPlatformId& Rhs) const
+	{
+		return Platform->PlatformGuid < Rhs.Platform->PlatformGuid;
+	}
+	
 	bool operator==(const FWwiseSharedPlatformId& Rhs) const
 	{
 		return Platform->PlatformGuid == Rhs.Platform->PlatformGuid;

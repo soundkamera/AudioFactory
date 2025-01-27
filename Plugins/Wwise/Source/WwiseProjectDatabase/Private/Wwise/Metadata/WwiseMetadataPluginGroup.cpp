@@ -18,18 +18,18 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/Metadata/WwiseMetadataPluginGroup.h"
 #include "Wwise/Metadata/WwiseMetadataLoader.h"
 
-FWwiseMetadataPluginReferenceGroup::FWwiseMetadataPluginReferenceGroup(FWwiseMetadataLoader& Loader) :
-	Custom(Loader.GetArray<FWwiseMetadataPluginReference>(this, TEXT("Custom"))),
-	ShareSets(Loader.GetArray<FWwiseMetadataPluginReference>(this, TEXT("ShareSets"))),
-	AudioDevices(Loader.GetArray<FWwiseMetadataPluginReference>(this, TEXT("AudioDevices")))
+WwiseMetadataPluginReferenceGroup::WwiseMetadataPluginReferenceGroup(WwiseMetadataLoader& Loader) :
+	Custom(Loader.GetArray<WwiseMetadataPluginReference>(this, "Custom"_wwise_db)),
+	ShareSets(Loader.GetArray<WwiseMetadataPluginReference>(this, "ShareSets"_wwise_db)),
+	AudioDevices(Loader.GetArray<WwiseMetadataPluginReference>(this, "AudioDevices"_wwise_db))
 {
-	Loader.LogParsed(TEXT("PluginReferenceGroup"));
+	Loader.LogParsed("PluginReferenceGroup"_wwise_db);
 }
 
-FWwiseMetadataPluginGroup::FWwiseMetadataPluginGroup(FWwiseMetadataLoader& Loader) :
-	Custom(Loader.GetArray<FWwiseMetadataPlugin>(this, TEXT("Custom"))),
-	ShareSets(Loader.GetArray<FWwiseMetadataPlugin>(this, TEXT("ShareSets"))),
-	AudioDevices(Loader.GetArray<FWwiseMetadataPlugin>(this, TEXT("AudioDevices")))
+WwiseMetadataPluginGroup::WwiseMetadataPluginGroup(WwiseMetadataLoader& Loader) :
+	Custom(Loader.GetArray<WwiseMetadataPlugin>(this, "Custom"_wwise_db)),
+	ShareSets(Loader.GetArray<WwiseMetadataPlugin>(this, "ShareSets"_wwise_db)),
+	AudioDevices(Loader.GetArray<WwiseMetadataPlugin>(this, "AudioDevices"_wwise_db))
 {
-	Loader.LogParsed(TEXT("PluginGroup"));
+	Loader.LogParsed("PluginGroup"_wwise_db);
 }

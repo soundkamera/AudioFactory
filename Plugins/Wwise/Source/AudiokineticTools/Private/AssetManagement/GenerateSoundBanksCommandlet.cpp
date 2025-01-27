@@ -38,14 +38,14 @@ static constexpr auto LanguagesSwitch = TEXT("languages");
 static constexpr auto PlatformsSwitch = TEXT("platforms");
 static constexpr auto WwiseConsolePathSwitch = TEXT("wwiseConsolePath");
 
-UGenerateSoundBanksCommandlet::UGenerateSoundBanksCommandlet()
+UDEPRECATED_GenerateSoundBanksCommandlet::UDEPRECATED_GenerateSoundBanksCommandlet()
 {
 	IsClient = false;
 	IsEditor = true;
 	IsServer = false;
 	LogToConsole = true;
 
-	HelpDescription = TEXT("Commandlet allowing to generate Wwise SoundBanks.");
+	HelpDescription = TEXT("(Deprecated) Commandlet allowing to generate Wwise SoundBanks. Use WwiseConsole instead");
 
 	HelpParamNames.Add(PlatformsSwitch);
 	HelpParamDescriptions.Add(TEXT("(Optional) Comma separated list of platforms for which SoundBanks will be generated, as specified in the Wwise project. If not specified, SoundBanks will be generated for all platforms."));
@@ -63,7 +63,7 @@ UGenerateSoundBanksCommandlet::UGenerateSoundBanksCommandlet()
 	HelpWebLink = TEXT("https://www.audiokinetic.com/library/edge/?source=UE4&id=using_features_generatecommandlet.html");
 }
 
-void UGenerateSoundBanksCommandlet::PrintHelp() const
+void UDEPRECATED_GenerateSoundBanksCommandlet::PrintHelp() const
 {
 	UE_LOG(LogAudiokineticTools, Display, TEXT("%s"), *HelpDescription);
 	UE_LOG(LogAudiokineticTools, Display, TEXT("Usage: %s"), *HelpUsage);
@@ -75,8 +75,9 @@ void UGenerateSoundBanksCommandlet::PrintHelp() const
 	UE_LOG(LogAudiokineticTools, Display, TEXT("For more information, see %s"), *HelpWebLink);
 }
 
-int32 UGenerateSoundBanksCommandlet::Main(const FString& Params)
+int32 UDEPRECATED_GenerateSoundBanksCommandlet::Main(const FString& Params)
 {
+	UE_LOG(LogAudiokineticTools, Warning, TEXT("GenerateSoundBanks Commandlet is deprecated. Use WwiseConsole instead."));
 	int32 ReturnCode = 0;
 #if WITH_EDITOR
 	AkSoundBankGenerationManager::FInitParameters InitParameters;

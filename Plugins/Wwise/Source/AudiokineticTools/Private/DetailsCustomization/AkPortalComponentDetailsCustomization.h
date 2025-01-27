@@ -17,12 +17,12 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #pragma once
 
-#include "PropertyEditorModule.h"
-#include "IDetailCustomization.h"
+#include "WwiseDetailsCustomization.h"
+
 //////////////////////////////////////////////////////////////////////////
 // FAkPortalComponentDetailsCustomization
 
-class FAkPortalComponentDetailsCustomization : public IDetailCustomization
+class FAkPortalComponentDetailsCustomization : public FWwiseDetailsCustomization
 {
 public:
 	FAkPortalComponentDetailsCustomization();

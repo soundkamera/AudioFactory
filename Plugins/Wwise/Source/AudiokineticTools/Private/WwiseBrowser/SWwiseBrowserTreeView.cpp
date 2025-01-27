@@ -25,9 +25,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "SlateOptMacros.h"
 #include "WwiseBrowser/WwiseAssetDragDropOp.h"
 
-#if UE_5_0_OR_LATER
 #include "WwiseUEFeatures.h"
-#endif
 
 BEGIN_SLATE_FUNCTION_BUILD_OPTIMIZATION
 

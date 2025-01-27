@@ -183,4 +183,16 @@ void FAssetTypeActions_AkAuxBus::GetActions(const TArray<UObject*>& InObjects, F
 {
 	auto AuxBusses = GetTypedWeakObjectPtrs<UAkAuxBus>(InObjects);
 }
+
+void FAssetTypeActions_AkSwitchValue::OpenAssetEditor(const TArray<UObject*>& InObjects,
+	TSharedPtr<IToolkitHost> EditWithinLevelEditor)
+{
+	FSimpleAssetEditor::CreateEditor(EToolkitMode::Standalone, EditWithinLevelEditor, InObjects);
+}
+
+void FAssetTypeActions_AkStateValue::OpenAssetEditor(const TArray<UObject*>& InObjects,
+	TSharedPtr<IToolkitHost> EditWithinLevelEditor)
+{
+	FSimpleAssetEditor::CreateEditor(EToolkitMode::Standalone, EditWithinLevelEditor, InObjects);
+}
 #undef LOCTEXT_NAMESPACE

@@ -18,21 +18,21 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/Metadata/WwiseMetadataDialogue.h"
 #include "Wwise/Metadata/WwiseMetadataLoader.h"
 
-FWwiseMetadataDialogueEventReference::FWwiseMetadataDialogueEventReference(FWwiseMetadataLoader& Loader) :
-	FWwiseMetadataBasicReference(Loader)
+WwiseMetadataDialogueEventReference::WwiseMetadataDialogueEventReference(WwiseMetadataLoader& Loader) :
+	WwiseMetadataBasicReference(Loader)
 {
-	Loader.LogParsed(TEXT("DialogueEventReference"), Id, Name);
+	Loader.LogParsed("DialogueEventReference"_wwise_db, Id, Name);
 }
 
-FWwiseMetadataDialogueArgument::FWwiseMetadataDialogueArgument(FWwiseMetadataLoader& Loader) :
-	FWwiseMetadataBasicReference(Loader)
+WwiseMetadataDialogueArgument::WwiseMetadataDialogueArgument(WwiseMetadataLoader& Loader) :
+	WwiseMetadataBasicReference(Loader)
 {
-	Loader.LogParsed(TEXT("DialogueArgument"), Id, Name);
+	Loader.LogParsed("DialogueArgument"_wwise_db, Id, Name);
 }
 
-FWwiseMetadataDialogueEvent::FWwiseMetadataDialogueEvent(FWwiseMetadataLoader& Loader) :
-	FWwiseMetadataDialogueEventReference(Loader),
-	Arguments(Loader.GetArray<FWwiseMetadataDialogueArgument>(this, TEXT("Arguments")))
+WwiseMetadataDialogueEvent::WwiseMetadataDialogueEvent(WwiseMetadataLoader& Loader) :
+	WwiseMetadataDialogueEventReference(Loader),
+	Arguments(Loader.GetArray<WwiseMetadataDialogueArgument>(this, "Arguments"_wwise_db))
 {
-	Loader.LogParsed(TEXT("DialogueEvent"), Id, Name);
+	Loader.LogParsed("DialogueEvent"_wwise_db, Id, Name);
 }

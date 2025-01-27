@@ -57,7 +57,7 @@ UAkPortalComponent::UAkPortalComponent(const class FObjectInitializer& ObjectIni
 	ObstructionRefreshInterval = 0.f;
 
 	PortalState = InitialState;
-	PortalNeedsUpdate = true;
+	bPortalNeedsUpdate = true;
 
 	PortalOcclusion = InitialOcclusion;
 	PortalOcclusionChanged = true;
@@ -122,9 +122,11 @@ void UAkPortalComponent::OnRegister()
 
 	SetRelativeTransform(FTransform::Identity);
 	InitializeParent();
+	// Force update the room or outdoors room connections
 	UpdateConnectedRooms(true);
-
-	PortalNeedsUpdate = true;
+	// Add portal to the WorldPortalsMap before tick.
+	// If the portal is created before the room, this will allow the room to update the portal afterwards
+	SetSpatialAudioPortal();
 
 #if WITH_EDITOR
 	if (GetDefault<UAkSettingsPerUser>()->VisualizeRoomsAndPortals)
@@ -136,7 +138,6 @@ void UAkPortalComponent::OnRegister()
 
 void UAkPortalComponent::OnUnregister()
 {
-	Super::OnUnregister();
 #if WITH_EDITOR
 	if (!HasAnyFlags(RF_Transient))
 	{
@@ -149,6 +150,7 @@ void UAkPortalComponent::OnUnregister()
 		RemovePortalConnections();
 		Dev->RemoveSpatialAudioPortal(this);
 	}
+	Super::OnUnregister();
 }
 
 #if WITH_EDITOR
@@ -169,7 +171,7 @@ void UAkPortalComponent::HandleObjectsReplaced(const TMap<UObject*, UObject*>& R
 	}
 	if (ReplacementMap.Contains(FrontRoom.Get()) || ReplacementMap.Contains(BackRoom.Get()))
 	{
-		PortalRoomsNeedUpdate = true;
+		bPortalRoomsNeedUpdate = true;
 	}
 }
 
@@ -197,6 +199,7 @@ void UAkPortalComponent::OnComponentDestroyed(bool bDestroyingHierarchy)
 	AkSettingsPerUser->OnShowRoomsPortalsChanged.Remove(ShowPortalsChangedHandle);
 	ShowPortalsChangedHandle.Reset();
 	DestroyDrawComponent();
+	Super::OnComponentDestroyed(bDestroyingHierarchy);
 }
 #endif // WITH_EDITOR
 
@@ -216,8 +219,9 @@ bool UAkPortalComponent::MoveComponentImpl(
 
 void UAkPortalComponent::OnUpdateTransform(EUpdateTransformFlags UpdateTransformFlags, ETeleportType Teleport)
 {
-	PortalRoomsNeedUpdate = true;
-	PortalNeedsUpdate = true;
+	Super::OnUpdateTransform(UpdateTransformFlags, Teleport);
+	bPortalRoomsNeedUpdate = true;
+	bPortalNeedsUpdate = true;
 }
 
 
@@ -299,7 +303,7 @@ void UAkPortalComponent::SetSpatialAudioPortal()
 	if (AkAudioDevice != nullptr)
 	{
 		AkAudioDevice->SetSpatialAudioPortal(this);
-		PortalNeedsUpdate = false;
+		bPortalNeedsUpdate = false;
 	}
 }
 
@@ -308,7 +312,7 @@ void UAkPortalComponent::EnablePortal()
 	if (PortalState == AkAcousticPortalState::Closed)
 	{
 		PortalState = AkAcousticPortalState::Open;
-		PortalNeedsUpdate = true;
+		bPortalNeedsUpdate = true;
 	}
 }
 
@@ -317,7 +321,7 @@ void UAkPortalComponent::DisablePortal()
 	if (PortalState == AkAcousticPortalState::Open)
 	{
 		PortalState = AkAcousticPortalState::Closed;
-		PortalNeedsUpdate = true;
+		bPortalNeedsUpdate = true;
 	}
 }
 
@@ -375,17 +379,18 @@ void UAkPortalComponent::BeginPlay()
 	ObstructionServiceFrontRoom.Init(portalID, World, ObstructionRefreshInterval);
 	ObstructionServiceBackRoom.Init(portalID, World, ObstructionRefreshInterval);
 
-	PortalRoomsNeedUpdate = true;
+	bPortalRoomsNeedUpdate = true;
 }
 
 void UAkPortalComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction * ThisTickFunction)
 {
-	if (PortalRoomsNeedUpdate)
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	if (bPortalRoomsNeedUpdate)
 	{
 		UpdateConnectedRooms();
 	}
 
-	if (PortalNeedsUpdate)
+	if (bPortalNeedsUpdate)
 	{
 		SetSpatialAudioPortal();
 	}
@@ -447,7 +452,7 @@ void UAkPortalComponent::TickComponent(float DeltaTime, enum ELevelTick TickType
 void UAkPortalComponent::ResetPortalState()
 {
 	PortalState = InitialState;
-	PortalNeedsUpdate = true;
+	bPortalNeedsUpdate = true;
 }
 
 void UAkPortalComponent::ResetPortalOcclusion()
@@ -538,7 +543,7 @@ bool UAkPortalComponent::UpdateConnectedRooms(bool in_bForceUpdate/* = false*/)
 
 	if (bRoomsChanged)
 	{
-		PortalNeedsUpdate = true;
+		bPortalNeedsUpdate = true;
 #if WITH_EDITOR
 		UpdateRoomNames();
 #endif
@@ -548,7 +553,7 @@ bool UAkPortalComponent::UpdateConnectedRooms(bool in_bForceUpdate/* = false*/)
 	UpdateTextLocRotVis();
 #endif
 
-	PortalRoomsNeedUpdate = false;
+	bPortalRoomsNeedUpdate = false;
 
 	/* Return true if any room connection has changed. */
 	return bRoomsChanged;

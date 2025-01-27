@@ -199,20 +199,12 @@ FAssetData WwiseBrowserHelpers::CreateBrowserAsset(const FString& AssetName, con
 		if (AssetCreationMode == EAssetCreationMode::Transient || WwiseTreeItem->IsFolder())
 		{
 			FString AssetPackage = UPackageTools::SanitizePackageName(GetTransientPackage()->GetPathName() / AssetClass->GetName());
-#if UE_5_1_OR_LATER
 			return FAssetData(FName(AssetPackage), FName(GetTransientPackage()->GetPathName()), FName(*SanitizedName), AssetClass->GetClassPathName());
-#else
-			return FAssetData(FName(AssetPackage), FName(GetTransientPackage()->GetPathName()), FName(*SanitizedName), AssetClass->GetFName());
-#endif
 		}
 		else if (AssetCreationMode == EAssetCreationMode::InPackage)
 		{
 			FString AssetPackage = UPackageTools::SanitizePackageName(PackagePath / AssetName);
-#if UE_5_1_OR_LATER
 			return FAssetData(FName(AssetPackage), FName(PackagePath), FName(*SanitizedName), AssetClass->GetClassPathName());
-#else
-			return FAssetData(FName(AssetPackage), FName(PackagePath), FName(*SanitizedName), AssetClass->GetFName());
-#endif
 		}
 	}
 	return CreateBrowserAssetTask(AssetName, WwiseTreeItem, AssetClass, AssetCreationMode, PackagePath);
@@ -457,7 +449,6 @@ bool WwiseBrowserHelpers::CanCreateAsset(const FWwiseTreeItemPtr& Item)
 
 FLinearColor WwiseBrowserHelpers::GetTextColor(bool bUpToDate)
 {
-	FColor Color;
 	return bUpToDate ? FLinearColor::Gray : FLinearColor(1.f, 0.33f, 0);
 }
 

@@ -38,11 +38,6 @@ void FAkIOSAdvancedInitializationSettings::FillInitializationStructure(FAkInitia
 //////////////////////////////////////////////////////////////////////////
 // UAkIOSInitializationSettings
 
-FAkIOSAdvancedInitializationSettings::FAkIOSAdvancedInitializationSettings()
-{
-	VmPageSize = 16 * 1024;
-}
-
 UAkIOSInitializationSettings::UAkIOSInitializationSettings(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {

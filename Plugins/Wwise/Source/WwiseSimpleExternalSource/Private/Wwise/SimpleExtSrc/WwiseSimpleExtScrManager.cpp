@@ -164,9 +164,9 @@ void FWwiseSimpleExtSrcManager::SetExternalSourceMediaWithIds(const int32 Extern
 
 #if WITH_EDITORONLY_DATA
 //This is called once per external source 
-void FWwiseSimpleExtSrcManager::Cook(FWwiseResourceCooker& InResourceCooker, const FWwiseExternalSourceCookedData& InCookedData,
-	TFunctionRef<void(const TCHAR* Filename, void* Data, int64 Size)> WriteAdditionalFile,
-	const FWwiseSharedPlatformId& InPlatform, const FWwiseSharedLanguageId& InLanguage)
+void FWwiseSimpleExtSrcManager::Cook(IWwiseResourceCooker& InResourceCooker, const FWwiseExternalSourceCookedData& InCookedData,
+                                     const TCHAR* PackageFilename,
+                                     const TFunctionRef<void(const TCHAR* Filename, void* Data, int64 Size)>& WriteAdditionalFile, const FWwiseSharedPlatformId& InPlatform, const FWwiseSharedLanguageId& InLanguage)
 {
 	SCOPED_WWISESIMPLEEXTERNALSOURCE_EVENT_2(TEXT("FWwiseSimpleExtSrcManager::Cook"));
 	if (LIKELY(bCooked))
@@ -176,21 +176,27 @@ void FWwiseSimpleExtSrcManager::Cook(FWwiseResourceCooker& InResourceCooker, con
 	}
 	bCooked = true;
 
-	FString SourceDirectory = InResourceCooker.GetResourceLoader()->GetUnrealGeneratedSoundBanksPath(InPlatform.Platform->ExternalSourceRootPath);
-
-	FString Context = TEXT("Iterating over default media");
+	const FString Context = TEXT("Iterating over default media");
 	MediaInfoTable->ForeachRow<FWwiseExternalSourceMediaInfo>(Context,
-		[this, SourceDirectory, &InResourceCooker, &WriteAdditionalFile](const FName& Key, const FWwiseExternalSourceMediaInfo& MediaInfo)
-	{
-		InResourceCooker.CookFileToSandbox(SourceDirectory / MediaInfo.MediaName.ToString(), FName(GetStagingDirectory() / MediaInfo.MediaName.ToString()), WriteAdditionalFile, true);
-	}
-	);
+		[this, &InResourceCooker, PackageFilename, &WriteAdditionalFile](const FName& Key, const FWwiseExternalSourceMediaInfo& MediaInfo) {
+		FWwisePackagedFile PackagedFile;
+		const auto MediaName = MediaInfo.MediaName;
+		if (UNLIKELY(MediaName.IsNone()))
+		{
+			return;
+		}
+		PackagedFile.PackagingStrategy = EWwisePackagingStrategy::AdditionalFile;
+		PackagedFile.PathName = FName(GetStagingDirectory() / MediaName.ToString());
+		PackagedFile.SourcePathName = GetExternalSourcePathFor(MediaName);
+			
+		InResourceCooker.CookFileToSandbox(PackagedFile, PackageFilename, WriteAdditionalFile);
+	});
 }
 #endif
 
 
 void FWwiseSimpleExtSrcManager::LoadExternalSourceMedia(const uint32 InExternalSourceCookie,
-	const FName& InExternalSourceName, const FName& InRootPath,
+	const FName& InExternalSourceName,
 	FLoadExternalSourceCallback&& InCallback)
 {
 	SCOPED_WWISESIMPLEEXTERNALSOURCE_EVENT_2(TEXT("FWwiseSimpleExtSrcManager::LoadExternalSourceMedia"));
@@ -226,7 +232,7 @@ void FWwiseSimpleExtSrcManager::LoadExternalSourceMedia(const uint32 InExternalS
 		InExternalSourceCookie, *InExternalSourceName.ToString(), MediaId, Count);
 
 	IncrementFileStateUse(MediaId, EWwiseFileStateOperationOrigin::Loading,
-		[this, MediaId, &InRootPath]() mutable -> FWwiseFileStateSharedPtr
+		[this, MediaId]() mutable -> FWwiseFileStateSharedPtr
 	{
 		const FName RowName = FName(FString::FromInt(MediaId));
 		const FString Context = TEXT("Find media info");
@@ -237,7 +243,7 @@ void FWwiseSimpleExtSrcManager::LoadExternalSourceMedia(const uint32 InExternalS
 		}
 		else if (const FWwiseExternalSourceMediaInfo* ExternalSourceMediaInfoEntry = MediaInfoTable->FindRow<FWwiseExternalSourceMediaInfo>(RowName, Context))
 		{
-			return CreateOp(*ExternalSourceMediaInfoEntry, InRootPath);
+			return CreateOp(*ExternalSourceMediaInfoEntry);
 		}
 		else
 		{
@@ -281,7 +287,7 @@ void FWwiseSimpleExtSrcManager::LoadExternalSourceMedia(const uint32 InExternalS
 }
 
 void FWwiseSimpleExtSrcManager::UnloadExternalSourceMedia(const uint32 InExternalSourceCookie,
-	const FName& InExternalSourceName, const FName& InRootPath,
+	const FName& InExternalSourceName,
 	FUnloadExternalSourceCallback&& InCallback)
 {
 	SCOPED_WWISESIMPLEEXTERNALSOURCE_EVENT_2(TEXT("FWwiseSimpleExtSrcManager::UnloadExternalSourceMedia"));
@@ -439,7 +445,7 @@ void FWwiseSimpleExtSrcManager::FillMediaNameToIdMap(const UDataTable& InMediaTa
 	);
 }
 
-FWwiseFileStateSharedPtr FWwiseSimpleExtSrcManager::CreateOp(const FWwiseExternalSourceMediaInfo& ExternalSourceMediaInfo, const FName& InRootPath)
+FWwiseFileStateSharedPtr FWwiseSimpleExtSrcManager::CreateOp(const FWwiseExternalSourceMediaInfo& ExternalSourceMediaInfo)
 {
 	if (ExternalSourceMediaInfo.bIsStreamed)
 	{
@@ -450,7 +456,6 @@ FWwiseFileStateSharedPtr FWwiseSimpleExtSrcManager::CreateOp(const FWwiseExterna
 			StreamingGranularity,
 			ExternalSourceMediaInfo.ExternalSourceMediaInfoId,
 			ExternalSourceMediaInfo.MediaName,
-			InRootPath,
 			ExternalSourceMediaInfo.CodecID));
 	}
 	else
@@ -460,7 +465,6 @@ FWwiseFileStateSharedPtr FWwiseSimpleExtSrcManager::CreateOp(const FWwiseExterna
 			ExternalSourceMediaInfo.bUseDeviceMemory,
 			ExternalSourceMediaInfo.ExternalSourceMediaInfoId,
 			ExternalSourceMediaInfo.MediaName,
-			InRootPath,
 			ExternalSourceMediaInfo.CodecID));
 	}
 }
@@ -555,7 +559,7 @@ void FWwiseSimpleExtSrcManager::SetExternalSourceMedia(const uint32 ExternalSour
 						{
 							UnloadFuture = UnloadPromise.GetFuture();
 						}
-						UnloadExternalSourceMedia(ExternalSourceCookie, ExternalSourceName, FWwiseResourceLoader::Get()->GetUnrealExternalSourcePath(),
+						UnloadExternalSourceMedia(ExternalSourceCookie, ExternalSourceName,
 							[UnloadPromise = MoveTemp(UnloadPromise)]() mutable
 							{
 								UnloadPromise.EmplaceValue();
@@ -563,7 +567,7 @@ void FWwiseSimpleExtSrcManager::SetExternalSourceMedia(const uint32 ExternalSour
 					}
 					else
 					{
-						UnloadExternalSourceMedia(ExternalSourceCookie, ExternalSourceName, FWwiseResourceLoader::Get()->GetUnrealExternalSourcePath(), []{});
+						UnloadExternalSourceMedia(ExternalSourceCookie, ExternalSourceName, []{});
 					}
 				}
 			}
@@ -597,7 +601,7 @@ void FWwiseSimpleExtSrcManager::SetExternalSourceMedia(const uint32 ExternalSour
 		{
 			if (i == 0)
 			{
-				LoadExternalSourceMedia(ExternalSourceCookie, ExternalSourceName, FWwiseResourceLoader::Get()->GetUnrealExternalSourcePath(), [&Completed, UnloadFuture = MoveTemp(UnloadFuture)](bool)
+				LoadExternalSourceMedia(ExternalSourceCookie, ExternalSourceName, [&Completed, UnloadFuture = MoveTemp(UnloadFuture)](bool)
 				{
 					UnloadFuture.Wait();
 					Completed->Trigger();
@@ -605,7 +609,7 @@ void FWwiseSimpleExtSrcManager::SetExternalSourceMedia(const uint32 ExternalSour
 			}
 			else
 			{
-				LoadExternalSourceMedia(ExternalSourceCookie, ExternalSourceName, FWwiseResourceLoader::Get()->GetUnrealExternalSourcePath(), [&Completed](bool) {});
+				LoadExternalSourceMedia(ExternalSourceCookie, ExternalSourceName, [&Completed](bool) {});
 			}
 		}
 	});

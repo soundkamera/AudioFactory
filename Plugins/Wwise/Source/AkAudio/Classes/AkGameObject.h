@@ -35,9 +35,20 @@ class AKAUDIO_API UAkGameObject: public USceneComponent
 public:
 	UAkGameObject(const class FObjectInitializer& ObjectInitializer);
 
+	UFUNCTION(BlueprintGetter, Category = "Audiokinetic|AkEvent")
+	float GetAttenuationScalingFactor() const;
+
+	/** Modifies the attenuation computations of the emitter on this game object to simulate sounds with a larger or smaller area of effect. */
+	UPROPERTY(EditAnywhere, BlueprintSetter = SetAttenuationScalingFactor, BlueprintGetter = GetAttenuationScalingFactor, Category = "AkEvent", meta = (ClampMin = 0.f))
+	float AttenuationScalingFactor = 1.0f;
+
+	/** Sets the attenuation scaling factor, which modifies the attenuation computations of the emitter on this game object to simulate sounds with a larger or smaller area of effect. */
+	UFUNCTION(BlueprintSetter, Category = "Audiokinetic|AkEvent")
+	void SetAttenuationScalingFactor(float InAttenuationScalingFactor);
+
 	/** Associated Wwise Event to be posted on this game object */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AkEvent")
-	UAkAudioEvent* AkAudioEvent = nullptr;
+	TObjectPtr<UAkAudioEvent> AkAudioEvent = nullptr;
 
 	/**
 	 * Posts this game object's AkAudioEvent to Wwise, using this as the game object source
@@ -116,6 +127,12 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category = "Audiokinetic|AkGameObject", meta = (AdvancedDisplay = "RTPC"))
 	void GetRTPCValue(class UAkRtpc const* RTPCValue, ERTPCValueType InputValueType, float& Value, ERTPCValueType& OutputValueType, FString RTPC, int32 PlayingID = 0) const;
 
+
+#if WITH_EDITOR
+	virtual void PreEditChange(FProperty* PropertyAboutToChange) override;
+	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
+
 #if CPP
 	bool VerifyEventName(const FString& InEventName) const;
 	bool AllowAudioPlayback() const;
@@ -124,10 +141,19 @@ public:
 	bool HasActiveEvents() const;
 #endif
 
-	bool HasBeenRegisteredWithWwise() const { return IsRegisteredWithWwise; }
+	void SetRegisteredWithWwise(bool bInRegisteredWithWwise) { bIsRegisteredWithWwise = bInRegisteredWithWwise; }
+	bool IsRegisteredWithWwise() const { return bIsRegisteredWithWwise; }
 	void EventPosted() {bEventPosted = true;}
 protected:
 	// Whether an event was posted on the game object. Never reset to false. 
 	bool bEventPosted;
-	bool IsRegisteredWithWwise = false;
+	bool bIsRegisteredWithWwise = false;
+	bool SetAttenuationScalingFactor();
+
+#if WITH_EDITOR
+	float PreviousAttenuationScalingFactor = 1.0f;
+#endif
+
+	UPROPERTY()
+	bool bAttenuationScalingMigrated = false;
 };

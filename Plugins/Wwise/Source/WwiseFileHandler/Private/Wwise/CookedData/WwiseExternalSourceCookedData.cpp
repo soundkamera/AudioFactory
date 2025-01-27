@@ -18,14 +18,17 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/CookedData/WwiseExternalSourceCookedData.h"
 
 #include "Wwise/Stats/FileHandler.h"
+
+#if WITH_EDITORONLY_DATA && UE_5_5_OR_LATER
+#include "Serialization/CompactBinaryWriter.h"
+#endif
+
 #include <inttypes.h>
 
-FWwiseExternalSourceCookedData::FWwiseExternalSourceCookedData():
-	Cookie(0),
-	DebugName()
+FWwiseExternalSourceCookedData::FWwiseExternalSourceCookedData()
 {}
 
-void FWwiseExternalSourceCookedData::Serialize(FArchive& Ar)
+void FWwiseExternalSourceCookedData::Serialize(FArchive& Ar, UObject* Owner)
 {
 	UStruct* Struct = StaticStruct();
 	UE_CLOG(UNLIKELY(!Struct), LogWwiseFileHandler, Fatal, TEXT("ExternalSourceCookedData Serialize: No StaticStruct."));
@@ -48,3 +51,13 @@ FString FWwiseExternalSourceCookedData::GetDebugString() const
 {
 	return FString::Printf(TEXT("ExternalSource %s (%" PRIu32 ")"), *DebugName.ToString(), Cookie);
 }
+
+#if WITH_EDITORONLY_DATA && UE_5_5_OR_LATER
+void FWwiseExternalSourceCookedData::PreSave(FObjectPreSaveContext& SaveContext, FCbWriter& Writer) const
+{
+	Writer << "ES";
+	Writer.BeginObject();
+	Writer << "Cookie" << Cookie;
+	Writer.EndObject();
+}
+#endif

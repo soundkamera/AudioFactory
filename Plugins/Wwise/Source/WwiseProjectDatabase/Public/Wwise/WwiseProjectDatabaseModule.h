@@ -21,9 +21,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Misc/CommandLine.h"
 #include "Misc/ConfigCacheIni.h"
 #include "WwiseUnrealDefines.h"
-#if !UE_5_0_OR_LATER
-#include "Misc/CommandLine.h"
-#endif
+#include "Wwise/AdapterTypes/WwiseProjectDatabaseLogging.h"
 
 class FWwiseProjectDatabase;
 class FWwiseProjectDatabaseDelegates;
@@ -95,26 +93,7 @@ public:
 
 	static bool ShouldInitializeProjectDatabase()
 	{
-#if UE_5_0_OR_LATER
 		return !IsRunningCookCommandlet();
-#else
-		if(IsRunningCommandlet())
-		{
-			TArray<FString> Switches;
-			TArray<FString> Tokens;
-			FCommandLine::Parse(FCommandLine::Get(), Tokens, Switches);
-			for(auto& Token : Tokens)
-			{
-				//Only in the WwiseReconcile commandlet that the Project Database should be initialized
-				if(Token.Contains(TEXT("run=WwiseReconcile")))
-				{
-					return true;
-				}
-			}
-			return false;
-		}
-		return true;
-#endif
 	}
 
 	virtual FWwiseProjectDatabase* GetProjectDatabase() { return nullptr; }

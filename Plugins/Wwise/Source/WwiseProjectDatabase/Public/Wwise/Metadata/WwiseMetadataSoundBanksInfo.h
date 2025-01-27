@@ -20,24 +20,24 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/Metadata/WwiseMetadataLoadable.h"
 #include "Wwise/Metadata/WwiseMetadataSoundBank.h"
 
-struct WWISEPROJECTDATABASE_API FWwiseMetadataSoundBanksInfoAttributes : public FWwiseMetadataLoadable
+struct WwiseMetadataSoundBanksInfoAttributes : public WwiseMetadataLoadable
 {
-	FName Platform;
-	FName BasePlatform;
-	uint32 SchemaVersion;
-	uint32 SoundBankVersion;
+	WwiseDBString Platform;
+	WwiseDBString BasePlatform;
+	WwiseDBShortId SchemaVersion;
+	WwiseDBShortId SoundBankVersion;
 
-	FWwiseMetadataSoundBanksInfoAttributes(FWwiseMetadataLoader& Loader);
+	WwiseMetadataSoundBanksInfoAttributes(WwiseMetadataLoader& Loader);
 };
 
-struct WWISEPROJECTDATABASE_API FWwiseMetadataSoundBanksInfo : public FWwiseMetadataSoundBanksInfoAttributes
+struct WwiseMetadataSoundBanksInfo : public WwiseMetadataSoundBanksInfoAttributes
 {
-	FWwiseMetadataRootPaths* RootPaths;
-	TArray<FWwiseMetadataDialogueEvent> DialogueEvents;
+	WwiseMetadataRootPaths* RootPaths;
+	WwiseDBArray<WwiseMetadataDialogueEvent> DialogueEvents;
 
-	TArray<FWwiseMetadataSoundBank> SoundBanks;
-	FGuid FileHash;
+	WwiseDBArray<WwiseMetadataSoundBank> SoundBanks;
+	WwiseDBGuid FileHash;
 
-	FWwiseMetadataSoundBanksInfo(FWwiseMetadataLoader& Loader);
-	~FWwiseMetadataSoundBanksInfo();
+	WwiseMetadataSoundBanksInfo(WwiseMetadataLoader& Loader);
+	~WwiseMetadataSoundBanksInfo();
 };

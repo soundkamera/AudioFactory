@@ -98,7 +98,6 @@ public:
 	}
 
 	virtual FWwiseResourceLoader* GetResourceLoader() { return nullptr; }
-	virtual FWwiseResourceLoaderImpl* InstantiateResourceLoaderImpl() { return nullptr; }
 	virtual FWwiseResourceLoader* InstantiateResourceLoader() { return nullptr; }
 
 private:

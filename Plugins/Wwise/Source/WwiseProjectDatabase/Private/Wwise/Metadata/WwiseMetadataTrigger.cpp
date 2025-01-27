@@ -18,8 +18,8 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/Metadata/WwiseMetadataTrigger.h"
 #include "Wwise/Metadata/WwiseMetadataLoader.h"
 
-FWwiseMetadataTrigger::FWwiseMetadataTrigger(FWwiseMetadataLoader& Loader) :
-	FWwiseMetadataBasicReference(Loader)
+WwiseMetadataTrigger::WwiseMetadataTrigger(WwiseMetadataLoader& Loader) :
+	WwiseMetadataBasicReference(Loader)
 {
-	Loader.LogParsed(TEXT("Trigger"), Id, Name);
+	Loader.LogParsed("Trigger"_wwise_db, Id, Name);
 }

@@ -25,6 +25,8 @@ public struct WwiseHelper
 			new string[]
 			{
 				"AkAudio",
+				"WwisePackaging",
+				"WwisePackagingRuntime",
 				"WwiseSoundEngine"
 			}
 		);
@@ -38,5 +40,15 @@ public struct WwiseHelper
 				"WwiseSimpleExternalSource"
 			}
 		);
+		
+		if (Target.bBuildEditor || Target.bBuildWithEditorOnlyData)
+		{
+			Module.PublicDependencyModuleNames.AddRange(
+				new string[]
+				{
+					"WwisePackagingEditor",
+				}
+			);
+		}
 	}
 }

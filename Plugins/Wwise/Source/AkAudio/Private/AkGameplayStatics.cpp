@@ -45,6 +45,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 
 bool UAkGameplayStatics::m_bSoundEngineRecording = false;
+FAkOutdoorsRoomParameters UAkGameplayStatics::m_CurrentOutDoorsRoomParameters = FAkOutdoorsRoomParameters();
 
 /*-----------------------------------------------------------------------------
 	UAkGameplayStatics.
@@ -56,21 +57,42 @@ UAkGameplayStatics::UAkGameplayStatics(const class FObjectInitializer& ObjectIni
 	// Property initialization
 }
 
-class UAkComponent * UAkGameplayStatics::GetAkComponent( class USceneComponent* AttachToComponent, bool& ComponentCreated, FName AttachPointName, FVector Location, EAttachLocation::Type LocationType )
+class UAkComponent * UAkGameplayStatics::GetAkComponent(USceneComponent* AttachToComponent, bool& ComponentCreated, FName AttachPointName, FVector Location, EAttachLocation::
+	Type LocationType)
 {
-	if ( AttachToComponent == NULL )
+	if ( !AttachToComponent )
 	{
 		UE_LOG(LogAkAudio, Warning, TEXT("UAkGameplayStatics::GetAkComponent: NULL AttachToComponent specified!"));
-		return NULL;
+		return nullptr;
 	}
 
 	FAkAudioDevice * AkAudioDevice = FAkAudioDevice::Get();
 	if( AkAudioDevice )
 	{
-		return AkAudioDevice->GetAkComponent( AttachToComponent, AttachPointName, &Location, LocationType, ComponentCreated );
+		return AkAudioDevice->GetAkComponent(AttachToComponent, AttachPointName, &Location, LocationType,
+			ComponentCreated);
 	}
 
-	return NULL;
+	return nullptr;
+}
+
+UAkComponent* UAkGameplayStatics::GetOrCreateAkComponent(USceneComponent* AttachToComponent, bool& ComponentCreated,
+	FName AttachPointName)
+{
+	if ( !AttachToComponent )
+	{
+		UE_LOG(LogAkAudio, Warning, TEXT("UAkGameplayStatics::GetAkComponent: NULL AttachToComponent specified!"));
+		return nullptr;
+	}
+
+	FAkAudioDevice * AkAudioDevice = FAkAudioDevice::Get();
+	if( AkAudioDevice )
+	{
+		return AkAudioDevice->GetAkComponent(AttachToComponent, AttachPointName, nullptr, EAttachLocation::KeepRelativeOffset,
+			ComponentCreated);
+	}
+
+	return nullptr;
 }
 
 bool UAkGameplayStatics::IsEditor()
@@ -107,8 +129,8 @@ int32 UAkGameplayStatics::PostEvent(UAkAudioEvent* AkEvent, AActor* Actor, int32
 	return AkEvent->PostOnActor(Actor, PostEventCallback, CallbackMask, bStopWhenAttachedToDestroyed);
 }
 
-int32 UAkGameplayStatics::PostAndWaitForEndOfEvent(UAkAudioEvent* AkEvent, AActor* Actor, bool bStopWhenAttachedToDestroyed,
-	FLatentActionInfo LatentInfo)
+int32 UAkGameplayStatics::PostAndWaitForEndOfEvent(UAkAudioEvent* AkEvent, AActor* Actor,
+	FLatentActionInfo LatentInfo, bool bStopWhenAttachedToDestroyed)
 {
 	if (UNLIKELY(!IsValid(AkEvent)))
 	{
@@ -130,17 +152,17 @@ int32 UAkGameplayStatics::PostEventAtLocation(class UAkAudioEvent* AkEvent, FVec
 	return AK_INVALID_PLAYING_ID;
 }
 
-UAkComponent* UAkGameplayStatics::SpawnAkComponentAtLocation(UObject* WorldContextObject, class UAkAudioEvent* AkEvent, FVector Location, FRotator Orientation, bool AutoPost, const FString& EventName, bool AutoDestroy /* = true*/)
+UAkComponent* UAkGameplayStatics::SpawnAkComponentAtLocation(UObject* WorldContextObject, class UAkAudioEvent* AkEvent, FVector Location, FRotator Orientation, bool AutoPost, bool AutoDestroy /* = true*/)
 {
 	AkDeviceAndWorld DeviceAndWorld(WorldContextObject);
 	if (UNLIKELY(!DeviceAndWorld.IsValid()))
 	{
 		return nullptr;
 	}
-	return DeviceAndWorld.AkAudioDevice->SpawnAkComponentAtLocation(AkEvent, Location, Orientation, AutoPost, EventName, AutoDestroy, DeviceAndWorld.CurrentWorld);
+	return DeviceAndWorld.AkAudioDevice->SpawnAkComponentAtLocation(AkEvent, Location, Orientation, AutoPost, AutoDestroy, DeviceAndWorld.CurrentWorld);
 }
 
-void UAkGameplayStatics::SetRTPCValue(const UAkRtpc* RTPCValue, float Value, int32 InterpolationTimeMs, AActor* Actor, FName RTPC)
+void UAkGameplayStatics::SetRTPCValue(const UAkRtpc* RTPCValue, float Value, int32 InterpolationTimeMs, AActor* Actor)
 {
 	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
 	if (AudioDevice)
@@ -149,17 +171,12 @@ void UAkGameplayStatics::SetRTPCValue(const UAkRtpc* RTPCValue, float Value, int
 		{
 			AudioDevice->SetRTPCValue(RTPCValue, Value, InterpolationTimeMs, Actor);
 		}
-		else if (RTPC.IsValid())
-		{
-			AudioDevice->SetRTPCValue(*RTPC.ToString(), Value, InterpolationTimeMs, Actor);
-		}
 	}
 }
 
-void UAkGameplayStatics::GetRTPCValue(const UAkRtpc* RTPCValue, int32 PlayingID, ERTPCValueType InputValueType, float& Value, ERTPCValueType& OutputValueType, AActor* Actor, FName RTPC)
+void UAkGameplayStatics::GetRTPCValue(const UAkRtpc* RTPCValue, int32 PlayingID, ERTPCValueType InputValueType, float& Value, ERTPCValueType& OutputValueType, AActor* Actor)
 {
-	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
-	if (AudioDevice)
+	if (FAkAudioDevice * AudioDevice = FAkAudioDevice::Get())
 	{
 		AK::SoundEngine::Query::RTPCValue_type RTPCType = (AK::SoundEngine::Query::RTPCValue_type)InputValueType;
 
@@ -174,20 +191,14 @@ void UAkGameplayStatics::GetRTPCValue(const UAkRtpc* RTPCValue, int32 PlayingID,
 		{
 			AudioDevice->GetRTPCValue(RTPCValue, IdToGet, PlayingID, Value, RTPCType);
 		}
-		else if (RTPC.IsValid())
-		{
-			AudioDevice->GetRTPCValue(*RTPC.ToString(), IdToGet, PlayingID, Value, RTPCType);
-		}
 
 		OutputValueType = (ERTPCValueType)RTPCType;
 	}
 }
 
-void UAkGameplayStatics::ResetRTPCValue(UAkRtpc const* RTPCValue, int32 InterpolationTimeMs, AActor* Actor, FName RTPC)
+void UAkGameplayStatics::ResetRTPCValue(UAkRtpc const* RTPCValue, int32 InterpolationTimeMs, AActor* Actor)
 {
-
-	FAkAudioDevice* AudioDevice = FAkAudioDevice::Get();
-	if (AudioDevice)
+	if (FAkAudioDevice* AudioDevice = FAkAudioDevice::Get())
 	{
 		AkGameObjectID IdToGet = AK_INVALID_GAME_OBJECT;
 		if (Actor != nullptr)
@@ -196,7 +207,7 @@ void UAkGameplayStatics::ResetRTPCValue(UAkRtpc const* RTPCValue, int32 Interpol
 			IdToGet = ComponentToGet->GetAkGameObjectID();
 		}
 
-		if (RTPCValue == NULL && RTPC.IsNone())
+		if (RTPCValue == NULL)
 		{
 			UE_LOG(LogAkAudio, Warning, TEXT("UAkGameplayStatics::ResetRTPCValue: No parameter specified!"));
 			return;
@@ -209,10 +220,6 @@ void UAkGameplayStatics::ResetRTPCValue(UAkRtpc const* RTPCValue, int32 Interpol
 		{
 			Result = AudioDevice->ResetRTPCValue(RTPCValue, IdToGet, InterpolationTimeMs);
 		}
-		else if (RTPC.IsValid())
-		{
-			Result = AudioDevice->ResetRTPCValue(*RTPC.ToString(), IdToGet, InterpolationTimeMs);
-		}
 		else
 		{
 			UE_LOG(LogAkAudio, Warning, TEXT("UAkGameplayStatics::ResetRTPCValue: Could not reset RTPC value, valid RTPC value not provided"));
@@ -220,7 +227,7 @@ void UAkGameplayStatics::ResetRTPCValue(UAkRtpc const* RTPCValue, int32 Interpol
 
 		if (Result == AK_IDNotFound)
 		{
-			UE_LOG(LogAkAudio, Warning, TEXT("UAkGameplayStatics::ResetRTPCValue: Could not reset RTPC value, RTPC %s not found"), *RTPC.ToString());
+			UE_LOG(LogAkAudio, Warning, TEXT("UAkGameplayStatics::ResetRTPCValue: Could not reset RTPC value, RTPC %s not found"), *RTPCValue->GetName());
 		}
 		else if (Result != AK_Success)
 		{
@@ -229,23 +236,18 @@ void UAkGameplayStatics::ResetRTPCValue(UAkRtpc const* RTPCValue, int32 Interpol
 	}
 }
 
-void UAkGameplayStatics::SetState(const UAkStateValue* StateValue, FName stateGroup, FName state)
+void UAkGameplayStatics::SetState(const UAkStateValue* StateValue)
 {
-	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
-	if( AudioDevice && stateGroup.IsValid() && state.IsValid() )
+	if(FAkAudioDevice * AudioDevice = FAkAudioDevice::Get())
 	{
 		if (StateValue)
 		{
 			AudioDevice->SetState(StateValue);
 		}
-		else if (stateGroup.IsValid() && state.IsValid())
-		{
-			AudioDevice->SetState(*stateGroup.ToString(), *state.ToString());
-		}
 	}
 }
 
-void UAkGameplayStatics::PostTrigger(const UAkTrigger* TriggerValue, AActor* Actor, FName Trigger)
+void UAkGameplayStatics::PostTrigger(const UAkTrigger* TriggerValue, AActor* Actor)
 {
 	if ( Actor == NULL )
 	{
@@ -253,38 +255,28 @@ void UAkGameplayStatics::PostTrigger(const UAkTrigger* TriggerValue, AActor* Act
 		return;
 	}
 
-	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
-	if( AudioDevice)
+	if(FAkAudioDevice * AudioDevice = FAkAudioDevice::Get())
 	{
 		if (TriggerValue)
 		{
 			AudioDevice->PostTrigger(TriggerValue, Actor);
 		}
-		else if (Trigger.IsValid())
-		{
-			AudioDevice->PostTrigger(*Trigger.ToString(), Actor);
-		}
 	}
 }
 
-void UAkGameplayStatics::SetSwitch(const UAkSwitchValue* SwitchValue, AActor* Actor, FName SwitchGroup, FName SwitchState)
+void UAkGameplayStatics::SetSwitch(const UAkSwitchValue* SwitchValue, AActor* Actor)
 {
 	if (Actor == NULL)
 	{
 		UE_LOG(LogAkAudio, Warning, TEXT("UAkGameplayStatics::SetSwitch: NULL Actor specified!"));
 		return;
 	}
-
-	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
-	if (AudioDevice)
+	
+	if (FAkAudioDevice * AudioDevice = FAkAudioDevice::Get())
 	{
 		if (SwitchValue)
 		{
 			AudioDevice->SetSwitch(SwitchValue, Actor);
-		}
-		else if (SwitchGroup.IsValid() && SwitchState.IsValid())
-		{
-			AudioDevice->SetSwitch(*SwitchGroup.ToString(), *SwitchState.ToString(), Actor);
 		}
 	}
 }
@@ -450,6 +442,33 @@ void UAkGameplayStatics::SetPortalObstructionAndOcclusion(UAkPortalComponent* Po
 	}
 }
 
+void UAkGameplayStatics::SetMaxGlobalReflectionPaths(int InMaxReflectionPaths)
+{
+	if (InMaxReflectionPaths < 0)
+	{
+		UE_LOG(LogAkAudio, Warning, TEXT("UAkGameplayStatics::SetMaxGlobalReflectionPaths: Invalid number of Reflection Paths (%d). Reflection path limit has been disabled."), InMaxReflectionPaths);
+		InMaxReflectionPaths = 0;
+	}
+
+	auto* SpatialAudio = IWwiseSpatialAudioAPI::Get();
+	if (UNLIKELY(!SpatialAudio)) return;
+	SpatialAudio->SetMaxGlobalReflectionPaths(InMaxReflectionPaths);
+}
+
+void UAkGameplayStatics::SetMaxDiffractionPaths(int InMaxDiffractionPaths, UAkGameObject* InGameObject)
+{
+	auto* SpatialAudio = IWwiseSpatialAudioAPI::Get();
+	if (UNLIKELY(!SpatialAudio)) return;
+	SpatialAudio->SetMaxDiffractionPaths(InMaxDiffractionPaths, InGameObject == nullptr ? AK_INVALID_GAME_OBJECT : InGameObject->GetAkGameObjectID());
+}
+
+void UAkGameplayStatics::SetSmoothingConstant(float InSmoothingConstantMs, UAkGameObject* InGameObject)
+{
+	auto* SpatialAudio = IWwiseSpatialAudioAPI::Get();
+	if (UNLIKELY(!SpatialAudio)) return;
+	SpatialAudio->SetSmoothingConstant(InSmoothingConstantMs, InGameObject == nullptr ? AK_INVALID_GAME_OBJECT : InGameObject->GetAkGameObjectID());
+}
+
 void UAkGameplayStatics::SetGameObjectToPortalObstruction(UAkComponent* GameObjectAkComponent, UAkPortalComponent* PortalComponent, float ObstructionValue)
 {
 	if (ObstructionValue > 1.f || ObstructionValue < 0.f)
@@ -480,6 +499,90 @@ void UAkGameplayStatics::SetPortalToPortalObstruction(UAkPortalComponent* Portal
 	{
 		AudioDevice->SetPortalToPortalObstruction(PortalComponent0, PortalComponent1, ObstructionValue);
 	}
+}
+
+FAkOutdoorsRoomParameters UAkGameplayStatics::GetCurrentOutdoorsRoomParameters()
+{
+	return m_CurrentOutDoorsRoomParameters;
+}
+
+void UAkGameplayStatics::SetOutdoorsRoomParameters(FAkOutdoorsRoomParameters InOutdoorsRoomParameters)
+{
+	m_CurrentOutDoorsRoomParameters = InOutdoorsRoomParameters;
+
+	AkRoomParams RoomParams = AkRoomParams();
+	AkUInt32 AuxBusID = AK_INVALID_AUX_ID;
+
+	if (m_CurrentOutDoorsRoomParameters.ReverbAuxBus)
+	{
+		AuxBusID = m_CurrentOutDoorsRoomParameters.ReverbAuxBus->GetShortID();
+		if (AuxBusID == AK_INVALID_AUX_ID)
+		{
+			UE_LOG(LogAkAudio, Warning, TEXT("UAkGameplayStatics::SetOutdoorsRoomParameters: Returning invalid auxBusID for the AuxBus passed in parameters."));
+		}
+	}
+	RoomParams.ReverbAuxBus = AuxBusID;
+
+	RoomParams.ReverbLevel = m_CurrentOutDoorsRoomParameters.ReverbLevel;
+	RoomParams.TransmissionLoss = m_CurrentOutDoorsRoomParameters.TransmissionLoss;
+	RoomParams.RoomGameObj_AuxSendLevelToSelf = m_CurrentOutDoorsRoomParameters.AuxSendLevel;
+	RoomParams.RoomGameObj_KeepRegistered = m_CurrentOutDoorsRoomParameters.KeepRegistered;
+	RoomParams.RoomPriority = 1;
+
+	auto* SpatialAudio = IWwiseSpatialAudioAPI::Get();
+	if (SpatialAudio)
+	{
+		SpatialAudio->SetRoom(
+			AK::SpatialAudio::kOutdoorRoomID,
+			RoomParams,
+			"Outdoors"
+		);
+	}
+}
+
+void UAkGameplayStatics::ResetOutdoorsRoomParams()
+{
+	auto* SpatialAudio = IWwiseSpatialAudioAPI::Get();
+	if (SpatialAudio)
+	{
+		AKRESULT result = SpatialAudio->RemoveRoom(AK::SpatialAudio::kOutdoorRoomID);
+		if (result == AK_Success)
+		{
+			m_CurrentOutDoorsRoomParameters = FAkOutdoorsRoomParameters();
+		}
+	}
+}
+
+int32 UAkGameplayStatics::PostEventOutdoors(UAkAudioEvent* AkEvent, int32 CallbackMask, const FOnAkPostEventCallback& PostEventCallback)
+{
+	if (UNLIKELY(!IsValid(AkEvent)))
+	{
+		UE_LOG(LogAkAudio, Warning, TEXT("UAkGameplayStatics::PostEventOutdoors: Failed to post invalid AkAudioEvent."))
+			return AK_INVALID_PLAYING_ID;
+	}
+
+	// before posting an event to the outdoors room, we need to make sure the room Game Object ID exists
+	// We need to set AkRoomParams.RoomGameObj_KeepRegistered to true
+	if (!m_CurrentOutDoorsRoomParameters.KeepRegistered)
+	{
+		m_CurrentOutDoorsRoomParameters.KeepRegistered = true;
+		SetOutdoorsRoomParameters(m_CurrentOutDoorsRoomParameters);
+	}
+
+	return AkEvent->PostOnGameObjectID(AK::SpatialAudio::kOutdoorRoomID.AsGameObjectID(), &PostEventCallback, nullptr, nullptr,
+		AkCallbackTypeHelpers::GetCallbackMaskFromBlueprintMask(CallbackMask), nullptr);
+}
+
+void UAkGameplayStatics::StopOutdoors()
+{
+	FAkAudioDevice* AudioDevice = FAkAudioDevice::Get();
+	if (UNLIKELY(!AudioDevice))
+	{
+		UE_LOG(LogAkAudio, Warning, TEXT("UAkGameplayStatics::StopActor: Could not retrieve audio device."));
+		return;
+	}
+
+	AudioDevice->StopGameObjectID(AK::SpatialAudio::kOutdoorRoomID.AsGameObjectID());
 }
 
 void UAkGameplayStatics::SetOutputBusVolume(float BusVolume, class AActor* Actor)
@@ -913,7 +1016,7 @@ UObject* UAkGameplayStatics::GetAkAudioTypeUserData(const UAkAudioType* Instance
 		return nullptr;
 	}
 	
-	for (auto* const Entry : Instance->UserData)
+	for (auto const& Entry : Instance->UserData)
 	{
 		if (LIKELY(Entry && IsValid(Entry)) && Entry->GetClass()->IsChildOf(Type))
 		{

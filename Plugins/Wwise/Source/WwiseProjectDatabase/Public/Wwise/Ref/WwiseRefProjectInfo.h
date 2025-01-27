@@ -19,16 +19,16 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Wwise/Ref/WwiseRefRootFile.h"
 
-class WWISEPROJECTDATABASE_API FWwiseRefProjectInfo : public FWwiseRefRootFile
+class WWISEPROJECTDATABASE_API WwiseRefProjectInfo : public WwiseRefRootFile
 {
 public:
-	static const TCHAR* const NAME;
-	static constexpr EWwiseRefType TYPE = EWwiseRefType::ProjectInfo;
+	static const WwiseDBString NAME;
+	static constexpr WwiseRefType TYPE = WwiseRefType::ProjectInfo;
 
-	FWwiseRefProjectInfo() {}
-	FWwiseRefProjectInfo(const WwiseMetadataSharedRootFileConstPtr& InRootMediaRef, const FName& InJsonFilePath) :
-		FWwiseRefRootFile(InRootMediaRef, InJsonFilePath)
+	WwiseRefProjectInfo() {}
+	WwiseRefProjectInfo(const WwiseMetadataSharedRootFileConstPtr& InRootMediaRef, const WwiseDBString& InJsonFilePath) :
+		WwiseRefRootFile(InRootMediaRef, InJsonFilePath)
 	{}
-	const FWwiseMetadataProjectInfo* GetProjectInfo() const;
-	EWwiseRefType Type() const override { return TYPE; }
+	const WwiseMetadataProjectInfo* GetProjectInfo() const;
+	WwiseRefType Type() const override { return TYPE; }
 };

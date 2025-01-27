@@ -19,8 +19,11 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Wwise/Stats/ResourceLoader.h"
 
-#include <inttypes.h>
+#if WITH_EDITORONLY_DATA && UE_5_5_OR_LATER
+#include "Serialization/CompactBinaryWriter.h"
+#endif
 
+#include <inttypes.h>
 
 FWwiseAcousticTextureCookedData::FWwiseAcousticTextureCookedData()
 	: AbsorptionLow(0)
@@ -45,6 +48,20 @@ void FWwiseAcousticTextureCookedData::Serialize(FArchive& Ar)
 		Struct->SerializeTaggedProperties(Ar, (uint8*)this, Struct, nullptr);
 	}
 }
+
+#if WITH_EDITORONLY_DATA && UE_5_5_OR_LATER
+void FWwiseAcousticTextureCookedData::PreSave(FObjectPreSaveContext& SaveContext, FCbWriter& Writer) const
+{
+	Writer << "AT";
+	Writer.BeginObject();
+	Writer << "Id" << ShortId
+		<< "Low" << AbsorptionLow
+		<< "MidLow" << AbsorptionMidLow
+		<< "MidHigh" << AbsorptionMidHigh
+		<< "High" << AbsorptionHigh;
+	Writer.EndObject();
+}
+#endif
 
 FString FWwiseAcousticTextureCookedData::GetDebugString() const
 {

@@ -25,6 +25,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Containers/Map.h"
 #include "Misc/FileHelper.h"
+#include "Wwise/WwiseStringConverter.h"
 #include "Wwise/Metadata/WwiseMetadataPluginInfo.h"
 #include "Wwise/Metadata/WwiseMetadataRootFile.h"
 #include "Wwise/Metadata/WwiseMetadataProjectInfo.h"
@@ -139,6 +140,7 @@ namespace StaticPluginWriter_Helper
 		TArray<FString> Result;
 
 		FString RootSoundBanksMetadataFilePath = WwiseUnrealHelper::GetSoundBankProjectMetadataFile();
+		WwiseDBString DBFilePath(FWwiseStringConverter::ToWwiseDBString(RootSoundBanksMetadataFilePath));
 		if (!FPaths::FileExists(RootSoundBanksMetadataFilePath))
 		{
 			UE_LOG(LogAudiokineticTools, Verbose,
@@ -146,7 +148,9 @@ namespace StaticPluginWriter_Helper
 			return Result;
 		}
 
-		WwiseMetadataFileMap JsonFiles = FWwiseMetadataRootFile::LoadFiles({RootSoundBanksMetadataFilePath});
+		WwiseDBArray<WwiseDBString> FilePaths;
+		FilePaths.Add(DBFilePath);
+		WwiseMetadataFileMap JsonFiles = WwiseMetadataRootFile::LoadFiles(FilePaths);
 		FString FileContents;
 		if (!FFileHelper::LoadFileToString(FileContents, *RootSoundBanksMetadataFilePath))
 		{
@@ -156,15 +160,15 @@ namespace StaticPluginWriter_Helper
 			return Result;
 		}
 
-		WwiseMetadataSharedRootFilePtr MetadataRoot = FWwiseMetadataRootFile::LoadFile(
-			MoveTemp(FileContents), *RootSoundBanksMetadataFilePath);
+		WwiseMetadataSharedRootFilePtr MetadataRoot = WwiseMetadataRootFile::LoadFile(DBFilePath);
 
 		FName PlatformPath;
+		WwiseDBString AdapatedPlatformName(FWwiseStringConverter::ToWwiseDBString(InWwisePlatformName));
 		for (const auto& Platform : MetadataRoot->ProjectInfo->Platforms)
 		{
-			if (Platform.Name.ToString() == InWwisePlatformName)
+			if (Platform.Name.Equals(AdapatedPlatformName, EStringCompareType::IgnoreCase))
 			{
-				PlatformPath = Platform.Path;
+				PlatformPath = *Platform.Path;
 				break;
 			}
 		}
@@ -177,13 +181,10 @@ namespace StaticPluginWriter_Helper
 			return Result;
 		}
 
-		FString PlatformPluginInfoPath = PlatformPath.ToString() / TEXT("PluginInfo.json");
-		if (FPaths::IsRelative(PlatformPluginInfoPath))
-		{
-			PlatformPluginInfoPath = WwiseUnrealHelper::GetSoundBankDirectory() / PlatformPluginInfoPath;
-		}
+		FString PlatformPluginInfoPath = *PlatformPath.ToString() / FString(TEXT("PluginInfo.json"));
+		PlatformPluginInfoPath = WwiseUnrealHelper::GetSoundBankDirectory() / *PlatformPluginInfoPath;
 
-		if (!FPaths::FileExists(PlatformPluginInfoPath))
+		if (!FPaths::FileExists(*PlatformPluginInfoPath))
 		{
 			UE_LOG(LogAudiokineticTools, Verbose,
 			       TEXT("StaticPluginWriter::GetLibraryFileNames, Could not find PluginInfo metadata for Platform %s at %s"),
@@ -191,22 +192,22 @@ namespace StaticPluginWriter_Helper
 			return Result;
 		}
 
-		MetadataRoot = FWwiseMetadataRootFile::LoadFile(PlatformPluginInfoPath);
+		MetadataRoot = WwiseMetadataRootFile::LoadFile(FWwiseStringConverter::ToWwiseDBString(PlatformPluginInfoPath));
 
 		// PluginLibNames + PluginLibIDs
-		for (WwiseRefIndexType PluginLibIndex = 0; PluginLibIndex < MetadataRoot->PluginInfo->PluginLibs.Num(); ++
+		for (WwiseRefIndexType PluginLibIndex = 0; PluginLibIndex < MetadataRoot->PluginInfo->PluginLibs.Size(); ++
 		     PluginLibIndex)
 		{
-			const FWwiseMetadataPluginLib& PluginLib = MetadataRoot->PluginInfo->PluginLibs[PluginLibIndex];
+			const WwiseMetadataPluginLib& PluginLib = MetadataRoot->PluginInfo->PluginLibs[PluginLibIndex];
 			auto StaticPluginLibName = PluginLib.StaticLib;
-			if (!StaticPluginLibName.IsNone())
+			if (!StaticPluginLibName.IsEmpty())
 			{
 				auto StaticPluginName = PluginIDToStaticLibraryName.Find(
 					static_cast<PluginID>(PluginLib.LibId));
 				ensureMsgf(PluginIDToStaticLibraryName.Contains((PluginID)PluginLib.LibId),
 				           TEXT("Missing plugin %s (ID: %d) from the known list of static Plugins"),
-				           *PluginLib.LibName.ToString(), PluginLib.LibId);
-				Result.Add(StaticPluginLibName.ToString());
+				           *FWwiseStringConverter::ToFString(PluginLib.LibName), PluginLib.LibId);
+				Result.Add(FWwiseStringConverter::ToFString(StaticPluginLibName));
 			}
 		}
 
@@ -221,11 +222,18 @@ namespace StaticPluginWriter_Helper
 
 		TArray<FString> PluginLines;
 
-		for (auto& PluginName : Plugins)
+		const TArray<FString> PluginsToSkip
 		{
 			// Don't include AkAudioInputSourceFactory.h in file because it is already linked in AkAudioInputManager
-			// Don't include AkMeterFX.h because it is alreay included in WwiseSoundEngineAPI
-			if (PluginName.Equals(TEXT("AkAudioInputSource")) || PluginName.Equals(TEXT("AkMeterFX")))
+			TEXT("AkAudioInputSource"),
+			// Don't include AkMeterFX.h because it is already included in WwiseSoundEngineAPI
+			TEXT("AkMeterFX"),
+			// Don't include TencentGME.h because it is already included in the GME Plugin
+			TEXT("TencentGME")
+		};
+		for (auto& PluginName : Plugins)
+		{
+			if (PluginsToSkip.Contains(PluginName))
 			{
 				continue;
 			}
@@ -283,7 +291,7 @@ namespace StaticPluginWriter
 			const auto PluginArray = StaticPluginWriter_Helper::GetLibraryFileNames(InWwisePlatform);
 
 			const FString AkPluginIncludeFileName = FString::Format(TEXT("Ak{0}Plugins.h"), { PlatformInfo->WwisePlatform });
-			const FString AkPluginIncludeFilePath = FPaths::Combine(FAkPlatform::GetWwisePluginDirectory(), TEXT("Source"), TEXT("WwiseSoundEngine"), TEXT("Public"), TEXT("Generated"), AkPluginIncludeFileName);
+			const FString AkPluginIncludeFilePath = FPaths::Combine(FAkPlatform::GetWwiseSoundEnginePluginDirectory(), TEXT("Source"), TEXT("WwiseSoundEngine"), TEXT("Public"), TEXT("Generated"), AkPluginIncludeFileName);
 
 			StaticPluginWriter_Helper::ModifySourceCode(*AkPluginIncludeFilePath, PlatformInfo->WwisePlatform, PluginArray);
 		}

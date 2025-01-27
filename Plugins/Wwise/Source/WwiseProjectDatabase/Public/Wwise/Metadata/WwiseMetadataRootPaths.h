@@ -19,14 +19,14 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #include "Wwise/Metadata/WwiseMetadataLoadable.h"
 
-struct WWISEPROJECTDATABASE_API FWwiseMetadataRootPaths : public FWwiseMetadataLoadable
+struct WwiseMetadataRootPaths : public WwiseMetadataLoadable
 {
-	FName ProjectRoot;
-	FName SourceFilesRoot;
-	FName SoundBanksRoot;
-	FName ExternalSourcesInputFile;
-	FName ExternalSourcesOutputRoot;
+	WwiseDBString ProjectRoot;
+	WwiseDBString SourceFilesRoot;
+	WwiseDBString SoundBanksRoot;
+	WwiseDBString ExternalSourcesInputFile;
+	WwiseDBString ExternalSourcesOutputRoot;
 
-	FWwiseMetadataRootPaths();
-	FWwiseMetadataRootPaths(FWwiseMetadataLoader& Loader);
+	WwiseMetadataRootPaths();
+	WwiseMetadataRootPaths(WwiseMetadataLoader& Loader);
 };

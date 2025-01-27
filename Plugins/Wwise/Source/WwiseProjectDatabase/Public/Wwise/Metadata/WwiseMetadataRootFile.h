@@ -21,17 +21,16 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "Wwise/Metadata/WwiseMetadataLoadable.h"
 
 
-struct WWISEPROJECTDATABASE_API FWwiseMetadataRootFile : public FWwiseMetadataLoadable
+struct WWISEPROJECTDATABASE_API WwiseMetadataRootFile : public WwiseMetadataLoadable
 {
-	FWwiseMetadataPlatformInfo* PlatformInfo;
-	FWwiseMetadataPluginInfo* PluginInfo;
-	FWwiseMetadataProjectInfo* ProjectInfo;
-	FWwiseMetadataSoundBanksInfo* SoundBanksInfo;
+	WwiseMetadataPlatformInfo* PlatformInfo;
+	WwiseMetadataPluginInfo* PluginInfo;
+	WwiseMetadataProjectInfo* ProjectInfo;
+	WwiseMetadataSoundBanksInfo* SoundBanksInfo;
 
-	FWwiseMetadataRootFile(FWwiseMetadataLoader& Loader);
-	~FWwiseMetadataRootFile();
+	WwiseMetadataRootFile(WwiseMetadataLoader& Loader);
+	~WwiseMetadataRootFile();
 
-	static WwiseMetadataSharedRootFilePtr LoadFile(const FString& FilePath);
-	static WwiseMetadataSharedRootFilePtr LoadFile(FString&& File, const FString& FilePath);
-	static WwiseMetadataFileMap LoadFiles(const TArray<FString>& FilePaths);
+	static WwiseMetadataSharedRootFilePtr LoadFile(const WwiseDBString& FilePath);
+	static WwiseMetadataFileMap LoadFiles(const WwiseDBArray<WwiseDBString>& FilePaths);
 };

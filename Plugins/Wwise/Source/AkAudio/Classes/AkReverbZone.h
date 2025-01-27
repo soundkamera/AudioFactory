@@ -48,7 +48,7 @@ private:
 	* @warning Deprecated as of Wwise 2023.1.1.
 	*/
 	UPROPERTY()
-	AAkSpatialAudioVolume* ParentSpatialAudioVolume;
+	TObjectPtr<AAkSpatialAudioVolume> ParentSpatialAudioVolume;
 
 	/**
 	* In Wwise 2023.1.1, the Reverb Zone properties were moved to AkRoomComponent.

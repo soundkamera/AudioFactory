@@ -29,11 +29,7 @@ Copyright (c) 2024 Audiokinetic Inc.
 #include "AssetManagement/AkAssetDatabase.h"
 
 #include "ObjectTools.h"
-#if UE_5_0_OR_LATER
 #include "HAL/PlatformFileManager.h"
-#else
-#include "HAL/PlatformFilemanager.h"
-#endif
 #include "Interfaces/IMainFrameModule.h"
 #include "Misc/Paths.h"
 #include "Misc/ScopedSlowTask.h"

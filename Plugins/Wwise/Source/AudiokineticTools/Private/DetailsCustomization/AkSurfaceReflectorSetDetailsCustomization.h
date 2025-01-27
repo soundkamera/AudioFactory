@@ -17,9 +17,10 @@ Copyright (c) 2024 Audiokinetic Inc.
 
 #pragma once
 
-#include "PropertyEditorModule.h"
-#include "IDetailCustomization.h"
+#include "WwiseDetailsCustomization.h"
+#include "Input/Reply.h"
 #include "UObject/StrongObjectPtr.h"
+
 //////////////////////////////////////////////////////////////////////////
 // FAkSurfaceReflectorSetDetailsCustomization
 
@@ -27,7 +28,7 @@ class IDetailCategoryBuilder;
 class STextBlock;
 class UAkSurfaceReflectorSetComponent;
 
-class FAkSurfaceReflectorSetDetailsCustomization : public IDetailCustomization
+class FAkSurfaceReflectorSetDetailsCustomization : public FWwiseDetailsCustomization
 {
 public:
 	FAkSurfaceReflectorSetDetailsCustomization();
