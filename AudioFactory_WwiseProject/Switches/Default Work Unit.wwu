@@ -24,6 +24,14 @@
 						<Switch Name="HUMAN" ID="{724CB739-058D-48DD-841E-08C4481EF9CF}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="GUNSSwitchGroup" ID="{B361832A-F122-434E-A4FD-C3B54FCDC043}">
+					<ChildrenList>
+						<Switch Name="GUNAuto" ID="{295A8163-5338-4413-9F98-FB99FF6C9BC1}"/>
+						<Switch Name="GUNPis" ID="{E0A90590-CB94-4468-A253-9470B2C590A2}"/>
+						<Switch Name="GUNRif" ID="{983EEF3F-DFA6-4D5A-8559-CB2BFAC9463F}"/>
+						<Switch Name="GUNShotg" ID="{6C236AB8-3648-4664-BB17-37BAD6304DDE}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

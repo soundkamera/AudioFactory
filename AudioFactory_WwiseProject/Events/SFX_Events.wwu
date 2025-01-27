@@ -15,17 +15,23 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Fire_GUNAuto_shot" ID="{00EEB85E-BE58-488E-98EF-F0EDADA35832}">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool" Value="False"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{5B48A810-2C6C-4137-88FA-797743A793D1}" ShortID="596684579">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="GUNAuto_shot" ID="{B1AAFEB4-F093-40CD-A506-A475D093D0D8}" WorkUnitID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}"/>
+									<ObjectRef Name="GUNAuto" ID="{B1AAFEB4-F093-40CD-A506-A475D093D0D8}" WorkUnitID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Fire_GUNPis_shot" ID="{2FE08369-935E-44D4-9842-2D899178E0A9}">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool" Value="False"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{E4722001-CA21-4594-9A12-6010CAAD774E}" ShortID="294961314">
 							<ReferenceList>
@@ -36,13 +42,56 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Fire_GUNAuto_burst" ID="{0C6BB6EF-1465-487A-BCD7-6F1C3540B884}"/>
+				<Event Name="Fire_GUNAuto_burst" ID="{0C6BB6EF-1465-487A-BCD7-6F1C3540B884}">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool" Value="False"/>
+					</PropertyList>
+				</Event>
 				<Event Name="Play_Bullet_Impact" ID="{1F80F101-AEEE-43DD-BF46-C7ED0132777B}">
 					<ChildrenList>
 						<Action Name="" ID="{1D78D5BC-9F0A-4A64-9316-CA14FD747623}" ShortID="422915903">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="BLLImptSwitch" ID="{B609D0EB-C3A1-4534-882B-6C1ECE1901BE}" WorkUnitID="{9690288C-B9E7-4561-BBEA-50BA655AE713}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Fire_GUNShotg_shot" ID="{B4967B21-FD8D-45E8-82F4-074640E76986}">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool" Value="False"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{C892FA49-9030-4568-A191-50ACD68496DE}" ShortID="427573805">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GUNShotg" ID="{2070C2D0-4D66-4BC3-8C64-823F0C8D5735}" WorkUnitID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Fire_GUNRif_shot" ID="{BC2D1A66-7D5F-470E-B80F-7BCE6C24D0BF}">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool" Value="False"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{86A975C5-0C3F-473B-A544-7043DC06CF39}" ShortID="528921326">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GUNRif" ID="{278DD23B-5060-4C6C-AA3D-CC348EF46042}" WorkUnitID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Fire_shot" ID="{008C69BB-3123-4CFD-85AF-25FE501136FD}">
+					<ChildrenList>
+						<Action Name="" ID="{F7484CFE-069A-4153-B983-B689A2272506}" ShortID="38486376">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GUNSSwitch" ID="{A75331BE-2DF4-4BE0-B32F-B3384CD7256E}" WorkUnitID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

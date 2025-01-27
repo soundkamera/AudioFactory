@@ -28,6 +28,38 @@
 						<CurrentSwitchRef Name="MUSstate_01" ID="{658F886C-7AF4-4BCC-ABAD-07F0FC1FD96D}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
+				<SoundcasterSession Name="Guns Soundcaster Session" ID="{60AB6986-9A2C-45EB-994A-AF69D0FD9938}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Fire_shot" ID="{008C69BB-3123-4CFD-85AF-25FE501136FD}" WorkUnitID="{D89F869D-A977-4955-AE76-51BABC8AECB8}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="GUNAuto" ID="{B1AAFEB4-F093-40CD-A506-A475D093D0D8}" WorkUnitID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="GUNPis" ID="{597D5512-CF91-4B43-9B93-7DEAEA419901}" WorkUnitID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="GUNRif" ID="{D67BCAE8-8F7C-47E7-BB13-735C19F48278}" WorkUnitID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="GUNShotg" ID="{408EC554-6ECE-4052-856C-9E5029B5EAC0}" WorkUnitID="{25BC2528-FA88-4F1F-B68B-4BC818F15A43}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="GUNAuto" ID="{295A8163-5338-4413-9F98-FB99FF6C9BC1}"/>
+						<CurrentSwitchRef Name="CONCRETE" ID="{8EE236E6-2725-4BB4-BBCF-AB743601CE6D}"/>
+						<CurrentSwitchRef Name="MUSstate_01" ID="{658F886C-7AF4-4BCC-ABAD-07F0FC1FD96D}"/>
+						<CurrentSwitchRef Name="CONCRETE" ID="{729C7B70-5536-4AA7-AE50-B39843684E5F}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>

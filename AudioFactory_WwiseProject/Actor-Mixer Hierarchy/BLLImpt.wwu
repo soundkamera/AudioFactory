@@ -827,11 +827,6 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="ZIP" ID="{1AA1771E-A65D-46AC-9EF9-266AB9576746}" ShortID="133944453">
 									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>6</Value>
